@@ -1,0 +1,134 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+**/*/node_modules
+
+# IDEs and editors
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+/report.*.json
+
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/class101.code-snippets
+.history
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# MEMO(Teddy): Pipeline101
+apps/apollo-server/src/infrastructure/Pipeline101SqsService/lambda/package.json
+apps/apollo-server/src/infrastructure/Pipeline101SqsService/lambda/package-lock.json
+apps/apollo-server/src/infrastructure/Pipeline101SqsService/lambda/node_modules
+apps/apollo-server/src/infrastructure/Pipeline101SqsService/lambda/*.zip
+
+/.next
+
+/class101-web
+
+/storybook-static
+
+build-storybook.log
+
+/pact
+
+# React Native
+
+## Xcode
+
+**/ios/**/build/
+**/ios/**/*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+
+## Android
+
+**/android/**/build/
+**/android/**/.gradle
+**/android/**/local.properties
+**/android/**/*.iml
+
+## BUCK
+
+buck-out/
+\.buckd/
+*.keystore
+!debug.keystore
+
+## fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+#
+**/fastlane/README.md
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+
+## Bundle artifact
+*.jsbundle
+
+## CocoaPods
+**/ios/Pods/
+/
+
+# zero install
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Serverless
+.serverless
+.webpack
+
+# Typescript Cache
+*.tsbuildinfo
+
+tools/diff-files.json
+
+# Next.js
+.next
