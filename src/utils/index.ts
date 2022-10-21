@@ -1,1 +1,3 @@
-export { Common } from './common';
+import { Common } from './common';
+
+export default Common;
