@@ -1,5 +1,6 @@
 const { Builder, By, until } = require('selenium-webdriver');
 
+// eslint-disable-next-line import/prefer-default-export
 export class Common {
   driver: any;
 
@@ -9,7 +10,7 @@ export class Common {
 
   async getElement(xPath: string) {
     await this.driver.wait(until.elementLocated(By.xpath(xPath)));
-    return await this.driver.findElement(By.xpath(xPath));
+    return this.driver.findElement(By.xpath(xPath));
   }
 
   async get(url: string) {
