@@ -13,11 +13,11 @@ export class Common {
     return this.driver.findElement(By.xpath(xPath));
   }
 
-  async get(url: string) {
+  get(url: string) {
     return this.driver.get(url);
   }
 
-  async quit() {
+  quit() {
     return this.driver.quit();
   }
 }
