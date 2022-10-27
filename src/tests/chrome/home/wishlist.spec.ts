@@ -9,6 +9,7 @@ describe('chrome', () => {
   beforeAll(() => {
     browser = new Common(Browser.CHROME);
     browser.get(Constant.CLASS101_SUBSCRIPTION_URL_STAGING);
+    browser.setWindowPosition(300, 300);
   });
 
   afterAll(async () => {

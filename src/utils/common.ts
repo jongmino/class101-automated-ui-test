@@ -8,6 +8,10 @@ export class Common {
     this.driver = new Builder().forBrowser(this.webDriver).build();
   }
 
+  async setWindowPosition(x:number, y:number) {
+    this.driver.manage().window().setRect({ x, y });
+  }
+
   async getElement(xPath: string) {
     await this.driver.wait(until.elementLocated(By.xpath(xPath)));
     const element = await this.driver.findElement(By.xpath(xPath));
@@ -25,7 +29,6 @@ export class Common {
   clickElement(xPath: string) {
     this.getElement(xPath).then((element) => {
       element.click();
-      console.log(`clicked: ${xPath}`);
     });
   }
 
@@ -34,19 +37,12 @@ export class Common {
   }
 
   async waitUntilVisible(xPath:string) {
-    console.log(`wait until visible: ${xPath}`);
     await this.driver.wait(() => this.driver.findElements(By.xpath(xPath))
       .then((elements:any) => elements.length !== 0));
   }
 
   async waitUntilNotVisible(xPath:string) {
-    console.log(`wait until not visible: ${xPath}`);
     await this.driver.wait(() => this.driver.findElements(By.xpath(xPath))
       .then((elements: any) => elements.length === 0));
-  }
-
-  async sleep(timeout: number) {
-    await this.driver.sleep(timeout);
-    console.log(`waiting...: ${timeout}`);
   }
 }
