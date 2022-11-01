@@ -1,12 +1,11 @@
-package net.class101.automateduitest;
+package net.class101.automateduitest.Login;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.Selenide;
+import net.class101.automateduitest.Constants;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -18,11 +17,11 @@ import org.junit.jupiter.api.TestMethodOrder;
 
 @TestInstance(Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.MethodName.class)
-public class Login {
+public class EmailLogin {
 
     @BeforeAll
     void setUp() {
-        open(Constants.STAGING_URL);
+        Selenide.open(Constants.STAGING_URL);
     }
 
     @Test
@@ -40,6 +39,6 @@ public class Login {
     void logout() {
         $(Constants.USER_NAVIGATION_PROFILE_IMG).click();
         $(Constants.MY_PAGE_LOGOUT_BUTTON).click();
-        $(Constants.USER_NAVIGATION_LOGIN_BUTTON).shouldBe(Condition.visible);
+        $(Constants.TRENDING_CLASS_SECTION).shouldBe(Condition.visible);
     }
 }
