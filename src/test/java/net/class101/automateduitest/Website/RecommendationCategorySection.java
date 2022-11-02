@@ -1,29 +1,27 @@
-package net.class101.automateduitest.Login;
+package net.class101.automateduitest.Website;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import net.class101.automateduitest.Constants;
-import net.class101.automateduitest.Common.Behaviors;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
-import org.junit.jupiter.api.TestMethodOrder;
-
 
 @TestInstance(Lifecycle.PER_CLASS)
-@TestMethodOrder(MethodOrderer.MethodName.class)
-public class EmailLogin {
+public class RecommendationCategorySection {
 
     @BeforeAll
-    void setUp() {
+    static void beforeAll() {
         open(Constants.STAGING_URL);
+        Configuration.timeout = 20000;
     }
 
     @AfterAll
@@ -32,16 +30,10 @@ public class EmailLogin {
     }
 
     @Test
-    @Order(1)
-    void login_with_email() {
-        Behaviors.loginWithEmail();
-    }
-
-    @Test
-    @Order(2)
-    void logout() {
-        $(Constants.USER_NAVIGATION_PROFILE_IMG).click();
-        $(Constants.MY_PAGE_LOGOUT_BUTTON).click();
-        $(Constants.TRENDING_CLASS_SECTION).shouldBe(Condition.visible);
+    void recommendation_category() throws InterruptedException {
+        $(Constants.RECOMMENDATION_CATEGORY_SECTION).shouldBe(Condition.visible);
+        $(Constants.ENGLISH_CATEGORY_BUTTON).click();
+        Thread.sleep(1000);
+        assertTrue(WebDriverRunner.url().contains("categories"));
     }
 }

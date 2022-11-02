@@ -9,6 +9,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.Constants;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -26,12 +27,18 @@ public class NaverLogin {
         Configuration.timeout = 10000;
     }
 
+    @AfterAll
+    static void afterAll() {
+        Selenide.closeWebDriver();
+    }
+
     @Test
     @Order(1)
     void login_with_naver() throws InterruptedException {
         $(Constants.USER_NAVIGATION_LOGIN_BUTTON).click();
         $(Constants.LOGIN_PAGE_ALL_LOGIN_BUTTON).click();
         $(Constants.LOGIN_PAGE_NAVER_BUTTON).click();
+
         naverEmailField.click();
         Selenide.clipboard().setText(Constants.NAVER_USER_ID);
         naverEmailField.sendKeys(Keys.COMMAND + "v");
