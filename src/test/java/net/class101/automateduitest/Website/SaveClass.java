@@ -1,11 +1,10 @@
 package net.class101.automateduitest.Website;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static net.class101.automateduitest.Common.Behaviors.openUrl;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import net.class101.automateduitest.Constants;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -22,13 +21,12 @@ public class SaveClass {
 
     @BeforeAll
     static void beforeAll() {
-        Selenide.open(Constants.STAGING_URL);
-        Configuration.timeout = 10000;
+        openUrl(Constants.STAGING_URL);
     }
 
     @AfterAll
     static void afterAll() {
-        Selenide.closeWebDriver();
+        closeWebDriver();
     }
 
     @Test
@@ -45,6 +43,7 @@ public class SaveClass {
     @Test
     @Order(2)
     void unSaveClass() throws InterruptedException {
+        Thread.sleep(2000);
         $(Constants.FIRST_SAVE_BUTTON_ON_SAVED_CLASS).click();
         $(Constants.SAVED_CLASSES_SECTION_TITLE).should(Condition.disappear);
     }

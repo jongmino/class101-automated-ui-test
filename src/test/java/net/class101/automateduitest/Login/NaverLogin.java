@@ -2,10 +2,9 @@ package net.class101.automateduitest.Login;
 
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static net.class101.automateduitest.Common.Behaviors.openUrl;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.Constants;
@@ -19,12 +18,11 @@ import org.openqa.selenium.Keys;
 
 @TestInstance(Lifecycle.PER_CLASS)
 public class NaverLogin {
-    SelenideElement naverEmailField = Selenide.$(Constants.NAVER_ID_INPUT_FIELD);
+    SelenideElement naverEmailField = $(Constants.NAVER_ID_INPUT_FIELD);
     SelenideElement naverPasswordField = $(Constants.NAVER_PASSWORD_INPUT_FIELD);
     @BeforeAll
     void setUp() {
-        open(Constants.STAGING_URL);
-        Configuration.timeout = 10000;
+        openUrl(Constants.STAGING_URL);
     }
 
     @AfterAll

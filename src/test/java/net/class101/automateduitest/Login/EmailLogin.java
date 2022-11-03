@@ -1,7 +1,7 @@
 package net.class101.automateduitest.Login;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static net.class101.automateduitest.Common.Behaviors.openUrl;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
@@ -9,6 +9,7 @@ import net.class101.automateduitest.Constants;
 import net.class101.automateduitest.Common.Behaviors;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -17,13 +18,14 @@ import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.TestMethodOrder;
 
 
+@DisplayName("Login with Email")
 @TestInstance(Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.MethodName.class)
 public class EmailLogin {
 
     @BeforeAll
     void setUp() {
-        open(Constants.STAGING_URL);
+        openUrl(Constants.STAGING_URL);
     }
 
     @AfterAll
@@ -34,7 +36,7 @@ public class EmailLogin {
     @Test
     @Order(1)
     void login_with_email() {
-        Behaviors.loginWithEmail();
+        Behaviors.loginWithEmail(Constants.CLASS101_USER_ID, Constants.CLASS101_PASSWORD);
     }
 
     @Test
