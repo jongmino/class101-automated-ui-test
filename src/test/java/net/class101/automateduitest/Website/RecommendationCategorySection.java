@@ -3,6 +3,7 @@ package net.class101.automateduitest.Website;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static net.class101.automateduitest.Common.Behaviors.openUrl;
+import static net.class101.automateduitest.Common.Behaviors.verifyRecommendedCategorySection;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
@@ -29,17 +30,7 @@ public class RecommendationCategorySection {
 
     @Test
     void recommendation_category() throws InterruptedException {
-        $(Constants.RECOMMENDATION_CATEGORY_SECTION).shouldBe(Condition.visible);
-        $(Constants.ENGLISH_CATEGORY_BUTTON).click();
-        Thread.sleep(1000);
-        assertTrue(WebDriverRunner.url().contains("categories"));
+        verifyRecommendedCategorySection();
     }
 
-    @Test
-    void click_subcategory() throws InterruptedException {
-        $(Constants.SUBCATEGORY_ENGLISH_COMMUNICATION).click();
-        Thread.sleep(1000);
-
-        assertTrue(WebDriverRunner.url().contains(Constants.SUBCATEGORY_ID_ENGLISH_COMMUNICATION));
-    }
 }

@@ -42,8 +42,6 @@ public class EmailLogin {
     @Test
     @Order(2)
     void logout() {
-        $(Constants.USER_NAVIGATION_PROFILE_IMG).click();
-        $(Constants.MY_PAGE_LOGOUT_BUTTON).click();
-        $(Constants.TRENDING_CLASS_SECTION).shouldBe(Condition.visible);
+        Behaviors.logout();
     }
 }

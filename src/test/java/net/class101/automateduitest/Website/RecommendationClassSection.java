@@ -34,25 +34,5 @@ public class RecommendationClassSection {
     @Order(1)
     void recommendation_class_section_is_visible() {
         Behaviors.loginWithEmail(Constants.CLASS101_USER_ID, Constants.CLASS101_PASSWORD);
-        $(Constants.RECOMMENDATION_SECTION).shouldBe(Condition.visible);
     }
-
-//    @Test
-//    @Order(2)
-//    void update_recommendation_section() {
-//        SelenideElement firstRecommendationClassTitle = $(Constants.FIRST_RECOMMENDATION_CLASS_TITLE);
-//        String firstRecommendationClassTitleBeforeChange = firstRecommendationClassTitle.getText();
-//
-//        $(Constants.FIRST_ITEM_OF_COOKING_SECTION).click();
-//        Selenide.refresh();
-//        $(Constants.USER_NAVIGATION_LOGO).click();
-//
-//        String firstRecommendationClassTitleAfterChange = firstRecommendationClassTitle.getText();
-//
-//        $(Constants.FIRST_ITEM_OF_TRENDING_NOW).click();
-//        Selenide.refresh();
-//        $(Constants.USER_NAVIGATION_LOGO).click();
-//
-//        assertNotEquals(firstRecommendationClassTitleBeforeChange, firstRecommendationClassTitleAfterChange, "recommendation classes should not be same after viewing PDP page");
-//    }
 }

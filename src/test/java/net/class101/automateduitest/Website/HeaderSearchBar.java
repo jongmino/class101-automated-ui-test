@@ -24,11 +24,5 @@ public class HeaderSearchBar {
 
     @Test
     void search_panel_is_visible() throws InterruptedException {
-        $(Constants.SEARCH_BAR).click();
-        $(Constants.SEARCH_PANEL_TITLE).shouldBe(Condition.visible);
-        $(Constants.SEARCH_BAR_INPUT_AFTER_CLICK).sendKeys("공예");
-        $(Constants.SEARCH_BAR_INPUT_AFTER_CLICK).pressEnter();
-        Thread.sleep(2000);
-        $(Constants.SEARCH_RESULT_CRAFTS_CATEGORY).shouldBe(Condition.visible);
     }
 }

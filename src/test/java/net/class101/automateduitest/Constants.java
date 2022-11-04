@@ -27,10 +27,10 @@ public final class Constants {
     public static final String NAVER_USER_ID = "candy6731";
     public static final String NAVER_PASSWORD = "class101!";
     public static final By TRENDING_CLASS_SECTION = Selectors.withText("실시간 인기 클래스");
-    public static final By FIRST_SAVE_BUTTON_ON_TRENDING_NOW = Selectors.byXpath("//section[contains(.,'실시간 인기 클래스')]/div[3]/div/div/div/div/div/button");
-    public static final By FIRST_SAVE_BUTTON_ON_SAVED_CLASS = Selectors.byXpath("//section[contains(.,'찜한 클래스')]/div[3]/div/div/div/div/div/div[2]/span");
+    public static final By FIRST_SAVE_BUTTON_ON_TRENDING_NOW = Selectors.byXpath("(//section[contains(.,'실시간 인기 클래스')]/div[3]/div/div/div/div/div/button)[1]");
+    public static final By FIRST_SAVE_BUTTON_ON_SAVED_CLASS = Selectors.byXpath("//section[contains(.,'찜한 클래스')]/div[3]/div/div/div/div/div/div[2]");
     public static final By SAVED_CLASSES_SECTION_TITLE = Selectors.byXpath("//h4[contains(.,'찜한 클래스')]");
-    public static final By RECOMMENDATION_SECTION = Selectors.withText("추천 클래스");
+    public static final By RECOMMENDED_CLASS_SECTION = Selectors.withText("추천 클래스");
 //    public static final By FIRST_ITEM_OF_COOKING_SECTION = Selectors.byXpath("//section[contains(.,'요리 클래스')]/div[3]/div/div/div/div");
 //    public static final By FIRST_ITEM_OF_TRENDING_NOW = Selectors.byXpath("//section[contains(.,'인기 클래스')]/div[3]/div/div/div/div");
 //    public static final By USER_NAVIGATION_LOGO = Selectors.byXpath("//a[@href='/plus/ko']");
@@ -38,7 +38,7 @@ public final class Constants {
     public static final By FIRST_CURATION_ITEM = Selectors.byXpath("//img[@alt='desktop-hero-banner']");
     public static final By CLASS101_PLUS_SUBSCRIBE_BUTTON = Selectors.withText("시작하기");
     public static final By SUBSCRIPTION_PLAN_TITLE = Selectors.withText("구독 상품");
-    public static final By RECOMMENDATION_CATEGORY_SECTION = Selectors.withText("관심 클래스를 발견하지 못하셨나요?");
+    public static final By RECOMMENDED_CATEGORY_SECTION = Selectors.withText("관심 클래스를 발견하지 못하셨나요?");
     public static final By ENGLISH_CATEGORY_BUTTON = Selectors.byXpath("//button[contains(.,'영어')]");
     public static final By ENGLISH_PLP_TITLE = Selectors.byXpath("//h1[contains(.,'영어')]");
     public static final String MY_CLASS_USER_ID = "sbtestc422@101.inc";
