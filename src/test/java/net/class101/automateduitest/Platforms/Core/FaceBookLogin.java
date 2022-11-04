@@ -1,10 +1,9 @@
-package net.class101.automateduitest.Login;
+package net.class101.automateduitest.Platforms.Core;
 
 import static com.codeborne.selenide.Selenide.$;
 import static net.class101.automateduitest.Common.Behaviors.loginWithFaceBook;
 import static net.class101.automateduitest.Common.Behaviors.openUrl;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.Constants;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;

@@ -1,10 +1,9 @@
-package net.class101.automateduitest.Website;
+package net.class101.automateduitest.Platforms.Website;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static net.class101.automateduitest.Common.Behaviors.openUrl;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.Constants;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;

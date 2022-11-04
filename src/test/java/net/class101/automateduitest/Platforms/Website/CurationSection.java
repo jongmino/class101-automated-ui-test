@@ -1,4 +1,4 @@
-package net.class101.automateduitest.Website;
+package net.class101.automateduitest.Platforms.Website;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static net.class101.automateduitest.Common.Behaviors.verifyCurationItemAndClassInformation;
