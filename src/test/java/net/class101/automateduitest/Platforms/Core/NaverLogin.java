@@ -19,7 +19,7 @@ public class NaverLogin {
 
     @BeforeAll
     void setUp() {
-        openUrl(Constants.STAGING_URL);
+        openUrl(Constants.STAGING_PLUS_HOME_URL);
     }
 
     @AfterAll

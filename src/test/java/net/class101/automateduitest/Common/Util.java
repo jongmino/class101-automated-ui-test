@@ -7,7 +7,7 @@ public final class Util {
         return WebDriverRunner.url();
     }
 
-    public static Boolean urlMatches(String url){
-        return getUrl().matches(url);
+    public static Boolean urlContains(String url){
+        return getUrl().contains(url);
     }
 }

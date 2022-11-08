@@ -24,7 +24,7 @@ public class SaveClass {
 
     @BeforeAll
     static void beforeAll() {
-        openUrl(Constants.STAGING_URL);
+        openUrl(Constants.STAGING_PLUS_HOME_URL);
     }
 
     @AfterAll

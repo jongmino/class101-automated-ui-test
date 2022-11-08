@@ -1,28 +1,26 @@
-package net.class101.automateduitest.Platforms.Core;
+package net.class101.automateduitest.Platforms.Classmate;
 
-import static com.codeborne.selenide.Selenide.$;
-import static net.class101.automateduitest.Common.Behaviors.loginWithFaceBook;
+import static net.class101.automateduitest.Common.Behaviors.checkCashTab;
+import static net.class101.automateduitest.Common.Behaviors.loginWithEmail;
 import static net.class101.automateduitest.Common.Behaviors.openUrl;
 
 import net.class101.automateduitest.Constants;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
 @TestInstance(Lifecycle.PER_CLASS)
-public class FaceBookLogin {
+public class MyPageProfile {
 
     @BeforeAll
-    void setUp() {
+    static void beforeAll() {
         openUrl(Constants.STAGING_PLUS_HOME_URL);
     }
 
     @Test
-    @Order(1)
-    void login_with_facebook() {
-        loginWithFaceBook(Constants.FACEBOOK_USER_ID, Constants.FACEBOOK_PASSWORD);
+    void verifyCashTab() {
+        loginWithEmail(Constants.CLASS101_USER_ID,Constants.CLASS101_PASSWORD);
+        checkCashTab();
     }
-
 }

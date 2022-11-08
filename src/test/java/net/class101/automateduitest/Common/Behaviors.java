@@ -3,6 +3,7 @@ package net.class101.automateduitest.Common;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
+import static net.class101.automateduitest.Common.Util.urlContains;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.CollectionCondition;
@@ -11,7 +12,11 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import net.class101.automateduitest.Constants;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
 public final class Behaviors {
@@ -159,7 +164,7 @@ public final class Behaviors {
         $(Constants.ENGLISH_CATEGORY_BUTTON).click();
         Thread.sleep(1000);
         //카테고리 페이지로 이동 확인
-        assertTrue(WebDriverRunner.url().contains("categories"));
+        assertTrue(urlContains("categories"));
 
         //영어 회화 서브카테고리 클릭
         $(Constants.SUBCATEGORY_ENGLISH_COMMUNICATION).click();
@@ -228,4 +233,112 @@ public final class Behaviors {
         $(Constants.SEARCH_RESULT_CRAFTS_CATEGORY).shouldBe(Condition.visible);
     }
 
+    public static void checkCashTab() {
+        //유저 네비게이션 프로필 이미지 클릭
+        $(Constants.USER_NAVIGATION_PROFILE_IMG).click();
+        //캐시탭 확인
+        $(Constants.MY_PAGE_CASH_TAB).shouldBe(Condition.visible);
+    }
+
+    public static void checkSubscriptionStatusWithNonSubscribed() {
+        //유저 네비게이션 프로필 이미지 클릭
+        $(Constants.USER_NAVIGATION_PROFILE_IMG).click();
+        //캐시탭 확인
+        $(Constants.MY_PAGE_SUBSCRIPTION_STATUS_NON).shouldBe(Condition.visible);
+    }
+
+
+    public static void checkSubscriptionStatusWithSubscribed() {
+        //유저 네비게이션 프로필 이미지 클릭
+        $(Constants.USER_NAVIGATION_PROFILE_IMG).click();
+        //캐시탭 확인
+        $(Constants.MY_PAGE_SUBSCRIPTION_STATUS_SUBSCRIBED).shouldBe(Condition.visible);
+    }
+    public static void checkMyPageMenu() throws InterruptedException {
+        //유저 네비게이션 프로필 이미지 클릭
+        $(Constants.USER_NAVIGATION_PROFILE_IMG).click();
+        //주문 및 배송 탭 확인
+        $(Constants.MY_PAGE_ORDER_TAB).click();
+        Thread.sleep(500);
+        assertTrue(urlContains("orders"));
+        //친구초대 탭 확인
+        $(Constants.MY_PAGE_REFERRAL_TAB).click();
+        Thread.sleep(500);
+        assertTrue(urlContains("classmate-referral"));
+        //크리에이터 센터 탭 확인
+        $(Constants.MY_PAGE_CREATOR_CENTER_TAB).click();
+        Thread.sleep(500);
+        assertTrue(urlContains("creator.class101.net"));
+        open(Constants.STAGING_PLUS_MY_PAGE_URL);
+        //자주 묻는 질문 탭 확인
+        $(Constants.MY_PAGE_FAQ_TAB).shouldBe(Condition.visible);
+        //1:1 문의 탭 확인
+        $(Constants.MY_PAGE_ENQUIRY_TAB).click();
+        Thread.sleep(500);
+        $(Constants.CHANNEL_TALK_MODAL).shouldBe(Condition.visible);
+        //설정 탭 확인
+        $(Constants.MY_PAGE_SETTING_TAB).click();
+        Thread.sleep(500);
+        assertTrue(urlContains("setting"));
+    }
+
+    public static void changeServiceRegion() throws InterruptedException {
+        //유저 네비게이션 프로필 이미지 클릭
+        $(Constants.USER_NAVIGATION_PROFILE_IMG).click();
+        //설정 탭 클릭
+        $(Constants.MY_PAGE_SETTING_TAB).click();
+        //지역변경 버튼 클릭
+        $(Constants.SETTING_SERVICE_REGION_BUTTON).click();
+        //영어로 변경
+        $(Constants.SERVICE_REGION_US_BUTTON).click();
+
+        Thread.sleep(1000);
+        assertTrue(urlContains("en"));
+
+
+        open(Constants.STAGING_PLUS_MY_PAGE_URL);
+        //설정 탭 클릭
+        $(Constants.MY_PAGE_SETTING_TAB).click();
+        //지역변경 버튼 클릭
+        $(Constants.SETTING_SERVICE_REGION_BUTTON).click();
+        //일본어로 변경
+        $(Constants.SERVICE_REGION_JP_BUTTON).click();
+
+        Thread.sleep(1000);
+        assertTrue(urlContains("ja"));
+
+    }
+
+    public static void playClass() {
+        $(Constants.FIRST_CURATION_ITEM).click();
+        $(Constants.PLAY_BUTTON_ON_PDP).click();
+        $(Constants.VIDEO_PLAYING).shouldBe(Condition.visible);
+    }
+
+
+    public static void creatorCenterCategory() throws InterruptedException {
+        List<By> categorySelectors = new ArrayList<>();
+        categorySelectors.add(Constants.FIRST_CATEGORY_SELECTOR);
+        categorySelectors.add(Constants.SECOND_CATEGORY_SELECTOR);
+        categorySelectors.add(Constants.THIRD_CATEGORY_SELECTOR);
+        categorySelectors.add(Constants.FOURTH_CATEGORY_SELECTOR);
+
+        $(Constants.CLASS101_EMAIL_INPUT_FIELD).sendKeys(Constants.CREATOR_USER_ID);
+        $(Constants.CLASS101_PASSWORD_INPUT_FIELD).sendKeys(Constants.CREATOR_PASSWORD);
+        $(Constants.LOGIN_PAGE_LOGIN_BUTTON).click();
+        Thread.sleep(5000);
+        $(Constants.CREATE_PRODUCT_BUTTON).should(Condition.enabled).click();
+        Thread.sleep(2000);
+        $(Constants.CREATE_CLASS_BUTTON).click();
+        $(Constants.CREATE_CLASS_PAGE_CATEGORY_SECTION).click();
+
+        for(By selectorXPath: categorySelectors) {
+            Thread.sleep(1000);
+            if($$(selectorXPath).size() > 0){
+                SelenideElement selector = $(selectorXPath);
+                int optionSize = selector.findAll("option").size();
+                selector.selectOption(new Random().nextInt(optionSize - 1));
+            }
+        }
+    }
 }
