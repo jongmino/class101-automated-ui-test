@@ -80,5 +80,12 @@ public final class Constants {
     public static final By SECOND_CATEGORY_SELECTOR = byXpath("(//form[contains(.,'분야를 선택해주세요')]//select)[2]");
     public static final By THIRD_CATEGORY_SELECTOR = byXpath("(//form[contains(.,'분야를 선택해주세요')]//select)[3]");
     public static final By FOURTH_CATEGORY_SELECTOR = byXpath("(//form[contains(.,'분야를 선택해주세요')]//select)[4]");
-
+    public static final By VIDEO_PLAY_SPEED_BUTTON = byXpath("(//div[div[contains(@class,'video')]]//span)[14]");
+    public static final By VIDEO_SETTING_BUTTON = byXpath("(//div[div[contains(@class,'video')]]//span)[15]");
+    public static final By VIDEO_SETTING_QUALITY_BUTTON = byXpath("//div[div[p[text() = '화질']]]");
+    public static final By VIDEO_SETTING_QUALITY_CURRENT_VALUE = byXpath("//div[div[p[text() = '화질']]]//button//span[contains(.,'p')]");
+    public static final By VIDEO_SETTING_AUTO_PLAY_BUTTON = byXpath("//div[div[p[text() = '자동 재생']]]");
+    public static final By VIDEO_SETTING_AUTO_PLAY_CURRENT_VALUE = byXpath("(//div[div[p[text() = '자동 재생']]]//button//span)[2]");
+    public static final By VIDEO_SETTING_FIRST_RADIO_OPTION_NOT_CHECKED = byXpath("//label[input[@type='radio' and not(@checked)]]");
+    public static final By UNCHECKED_AUTO_PLAY_OPTION_TEXT = By.xpath("//div[label[input[@type='radio' and not(@checked)]]]//p");
 }

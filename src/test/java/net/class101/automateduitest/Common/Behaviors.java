@@ -4,6 +4,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 import static net.class101.automateduitest.Common.Util.urlContains;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.CollectionCondition;
@@ -340,5 +341,41 @@ public final class Behaviors {
                 selector.selectOption(new Random().nextInt(optionSize - 1));
             }
         }
+    }
+
+    public static void checkVideoPlayerFunctionality() throws InterruptedException {
+        SelenideElement playSpeedButton = $(Constants.VIDEO_PLAY_SPEED_BUTTON);
+        SelenideElement settingButton = $(Constants.VIDEO_SETTING_BUTTON);
+        SelenideElement firstQualityOption = $(Constants.VIDEO_SETTING_FIRST_RADIO_OPTION_NOT_CHECKED);
+        $(Constants.FIRST_CURATION_ITEM).click();
+        $(Constants.PLAY_BUTTON_ON_PDP).click();
+        $(Constants.VIDEO_PLAYING).hover();
+        playSpeedButton.shouldBe(Condition.visible);
+
+        //재생 속도 변경 확인
+        String playSpeedSvgPathBefore = playSpeedButton.find("svg").find("path").getAttribute("d");
+        Thread.sleep(1000);
+        playSpeedButton.click();
+        String playSpeedSvgPathAfter = playSpeedButton.find("svg").find("path").getAttribute("d");
+        assertNotEquals(playSpeedSvgPathBefore, playSpeedSvgPathAfter);
+
+        //화질 변경 확인
+        settingButton.shouldBe(Condition.visible).click();
+        $(Constants.VIDEO_SETTING_QUALITY_BUTTON).click();
+        String qualityOptionValue = firstQualityOption.find("input").getValue();
+        firstQualityOption.click();
+        settingButton.click();
+        Thread.sleep(1000);
+        String currentQuality  = $(Constants.VIDEO_SETTING_QUALITY_CURRENT_VALUE).getText();
+        assertTrue(currentQuality.contains(qualityOptionValue));
+
+        //자동 재생 옵션 변경 확인
+        $(Constants.VIDEO_SETTING_AUTO_PLAY_BUTTON).click();
+        String autoPlayOptionValue = $(Constants.UNCHECKED_AUTO_PLAY_OPTION_TEXT).getText();
+        firstQualityOption.click();
+        settingButton.click();
+        Thread.sleep(1000);
+        String currentAutoPlayOption = $(Constants.VIDEO_SETTING_AUTO_PLAY_CURRENT_VALUE).getText();
+        assertTrue(currentAutoPlayOption.contains(autoPlayOptionValue));
     }
 }

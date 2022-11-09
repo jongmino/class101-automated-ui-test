@@ -1,6 +1,6 @@
 package net.class101.automateduitest.Platforms.Core;
 
-import static com.codeborne.selenide.Selenide.$;
+import static net.class101.automateduitest.Common.Behaviors.loginWithEmail;
 import static net.class101.automateduitest.Common.Behaviors.openUrl;
 
 import com.codeborne.selenide.Selenide;
@@ -35,7 +35,7 @@ public class EmailLogin {
     @Test
     @Order(1)
     void login_with_email() {
-        Behaviors.loginWithEmail(Constants.CLASS101_USER_ID, Constants.CLASS101_PASSWORD);
+        loginWithEmail(Constants.CLASS101_USER_ID, Constants.CLASS101_PASSWORD);
     }
 
     @Test

@@ -7,6 +7,7 @@ import static net.class101.automateduitest.Common.Behaviors.checkCashTab;
 import static net.class101.automateduitest.Common.Behaviors.checkMyPageMenu;
 import static net.class101.automateduitest.Common.Behaviors.checkSubscriptionStatusWithNonSubscribed;
 import static net.class101.automateduitest.Common.Behaviors.checkSubscriptionStatusWithSubscribed;
+import static net.class101.automateduitest.Common.Behaviors.checkVideoPlayerFunctionality;
 import static net.class101.automateduitest.Common.Behaviors.loginWithEmail;
 import static net.class101.automateduitest.Common.Behaviors.loginWithNaver;
 import static net.class101.automateduitest.Common.Behaviors.logout;
@@ -249,8 +250,15 @@ public class TestAll {
             }
 
             @Test
+            @DisplayName("영상 재생 확인")
             void verifyVideoPlay() {
                 playClass();
+            }
+
+            @Test
+            @DisplayName("플레이어 기능 확인")
+            void verifyVideoPlayerFunctionality() throws InterruptedException {
+                checkVideoPlayerFunctionality();
             }
         }
     }
