@@ -93,14 +93,14 @@ public final class Behaviors {
         //클립보드에 아이디 복사
         Selenide.clipboard().setText(userId);
         //붙여넣기
-        naverEmailField.sendKeys(Keys.COMMAND + "v");
+        naverEmailField.sendKeys(Util.paste());
 
         Thread.sleep(1000);
 
         //같은 방법으로 비밀번호 입력
         naverPasswordField.click();
         Selenide.clipboard().setText(password);
-        naverPasswordField.sendKeys(Keys.COMMAND + "v");
+        naverPasswordField.sendKeys(Util.paste());
 
         Thread.sleep(1000);
 
