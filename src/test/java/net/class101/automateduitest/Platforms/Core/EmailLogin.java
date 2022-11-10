@@ -1,12 +1,7 @@
 package net.class101.automateduitest.Platforms.Core;
 
-import static net.class101.automateduitest.Common.Behaviors.loginWithEmail;
-import static net.class101.automateduitest.Common.Behaviors.openUrl;
-
-import com.codeborne.selenide.Selenide;
-import net.class101.automateduitest.Constants;
-import net.class101.automateduitest.Common.Behaviors;
-import org.junit.jupiter.api.AfterAll;
+import net.class101.automateduitest.Behaviors.Core;
+import net.class101.automateduitest.Pages.Plus.Home;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
@@ -24,23 +19,18 @@ public class EmailLogin {
 
     @BeforeAll
     void setUp() {
-        openUrl(Constants.STAGING_PLUS_HOME_URL);
-    }
-
-    @AfterAll
-    static void afterAll() {
-        Selenide.closeWebDriver();
+        Home.openPage();
     }
 
     @Test
     @Order(1)
     void login_with_email() {
-        loginWithEmail(Constants.CLASS101_USER_ID, Constants.CLASS101_PASSWORD);
+        Core.loginWithNonSubscribedUser();
     }
 
     @Test
     @Order(2)
     void logout() {
-        Behaviors.logout();
+        Core.logout();
     }
 }

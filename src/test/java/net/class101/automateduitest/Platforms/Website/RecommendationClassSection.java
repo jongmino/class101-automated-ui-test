@@ -1,12 +1,8 @@
 package net.class101.automateduitest.Platforms.Website;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static net.class101.automateduitest.Common.Behaviors.openUrl;
-
-import net.class101.automateduitest.Constants;
-import net.class101.automateduitest.Common.Behaviors;
-import org.junit.jupiter.api.AfterAll;
+import net.class101.automateduitest.Behaviors.Core;
+import net.class101.automateduitest.Behaviors.Website;
+import net.class101.automateduitest.Pages.Plus.Home;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -21,17 +17,13 @@ public class RecommendationClassSection {
 
     @BeforeAll
     static void beforeAll() {
-        openUrl(Constants.STAGING_PLUS_HOME_URL);
-    }
-
-    @AfterAll
-    static void afterAll() {
-        closeWebDriver();
+        Home.openPage();
     }
 
     @Test
     @Order(1)
     void recommendation_class_section_is_visible() {
-        Behaviors.loginWithEmail(Constants.CLASS101_USER_ID, Constants.CLASS101_PASSWORD);
+        Core.loginWithNonSubscribedUser();
+        Website.verifyRecommendedClassSection();
     }
 }

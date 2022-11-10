@@ -1,10 +1,7 @@
 package net.class101.automateduitest.Platforms.Core;
 
-import static com.codeborne.selenide.Selenide.$;
-import static net.class101.automateduitest.Common.Behaviors.loginWithFaceBook;
-import static net.class101.automateduitest.Common.Behaviors.openUrl;
-
-import net.class101.automateduitest.Constants;
+import net.class101.automateduitest.Behaviors.Core;
+import net.class101.automateduitest.Pages.Plus.Home;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -16,13 +13,13 @@ public class FaceBookLogin {
 
     @BeforeAll
     void setUp() {
-        openUrl(Constants.STAGING_PLUS_HOME_URL);
+        Home.openPage();
     }
 
     @Test
     @Order(1)
     void login_with_facebook() {
-        loginWithFaceBook(Constants.FACEBOOK_USER_ID, Constants.FACEBOOK_PASSWORD);
+        Core.loginWithFaceBook();
     }
 
 }
