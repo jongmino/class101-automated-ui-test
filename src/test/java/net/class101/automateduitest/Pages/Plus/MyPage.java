@@ -7,10 +7,12 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 import com.codeborne.selenide.SelenideElement;
+import net.class101.automateduitest.Common.Properties;
+import net.class101.automateduitest.Common.Utils;
 import org.openqa.selenium.By;
 
 public final class MyPage {
-    private static final String STAGING_PLUS_MY_PAGE_URL = "https://staging.class101.net/plus/ko/mypage";
+    private static final String STAGING_PLUS_MY_PAGE_URL = Utils.getProperties().urls.get("plusMyPage").staging;
     private static final By MY_PAGE_LOGOUT_BUTTON = withText("로그아웃");
     private static final By MY_PAGE_CASH_TAB = byXpath("//a[contains(@href,'cash')]");
     private static final By MY_PAGE_SUBSCRIPTION_STATUS_NON = byXpath("//a[contains(@href,'subscription') and contains(.,'구독하기')]");

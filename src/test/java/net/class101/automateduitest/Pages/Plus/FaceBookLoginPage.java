@@ -3,13 +3,14 @@ package net.class101.automateduitest.Pages.Plus;
 import static com.codeborne.selenide.Selenide.$;
 
 import com.codeborne.selenide.SelenideElement;
+import net.class101.automateduitest.Common.Utils;
 
 public final class FaceBookLoginPage {
     private static final String EMAIL_INPUT_ELEMENT = "input[id='email']";
     private static final String PASSWORD_INPUT_ELEMENT = "input[name='pass']";
     private static final String FACEBOOK_LOGIN_BUTTON = "button[type='submit']";
-    private static final String FACEBOOK_USER_ID = "steven@101.inc";
-    private static final String FACEBOOK_PASSWORD = "class101!";
+    private static final String FACEBOOK_USER_ID = Utils.getProperties().accounts.get("plusFacebook").id;
+    private static final String FACEBOOK_PASSWORD = Utils.getProperties().accounts.get("plusFacebook").pw;
 
     public static SelenideElement emailInputElement() {
         return $(EMAIL_INPUT_ELEMENT);

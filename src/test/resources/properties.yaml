@@ -1,0 +1,30 @@
+urls:
+  plusHome:
+    dev: "https://web-preview-master.class101.net/plus/ko"
+    staging: "https://staging.class101.net/plus/ko"
+  plusMyPage:
+    dev: "https://web-preview-master.class101.net/plus/ko/mypage"
+    staging: "https://staging.class101.net/plus/ko/mypage"
+  creatorHome:
+    dev: "https://staging-creator.class101.net/center/products"
+    staging: "https://staging-creator.class101.net/center/products"
+
+accounts:
+  plusNonSubscribed:
+    id: "referral_1@101.inc"
+    pw: "class101!"
+  plusSubscribed:
+    id: "sbtestc422@101.inc"
+    pw: "test001!"-
+  plusNaver:
+    id: "candy6731"
+    pw: "class101!"
+  plusFaceBook:
+    id: "steven@101.inc"
+    pw: "class101!"
+  creatorHasRevenue:
+    id: "revenue_referral_ko@101.inc"
+    pw: "revenue_referral_ko@101.inc"
+  creatorHasClass:
+    id: "sdtest1@101.inc"
+    pw: "class101!"

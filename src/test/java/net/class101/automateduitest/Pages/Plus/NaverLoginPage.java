@@ -4,14 +4,14 @@ import static com.codeborne.selenide.Selenide.$;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import net.class101.automateduitest.Common.Util;
+import net.class101.automateduitest.Common.Utils;
 
 public final class NaverLoginPage {
     private static final String EMAIL_INPUT_ELEMENT = "input[id='id']";
     private static final String PASSWORD_INPUT_ELEMENT = "input[id='pw']";
     private static final String NAVER_LOGIN_BUTTON = "button[class='btn_login']";
-    private static final String NAVER_USER_ID = "candy6731";
-    private static final String NAVER_PASSWORD = "class101!";
+    private static final String NAVER_USER_ID = Utils.getProperties().accounts.get("plusNaver").id;
+    private static final String NAVER_PASSWORD = Utils.getProperties().accounts.get("plusNaver").pw;
 
     public static SelenideElement emailInputElement() {
         return $(EMAIL_INPUT_ELEMENT);
@@ -28,13 +28,13 @@ public final class NaverLoginPage {
     public static void fillDefaultEmail() {
         emailInputElement().click();
         Selenide.clipboard().setText(NAVER_USER_ID);
-        emailInputElement().sendKeys(Util.paste());
+        emailInputElement().sendKeys(Utils.paste());
     }
 
     public static void fillDefaultPassword() {
         passwordInputElement().click();
         Selenide.clipboard().setText(NAVER_PASSWORD);
-        passwordInputElement().sendKeys(Util.paste());
+        passwordInputElement().sendKeys(Utils.paste());
     }
 
     public static void defaultLogin() throws InterruptedException {

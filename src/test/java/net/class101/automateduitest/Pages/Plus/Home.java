@@ -9,10 +9,11 @@ import static com.codeborne.selenide.Selenide.open;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.SelenideElement;
+import net.class101.automateduitest.Common.Utils;
 import org.openqa.selenium.By;
 
 public final class Home {
-    private static final String STAGING_PLUS_HOME_URL = "https://staging.class101.net/plus/ko";
+    private static final String STAGING_PLUS_HOME_URL = Utils.getProperties().urls.get("plusHome").staging;
     private static final String USER_NAVIGATION_PROFILE_IMG = "img[alt='profile']";
     private static final By USER_NAVIGATION_LOGIN_BUTTON = withText("로그인");
     private static final By TRENDING_CLASS_SECTION = withText("실시간 인기 클래스");

@@ -1,6 +1,6 @@
 package net.class101.automateduitest.Behaviors;
 
-import static net.class101.automateduitest.Common.Util.urlContains;
+import static net.class101.automateduitest.Common.Utils.urlContains;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
