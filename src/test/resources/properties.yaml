@@ -8,6 +8,9 @@ urls:
   creatorHome:
     dev: "https://staging-creator.class101.net/center/products"
     staging: "https://staging-creator.class101.net/center/products"
+  lecturePage:
+    dev: ""
+    staging: "https://staging.class101.net/plus/ko/classes/5ee1d9b3260ecd6be569ce83/lectures/5ef6db612e1d730dbd5cc8a0"
 
 accounts:
   plusNonSubscribed:
@@ -15,7 +18,7 @@ accounts:
     pw: "class101!"
   plusSubscribed:
     id: "sbtestc422@101.inc"
-    pw: "test001!"-
+    pw: "test001!"
   plusNaver:
     id: "candy6731"
     pw: "class101!"
