@@ -50,11 +50,11 @@ public class AllLoginPage {
             $(AllLoginPage.Elements.LOGIN_BUTTON).click();
         }
 
-        public static void loginWithNonSubscribedUser() {
+        public static void loginAsNonSubscriber() {
             loginWithEmail(NON_SUBSCRIBED_USER_ID, NON_SUBSCRIBED_PASSWORD);
         }
 
-        public static void loginWithSubscribedUser() {
+        public static void loginAsSubscriber() {
             loginWithEmail(SUBSCRIBED_USER_ID, SUBSCRIBED_PASSWORD);
         }
     }

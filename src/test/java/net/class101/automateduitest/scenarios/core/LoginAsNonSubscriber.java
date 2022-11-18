@@ -26,7 +26,7 @@ public class LoginAsNonSubscriber implements TestScenario {
         Home.Elements.loginButton().click();
         //다른 방법으로 로그인 버튼 클릭
         LoginPage.Elements.allLoginButton().click();
-        AllLoginPage.Actions.loginWithNonSubscribedUser();
+        AllLoginPage.Actions.loginAsNonSubscriber();
         return this;
     }
 

@@ -25,7 +25,7 @@ public class LoginAsSubscriber implements TestScenario {
 
         Home.Elements.loginButton().click();
         LoginPage.Elements.allLoginButton().click();
-        AllLoginPage.Actions.loginWithSubscribedUser();
+        AllLoginPage.Actions.loginAsSubscriber();
 
         return this;
     }
