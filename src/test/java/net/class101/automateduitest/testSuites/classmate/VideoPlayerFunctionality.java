@@ -2,14 +2,11 @@ package net.class101.automateduitest.testSuites.classmate;
 
 import com.codeborne.selenide.Configuration;
 import net.class101.automateduitest.pages.plus.Home;
-import net.class101.automateduitest.pages.plus.LecturePage;
-import net.class101.automateduitest.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.scenarios.classmate.ChangeAutoPlay;
 import net.class101.automateduitest.scenarios.classmate.ChangePlaySpeed;
 import net.class101.automateduitest.scenarios.classmate.ChangeVideoQuality;
 import net.class101.automateduitest.scenarios.classmate.PlayLecture;
 import net.class101.automateduitest.scenarios.core.LoginAsSubscriber;
-import net.class101.automateduitest.scenarios.website.CheckCurationSection;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;

@@ -1,7 +1,6 @@
 package net.class101.automateduitest.scenarios.classmate;
 
 import com.codeborne.selenide.Condition;
-import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.pages.plus.MyPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 

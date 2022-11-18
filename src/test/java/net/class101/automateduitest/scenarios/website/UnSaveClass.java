@@ -1,6 +1,5 @@
 package net.class101.automateduitest.scenarios.website;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.TestScenario;
 
