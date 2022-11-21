@@ -6,6 +6,9 @@ urls:
     dev: "https://web-preview-master.class101.net/plus/ko/mypage"
     staging: "https://staging.class101.net/plus/ko/mypage"
   creatorHome:
+    dev: "https://staging-creator.class101.net/"
+    staging: "https://staging-creator.class101.net/"
+  creatorProduct:
     dev: "https://staging-creator.class101.net/center/products"
     staging: "https://staging-creator.class101.net/center/products"
   lecturePage:
