@@ -34,3 +34,6 @@ accounts:
   creatorHasClass:
     id: "sdtest1@101.inc"
     pw: "class101!"
+  creatorNew:
+    id: "referral_2@101.inc"
+    pw: "class101!"

@@ -33,6 +33,8 @@ public class CreatorLoginPage {
         private static final String CREATOR_HAS_REVENUE_PASSWORD = accounts.get("creatorHasRevenue").pw;
         private static final String CREATOR_HAS_CLASS_USER_ID = accounts.get("creatorHasClass").id;
         private static final String CREATOR_HAS_CLASS_PASSWORD = accounts.get("creatorHasClass").pw;
+        private static final String CREATOR_NEW_USER_ID = accounts.get("creatorNew").id;
+        private static final String CREATOR_NEW_PASSWORD = accounts.get("creatorNew").pw;
 
         public static void loginWithEmail(String email, String password) {
             CreatorLoginPage.Elements.emailInputElement().sendKeys(email);
@@ -46,6 +48,10 @@ public class CreatorLoginPage {
 
         public static void loginAsCreatorHasRevenue() {
             loginWithEmail(CREATOR_HAS_REVENUE_USER_ID, CREATOR_HAS_REVENUE_PASSWORD);
+        }
+
+        public static void loginAsCreatorNew() {
+            loginWithEmail(CREATOR_NEW_USER_ID, CREATOR_NEW_PASSWORD);
         }
     }
 }
