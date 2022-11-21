@@ -17,11 +17,11 @@ public class CreatorAddProductPage {
         }
 
         public static SelenideElement createDigitalFileButton() {
-            return $(CREATE_CLASS_BUTTON);
+            return $(CREATE_DIGITAL_FILE_BUTTON);
         }
 
         public static SelenideElement createEBookButton() {
-            return $(CREATE_CLASS_BUTTON);
+            return $(CREATE_E_BOOK_BUTTON);
         }
 
     }
