@@ -4,6 +4,8 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import net.class101.automateduitest.pages.creatorCenter.CreatorHome;
+import net.class101.automateduitest.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.classmate.ChangeAutoPlay;
 import net.class101.automateduitest.scenarios.classmate.ChangePlaySpeed;
@@ -25,6 +27,17 @@ import net.class101.automateduitest.scenarios.core.LoginAsSubscriber;
 import net.class101.automateduitest.scenarios.core.LoginWithFacebook;
 import net.class101.automateduitest.scenarios.core.LoginWithNaver;
 import net.class101.automateduitest.scenarios.core.Logout;
+import net.class101.automateduitest.scenarios.creator.CheckAddClass;
+import net.class101.automateduitest.scenarios.creator.CheckAddDigitalFile;
+import net.class101.automateduitest.scenarios.creator.CheckAddEBook;
+import net.class101.automateduitest.scenarios.creator.CheckClassCommentPage;
+import net.class101.automateduitest.scenarios.creator.CheckClassNews;
+import net.class101.automateduitest.scenarios.creator.CheckCommentAnswered;
+import net.class101.automateduitest.scenarios.creator.CheckCommentNotAnswered;
+import net.class101.automateduitest.scenarios.creator.CheckProductList;
+import net.class101.automateduitest.scenarios.creator.DeleteFirstProduct;
+import net.class101.automateduitest.scenarios.creator.LoginAsCreatorHasClass;
+import net.class101.automateduitest.scenarios.creator.LoginAsCreatorNew;
 import net.class101.automateduitest.scenarios.website.CheckCurationSection;
 import net.class101.automateduitest.scenarios.website.CheckMyClassSection;
 import net.class101.automateduitest.scenarios.website.CheckRecommendedCategorySection;
@@ -295,6 +308,92 @@ public class TestAll {
                 ChangePlaySpeed.getInstance().proceed().validate();
                 ChangeVideoQuality.getInstance().proceed().validate();
                 ChangeAutoPlay.getInstance().proceed().validate();
+            }
+        }
+    }
+
+    @Nested
+    @DisplayName("크리에이터 플랫폼")
+    public class CreatorPlatform {
+        @Nested
+        @DisplayName("크리에이터 상품 테스트 계정")
+        public class CreatorProductTestAccount {
+
+            @BeforeAll
+            static void beforeAll() {
+                CreatorHome.Actions.openPage();
+                LoginAsCreatorNew.getInstance().proceed().validate();
+            }
+
+            @AfterAll
+            static void afterAll() {
+                closeWebDriver();
+            }
+
+            @BeforeEach
+            void setUp() {
+                CreatorProductPage.Elements.creatorCenterLogo().click();
+            }
+
+            @AfterEach
+            void tearDown() {
+                DeleteFirstProduct.getInstance().proceed();
+            }
+
+            @Test
+            void addClass() {
+                CheckAddClass.getInstance().proceed().validate();
+            }
+
+            @Test
+            void addDigitalFile() {
+                CheckAddDigitalFile.getInstance().proceed().validate();
+            }
+
+            @Test
+            void addEBook() {
+                CheckAddEBook.getInstance().proceed().validate();
+            }
+        }
+
+        @Nested
+        @DisplayName("크리에이터 클래스 정보 테스트 계정")
+        public class CreatorClassTestAccount {
+
+            @BeforeAll
+            static void beforeAll() {
+                CreatorHome.Actions.openPage();
+                LoginAsCreatorHasClass.getInstance().proceed().validate();
+            }
+
+            @AfterAll
+            static void afterAll() {
+                closeWebDriver();
+            }
+
+            @Test
+            void productList() {
+                CheckProductList.getInstance().proceed().validate();
+            }
+
+            @Test
+            void commentPage() {
+                CheckClassCommentPage.getInstance().proceed().validate();
+            }
+
+            @Test
+            void commentAnswered() {
+                CheckCommentAnswered.getInstance().proceed().validate();
+            }
+
+            @Test
+            void commentNotAnswered() {
+                CheckCommentNotAnswered.getInstance().proceed().validate();
+            }
+
+            @Test
+            void classNews() {
+                CheckClassNews.getInstance().proceed().validate();
             }
         }
     }

@@ -22,6 +22,7 @@ public class CheckAddDigitalFile implements TestScenario {
     @Override
     public TestScenario proceed() {
         try{
+            Thread.sleep(2000);
             CreatorProductPage.Elements.createProductButton().shouldNotBe(Condition.disabled).click();
             Thread.sleep(2000);
             CreatorAddProductPage.Elements.createDigitalFileButton().shouldBe(Condition.visible).click();
