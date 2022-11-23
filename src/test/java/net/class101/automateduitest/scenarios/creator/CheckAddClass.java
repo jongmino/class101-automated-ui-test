@@ -22,11 +22,10 @@ public class CheckAddClass implements TestScenario {
     @Override
     public TestScenario proceed() {
         try{
-            Thread.sleep(2000);
-            CreatorProductPage.Elements.createProductButton().shouldBe(Condition.enabled).click();
+            CreatorProductPage.Elements.createProductButton().shouldNotBe(Condition.disabled).click();
             Thread.sleep(2000);
             CreatorAddProductPage.Elements.createClassButton().shouldBe(Condition.visible).click();
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         }catch (InterruptedException e){
             e.printStackTrace();
         }

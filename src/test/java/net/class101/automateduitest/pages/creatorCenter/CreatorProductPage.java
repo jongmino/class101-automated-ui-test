@@ -53,7 +53,7 @@ public class CreatorProductPage {
         public static void deleteFirstProduct() {
             try{
                 CreatorProductPage.Elements.creatorCenterLogo().click();
-                Thread.sleep(2000);
+                Thread.sleep(1000);
                 CreatorProductPage.Elements.firstProductSelectBox().shouldBe(Condition.visible).click();
                 Thread.sleep(1000);
                 CreatorProductPage.Elements.deleteButton().shouldBe(Condition.visible).click();
