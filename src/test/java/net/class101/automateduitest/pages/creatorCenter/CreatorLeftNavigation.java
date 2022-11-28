@@ -13,6 +13,7 @@ public class CreatorLeftNavigation {
         private static final By CLASS_COMMENT_TAB = byXpath("//div[text()='클래스 댓글']");
         private static final By CLASS_NEWS_TAB = byXpath("//div[text()='클래스 소식']");
         private static final By REFERRAL_TAB = byXpath("//span[text()='클래스101+ 초대']");
+        private static final By FILE_REQUEST_HISTORY_TAB = byXpath("//span[text()='파일 요청 내역']");
 
         public static SelenideElement classTab() {
             return $(CLASS_TAB);
@@ -28,6 +29,10 @@ public class CreatorLeftNavigation {
 
         public static SelenideElement referralTab() {
             return $(REFERRAL_TAB);
+        }
+
+        public static SelenideElement fileRequestTab() {
+            return $(FILE_REQUEST_HISTORY_TAB);
         }
     }
 
