@@ -3,18 +3,17 @@ package net.class101.automateduitest.scenarios.creator;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
-import net.class101.automateduitest.common.Utils;
 import net.class101.automateduitest.pages.creatorCenter.CreatorLeftNavigation;
 import net.class101.automateduitest.pages.creatorCenter.CreatorReferralPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
-public class CheckReferralTab implements TestScenario {
+public class CheckCreatorReferralTab implements TestScenario {
 
-    private static CheckReferralTab instance = null;
+    private static CheckCreatorReferralTab instance = null;
 
-    public static CheckReferralTab getInstance() {
+    public static CheckCreatorReferralTab getInstance() {
         if(instance == null){
-            instance = new CheckReferralTab();
+            instance = new CheckCreatorReferralTab();
         }
         return instance;
     }

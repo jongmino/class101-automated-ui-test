@@ -20,7 +20,7 @@ public class MyPage {
         private static final By MY_PAGE_SUBSCRIPTION_STATUS_SUBSCRIBED = byXpath("//a[contains(@href,'subscription') and contains(.,'구독 중')]");
         private static final By MY_PAGE_ORDER_TAB = byXpath("//a[contains(@href,'orders')]");
         private static final By MY_PAGE_REFERRAL_TAB = byXpath("//a[contains(@href,'classmate-referral')]");
-        private static final By MY_PAGE_CREATOR_CENTER_TAB = byXpath("//button[contains(.,'크리에이터 센터')]");
+        private static final By MY_PAGE_CREATOR_CENTER_TAB = byXpath("(//h6[text()='크리에이터 센터'])[2]");
         private static final By MY_PAGE_FAQ_TAB = byXpath("//a[contains(@href,'intercom.help/class101faq')]");
         private static final By MY_PAGE_ENQUIRY_TAB = byXpath("//button[contains(.,'1:1 문의')]");
         private static final By MY_PAGE_SETTING_TAB = byXpath("//a[contains(@href,'setting')]");

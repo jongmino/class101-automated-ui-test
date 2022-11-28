@@ -19,9 +19,8 @@ public class SaveClass implements TestScenario {
     public TestScenario proceed() {
         try {
             //실시간 인기 클래스 첫번째 아이템 찜하기
-            Home.Elements.firstSaveButtonOnTrendingNow().click();
             Thread.sleep(2000);
-
+            Home.Elements.firstSaveButtonOnTrendingNow().shouldBe(Condition.enabled).click();
         }catch (InterruptedException e){
             e.printStackTrace();
         }

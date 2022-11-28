@@ -34,6 +34,8 @@ import net.class101.automateduitest.scenarios.creator.CheckClassCommentPage;
 import net.class101.automateduitest.scenarios.creator.CheckClassNews;
 import net.class101.automateduitest.scenarios.creator.CheckCommentAnswered;
 import net.class101.automateduitest.scenarios.creator.CheckCommentNotAnswered;
+import net.class101.automateduitest.scenarios.creator.CheckCreatorReferralTab;
+import net.class101.automateduitest.scenarios.creator.CheckFileRequestTab;
 import net.class101.automateduitest.scenarios.creator.CheckProductList;
 import net.class101.automateduitest.scenarios.creator.DeleteFirstProduct;
 import net.class101.automateduitest.scenarios.creator.LoginAsCreatorHasClass;
@@ -176,16 +178,9 @@ public class TestAll {
                 CheckRecommendedClassSection.getInstance().proceed().validate();
             }
 
-            @Test
-            @DisplayName("찜하기 추가 / 제거")
-            void verifySaveClass() throws InterruptedException {
-                SaveClass.getInstance().proceed().validate();
-                UnSaveClass.getInstance().proceed().validate();
-            }
         }
 
         @Nested
-        @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
         @DisplayName("구독 유저")
         public class WithSubscribedAccount {
 
@@ -206,10 +201,17 @@ public class TestAll {
             }
 
             @Test
-            @Order(2)
             @DisplayName("내 클래스 섹션 검증")
             void verifyMyClass() {
                 CheckMyClassSection.getInstance().proceed().validate();
+            }
+
+
+            @Test
+            @DisplayName("찜하기 추가 / 제거")
+            void verifySaveClass() throws InterruptedException {
+                SaveClass.getInstance().proceed().validate();
+                UnSaveClass.getInstance().proceed().validate();
             }
         }
     }
@@ -394,6 +396,16 @@ public class TestAll {
             @Test
             void classNews() {
                 CheckClassNews.getInstance().proceed().validate();
+            }
+
+            @Test
+            void referralTab() {
+                CheckCreatorReferralTab.getInstance().proceed().validate();
+            }
+
+            @Test
+            void fileRequestTab() {
+                CheckFileRequestTab.getInstance().proceed().validate();
             }
         }
     }

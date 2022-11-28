@@ -26,7 +26,7 @@ public class Home {
         private static final By ENGLISH_CATEGORY_BUTTON = byXpath("//button[contains(.,'영어')]");
         private static final By FIRST_CURATION_ITEM = byXpath("//img[@alt='desktop-hero-banner']");
         private static final By MY_CLASS_SECTION = byXpath("//h4[contains(.,'내 클래스')]");
-        private static final By SEARCH_BAR = byXpath("//p[contains(.,'찾기')]");
+        private static final By SEARCH_BAR = byXpath("//span[contains(.,'찾기')]");
         private static final By SEARCH_PANEL_TITLE = withText("지금 인기있는");
         private static final By SEARCH_BAR_INPUT_AFTER_CLICK = byTagName("input");
 
