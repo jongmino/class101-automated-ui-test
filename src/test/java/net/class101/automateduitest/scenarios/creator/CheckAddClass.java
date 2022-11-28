@@ -26,7 +26,7 @@ public class CheckAddClass implements TestScenario {
             CreatorProductPage.Elements.createProductButton().shouldNotBe(Condition.disabled).click();
             Thread.sleep(2000);
             CreatorAddProductPage.Elements.createClassButton().shouldBe(Condition.visible).click();
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         }catch (InterruptedException e){
             e.printStackTrace();
         }
