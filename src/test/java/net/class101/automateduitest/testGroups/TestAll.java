@@ -37,6 +37,7 @@ import net.class101.automateduitest.scenarios.creator.CheckCreatorReferralTab;
 import net.class101.automateduitest.scenarios.creator.CheckFileRequestTab;
 import net.class101.automateduitest.scenarios.creator.CheckOrderAndShippingTab;
 import net.class101.automateduitest.scenarios.creator.CheckProductList;
+import net.class101.automateduitest.scenarios.creator.CheckStockTab;
 import net.class101.automateduitest.scenarios.creator.DeleteFirstProduct;
 import net.class101.automateduitest.scenarios.creator.LoginAsCreatorHasClass;
 import net.class101.automateduitest.scenarios.creator.LoginAsCreatorNew;
@@ -411,6 +412,11 @@ public class TestAll {
             @Test
             void orderAndShippingTab() {
                 CheckOrderAndShippingTab.getInstance().proceed().validate();
+            }
+
+            @Test
+            void stockTab() {
+                CheckStockTab.getInstance().proceed().validate();
             }
         }
     }

@@ -6,7 +6,7 @@ import net.class101.automateduitest.scenarios.creator.LoginAsCreatorHasClass;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class ReferralTab {
+public class Referral {
 
     @BeforeAll
     static void beforeAll() {
