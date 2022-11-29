@@ -24,18 +24,18 @@ import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusT
 import net.class101.automateduitest.scenarios.classmate.PlayLecture;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
 import net.class101.automateduitest.scenarios.core.LoginAsSubscriber;
-import net.class101.automateduitest.scenarios.core.LoginWithFacebook;
 import net.class101.automateduitest.scenarios.core.LoginWithNaver;
 import net.class101.automateduitest.scenarios.core.Logout;
 import net.class101.automateduitest.scenarios.creator.CheckAddClass;
 import net.class101.automateduitest.scenarios.creator.CheckAddDigitalFile;
 import net.class101.automateduitest.scenarios.creator.CheckAddEBook;
-import net.class101.automateduitest.scenarios.creator.CheckClassCommentPage;
+import net.class101.automateduitest.scenarios.creator.CheckClassCommentTab;
 import net.class101.automateduitest.scenarios.creator.CheckClassNews;
 import net.class101.automateduitest.scenarios.creator.CheckCommentAnswered;
 import net.class101.automateduitest.scenarios.creator.CheckCommentNotAnswered;
 import net.class101.automateduitest.scenarios.creator.CheckCreatorReferralTab;
 import net.class101.automateduitest.scenarios.creator.CheckFileRequestTab;
+import net.class101.automateduitest.scenarios.creator.CheckOrderAndShippingTab;
 import net.class101.automateduitest.scenarios.creator.CheckProductList;
 import net.class101.automateduitest.scenarios.creator.DeleteFirstProduct;
 import net.class101.automateduitest.scenarios.creator.LoginAsCreatorHasClass;
@@ -380,7 +380,7 @@ public class TestAll {
 
             @Test
             void commentPage() {
-                CheckClassCommentPage.getInstance().proceed().validate();
+                CheckClassCommentTab.getInstance().proceed().validate();
             }
 
             @Test
@@ -406,6 +406,11 @@ public class TestAll {
             @Test
             void fileRequestTab() {
                 CheckFileRequestTab.getInstance().proceed().validate();
+            }
+
+            @Test
+            void orderAndShippingTab() {
+                CheckOrderAndShippingTab.getInstance().proceed().validate();
             }
         }
     }

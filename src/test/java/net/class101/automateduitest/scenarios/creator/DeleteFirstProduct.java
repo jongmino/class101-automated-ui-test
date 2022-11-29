@@ -22,6 +22,5 @@ public class DeleteFirstProduct implements TestScenario {
 
     @Override
     public void validate() {
-
     }
 }

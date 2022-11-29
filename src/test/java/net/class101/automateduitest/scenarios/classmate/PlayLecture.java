@@ -22,7 +22,7 @@ public class PlayLecture implements TestScenario {
 
         Home.Elements.firstCurationItem().click();
 
-        ProductDetailPage.Elements.playLectureButton().click();
+        ProductDetailPage.Elements.playLectureButton().shouldBe(Condition.enabled).click();
 
         return this;
     }

@@ -58,6 +58,7 @@ public class CreatorProductPage {
                 Thread.sleep(1000);
                 CreatorProductPage.Elements.deleteButton().shouldBe(Condition.visible).click();
                 CreatorProductPage.Elements.modalDeleteButton().shouldBe(Condition.visible).click();
+                CreatorProductPage.Elements.modalDeleteButton().should(Condition.disappear);
             }catch (InterruptedException e){
                 e.printStackTrace();
             }

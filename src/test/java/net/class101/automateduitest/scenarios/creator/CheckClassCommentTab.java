@@ -7,13 +7,13 @@ import net.class101.automateduitest.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.pages.creatorCenter.CreatorLeftNavigation;
 import net.class101.automateduitest.scenarios.TestScenario;
 
-public class CheckClassCommentPage implements TestScenario {
+public class CheckClassCommentTab implements TestScenario {
 
-    private static CheckClassCommentPage instance = null;
+    private static CheckClassCommentTab instance = null;
 
-    public static CheckClassCommentPage getInstance() {
+    public static CheckClassCommentTab getInstance() {
         if (instance == null) {
-            instance = new CheckClassCommentPage();
+            instance = new CheckClassCommentTab();
         }
         return instance;
     }

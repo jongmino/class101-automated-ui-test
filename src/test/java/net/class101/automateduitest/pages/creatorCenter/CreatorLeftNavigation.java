@@ -14,6 +14,8 @@ public class CreatorLeftNavigation {
         private static final By CLASS_NEWS_TAB = byXpath("//div[text()='클래스 소식']");
         private static final By REFERRAL_TAB = byXpath("//span[text()='클래스101+ 초대']");
         private static final By FILE_REQUEST_HISTORY_TAB = byXpath("//span[text()='파일 요청 내역']");
+        private static final By ORDER_AND_SHIPPING_TAB = byXpath("//span[text()='주문 및 배송']");
+        private static final By ORDER_AND_SHIPPING_SHOP_TAB = byXpath("//div[text()='[Created by] 샌디테스트1']");
 
         public static SelenideElement classTab() {
             return $(CLASS_TAB);
@@ -33,6 +35,14 @@ public class CreatorLeftNavigation {
 
         public static SelenideElement fileRequestTab() {
             return $(FILE_REQUEST_HISTORY_TAB);
+        }
+
+        public static SelenideElement orderAndShippingTab() {
+            return $(ORDER_AND_SHIPPING_TAB);
+        }
+
+        public static SelenideElement orderAndShippingShopTab() {
+            return $(ORDER_AND_SHIPPING_SHOP_TAB);
         }
     }
 

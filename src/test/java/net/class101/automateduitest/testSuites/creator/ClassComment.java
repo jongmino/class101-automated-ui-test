@@ -2,7 +2,7 @@ package net.class101.automateduitest.testSuites.creator;
 
 import com.codeborne.selenide.Configuration;
 import net.class101.automateduitest.pages.creatorCenter.CreatorHome;
-import net.class101.automateduitest.scenarios.creator.CheckClassCommentPage;
+import net.class101.automateduitest.scenarios.creator.CheckClassCommentTab;
 import net.class101.automateduitest.scenarios.creator.CheckCommentAnswered;
 import net.class101.automateduitest.scenarios.creator.CheckCommentNotAnswered;
 import net.class101.automateduitest.scenarios.creator.LoginAsCreatorHasClass;
@@ -20,7 +20,7 @@ public class ClassComment {
 
     @Test
     void commentPage() {
-        CheckClassCommentPage.getInstance().proceed().validate();
+        CheckClassCommentTab.getInstance().proceed().validate();
     }
 
     @Test
