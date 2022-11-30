@@ -34,6 +34,7 @@ import net.class101.automateduitest.scenarios.creator.CheckClassNews;
 import net.class101.automateduitest.scenarios.creator.CheckClassSettlement;
 import net.class101.automateduitest.scenarios.creator.CheckCommentAnswered;
 import net.class101.automateduitest.scenarios.creator.CheckCommentNotAnswered;
+import net.class101.automateduitest.scenarios.creator.CheckCreatorGuideTab;
 import net.class101.automateduitest.scenarios.creator.CheckCreatorReferralTab;
 import net.class101.automateduitest.scenarios.creator.CheckFileRequestTab;
 import net.class101.automateduitest.scenarios.creator.CheckOrderAndShippingTab;
@@ -146,8 +147,8 @@ public class TestAll {
                 LoginAsNonSubscriber.getInstance().proceed().validate();
             }
 
-            @BeforeEach
-            void setUp() {
+            @AfterEach
+            void tearDown() {
                 Home.Actions.openPage();
             }
 
@@ -193,8 +194,8 @@ public class TestAll {
                 LoginAsSubscriber.getInstance().proceed().validate();
             }
 
-            @BeforeEach
-            void setUp() {
+            @AfterEach
+            void tearDown() {
                 Home.Actions.openPage();
             }
 
@@ -238,8 +239,8 @@ public class TestAll {
                 closeWebDriver();
             }
 
-            @BeforeEach
-            void setUp() {
+            @AfterEach
+            void tearDown() {
                 Home.Actions.openPage();
             }
 
@@ -289,8 +290,8 @@ public class TestAll {
                 closeWebDriver();
             }
 
-            @BeforeEach
-            void setUp() {
+            @AfterEach
+            void tearDown() {
                 Home.Actions.openPage();
             }
 
@@ -379,6 +380,11 @@ public class TestAll {
                 closeWebDriver();
             }
 
+            @AfterEach
+            void tearDown() {
+                CreatorHome.Actions.openPage();
+            }
+
             @Test
             @DisplayName("상품 리스트 목록")
             void productList() {
@@ -449,6 +455,12 @@ public class TestAll {
             @DisplayName("키트 정산")
             void kitSettlement() {
                 CheckPlusSettlement.getInstance().proceed().validate();
+            }
+
+            @Test
+            @DisplayName("크리에이터 가이드 센터")
+            void creatorGuideCenter() {
+                CheckCreatorGuideTab.getInstance().proceed().validate();
             }
         }
     }

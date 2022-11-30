@@ -24,7 +24,7 @@ public class ChangePlaySpeed implements TestScenario {
 
         try {
             LecturePage.Elements.videoElementPlaying().hover();
-            LecturePage.Elements.playSpeedButton().shouldBe(Condition.visible);
+            LecturePage.Elements.playSpeedButton().shouldBe(Condition.enabled);
             playSpeedSvgPathBefore = LecturePage.Actions.getPlaySpeedSVGPathValue();
             Thread.sleep(1000);
             LecturePage.Elements.playSpeedButton().click();

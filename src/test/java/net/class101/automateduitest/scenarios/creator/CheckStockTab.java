@@ -19,7 +19,7 @@ public class CheckStockTab implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-        CreatorLeftNavigation.Elements.stockTab().click();
+        CreatorLeftNavigation.Elements.stockTab().shouldBe(Condition.enabled).click();
         CreatorLeftNavigation.Elements.stockAllTab().shouldBe(Condition.visible).click();
         return this;
     }
