@@ -20,6 +20,8 @@ public class CreatorLeftNavigation {
         private static final By CLASS_SETTLEMENT_TAB = byXpath("//span[text()='클래스 정산']");
         private static final By INDIVIDUAL_CLASS_SETTLEMENT_TAB = byXpath("//div[text()='샌디테스트1']");
         private static final By PLUS_CLASS_SETTLEMENT_TAB = byXpath("//div[text()='클래스101+ 수익']");
+        private static final By KIT_SETTLEMENT_TAB = byXpath("//span[text()='키트 정산']");
+        private static final By KIT_SETTLEMENT_SUB_TAB = byXpath("//div[text()='[Created by] 샌디테스트1']");
 
         public static SelenideElement classTab() {
             return $(CLASS_TAB);
@@ -67,6 +69,14 @@ public class CreatorLeftNavigation {
         
         public static SelenideElement plusClassSettlementTab() {
             return $(PLUS_CLASS_SETTLEMENT_TAB);
+        }
+
+        public static SelenideElement kitSettlementTab() {
+            return $(KIT_SETTLEMENT_TAB);
+        }
+
+        public static SelenideElement kitSettlementSubTab() {
+            return $(KIT_SETTLEMENT_SUB_TAB);
         }
     }
 

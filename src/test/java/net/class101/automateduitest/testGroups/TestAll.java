@@ -444,6 +444,12 @@ public class TestAll {
             void plusSettlement() {
                 CheckPlusSettlement.getInstance().proceed().validate();
             }
+
+            @Test
+            @DisplayName("키트 정산")
+            void kitSettlement() {
+                CheckPlusSettlement.getInstance().proceed().validate();
+            }
         }
     }
 }
