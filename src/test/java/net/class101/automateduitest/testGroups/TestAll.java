@@ -31,6 +31,7 @@ import net.class101.automateduitest.scenarios.creator.CheckAddDigitalFile;
 import net.class101.automateduitest.scenarios.creator.CheckAddEBook;
 import net.class101.automateduitest.scenarios.creator.CheckClassCommentTab;
 import net.class101.automateduitest.scenarios.creator.CheckClassNews;
+import net.class101.automateduitest.scenarios.creator.CheckClassSettlement;
 import net.class101.automateduitest.scenarios.creator.CheckCommentAnswered;
 import net.class101.automateduitest.scenarios.creator.CheckCommentNotAnswered;
 import net.class101.automateduitest.scenarios.creator.CheckCreatorReferralTab;
@@ -344,16 +345,19 @@ public class TestAll {
             }
 
             @Test
+            @DisplayName("클래스 만들기")
             void addClass() {
                 CheckAddClass.getInstance().proceed().validate();
             }
 
             @Test
+            @DisplayName("디지털 파일 만들기")
             void addDigitalFile() {
                 CheckAddDigitalFile.getInstance().proceed().validate();
             }
 
             @Test
+            @DisplayName("전자책 만들기")
             void addEBook() {
                 CheckAddEBook.getInstance().proceed().validate();
             }
@@ -375,48 +379,63 @@ public class TestAll {
             }
 
             @Test
+            @DisplayName("상품 리스트 목록")
             void productList() {
                 CheckProductList.getInstance().proceed().validate();
             }
 
             @Test
+            @DisplayName("클래스 댓글 페이지")
             void commentPage() {
                 CheckClassCommentTab.getInstance().proceed().validate();
             }
 
             @Test
+            @DisplayName("클래스 댓글 페이지 답변완료")
             void commentAnswered() {
                 CheckCommentAnswered.getInstance().proceed().validate();
             }
 
             @Test
+            @DisplayName("클래스 댓글 페이지 답변 대기중")
             void commentNotAnswered() {
                 CheckCommentNotAnswered.getInstance().proceed().validate();
             }
 
             @Test
+            @DisplayName("클래스 소식")
             void classNews() {
                 CheckClassNews.getInstance().proceed().validate();
             }
 
             @Test
+            @DisplayName("클래스101+ 초대")
             void referralTab() {
                 CheckCreatorReferralTab.getInstance().proceed().validate();
             }
 
             @Test
+            @DisplayName("파일 요청 내역")
             void fileRequestTab() {
                 CheckFileRequestTab.getInstance().proceed().validate();
             }
 
             @Test
+            @DisplayName("주문 및 배송")
             void orderAndShippingTab() {
                 CheckOrderAndShippingTab.getInstance().proceed().validate();
             }
 
             @Test
+            @DisplayName("재고")
             void stockTab() {
                 CheckStockTab.getInstance().proceed().validate();
+            }
+
+            @Test
+            @DisplayName("클래스 정산")
+            void classSettlement() {
+                CheckClassSettlement.getInstance().proceed().validate();
             }
         }
     }
