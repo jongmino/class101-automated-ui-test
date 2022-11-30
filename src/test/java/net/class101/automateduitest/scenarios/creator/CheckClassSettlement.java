@@ -20,7 +20,7 @@ public class CheckClassSettlement implements TestScenario {
     @Override
     public TestScenario proceed() {
         CreatorLeftNavigation.Elements.classSettlementTab().click();
-        CreatorLeftNavigation.Elements.classSettlementClassTab().shouldBe(Condition.visible).click();
+        CreatorLeftNavigation.Elements.individualClassSettlementTab().shouldBe(Condition.visible).click();
         return this;
     }
 

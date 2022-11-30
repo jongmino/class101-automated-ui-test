@@ -37,6 +37,7 @@ import net.class101.automateduitest.scenarios.creator.CheckCommentNotAnswered;
 import net.class101.automateduitest.scenarios.creator.CheckCreatorReferralTab;
 import net.class101.automateduitest.scenarios.creator.CheckFileRequestTab;
 import net.class101.automateduitest.scenarios.creator.CheckOrderAndShippingTab;
+import net.class101.automateduitest.scenarios.creator.CheckPlusSettlement;
 import net.class101.automateduitest.scenarios.creator.CheckProductList;
 import net.class101.automateduitest.scenarios.creator.CheckStockTab;
 import net.class101.automateduitest.scenarios.creator.DeleteFirstProduct;
@@ -436,6 +437,12 @@ public class TestAll {
             @DisplayName("클래스 정산")
             void classSettlement() {
                 CheckClassSettlement.getInstance().proceed().validate();
+            }
+
+            @Test
+            @DisplayName("클래스101+ 정산")
+            void plusSettlement() {
+                CheckPlusSettlement.getInstance().proceed().validate();
             }
         }
     }
