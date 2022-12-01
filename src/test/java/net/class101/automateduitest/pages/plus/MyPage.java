@@ -28,6 +28,9 @@ public class MyPage {
         private static final By SETTING_SERVICE_REGION_BUTTON = withText("지역 설정");
         private static final By SERVICE_REGION_US_BUTTON = byXpath("//p[contains(.,'United States / English')]");
         private static final By SERVICE_REGION_JP_BUTTON = byXpath("//p[contains(.,'日本 / 日本語')]");
+        private static final By ORDER_VIEW_DETAIL_BUTTON = byXpath("//span[text()='자세히 보기']");
+        private static final By ORDER_HISTORY_TITLE = byXpath("//h3[text()='주문 및 배송']");
+        private static final By SHIPPING_INFO_BUTTON = byXpath("//span[text()='배송 안내']");
 
         public static SelenideElement logoutButton() {
             return $(MY_PAGE_LOGOUT_BUTTON);
@@ -83,6 +86,18 @@ public class MyPage {
 
         public static SelenideElement serviceRegionJPButton() {
             return $(SERVICE_REGION_JP_BUTTON);
+        }
+
+        public static SelenideElement orderViewDetailButton() {
+            return $(ORDER_VIEW_DETAIL_BUTTON);
+        }
+
+        public static SelenideElement orderHistoryTitle() {
+            return $(ORDER_HISTORY_TITLE);
+        }
+
+        public static SelenideElement shippingInfoButton() {
+            return $(SHIPPING_INFO_BUTTON);
         }
     }
 

@@ -39,10 +39,12 @@ public class AllLoginPage {
     public class Actions {
 
         private static final Map<String, Account> accounts = PropertyLoader.getProperties().accounts;
-        private static final String NON_SUBSCRIBED_USER_ID = accounts.get("plusNonSubscribed").id;
-        private static final String NON_SUBSCRIBED_PASSWORD = accounts.get("plusNonSubscribed").pw;
-        private static final String SUBSCRIBED_USER_ID = accounts.get("plusSubscribed").id;
-        private static final String SUBSCRIBED_PASSWORD = accounts.get("plusSubscribed").pw;
+        private static final String NON_SUBSCRIBED_USER_ID = accounts.get("plusNonSubscriber").id;
+        private static final String NON_SUBSCRIBED_PASSWORD = accounts.get("plusNonSubscriber").pw;
+        private static final String SUBSCRIBED_USER_ID = accounts.get("plusSubscriber").id;
+        private static final String SUBSCRIBED_PASSWORD = accounts.get("plusSubscriber").pw;
+        private static final String KIT_USER_ID = accounts.get("plusHasKit").id;
+        private static final String KIT_PASSWORD = accounts.get("plusHasKit").pw;
 
         private static void loginWithEmail(String email, String password) {
             AllLoginPage.Elements.emailInputElement().sendKeys(email);
@@ -56,6 +58,10 @@ public class AllLoginPage {
 
         public static void loginAsSubscriber() {
             loginWithEmail(SUBSCRIBED_USER_ID, SUBSCRIBED_PASSWORD);
+        }
+
+        public static void loginAsUserHasKit() {
+            loginWithEmail(KIT_USER_ID, KIT_PASSWORD);
         }
     }
 }

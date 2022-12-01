@@ -19,12 +19,15 @@ urls:
     staging: "https://staging.class101.net/plus/ko/products/5e4b42bb3887d3076ee5976b"
 
 accounts:
-  plusNonSubscribed:
+  plusNonSubscriber:
     id: "referral_1@101.inc"
     pw: "class101!"
-  plusSubscribed:
+  plusSubscriber:
     id: "sbtestc422@101.inc"
     pw: "test001!"
+  plusHasKit:
+    id: "dora.testc@gmail.com"
+    pw: "thwjd1205!"
   plusNaver:
     id: "candy6731"
     pw: "class101!"

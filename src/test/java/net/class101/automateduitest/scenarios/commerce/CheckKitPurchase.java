@@ -4,18 +4,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.common.Utils;
 import net.class101.automateduitest.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.scenarios.TestScenario;
-import org.openqa.selenium.Keys;
 
-public class BuyKit implements TestScenario {
-    private static BuyKit instance;
+public class CheckKitPurchase implements TestScenario {
 
-    public static BuyKit getInstance() {
+    private static CheckKitPurchase instance;
+
+    public static CheckKitPurchase getInstance() {
         if(instance == null){
-            instance = new BuyKit();
+            instance = new CheckKitPurchase();
         }
         return instance;
     }
