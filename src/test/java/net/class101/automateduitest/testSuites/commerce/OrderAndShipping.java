@@ -1,6 +1,7 @@
 package net.class101.automateduitest.testSuites.commerce;
 
 import net.class101.automateduitest.pages.plus.Home;
+import net.class101.automateduitest.scenarios.commerce.CheckOrderDetail;
 import net.class101.automateduitest.scenarios.commerce.CheckOrderHistory;
 import net.class101.automateduitest.scenarios.core.LoginAsUserHasKit;
 import org.junit.jupiter.api.BeforeAll;
@@ -17,5 +18,10 @@ public class OrderAndShipping {
     @Test
     void orderHistory() {
         CheckOrderHistory.getInstance().proceed().validate();
+    }
+
+    @Test
+    void orderDetail() {
+        CheckOrderDetail.getInstance().proceed().validate();
     }
 }

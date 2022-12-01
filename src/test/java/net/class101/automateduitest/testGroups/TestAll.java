@@ -22,9 +22,10 @@ import net.class101.automateduitest.scenarios.classmate.CheckSettingTab;
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusFalse;
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusTrue;
 import net.class101.automateduitest.scenarios.classmate.PlayLecture;
-import net.class101.automateduitest.scenarios.commerce.CheckKitPurchase;
-import net.class101.automateduitest.scenarios.commerce.CheckOrderHistory;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
+import net.class101.automateduitest.scenarios.commerce.CheckKitPurchase;
+import net.class101.automateduitest.scenarios.commerce.CheckOrderDetail;
+import net.class101.automateduitest.scenarios.commerce.CheckOrderHistory;
 import net.class101.automateduitest.scenarios.core.LoginAsSubscriber;
 import net.class101.automateduitest.scenarios.core.LoginAsUserHasKit;
 import net.class101.automateduitest.scenarios.core.LoginWithNaver;
@@ -493,6 +494,7 @@ public class TestAll {
             }
 
             @Test
+            @DisplayName("준비물 구매")
             void buyKit() {
                 CheckKitPurchase.getInstance().proceed().validate();
             }
@@ -519,10 +521,16 @@ public class TestAll {
             }
 
             @Test
-            void buyKit() {
+            @DisplayName("주문 및 배송 진입")
+            void orderHistory() {
                 CheckOrderHistory.getInstance().proceed().validate();
             }
 
+            @Test
+            @DisplayName("주문 및 배송 자세히 보기")
+            void orderDetail() {
+                CheckOrderDetail.getInstance().proceed().validate();
+            }
         }
     }
 }
