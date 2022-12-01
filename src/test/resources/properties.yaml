@@ -14,6 +14,9 @@ urls:
   lecturePage:
     dev: ""
     staging: "https://staging.class101.net/plus/ko/classes/5ee1d9b3260ecd6be569ce83/lectures/5ef6db612e1d730dbd5cc8a0"
+  kitLecturePage:
+    dev: ""
+    staging: "https://staging.class101.net/plus/ko/products/5e4b42bb3887d3076ee5976b"
 
 accounts:
   plusNonSubscribed:

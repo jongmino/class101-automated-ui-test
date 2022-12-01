@@ -22,6 +22,7 @@ import net.class101.automateduitest.scenarios.classmate.CheckSettingTab;
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusFalse;
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusTrue;
 import net.class101.automateduitest.scenarios.classmate.PlayLecture;
+import net.class101.automateduitest.scenarios.commerce.BuyKit;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
 import net.class101.automateduitest.scenarios.core.LoginAsSubscriber;
 import net.class101.automateduitest.scenarios.core.LoginWithNaver;
@@ -461,6 +462,35 @@ public class TestAll {
             @DisplayName("크리에이터 가이드 센터")
             void creatorGuideCenter() {
                 CheckCreatorGuideTab.getInstance().proceed().validate();
+            }
+        }
+    }
+
+    @Nested
+    @DisplayName("커머스 플랫폼")
+    public class CommercePlatform {
+        @Nested
+        @DisplayName("구독 계정")
+        public class withSubscriber{
+            @BeforeAll
+            static void beforeAll() {
+                Home.Actions.openPage();
+                LoginAsSubscriber.getInstance().proceed().validate();
+            }
+
+            @AfterAll
+            static void afterAll() {
+                closeWebDriver();
+            }
+
+            @AfterEach
+            void tearDown() {
+                Home.Actions.openPage();
+            }
+
+            @Test
+            void buyKit() {
+                BuyKit.getInstance().proceed().validate();
             }
         }
     }
