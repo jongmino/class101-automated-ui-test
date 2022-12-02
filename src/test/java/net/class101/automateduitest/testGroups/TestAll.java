@@ -16,12 +16,13 @@ import net.class101.automateduitest.scenarios.classmate.CheckCashTab;
 import net.class101.automateduitest.scenarios.classmate.CheckCreatorCenterTab;
 import net.class101.automateduitest.scenarios.classmate.CheckEnquiryTab;
 import net.class101.automateduitest.scenarios.classmate.CheckFAQTab;
+import net.class101.automateduitest.scenarios.classmate.CheckLectureTabMenu;
 import net.class101.automateduitest.scenarios.classmate.CheckOrderTab;
 import net.class101.automateduitest.scenarios.classmate.CheckReferralTab;
 import net.class101.automateduitest.scenarios.classmate.CheckSettingTab;
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusFalse;
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusTrue;
-import net.class101.automateduitest.scenarios.classmate.PlayLecture;
+import net.class101.automateduitest.scenarios.classmate.CheckPlayLecture;
 import net.class101.automateduitest.scenarios.commerce.CheckRefundKit;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
 import net.class101.automateduitest.scenarios.commerce.CheckKitPurchase;
@@ -309,16 +310,22 @@ public class TestAll {
             @Test
             @DisplayName("영상 재생 확인")
             void verifyVideoPlay() {
-                PlayLecture.getInstance().proceed().validate();
+                CheckPlayLecture.getInstance().proceed().validate();
             }
 
             @Test
             @DisplayName("플레이어 기능 확인")
             void verifyVideoPlayerFunctionality() throws InterruptedException {
-                PlayLecture.getInstance().proceed();
+                CheckPlayLecture.getInstance().proceed();
                 ChangePlaySpeed.getInstance().proceed().validate();
                 ChangeVideoQuality.getInstance().proceed().validate();
                 ChangeAutoPlay.getInstance().proceed().validate();
+            }
+
+            @Test
+            @DisplayName("수강환경 탭 메뉴 확인")
+            void lectureTabMenu() {
+                CheckLectureTabMenu.getInstance().proceed().validate();
             }
         }
     }

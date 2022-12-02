@@ -18,6 +18,10 @@ public class LecturePage {
         private static final By VIDEO_SETTING_AUTO_PLAY_BUTTON = byXpath("//div[div[p[text() = '자동 재생']]]");
         private static final By VIDEO_SETTING_FIRST_RADIO_OPTION_NOT_CHECKED = byXpath("//label[input[@type='radio' and not(@checked)]]");
         private static final By VIDEO_PLAYING = byXpath("//div[contains(@class,'playing')]");
+        private static final By COMMENT_SECTION = byXpath("//h4[text()='댓글']");
+        private static final By CURRICULUM_SECTION = byXpath("//li//span[text()='커리큘럼']");
+        private static final By MATERIAL_SECTION = byXpath("//li//span[text()='수업자료']");
+        private static final By NOTICE_SECTION = byXpath("//li//span[text()='소식']");
 
         public static SelenideElement playSpeedButton() {
             return $(VIDEO_PLAY_SPEED_BUTTON);
@@ -43,6 +47,21 @@ public class LecturePage {
             return $(VIDEO_PLAYING);
         }
 
+        public static SelenideElement commentSection() {
+            return $(COMMENT_SECTION);
+        }
+
+        public static SelenideElement curriculumSection() {
+            return $(CURRICULUM_SECTION);
+        }
+
+        public static SelenideElement materialSection() {
+            return $(MATERIAL_SECTION);
+        }
+
+        public static SelenideElement noticeSection() {
+            return $(NOTICE_SECTION);
+        }
     }
 
     public class Actions {

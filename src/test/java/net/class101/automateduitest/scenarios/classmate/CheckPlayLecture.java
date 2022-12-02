@@ -6,13 +6,13 @@ import net.class101.automateduitest.pages.plus.LecturePage;
 import net.class101.automateduitest.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
-public class PlayLecture implements TestScenario {
+public class CheckPlayLecture implements TestScenario {
 
-    private static PlayLecture instance = null;
+    private static CheckPlayLecture instance = null;
 
-    public static PlayLecture getInstance() {
+    public static CheckPlayLecture getInstance() {
         if(instance == null) {
-            instance = new PlayLecture();
+            instance = new CheckPlayLecture();
         }
         return instance;
     }

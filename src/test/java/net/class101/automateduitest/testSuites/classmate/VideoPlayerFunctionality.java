@@ -5,7 +5,7 @@ import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.classmate.ChangeAutoPlay;
 import net.class101.automateduitest.scenarios.classmate.ChangePlaySpeed;
 import net.class101.automateduitest.scenarios.classmate.ChangeVideoQuality;
-import net.class101.automateduitest.scenarios.classmate.PlayLecture;
+import net.class101.automateduitest.scenarios.classmate.CheckPlayLecture;
 import net.class101.automateduitest.scenarios.core.LoginAsSubscriber;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -23,8 +23,8 @@ public class VideoPlayerFunctionality {
     }
 
     @Test
-    void verifyVideoPlayerFunctionality() throws InterruptedException {
-        PlayLecture.getInstance().proceed();
+    void verifyVideoPlayerFunctionality() {
+        CheckPlayLecture.getInstance().proceed();
         ChangePlaySpeed.getInstance().proceed().validate();
         ChangeVideoQuality.getInstance().proceed().validate();
         ChangeAutoPlay.getInstance().proceed().validate();
