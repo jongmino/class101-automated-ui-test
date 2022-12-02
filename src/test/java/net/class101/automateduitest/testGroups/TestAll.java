@@ -22,6 +22,7 @@ import net.class101.automateduitest.scenarios.classmate.CheckSettingTab;
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusFalse;
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusTrue;
 import net.class101.automateduitest.scenarios.classmate.PlayLecture;
+import net.class101.automateduitest.scenarios.commerce.CheckRefundKit;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
 import net.class101.automateduitest.scenarios.commerce.CheckKitPurchase;
 import net.class101.automateduitest.scenarios.commerce.CheckOrderDetail;
@@ -530,6 +531,12 @@ public class TestAll {
             @DisplayName("주문 및 배송 자세히 보기")
             void orderDetail() {
                 CheckOrderDetail.getInstance().proceed().validate();
+            }
+
+            @Test
+            @DisplayName("키트 환불")
+            void refundKit() {
+                CheckRefundKit.getInstance().proceed().validate();
             }
         }
     }

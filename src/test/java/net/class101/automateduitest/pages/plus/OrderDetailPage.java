@@ -12,6 +12,7 @@ public class OrderDetailPage {
         private static final By PAYMENT_INFO_SECTION = byXpath("//div[h5 and contains(.,'총 결제 금액')]");
         private static final By SHIPPING_INFO_SECTION = byXpath("//div[h4[text()='배송 정보']]");
         private static final By ORDERED_ITEM_INFO_SECTION = byXpath("//div[h4[text()='구매 물품']]");
+        private static final By REFUND_BUTTON = byXpath("//button//span[text()='환불하기']");
 
         public static SelenideElement orderDetailPageTitle() {
             return $(ORDER_DETAIL_PAGE_TITLE);
@@ -27,6 +28,10 @@ public class OrderDetailPage {
 
         public static SelenideElement orderedItemInfoSection() {
             return $(ORDERED_ITEM_INFO_SECTION);
+        }
+
+        public static SelenideElement refundButton() {
+            return $(REFUND_BUTTON);
         }
     }
 
