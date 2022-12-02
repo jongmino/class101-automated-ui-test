@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 
 public class CreatorLeftNavigation {
     public class Elements {
+        private static final By NOTICE_TAB = byXpath("//span[text()='공지사항']");
         private static final By CLASS_TAB = byXpath("//span[text()='클래스']");
         private static final By CLASS_COMMENT_TAB = byXpath("//div[text()='클래스 댓글']");
         private static final By CLASS_NEWS_TAB = byXpath("//div[text()='클래스 소식']");
@@ -82,6 +83,10 @@ public class CreatorLeftNavigation {
 
         public static SelenideElement creatorGuideTab() {
             return $(CREATOR_GUIDE_TAB);
+        }
+
+        public static SelenideElement noticeTab(){
+            return $(NOTICE_TAB);
         }
     }
 
