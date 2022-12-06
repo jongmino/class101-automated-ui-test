@@ -80,7 +80,7 @@ public class TestAll {
         //브라우저 크기 최대화
         Configuration.browserSize = "1920x1080";
         //테스트 타임아웃 20초
-        Configuration.timeout = 20000;
+        Configuration.timeout = 60000;
         //브라우저 창 위치 초기화
         Configuration.browserPosition = "0x0";
     }

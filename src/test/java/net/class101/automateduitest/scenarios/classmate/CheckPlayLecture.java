@@ -21,8 +21,8 @@ public class CheckPlayLecture implements TestScenario {
     public TestScenario proceed() {
 
         Home.Elements.firstCurationItem().click();
-
         ProductDetailPage.Elements.playLectureButton().shouldBe(Condition.enabled).click();
+
 
         return this;
     }

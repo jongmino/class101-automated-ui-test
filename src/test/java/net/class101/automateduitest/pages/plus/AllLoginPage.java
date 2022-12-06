@@ -19,11 +19,11 @@ public class AllLoginPage {
         private static final By ALL_LOGIN_NAVER = withText("네이버");
         private static final By ALL_LOGIN_FACEBOOK = withText("페이스북");
 
-        public static SelenideElement emailInputElement() {
+        public static SelenideElement emailInputField() {
             return $(CLASS101_EMAIL_INPUT_FIELD);
         }
 
-        public static SelenideElement passwordInputElement() {
+        public static SelenideElement passwordInputField() {
             return $(CLASS101_PASSWORD_INPUT_FIELD);
         }
 
@@ -33,6 +33,10 @@ public class AllLoginPage {
 
         public static SelenideElement loginWithFaceBookButton() {
             return $(ALL_LOGIN_FACEBOOK);
+        }
+
+        public static SelenideElement loginButton() {
+            return $(LOGIN_BUTTON);
         }
     }
 
@@ -47,9 +51,9 @@ public class AllLoginPage {
         private static final String KIT_PASSWORD = accounts.get("plusHasKit").pw;
 
         private static void loginWithEmail(String email, String password) {
-            AllLoginPage.Elements.emailInputElement().sendKeys(email);
-            AllLoginPage.Elements.passwordInputElement().sendKeys(password);
-            $(AllLoginPage.Elements.LOGIN_BUTTON).click();
+            AllLoginPage.Elements.emailInputField().sendKeys(email);
+            AllLoginPage.Elements.passwordInputField().sendKeys(password);
+            AllLoginPage.Elements.loginButton().click();
         }
 
         public static void loginAsNonSubscriber() {

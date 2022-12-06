@@ -24,9 +24,10 @@ public class ChangePlaySpeed implements TestScenario {
 
         try {
             LecturePage.Elements.videoElementPlaying().hover();
-            LecturePage.Elements.playSpeedButton().shouldBe(Condition.enabled);
+            LecturePage.Elements.playSpeedButton().shouldNotBe(Condition.disabled);
             playSpeedSvgPathBefore = LecturePage.Actions.getPlaySpeedSVGPathValue();
             Thread.sleep(1000);
+            LecturePage.Elements.videoElementPlaying().hover();
             LecturePage.Elements.playSpeedButton().click();
             playSpeedSvgPathAfter = LecturePage.Actions.getPlaySpeedSVGPathValue();
 
@@ -40,6 +41,8 @@ public class ChangePlaySpeed implements TestScenario {
 
     @Override
     public void validate() {
+        System.out.println("before: " + playSpeedSvgPathBefore);
+        System.out.println("after: " + playSpeedSvgPathAfter);
         assertNotEquals(playSpeedSvgPathBefore, playSpeedSvgPathAfter);
     }
 }
