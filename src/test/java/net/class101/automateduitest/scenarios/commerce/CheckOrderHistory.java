@@ -19,6 +19,7 @@ public class CheckOrderHistory implements TestScenario {
     @Override
     public TestScenario proceed() {
         MyPage.Actions.openPage();
+        MyPage.Elements.orderTab().click();
         return this;
     }
 

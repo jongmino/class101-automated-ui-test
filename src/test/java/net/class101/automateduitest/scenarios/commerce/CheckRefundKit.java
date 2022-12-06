@@ -21,6 +21,7 @@ public class CheckRefundKit implements TestScenario {
     @Override
     public TestScenario proceed() {
         MyPage.Actions.openPage();
+        MyPage.Elements.orderTab().click();
         OrderPage.Elements.refundableOrderDetailButton().shouldBe(Condition.enabled).click();
         OrderDetailPage.Elements.refundButton().shouldBe(Condition.enabled).click();
         return this;

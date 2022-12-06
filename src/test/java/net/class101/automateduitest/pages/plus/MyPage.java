@@ -18,7 +18,7 @@ public class MyPage {
         private static final By MY_PAGE_CASH_TAB = byXpath("//a[contains(@href,'cash')]");
         private static final By MY_PAGE_SUBSCRIPTION_STATUS_NON = byXpath("//a[contains(@href,'subscription') and contains(.,'구독하기')]");
         private static final By MY_PAGE_SUBSCRIPTION_STATUS_SUBSCRIBED = byXpath("//a[contains(@href,'subscription') and contains(.,'구독 중')]");
-        private static final By MY_PAGE_ORDER_TAB = byXpath("//a[contains(@href,'orders')]");
+        private static final By MY_PAGE_ORDER_TAB = byXpath("//h6[text()='주문 및 배송']");
         private static final By MY_PAGE_REFERRAL_TAB = byXpath("//a[contains(@href,'classmate-referral')]");
         private static final By MY_PAGE_CREATOR_CENTER_TAB = byXpath("(//h6[text()='크리에이터 센터'])[2]");
         private static final By MY_PAGE_FAQ_TAB = byXpath("//a[contains(@href,'intercom.help/class101faq')]");
