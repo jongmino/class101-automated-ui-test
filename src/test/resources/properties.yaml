@@ -2,6 +2,9 @@ urls:
   plusHome:
     dev: "https://web-preview-master.class101.net/plus/ko"
     staging: "https://staging.class101.net/plus/ko"
+  plusSignUpPage:
+    dev: ""
+    staging: "https://staging.class101.net/plus/ko/register"
   plusMyPage:
     dev: "https://web-preview-master.class101.net/plus/ko/mypage"
     staging: "https://staging.class101.net/plus/ko/mypage"
