@@ -8,11 +8,15 @@ import net.class101.automateduitest.scenarios.TestScenario;
 public class CheckFacebookLoginPage implements TestScenario {
 
     private static CheckFacebookLoginPage instance;
+
     public static CheckFacebookLoginPage getInstance() {
         if (instance == null) {
             instance = new CheckFacebookLoginPage();
         }
         return instance;
+    }
+
+    private CheckFacebookLoginPage() {
     }
 
     @Override

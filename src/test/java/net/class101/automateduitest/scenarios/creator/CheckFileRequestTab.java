@@ -16,6 +16,9 @@ public class CheckFileRequestTab implements TestScenario {
         return instance;
     }
 
+    private CheckFileRequestTab() {
+    }
+
     @Override
     public TestScenario proceed() {
         CreatorLeftNavigation.Elements.fileRequestTab().click();

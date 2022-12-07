@@ -12,7 +12,7 @@ public class CheckRefundKit implements TestScenario {
     private static CheckRefundKit instance;
 
     public static CheckRefundKit getInstance() {
-        if(instance == null){
+        if (instance == null) {
             instance = new CheckRefundKit();
         }
         return instance;

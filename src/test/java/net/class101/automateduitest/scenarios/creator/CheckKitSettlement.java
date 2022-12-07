@@ -10,12 +10,14 @@ public class CheckKitSettlement implements TestScenario {
     private static CheckKitSettlement instance = null;
 
     public static CheckKitSettlement getInstance() {
-        if(instance == null){
+        if (instance == null) {
             instance = new CheckKitSettlement();
         }
         return instance;
     }
 
+    private CheckKitSettlement() {
+    }
 
     @Override
     public TestScenario proceed() {

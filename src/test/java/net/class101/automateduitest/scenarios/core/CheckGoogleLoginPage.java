@@ -8,6 +8,7 @@ import net.class101.automateduitest.scenarios.TestScenario;
 public class CheckGoogleLoginPage implements TestScenario {
 
     private static CheckGoogleLoginPage instance;
+
     public static CheckGoogleLoginPage getInstance() {
         if (instance == null) {
             instance = new CheckGoogleLoginPage();
@@ -15,6 +16,8 @@ public class CheckGoogleLoginPage implements TestScenario {
         return instance;
     }
 
+    private CheckGoogleLoginPage() {
+    }
 
     @Override
     public TestScenario proceed() {

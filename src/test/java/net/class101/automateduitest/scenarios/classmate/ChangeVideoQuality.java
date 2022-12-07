@@ -9,15 +9,16 @@ import net.class101.automateduitest.scenarios.TestScenario;
 public class ChangeVideoQuality implements TestScenario {
 
     private static ChangeVideoQuality instance = null;
-    private String qualityOptionValue = null;
-    private String currentQualityValue = null;
 
     public static ChangeVideoQuality getInstance() {
-        if(instance == null){
+        if (instance == null) {
             instance = new ChangeVideoQuality();
         }
         return instance;
     }
+
+    private String qualityOptionValue = null;
+    private String currentQualityValue = null;
 
     @Override
     public TestScenario proceed() {
@@ -30,18 +31,15 @@ public class ChangeVideoQuality implements TestScenario {
             LecturePage.Elements.firstUnCheckedRadioButton().shouldBe(Condition.enabled).click();
             LecturePage.Elements.settingButton().click();
             Thread.sleep(1000);
-            currentQualityValue  = LecturePage.Actions.getVideoQualityValue();
-        }catch (InterruptedException e){
-
+            currentQualityValue = LecturePage.Actions.getVideoQualityValue();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return this;
     }
 
     @Override
     public void validate() {
         assertTrue(currentQualityValue.contains(qualityOptionValue));
-
     }
 }

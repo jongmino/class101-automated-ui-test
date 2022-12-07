@@ -11,7 +11,7 @@ public class CheckOrderDetail implements TestScenario {
     private static CheckOrderDetail instance;
 
     public static CheckOrderDetail getInstance() {
-        if(instance == null){
+        if (instance == null) {
             instance = new CheckOrderDetail();
         }
         return instance;

@@ -16,6 +16,9 @@ public class CheckNoticeTab implements TestScenario {
         return instance;
     }
 
+    private CheckNoticeTab() {
+    }
+
     @Override
     public TestScenario proceed() {
         CreatorLeftNavigation.Elements.noticeTab().click();

@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 
 public class CreatorPlusSettlementPage {
 
-    public class Elements{
+    public class Elements {
         private static final By SETTLEMENT_DETAILS_BUTTON = byXpath("//h1[text()='원']");
         private static final By SETTLEMENT_DETAILS_MODAL_TITLE = byXpath("//h4[text()='정산 세부내역']");
 
@@ -21,7 +21,6 @@ public class CreatorPlusSettlementPage {
         }
     }
 
-    public class Actions{
-
+    public class Actions {
     }
 }

@@ -11,7 +11,7 @@ public class CheckReferralTab implements TestScenario {
     private static CheckCreatorCenterTab instance = null;
 
     public static CheckCreatorCenterTab getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new CheckCreatorCenterTab();
         }
         return instance;
@@ -19,21 +19,16 @@ public class CheckReferralTab implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-
         try {
-
             //유저 네비게이션 프로필 이미지 클릭
             MyPage.Actions.openPage();
 
             //친구초대 탭 확인
             MyPage.Elements.referralTab().click();
             Thread.sleep(500);
-
-        }catch (InterruptedException e) {
-
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return this;
     }
 

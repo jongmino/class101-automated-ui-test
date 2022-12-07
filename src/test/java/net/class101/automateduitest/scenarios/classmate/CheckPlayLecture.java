@@ -11,7 +11,7 @@ public class CheckPlayLecture implements TestScenario {
     private static CheckPlayLecture instance = null;
 
     public static CheckPlayLecture getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new CheckPlayLecture();
         }
         return instance;
@@ -19,17 +19,13 @@ public class CheckPlayLecture implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-
         Home.Elements.firstCurationItem().click();
         ProductDetailPage.Elements.playLectureButton().shouldBe(Condition.enabled).click();
-
-
         return this;
     }
 
     @Override
     public void validate() {
-
         LecturePage.Elements.videoElementPlaying().shouldBe(Condition.visible);
     }
 }

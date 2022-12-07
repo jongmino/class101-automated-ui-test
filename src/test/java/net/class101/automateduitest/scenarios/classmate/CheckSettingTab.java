@@ -11,7 +11,7 @@ public class CheckSettingTab implements TestScenario {
     private static CheckSettingTab instance = null;
 
     public static CheckSettingTab getInstance() {
-        if(instance == null){
+        if (instance == null) {
             instance = new CheckSettingTab();
         }
         return instance;
@@ -22,10 +22,9 @@ public class CheckSettingTab implements TestScenario {
         try {
             MyPage.Elements.settingTab().click();
             Thread.sleep(500);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return this;
     }
 

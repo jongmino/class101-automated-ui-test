@@ -16,5 +16,6 @@ public class KakaoLoginPage {
         }
     }
 
-    public class Actions {}
+    public class Actions {
+    }
 }

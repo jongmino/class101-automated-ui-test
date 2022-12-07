@@ -14,7 +14,6 @@ public class CreatorHome {
         public static SelenideElement profileImg() {
             return $(NAVIGATION_PROFILE_IMG);
         }
-
     }
 
     public class Actions {
@@ -24,5 +23,4 @@ public class CreatorHome {
             open(CREATOR_CENTER_STAGING_URL);
         }
     }
-
 }

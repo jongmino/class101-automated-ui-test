@@ -16,6 +16,9 @@ public class CheckCommentNotAnswered implements TestScenario {
         return instance;
     }
 
+    private CheckCommentNotAnswered() {
+    }
+
     @Override
     public TestScenario proceed() {
         try {
@@ -24,7 +27,7 @@ public class CheckCommentNotAnswered implements TestScenario {
             CreatorLeftNavigation.Elements.classCommentTab().click();
             CreatorClassCommentPage.Elements.notAnsweredTab().click();
             Thread.sleep(500);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
 

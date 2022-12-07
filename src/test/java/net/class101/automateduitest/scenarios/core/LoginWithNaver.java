@@ -16,10 +16,13 @@ public class LoginWithNaver implements TestScenario {
     private static LoginWithNaver instance = null;
 
     public static LoginWithNaver getInstance() {
-        if(instance == null){
+        if (instance == null) {
             instance = new LoginWithNaver();
         }
         return instance;
+    }
+
+    private LoginWithNaver() {
     }
 
     @Override

@@ -16,6 +16,9 @@ public class CheckOrderAndShippingTab implements TestScenario {
         return instance;
     }
 
+    private CheckOrderAndShippingTab() {
+    }
+
     @Override
     public TestScenario proceed() {
         CreatorLeftNavigation.Elements.orderAndShippingTab().click();

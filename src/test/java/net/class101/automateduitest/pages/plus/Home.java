@@ -85,7 +85,6 @@ public class Home {
         public static SelenideElement searchPanelTitle() {
             return $(SEARCH_PANEL_TITLE);
         }
-
     }
 
     public class Actions {
@@ -101,9 +100,4 @@ public class Home {
             $$(SAVED_CLASSES_SECTION_TITLE).shouldBe(CollectionCondition.size(0));
         }
     }
-
-
-
-
-
 }

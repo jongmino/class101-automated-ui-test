@@ -7,6 +7,7 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 public class OrderPage {
+
     public class Elements{
 
         private static final By ORDER_VIEW_DETAIL_BUTTON = byXpath("//span[text()='자세히 보기']");
@@ -32,6 +33,5 @@ public class OrderPage {
     }
 
     public class Actions{
-
     }
 }

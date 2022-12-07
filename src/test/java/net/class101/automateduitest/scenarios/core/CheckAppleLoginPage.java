@@ -8,6 +8,7 @@ import net.class101.automateduitest.scenarios.TestScenario;
 public class CheckAppleLoginPage implements TestScenario {
 
     private static CheckAppleLoginPage instance;
+
     public static CheckAppleLoginPage getInstance() {
         if (instance == null) {
             instance = new CheckAppleLoginPage();

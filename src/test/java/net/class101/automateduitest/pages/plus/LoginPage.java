@@ -15,10 +15,12 @@ public class LoginPage {
         public static SelenideElement allLoginButton() {
             return $(ALL_LOGIN_BUTTON);
         }
+
         public static SelenideElement signUpButton() {
             return $(SIGN_UP_BUTTON);
         }
     }
 
-    public class Actions {}
+    public class Actions {
+    }
 }

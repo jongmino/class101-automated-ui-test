@@ -7,8 +7,8 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 public class CreatorClassNewsPage {
-    public class Elements{
 
+    public class Elements {
         private static final By CLASS_SELECTOR = byXpath("//select");
         private static final By CREATE_NOTICE_BUTTON = byXpath("//div[text()='공지하기']");
 
@@ -21,8 +21,6 @@ public class CreatorClassNewsPage {
         }
     }
 
-    public class Actions{
-
+    public class Actions {
     }
-
 }

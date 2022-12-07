@@ -11,7 +11,7 @@ public class ChangeServiceRegionJP implements TestScenario {
     private static ChangeServiceRegionJP instance = null;
 
     public static ChangeServiceRegionJP getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new ChangeServiceRegionJP();
         }
         return instance;
@@ -30,7 +30,7 @@ public class ChangeServiceRegionJP implements TestScenario {
             MyPage.Elements.serviceRegionJPButton().click();
 
             Thread.sleep(1000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         return this;

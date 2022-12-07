@@ -11,7 +11,7 @@ import net.class101.automateduitest.common.PropertyLoader;
 import org.openqa.selenium.By;
 
 public class CreatorProductPage {
-    public class Elements{
+    public class Elements {
         private static final By CREATE_PRODUCT_BUTTON = byXpath("//a[@href='/center/products/add']");
         private static final By PRODUCT_LIST = byXpath("//div[@aria-label='grid']/div");
         private static final By FIRST_PRODUCT_SELECT_BOX = byXpath("(//div[@aria-label='grid']//label)[1]");
@@ -44,14 +44,16 @@ public class CreatorProductPage {
         }
     }
 
-    public class Actions{
-        private static final String STAGING_CREATOR_PRODUCT_PAGE = PropertyLoader.getProperties().urls.get("creatorProduct").staging;
+    public class Actions {
+        private static final String STAGING_CREATOR_PRODUCT_PAGE =
+                PropertyLoader.getProperties().urls.get("creatorProduct").staging;
+
         public static void openPage() {
             open(STAGING_CREATOR_PRODUCT_PAGE);
         }
 
         public static void deleteFirstProduct() {
-            try{
+            try {
                 CreatorProductPage.Elements.creatorCenterLogo().click();
                 Thread.sleep(1000);
                 CreatorProductPage.Elements.firstProductSelectBox().shouldBe(Condition.visible).click();
@@ -59,7 +61,7 @@ public class CreatorProductPage {
                 CreatorProductPage.Elements.deleteButton().shouldBe(Condition.visible).click();
                 CreatorProductPage.Elements.modalDeleteButton().shouldBe(Condition.visible).click();
                 CreatorProductPage.Elements.modalDeleteButton().should(Condition.disappear);
-            }catch (InterruptedException e){
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }

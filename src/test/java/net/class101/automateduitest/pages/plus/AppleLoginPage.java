@@ -11,10 +11,11 @@ public class AppleLoginPage {
     public class Elements {
         private static final By APPLE_LOGO = byXpath("(//*[contains(@class,'ac-gn-apple')])[2]");
 
-        public static SelenideElement appleLogo(){
+        public static SelenideElement appleLogo() {
             return $(APPLE_LOGO);
         }
     }
 
-    public class Actions {}
+    public class Actions {
+    }
 }

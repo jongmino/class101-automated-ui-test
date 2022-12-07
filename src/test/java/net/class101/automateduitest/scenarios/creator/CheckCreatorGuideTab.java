@@ -10,10 +10,13 @@ public class CheckCreatorGuideTab implements TestScenario {
     private static CheckCreatorGuideTab instance = null;
 
     public static CheckCreatorGuideTab getInstance() {
-        if(instance == null){
+        if (instance == null) {
             instance = new CheckCreatorGuideTab();
         }
         return instance;
+    }
+
+    private CheckCreatorGuideTab() {
     }
 
     @Override

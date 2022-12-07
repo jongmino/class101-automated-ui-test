@@ -11,7 +11,7 @@ public class CheckCreatorCenterTab implements TestScenario {
     private static CheckCreatorCenterTab instance = null;
 
     public static CheckCreatorCenterTab getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new CheckCreatorCenterTab();
         }
         return instance;
@@ -19,20 +19,16 @@ public class CheckCreatorCenterTab implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-
         try {
-
             MyPage.Actions.openPage();
 
             //크리에이터 센터 탭 확인
             MyPage.Elements.creatorCenterTab().click();
             Thread.sleep(500);
 
-        }catch (InterruptedException e) {
-
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return this;
     }
 

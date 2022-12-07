@@ -10,7 +10,7 @@ public class CheckOrderHistory implements TestScenario {
     private static CheckOrderHistory instance;
 
     public static CheckOrderHistory getInstance() {
-        if(instance == null){
+        if (instance == null) {
             instance = new CheckOrderHistory();
         }
         return instance;

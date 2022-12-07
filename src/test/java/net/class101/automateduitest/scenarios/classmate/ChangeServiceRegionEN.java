@@ -11,7 +11,7 @@ public class ChangeServiceRegionEN implements TestScenario {
     private static ChangeServiceRegionEN instance = null;
 
     public static ChangeServiceRegionEN getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new ChangeServiceRegionEN();
         }
         return instance;
@@ -30,7 +30,7 @@ public class ChangeServiceRegionEN implements TestScenario {
             MyPage.Elements.serviceRegionUSButton().click();
 
             Thread.sleep(1000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         return this;

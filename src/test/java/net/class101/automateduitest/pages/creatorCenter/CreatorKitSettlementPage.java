@@ -14,7 +14,7 @@ public class CreatorKitSettlementPage {
             return $(SETTLEMENT_TABLE);
         }
     }
-    public class Actions{
 
+    public class Actions{
     }
 }

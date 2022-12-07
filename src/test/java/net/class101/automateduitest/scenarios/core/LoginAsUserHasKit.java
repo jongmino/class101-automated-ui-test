@@ -6,7 +6,7 @@ import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.pages.plus.LoginPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
-public class LoginAsUserHasKit implements TestScenario{
+public class LoginAsUserHasKit implements TestScenario {
 
     private static LoginAsUserHasKit instance;
 
@@ -17,13 +17,14 @@ public class LoginAsUserHasKit implements TestScenario{
         return instance;
     }
 
+    private LoginAsUserHasKit() {
+    }
+
     @Override
     public TestScenario proceed() {
-
         Home.Elements.loginButton().click();
         LoginPage.Elements.allLoginButton().click();
         AllLoginPage.Actions.loginAsUserHasKit();
-
         return this;
     }
 

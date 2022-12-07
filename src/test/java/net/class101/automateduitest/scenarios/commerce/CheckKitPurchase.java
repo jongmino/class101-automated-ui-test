@@ -13,7 +13,7 @@ public class CheckKitPurchase implements TestScenario {
     private static CheckKitPurchase instance;
 
     public static CheckKitPurchase getInstance() {
-        if(instance == null){
+        if (instance == null) {
             instance = new CheckKitPurchase();
         }
         return instance;

@@ -46,7 +46,7 @@ public class NaverLoginPage {
                 Selenide.clipboard().setText(NAVER_USER_ID);
                 Thread.sleep(1000);
                 NaverLoginPage.Elements.emailInputElement().sendKeys(Utils.paste());
-            } catch (InterruptedException e){
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
@@ -57,7 +57,7 @@ public class NaverLoginPage {
                 Selenide.clipboard().setText(NAVER_PASSWORD);
                 Thread.sleep(1000);
                 NaverLoginPage.Elements.passwordInputElement().sendKeys(Utils.paste());
-            } catch (InterruptedException e){
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }

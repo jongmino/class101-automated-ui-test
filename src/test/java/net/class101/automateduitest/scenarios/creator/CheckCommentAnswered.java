@@ -16,6 +16,9 @@ public class CheckCommentAnswered implements TestScenario {
         return instance;
     }
 
+    private CheckCommentAnswered() {
+    }
+
     @Override
     public TestScenario proceed() {
         try {
@@ -24,10 +27,9 @@ public class CheckCommentAnswered implements TestScenario {
             CreatorLeftNavigation.Elements.classCommentTab().click();
             CreatorClassCommentPage.Elements.answeredTab().click();
             Thread.sleep(500);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return this;
     }
 

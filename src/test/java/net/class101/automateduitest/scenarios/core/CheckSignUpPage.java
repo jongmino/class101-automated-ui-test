@@ -10,11 +10,14 @@ public class CheckSignUpPage implements TestScenario {
 
     private static CheckSignUpPage instance;
 
-    public static CheckSignUpPage getInstance(){
-        if(instance == null){
+    public static CheckSignUpPage getInstance() {
+        if (instance == null) {
             instance = new CheckSignUpPage();
         }
         return instance;
+    }
+
+    private CheckSignUpPage() {
     }
 
     @Override

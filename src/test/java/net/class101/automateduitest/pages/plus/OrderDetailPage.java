@@ -7,7 +7,8 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 public class OrderDetailPage {
-    public class Elements{
+
+    public class Elements {
         private static final By ORDER_DETAIL_PAGE_TITLE = byXpath("//h3[contains(.,'주문 상세')]");
         private static final By PAYMENT_INFO_SECTION = byXpath("//div[h5 and contains(.,'총 결제 금액')]");
         private static final By SHIPPING_INFO_SECTION = byXpath("//div[h4[text()='배송 정보']]");
@@ -35,5 +36,6 @@ public class OrderDetailPage {
         }
     }
 
-    public class Actions{}
+    public class Actions {
+    }
 }

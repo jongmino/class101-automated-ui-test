@@ -8,11 +8,15 @@ import net.class101.automateduitest.scenarios.TestScenario;
 public class CheckNaverLoginPage implements TestScenario {
 
     private static CheckNaverLoginPage instance;
+
     public static CheckNaverLoginPage getInstance() {
         if (instance == null) {
             instance = new CheckNaverLoginPage();
         }
         return instance;
+    }
+
+    private CheckNaverLoginPage() {
     }
 
     @Override

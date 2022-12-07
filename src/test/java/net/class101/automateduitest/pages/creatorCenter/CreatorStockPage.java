@@ -12,4 +12,7 @@ public class CreatorStockPage {
             return $(STOCK_TABLE);
         }
     }
+
+    public class Actions {
+    }
 }

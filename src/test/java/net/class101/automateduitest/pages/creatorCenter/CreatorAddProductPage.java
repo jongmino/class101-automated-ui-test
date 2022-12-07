@@ -7,7 +7,8 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 public class CreatorAddProductPage {
-    public class Elements{
+
+    public class Elements {
         private static final By CREATE_CLASS_BUTTON = byXpath("(//button//span[text()='만들기'])[1]");
         private static final By CREATE_DIGITAL_FILE_BUTTON = byXpath("(//button//span[text()='만들기'])[2]");
         private static final By CREATE_E_BOOK_BUTTON = byXpath("(//button//span[text()='만들기'])[3]");
@@ -23,10 +24,8 @@ public class CreatorAddProductPage {
         public static SelenideElement createEBookButton() {
             return $(CREATE_E_BOOK_BUTTON);
         }
-
     }
 
-    public class Actions{
-
+    public class Actions {
     }
 }

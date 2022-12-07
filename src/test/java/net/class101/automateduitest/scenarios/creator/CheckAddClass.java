@@ -19,15 +19,18 @@ public class CheckAddClass implements TestScenario {
         return instance;
     }
 
+    private CheckAddClass() {
+    }
+
     @Override
     public TestScenario proceed() {
-        try{
+        try {
             Thread.sleep(2000);
             CreatorProductPage.Elements.createProductButton().shouldNotBe(Condition.disabled).click();
             Thread.sleep(2000);
             CreatorAddProductPage.Elements.createClassButton().shouldBe(Condition.visible).click();
             Thread.sleep(2000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         return this;

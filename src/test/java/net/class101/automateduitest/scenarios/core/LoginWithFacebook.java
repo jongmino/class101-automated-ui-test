@@ -21,6 +21,9 @@ public class LoginWithFacebook implements TestScenario {
         return instance;
     }
 
+    private LoginWithFacebook() {
+    }
+
     @Override
     public TestScenario proceed() {
 

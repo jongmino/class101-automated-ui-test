@@ -20,19 +20,19 @@ public class LoginAsSubscriber implements TestScenario {
         return instance;
     }
 
+    private LoginAsSubscriber() {
+    }
+
     @Override
     public TestScenario proceed() {
-
         Home.Elements.loginButton().click();
         LoginPage.Elements.allLoginButton().click();
         AllLoginPage.Actions.loginAsSubscriber();
-
         return this;
     }
 
     @Override
     public void validate() {
-
         Home.Elements.userProfileImg().shouldBe(Condition.visible).hover();
     }
 }

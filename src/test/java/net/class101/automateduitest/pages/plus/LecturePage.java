@@ -91,5 +91,4 @@ public class LecturePage {
             return LecturePage.Elements.playSpeedButton().find("svg").find("path").getAttribute("d");
         }
     }
-
 }

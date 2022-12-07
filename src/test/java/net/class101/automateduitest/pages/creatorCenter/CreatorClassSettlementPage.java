@@ -7,15 +7,14 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 public class CreatorClassSettlementPage {
-    public class Elements{
+    public class Elements {
         private static final By SETTLEMENT_TABLE = byXpath("//div[contains(@class,'table')]");
 
-        public static SelenideElement settlementTable(){
+        public static SelenideElement settlementTable() {
             return $(SETTLEMENT_TABLE);
         }
     }
 
-    public class Actions{
-
+    public class Actions {
     }
 }

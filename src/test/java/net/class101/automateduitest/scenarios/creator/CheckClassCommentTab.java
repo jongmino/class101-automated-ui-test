@@ -18,6 +18,9 @@ public class CheckClassCommentTab implements TestScenario {
         return instance;
     }
 
+    private CheckClassCommentTab() {
+    }
+
     @Override
     public TestScenario proceed() {
         try {
@@ -25,7 +28,7 @@ public class CheckClassCommentTab implements TestScenario {
             CreatorLeftNavigation.Elements.classTab().click();
             CreatorLeftNavigation.Elements.classCommentTab().click();
             Thread.sleep(1000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
 

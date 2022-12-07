@@ -13,7 +13,7 @@ public class ChangeAutoPlay implements TestScenario {
     private String currentAutoPlayOptionValue = null;
 
     public static ChangeAutoPlay getInstance() {
-        if(instance == null){
+        if (instance == null) {
             instance = new ChangeAutoPlay();
         }
         return instance;
@@ -30,16 +30,14 @@ public class ChangeAutoPlay implements TestScenario {
             LecturePage.Elements.settingButton().click();
             Thread.sleep(1000);
             currentAutoPlayOptionValue = LecturePage.Actions.getAutoPlayValue();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return this;
     }
 
     @Override
     public void validate() {
-
         assertTrue(currentAutoPlayOptionValue.contains(autoPlayOptionValue));
     }
 }

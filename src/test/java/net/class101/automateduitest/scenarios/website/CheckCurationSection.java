@@ -10,23 +10,23 @@ public class CheckCurationSection implements TestScenario {
     private static CheckCurationSection instance = null;
 
     public static CheckCurationSection getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new CheckCurationSection();
         }
         return instance;
     }
 
+    private CheckCurationSection() {
+    }
+
     @Override
     public TestScenario proceed() {
-
         Home.Elements.firstCurationItem().click();
-
         return this;
     }
 
     @Override
     public void validate() {
-
         ProductDetailPage.Elements.classInfoTab().shouldBe(Condition.visible);
         ProductDetailPage.Elements.creatorInfoTab().shouldBe(Condition.visible);
     }

@@ -9,7 +9,9 @@ import net.class101.automateduitest.common.PropertyLoader;
 import org.openqa.selenium.By;
 
 public class SignUpPage {
+
     public class Elements{
+
         private static final By KAKAO_BUTTON  = byXpath("//button[contains(.,'카카오로 3초 만에 시작하기')]");
         private static final By NAVER_BUTTON  = byXpath("//button[contains(.,'네이버로 시작하기')]");
         private static final By FACEBOOK_BUTTON  = byXpath("//button[contains(.,'페이스북으로 시작하기')]");
@@ -48,5 +50,4 @@ public class SignUpPage {
             open(STAGING_SIGN_UP_PAGE_URL);
         }
     }
-
 }
