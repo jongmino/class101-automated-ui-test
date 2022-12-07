@@ -1,11 +1,13 @@
 package net.class101.automateduitest.pages.plus;
 
+import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.common.PropertyLoader;
 import net.class101.automateduitest.common.Utils;
+import org.openqa.selenium.By;
 
 public class NaverLoginPage {
 
@@ -14,6 +16,7 @@ public class NaverLoginPage {
         private static final String EMAIL_INPUT_ELEMENT = "input[id='id']";
         private static final String PASSWORD_INPUT_ELEMENT = "input[id='pw']";
         private static final String NAVER_LOGIN_BUTTON = "button[class='btn_login']";
+        private static final By NAVER_LOGO = byXpath("//a[contains(.,'NAVER')]");
 
         public static SelenideElement emailInputElement() {
             return $(EMAIL_INPUT_ELEMENT);
@@ -25,6 +28,10 @@ public class NaverLoginPage {
 
         public static SelenideElement loginButton() {
             return $(NAVER_LOGIN_BUTTON);
+        }
+
+        public static SelenideElement naverLogo() {
+            return $(NAVER_LOGO);
         }
     }
 

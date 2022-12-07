@@ -11,10 +11,10 @@ import org.openqa.selenium.By;
 public class SignUpPage {
     public class Elements{
         private static final By KAKAO_BUTTON  = byXpath("//button[contains(.,'카카오로 3초 만에 시작하기')]");
-        private static final By NAVER_BUTTON  = byXpath("//button[contains(.,'카카오로 3초 만에 시작하기')]");
-        private static final By FACEBOOK_BUTTON  = byXpath("//button[contains(.,'카카오로 3초 만에 시작하기')]");
-        private static final By GOOGLE_BUTTON  = byXpath("//button[contains(.,'카카오로 3초 만에 시작하기')]");
-        private static final By APPLE_BUTTON  = byXpath("//button[contains(.,'카카오로 3초 만에 시작하기')]");
+        private static final By NAVER_BUTTON  = byXpath("//button[contains(.,'네이버로 시작하기')]");
+        private static final By FACEBOOK_BUTTON  = byXpath("//button[contains(.,'페이스북으로 시작하기')]");
+        private static final By GOOGLE_BUTTON  = byXpath("//button[contains(.,'구글로 시작하기')]");
+        private static final By APPLE_BUTTON  = byXpath("//button[contains(.,'Apple로 시작하기')]");
         private static final By EMAIL_BUTTON = byXpath("//span[text()='이메일 주소로 시작하기']");
 
         public static SelenideElement kakaoButton() {

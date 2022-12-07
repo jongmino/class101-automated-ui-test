@@ -88,11 +88,50 @@ public class TestAll {
     @Nested
     @DisplayName("코어 플랫폼")
     public class CorePlatform {
+        @Nested
+        @DisplayName("회원가입")
+        public class SignUp {
+            @BeforeAll
+            static void beforeAll() {
+                Home.Actions.openPage();
+            }
+
+            @AfterAll
+            static void afterAll() {
+                closeWebDriver();
+            }
+
+            @Test
+            @DisplayName("회원가입 - 애플 로그인 페이지")
+            void appleLoginPage() {
+            }
+
+            @Test
+            @DisplayName("회원가입 - 페이스북 로그인 페이지")
+            void facebookLoginPage() {
+            }
+
+            @Test
+            @DisplayName("회원가입 - 구글 로그인 페이지")
+            void googleLoginPage() {
+            }
+
+            @Test
+            @DisplayName("회원가입 - 카카오 로그인 페이지")
+            void kakaoPage() {
+            }
+
+            @Test
+            @DisplayName("회원가입 - 네이버 로그인 페이지")
+            void naverPage() {
+            }
+
+        }
 
         @Nested
         @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-        @DisplayName("로그인 검증")
-        public class ThirdPartyLogin {
+        @DisplayName("로그인")
+        public class SignIn {
 
             @BeforeAll
             static void beforeAll() {
