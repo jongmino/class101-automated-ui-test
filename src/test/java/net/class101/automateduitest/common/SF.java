@@ -6,6 +6,7 @@ import java.util.Map;
 /**
  * Singleton Factory
  */
+@SuppressWarnings({"unchecked"})
 public class SF {
     private static Map<String, Object> instances = new HashMap<>();
 

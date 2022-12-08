@@ -6,6 +6,7 @@ import net.class101.automateduitest.pages.plus.OrderPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckOrderHistory implements TestScenario {
+
     @Override
     public TestScenario proceed() {
         MyPage.Actions.openPage();

@@ -26,7 +26,7 @@ public class SignUpPage {
 
     @Test
     void emailSignUp() {
-        CheckEmailSignUpPage.getInstance().proceed().validate();
+        SF.getInstance(CheckEmailSignUpPage.class).proceed().validate();
     }
 
     @Test

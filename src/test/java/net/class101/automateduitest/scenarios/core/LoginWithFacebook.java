@@ -12,7 +12,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
  */
 public class LoginWithFacebook implements TestScenario {
 
-
     @Override
     public TestScenario proceed() {
         Home.Elements.loginButton().click();

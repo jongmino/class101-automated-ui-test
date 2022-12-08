@@ -13,7 +13,7 @@ public class UnSaveClass implements TestScenario {
             //실시간 인기 클래스 첫번째 아이템 찜하기 취소
             Home.Elements.firstSaveButtonOnTrendingNow().shouldBe(Condition.enabled).click();
 
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         return this;

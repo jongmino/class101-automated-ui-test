@@ -6,6 +6,7 @@ import net.class101.automateduitest.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckCurationSection implements TestScenario {
+
     @Override
     public TestScenario proceed() {
         Home.Elements.firstCurationItem().click();

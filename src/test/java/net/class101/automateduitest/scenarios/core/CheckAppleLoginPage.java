@@ -7,7 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckAppleLoginPage implements TestScenario {
 
-
     @Override
     public TestScenario proceed() {
         SignUpPage.Actions.openPage();

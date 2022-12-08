@@ -111,37 +111,37 @@ public class TestAll {
             @Test
             @DisplayName("회원가입 - 애플 로그인 페이지")
             void appleLoginPage() {
-                CheckAppleLoginPage.getInstance().proceed().validate();
+                SF.getInstance(CheckAppleLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 페이스북 로그인 페이지")
             void facebookLoginPage() {
-                CheckFacebookLoginPage.getInstance().proceed().validate();
+                SF.getInstance(CheckFacebookLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 구글 로그인 페이지")
             void googleLoginPage() {
-                CheckGoogleLoginPage.getInstance().proceed().validate();
+                SF.getInstance(CheckGoogleLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 카카오 로그인 페이지")
             void kakaoPage() {
-                CheckKakaoLoginPage.getInstance().proceed().validate();
+                SF.getInstance(CheckKakaoLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 네이버 로그인 페이지")
             void naverPage() {
-                CheckNaverLoginPage.getInstance().proceed().validate();
+                SF.getInstance(CheckNaverLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 이메일로 시작하기")
             void emailSignUpPage() {
-                CheckEmailSignUpPage.getInstance().proceed().validate();
+                SF.getInstance(CheckEmailSignUpPage.class).proceed().validate();
             }
         }
 
@@ -272,7 +272,6 @@ public class TestAll {
                 SF.getInstance(CheckMyClassSection.class).proceed().validate();
             }
 
-
             @Test
             @DisplayName("찜하기 추가 / 제거")
             void verifySaveClass() throws InterruptedException {
@@ -371,7 +370,7 @@ public class TestAll {
 
             @Test
             @DisplayName("플레이어 기능 확인")
-            void verifyVideoPlayerFunctionality() throws InterruptedException {
+            void verifyVideoPlayerFunctionality() {
                 SF.getInstance(CheckPlayLecture.class).proceed();
                 SF.getInstance(ChangePlaySpeed.class).proceed().validate();
                 SF.getInstance(ChangeVideoQuality.class).proceed().validate();

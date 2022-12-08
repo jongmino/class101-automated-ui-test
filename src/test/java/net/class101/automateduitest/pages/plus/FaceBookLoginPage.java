@@ -16,7 +16,6 @@ public class FaceBookLoginPage {
         private static final String FACEBOOK_LOGIN_BUTTON = "button[type='submit']";
         private static final By FACEBOOK_LOGO = byXpath("//i[contains(.,'Facebook')]");
 
-
         public static SelenideElement emailInputElement() {
             return $(EMAIL_INPUT_ELEMENT);
         }

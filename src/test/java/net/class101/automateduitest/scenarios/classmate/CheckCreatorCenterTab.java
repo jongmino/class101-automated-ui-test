@@ -7,6 +7,7 @@ import net.class101.automateduitest.pages.plus.MyPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckCreatorCenterTab implements TestScenario {
+
     @Override
     public TestScenario proceed() {
         try {

@@ -8,6 +8,7 @@ import net.class101.automateduitest.pages.plus.RefundPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckRefundKit implements TestScenario {
+
     @Override
     public TestScenario proceed() {
         MyPage.Actions.openPage();

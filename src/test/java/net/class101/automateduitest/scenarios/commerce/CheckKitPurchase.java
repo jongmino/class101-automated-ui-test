@@ -9,6 +9,7 @@ import net.class101.automateduitest.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckKitPurchase implements TestScenario {
+
     @Override
     public TestScenario proceed() {
         ProductDetailPage.Actions.openKitPage();

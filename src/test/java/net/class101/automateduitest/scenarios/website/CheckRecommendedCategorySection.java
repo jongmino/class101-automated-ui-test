@@ -17,7 +17,7 @@ public class CheckRecommendedCategorySection implements TestScenario {
             //영어 카테고리 클릭
             Home.Elements.englishCategoryButton().shouldBe(Condition.enabled).click();
             Thread.sleep(1000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         return this;

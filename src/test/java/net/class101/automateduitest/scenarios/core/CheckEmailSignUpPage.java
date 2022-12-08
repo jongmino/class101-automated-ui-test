@@ -7,15 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckEmailSignUpPage implements TestScenario {
 
-    private static CheckEmailSignUpPage instance;
-
-    public static CheckEmailSignUpPage getInstance() {
-        if (instance == null) {
-            instance = new CheckEmailSignUpPage();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         SignUpPage.Actions.openPage();

@@ -6,6 +6,7 @@ import net.class101.automateduitest.pages.plus.SignUpPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckKakaoLoginPage implements TestScenario {
+
     @Override
     public TestScenario proceed() {
         SignUpPage.Actions.openPage();

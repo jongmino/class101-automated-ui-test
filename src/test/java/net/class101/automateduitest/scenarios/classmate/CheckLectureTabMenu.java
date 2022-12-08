@@ -11,6 +11,7 @@ import net.class101.automateduitest.scenarios.TestScenario;
  *
  * */
 public class CheckLectureTabMenu implements TestScenario {
+
     @Override
     public TestScenario proceed() {
         LecturePage.Actions.openPage();

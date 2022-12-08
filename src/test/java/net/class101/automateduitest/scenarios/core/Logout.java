@@ -11,7 +11,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
  */
 public class Logout implements TestScenario {
 
-
     @Override
     public TestScenario proceed() {
         //우상단 유저 프로필 클릭

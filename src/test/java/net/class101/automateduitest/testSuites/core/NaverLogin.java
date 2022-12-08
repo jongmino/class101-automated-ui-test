@@ -1,6 +1,5 @@
 package net.class101.automateduitest.testSuites.core;
 
-
 import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.core.LoginWithNaver;

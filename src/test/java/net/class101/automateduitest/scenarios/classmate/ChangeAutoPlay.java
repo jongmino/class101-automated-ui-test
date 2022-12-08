@@ -7,9 +7,9 @@ import net.class101.automateduitest.pages.plus.LecturePage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class ChangeAutoPlay implements TestScenario {
+
     private String autoPlayOptionValue = null;
     private String currentAutoPlayOptionValue = null;
-
 
     @Override
     public TestScenario proceed() {
