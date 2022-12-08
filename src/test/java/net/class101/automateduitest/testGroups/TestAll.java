@@ -24,6 +24,12 @@ import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusF
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusTrue;
 import net.class101.automateduitest.scenarios.classmate.CheckPlayLecture;
 import net.class101.automateduitest.scenarios.commerce.CheckRefundKit;
+import net.class101.automateduitest.scenarios.core.CheckAppleLoginPage;
+import net.class101.automateduitest.scenarios.core.CheckEmailSignUpPage;
+import net.class101.automateduitest.scenarios.core.CheckFacebookLoginPage;
+import net.class101.automateduitest.scenarios.core.CheckGoogleLoginPage;
+import net.class101.automateduitest.scenarios.core.CheckKakaoLoginPage;
+import net.class101.automateduitest.scenarios.core.CheckNaverLoginPage;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
 import net.class101.automateduitest.scenarios.commerce.CheckKitPurchase;
 import net.class101.automateduitest.scenarios.commerce.CheckOrderDetail;
@@ -104,28 +110,38 @@ public class TestAll {
             @Test
             @DisplayName("회원가입 - 애플 로그인 페이지")
             void appleLoginPage() {
+                CheckAppleLoginPage.getInstance().proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 페이스북 로그인 페이지")
             void facebookLoginPage() {
+                CheckFacebookLoginPage.getInstance().proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 구글 로그인 페이지")
             void googleLoginPage() {
+                CheckGoogleLoginPage.getInstance().proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 카카오 로그인 페이지")
             void kakaoPage() {
+                CheckKakaoLoginPage.getInstance().proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 네이버 로그인 페이지")
             void naverPage() {
+                CheckNaverLoginPage.getInstance().proceed().validate();
             }
 
+            @Test
+            @DisplayName("회원가입 - 이메일로 시작하기")
+            void emailSignUpPage() {
+                CheckEmailSignUpPage.getInstance().proceed().validate();
+            }
         }
 
         @Nested

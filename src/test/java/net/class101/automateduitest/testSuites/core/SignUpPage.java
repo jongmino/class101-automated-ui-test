@@ -2,6 +2,7 @@ package net.class101.automateduitest.testSuites.core;
 
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.core.CheckAppleLoginPage;
+import net.class101.automateduitest.scenarios.core.CheckEmailSignUpPage;
 import net.class101.automateduitest.scenarios.core.CheckFacebookLoginPage;
 import net.class101.automateduitest.scenarios.core.CheckGoogleLoginPage;
 import net.class101.automateduitest.scenarios.core.CheckKakaoLoginPage;
@@ -20,6 +21,11 @@ public class SignUpPage {
     @Test
     void signUpPage() {
         CheckSignUpPage.getInstance().proceed().validate();
+    }
+
+    @Test
+    void emailSignUp() {
+        CheckEmailSignUpPage.getInstance().proceed().validate();
     }
 
     @Test
