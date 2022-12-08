@@ -25,7 +25,7 @@ public class VideoPlayerFunctionality {
 
     @Test
     void verifyVideoPlayerFunctionality() {
-        SF.getInstance(CheckPlayLecture.class).proceed();
+        SF.getInstance(CheckPlayLecture.class).proceed().validate();
         SF.getInstance(ChangePlaySpeed.class).proceed().validate();
         SF.getInstance(ChangeVideoQuality.class).proceed().validate();
         SF.getInstance(ChangeAutoPlay.class).proceed().validate();

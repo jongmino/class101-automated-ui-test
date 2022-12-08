@@ -25,6 +25,7 @@ import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusF
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusTrue;
 import net.class101.automateduitest.scenarios.classmate.CheckPlayLecture;
 import net.class101.automateduitest.scenarios.commerce.CheckRefundKit;
+import net.class101.automateduitest.scenarios.commerce.CheckYearlySubscription;
 import net.class101.automateduitest.scenarios.core.CheckAppleLoginPage;
 import net.class101.automateduitest.scenarios.core.CheckEmailSignUpPage;
 import net.class101.automateduitest.scenarios.core.CheckFacebookLoginPage;
@@ -535,6 +536,31 @@ public class TestAll {
     @Nested
     @DisplayName("커머스 플랫폼")
     public class CommercePlatform {
+
+        @Nested
+        @DisplayName("미구독 계정")
+        public class NonSubscriber {
+            @BeforeAll
+            static void beforeAll() {
+                Home.Actions.openPage();
+                SF.getInstance(LoginAsSubscriber.class).proceed().validate();
+            }
+
+            @AfterAll
+            static void afterAll() {
+                closeWebDriver();
+            }
+
+            @AfterEach
+            void tearDown() {
+                Home.Actions.openPage();
+            }
+
+            @Test
+            void yearlyPlan() {
+                SF.getInstance(CheckYearlySubscription.class).proceed().validate();
+            }
+        }
 
         @Nested
         @DisplayName("구독 계정")

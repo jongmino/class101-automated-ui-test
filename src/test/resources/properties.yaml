@@ -20,6 +20,9 @@ urls:
   kitLecturePage:
     dev: ""
     staging: "https://staging.class101.net/plus/ko/products/5e4b42bb3887d3076ee5976b"
+  selectPlanPage:
+    dev: ""
+    staging: "https://staging.class101.net/plus/ko/payment/select-subscription-product"
 
 accounts:
   plusNonSubscriber:
