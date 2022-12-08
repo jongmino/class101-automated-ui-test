@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.classmate;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.classmate.CheckCashTab;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
@@ -18,7 +19,7 @@ public class MyPageProfile {
 
     @Test
     void verifyCashTab() {
-        LoginAsNonSubscriber.getInstance().proceed().validate();
-        CheckCashTab.getInstance().proceed().validate();
+        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
+        SF.getInstance(CheckCashTab.class).proceed().validate();
     }
 }

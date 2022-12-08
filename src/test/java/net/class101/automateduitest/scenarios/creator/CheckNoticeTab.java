@@ -7,18 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckNoticeTab implements TestScenario {
 
-    private static CheckNoticeTab instance = null;
-
-    public static CheckNoticeTab getInstance() {
-        if (instance == null) {
-            instance = new CheckNoticeTab();
-        }
-        return instance;
-    }
-
-    private CheckNoticeTab() {
-    }
-
     @Override
     public TestScenario proceed() {
         CreatorLeftNavigation.Elements.noticeTab().click();

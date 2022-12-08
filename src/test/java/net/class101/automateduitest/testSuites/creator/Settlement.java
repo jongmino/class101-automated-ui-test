@@ -1,6 +1,7 @@
 package net.class101.automateduitest.testSuites.creator;
 
 import com.codeborne.selenide.Configuration;
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.scenarios.creator.CheckClassSettlement;
 import net.class101.automateduitest.scenarios.creator.CheckKitSettlement;
@@ -16,7 +17,7 @@ public class Settlement {
     static void beforeAll() {
         Configuration.timeout = 20000;
         CreatorHome.Actions.openPage();
-        LoginAsCreatorHasClass.getInstance().proceed().validate();
+        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
     }
 
     @AfterEach
@@ -26,16 +27,16 @@ public class Settlement {
 
     @Test
     void classSettlement() {
-        CheckClassSettlement.getInstance().proceed().validate();
+        SF.getInstance(CheckClassSettlement.class).proceed().validate();
     }
 
     @Test
     void plusSettlement() {
-        CheckPlusSettlement.getInstance().proceed().validate();
+        SF.getInstance(CheckPlusSettlement.class).proceed().validate();
     }
 
     @Test
     void kitSettlement() {
-        CheckKitSettlement.getInstance().proceed().validate();
+        SF.getInstance(CheckKitSettlement.class).proceed().validate();
     }
 }

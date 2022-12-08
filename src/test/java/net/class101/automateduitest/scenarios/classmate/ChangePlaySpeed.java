@@ -8,21 +8,11 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class ChangePlaySpeed implements TestScenario {
 
-    private static ChangePlaySpeed instance = null;
-
-    public static ChangePlaySpeed getInstance() {
-        if (instance == null) {
-            instance = new ChangePlaySpeed();
-        }
-        return instance;
-    }
-
     private String playSpeedSvgPathBefore = null;
     private String playSpeedSvgPathAfter = null;
 
     @Override
     public TestScenario proceed() {
-
         try {
             LecturePage.Elements.videoElementPlaying().hover();
             LecturePage.Elements.playSpeedButton().shouldNotBe(Condition.disabled);

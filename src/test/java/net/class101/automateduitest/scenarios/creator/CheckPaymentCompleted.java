@@ -6,15 +6,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckPaymentCompleted implements TestScenario {
 
-    private static CheckPaymentCompleted instance = null;
-
-    public static CheckPaymentCompleted getInstance() {
-        if (instance == null) {
-            instance = new CheckPaymentCompleted();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         CreatorOrderAndShippingPage.Elements.paymentCompletedTab().shouldBe(Condition.visible).click();

@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.commerce;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.commerce.CheckOrderDetail;
 import net.class101.automateduitest.scenarios.commerce.CheckOrderHistory;
@@ -12,16 +13,16 @@ public class OrderAndShipping {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
-        LoginAsUserHasKit.getInstance().proceed().validate();
+        SF.getInstance(LoginAsUserHasKit.class).proceed().validate();
     }
 
     @Test
     void orderHistory() {
-        CheckOrderHistory.getInstance().proceed().validate();
+        SF.getInstance(CheckOrderHistory.class).proceed().validate();
     }
 
     @Test
     void orderDetail() {
-        CheckOrderDetail.getInstance().proceed().validate();
+        SF.getInstance(CheckOrderDetail.class).proceed().validate();
     }
 }

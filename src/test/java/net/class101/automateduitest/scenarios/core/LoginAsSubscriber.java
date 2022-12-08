@@ -11,18 +11,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
  */
 public class LoginAsSubscriber implements TestScenario {
 
-    private static LoginAsSubscriber instance;
-
-    public static LoginAsSubscriber getInstance() {
-        if (instance == null) {
-            instance = new LoginAsSubscriber();
-        }
-        return instance;
-    }
-
-    private LoginAsSubscriber() {
-    }
-
     @Override
     public TestScenario proceed() {
         Home.Elements.loginButton().click();

@@ -8,16 +8,6 @@ import net.class101.automateduitest.pages.plus.RefundPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckRefundKit implements TestScenario {
-
-    private static CheckRefundKit instance;
-
-    public static CheckRefundKit getInstance() {
-        if (instance == null) {
-            instance = new CheckRefundKit();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         MyPage.Actions.openPage();

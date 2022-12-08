@@ -7,18 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckCreatorReferralTab implements TestScenario {
 
-    private static CheckCreatorReferralTab instance = null;
-
-    public static CheckCreatorReferralTab getInstance() {
-        if (instance == null) {
-            instance = new CheckCreatorReferralTab();
-        }
-        return instance;
-    }
-
-    private CheckCreatorReferralTab() {
-    }
-
     @Override
     public TestScenario proceed() {
         CreatorLeftNavigation.Elements.referralTab().click();

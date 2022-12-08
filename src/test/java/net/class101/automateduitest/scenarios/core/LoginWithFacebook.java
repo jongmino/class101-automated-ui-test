@@ -12,32 +12,18 @@ import net.class101.automateduitest.scenarios.TestScenario;
  */
 public class LoginWithFacebook implements TestScenario {
 
-    private static LoginWithFacebook instance = null;
-
-    public static LoginWithFacebook getInstance() {
-        if (instance == null) {
-            instance = new LoginWithFacebook();
-        }
-        return instance;
-    }
-
-    private LoginWithFacebook() {
-    }
 
     @Override
     public TestScenario proceed() {
-
         Home.Elements.loginButton().click();
         LoginPage.Elements.allLoginButton().click();
         AllLoginPage.Elements.loginWithFaceBookButton().click();
         FaceBookLoginPage.Actions.defaultLogin();
-
         return this;
     }
 
     @Override
     public void validate() {
-
         Home.Elements.userProfileImg().shouldBe(Condition.visible).hover();
     }
 }

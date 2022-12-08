@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.core;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.core.LoginWithFacebook;
 import org.junit.jupiter.api.BeforeAll;
@@ -19,7 +20,6 @@ public class FaceBookLogin {
     @Test
     @Order(1)
     void login_with_facebook() {
-        LoginWithFacebook.getInstance().proceed().validate();
+        SF.getInstance(LoginWithFacebook.class).proceed().validate();
     }
-
 }

@@ -8,18 +8,8 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckOrderTab implements TestScenario {
 
-    private static CheckOrderTab instance = null;
-
-    public static CheckOrderTab getInstance() {
-        if (instance == null) {
-            instance = new CheckOrderTab();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
-
         try {
             //유저 네비게이션 프로필 이미지 클릭
             MyPage.Actions.openPage();

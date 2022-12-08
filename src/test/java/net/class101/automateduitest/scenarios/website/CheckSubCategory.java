@@ -8,27 +8,15 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckSubCategory implements TestScenario {
 
-    private static CheckSubCategory instance = null;
-
-    public static CheckSubCategory getInstance() {
-        if(instance == null) {
-            instance = new CheckSubCategory();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         try {
-
             //영어 회화 서브카테고리 클릭
             ProductListPage.Elements.englishCommunicationSubCategoryButton().click();
             Thread.sleep(1000);
-
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return this;
     }
 

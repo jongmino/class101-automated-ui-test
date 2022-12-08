@@ -6,15 +6,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class UnSaveClass implements TestScenario {
 
-    private static UnSaveClass instance = null;
-
-    public static UnSaveClass getInstance() {
-        if(instance == null) {
-            instance = new UnSaveClass();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         try {
@@ -25,7 +16,6 @@ public class UnSaveClass implements TestScenario {
         }catch (InterruptedException e){
             e.printStackTrace();
         }
-
         return this;
     }
 

@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.website;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.website.CheckRecommendedCategorySection;
 import org.junit.jupiter.api.BeforeAll;
@@ -17,7 +18,7 @@ public class RecommendationCategorySection {
 
     @Test
     void recommendation_category() {
-        CheckRecommendedCategorySection.getInstance().proceed().validate();
+        SF.getInstance(CheckRecommendedCategorySection.class).proceed().validate();
     }
 
 }

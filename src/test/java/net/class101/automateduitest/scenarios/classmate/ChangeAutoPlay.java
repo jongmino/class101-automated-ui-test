@@ -7,21 +7,12 @@ import net.class101.automateduitest.pages.plus.LecturePage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class ChangeAutoPlay implements TestScenario {
-
-    private static ChangeAutoPlay instance = null;
     private String autoPlayOptionValue = null;
     private String currentAutoPlayOptionValue = null;
 
-    public static ChangeAutoPlay getInstance() {
-        if (instance == null) {
-            instance = new ChangeAutoPlay();
-        }
-        return instance;
-    }
 
     @Override
     public TestScenario proceed() {
-
         try {
             LecturePage.Elements.videoElementPlaying().hover();
             LecturePage.Elements.autoPlaySettingButton().shouldBe(Condition.visible).click();

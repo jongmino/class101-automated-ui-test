@@ -8,18 +8,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckClassNews implements TestScenario {
 
-    private static CheckClassNews instance = null;
-
-    public static CheckClassNews getInstance() {
-        if (instance == null) {
-            instance = new CheckClassNews();
-        }
-        return instance;
-    }
-
-    private CheckClassNews() {
-    }
-
     @Override
     public TestScenario proceed() {
         CreatorHome.Actions.openPage();

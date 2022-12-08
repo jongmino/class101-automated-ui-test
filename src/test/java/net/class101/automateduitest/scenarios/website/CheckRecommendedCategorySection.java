@@ -9,15 +9,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckRecommendedCategorySection implements TestScenario {
 
-    private static CheckRecommendedCategorySection instance = null;
-
-    public static CheckRecommendedCategorySection getInstance() {
-        if(instance == null) {
-            instance = new CheckRecommendedCategorySection();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         try {
@@ -29,7 +20,6 @@ public class CheckRecommendedCategorySection implements TestScenario {
         }catch (InterruptedException e){
             e.printStackTrace();
         }
-
         return this;
     }
 

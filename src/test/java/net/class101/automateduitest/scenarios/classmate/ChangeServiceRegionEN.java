@@ -8,15 +8,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class ChangeServiceRegionEN implements TestScenario {
 
-    private static ChangeServiceRegionEN instance = null;
-
-    public static ChangeServiceRegionEN getInstance() {
-        if (instance == null) {
-            instance = new ChangeServiceRegionEN();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         try {

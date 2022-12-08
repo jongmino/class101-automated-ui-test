@@ -1,6 +1,7 @@
 package net.class101.automateduitest.testSuites.creator;
 
 import com.codeborne.selenide.Configuration;
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.scenarios.creator.CheckClassCommentTab;
 import net.class101.automateduitest.scenarios.creator.CheckCommentAnswered;
@@ -15,21 +16,21 @@ public class ClassComment {
     static void beforeAll() {
         Configuration.timeout = 40000;
         CreatorHome.Actions.openPage();
-        LoginAsCreatorHasClass.getInstance().proceed().validate();
+        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
     }
 
     @Test
     void commentPage() {
-        CheckClassCommentTab.getInstance().proceed().validate();
+        SF.getInstance(CheckClassCommentTab.class).proceed().validate();
     }
 
     @Test
     void commentAnswered() {
-        CheckCommentAnswered.getInstance().proceed().validate();
+        SF.getInstance(CheckCommentAnswered.class).proceed().validate();
     }
 
     @Test
     void commentNotAnswered() {
-        CheckCommentNotAnswered.getInstance().proceed().validate();
+        SF.getInstance(CheckCommentNotAnswered.class).proceed().validate();
     }
 }

@@ -8,18 +8,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckSignUpPage implements TestScenario {
 
-    private static CheckSignUpPage instance;
-
-    public static CheckSignUpPage getInstance() {
-        if (instance == null) {
-            instance = new CheckSignUpPage();
-        }
-        return instance;
-    }
-
-    private CheckSignUpPage() {
-    }
-
     @Override
     public TestScenario proceed() {
         Home.Elements.loginButton().shouldNotBe(Condition.disabled).click();

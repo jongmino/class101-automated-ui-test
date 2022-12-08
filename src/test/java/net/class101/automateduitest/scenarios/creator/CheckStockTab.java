@@ -7,16 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckStockTab implements TestScenario {
 
-    private static CheckStockTab instance = null;
-
-    public static CheckStockTab getInstance() {
-        if (instance == null) {
-            instance = new CheckStockTab();
-        }
-        return instance;
-    }
-
-
     @Override
     public TestScenario proceed() {
         CreatorLeftNavigation.Elements.stockTab().shouldBe(Condition.enabled).click();

@@ -11,26 +11,14 @@ import net.class101.automateduitest.scenarios.TestScenario;
  */
 public class CheckRecommendedClassSection implements TestScenario {
 
-    private static CheckRecommendedClassSection instance = null;
-
-    public static CheckRecommendedClassSection getInstance() {
-        if(instance == null) {
-            instance = new CheckRecommendedClassSection();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
-
         Home.Actions.openPage();
-
         return this;
     }
 
     @Override
     public void validate() {
-
         Home.Elements.recommendedClassSectionTitle().shouldBe(Condition.visible);
     }
 }

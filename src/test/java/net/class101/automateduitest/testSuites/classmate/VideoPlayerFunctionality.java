@@ -1,6 +1,7 @@
 package net.class101.automateduitest.testSuites.classmate;
 
 import com.codeborne.selenide.Configuration;
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.classmate.ChangeAutoPlay;
 import net.class101.automateduitest.scenarios.classmate.ChangePlaySpeed;
@@ -19,15 +20,14 @@ public class VideoPlayerFunctionality {
     static void beforeAll() {
         Configuration.timeout = 20000;
         Home.Actions.openPage();
-        LoginAsSubscriber.getInstance().proceed().validate();
+        SF.getInstance(LoginAsSubscriber.class).proceed().validate();
     }
 
     @Test
     void verifyVideoPlayerFunctionality() {
-        CheckPlayLecture.getInstance().proceed();
-        ChangePlaySpeed.getInstance().proceed().validate();
-        ChangeVideoQuality.getInstance().proceed().validate();
-        ChangeAutoPlay.getInstance().proceed().validate();
+        SF.getInstance(CheckPlayLecture.class).proceed();
+        SF.getInstance(ChangePlaySpeed.class).proceed().validate();
+        SF.getInstance(ChangeVideoQuality.class).proceed().validate();
+        SF.getInstance(ChangeAutoPlay.class).proceed().validate();
     }
 }
-

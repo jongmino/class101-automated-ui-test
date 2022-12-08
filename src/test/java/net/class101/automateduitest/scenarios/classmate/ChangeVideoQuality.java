@@ -8,21 +8,11 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class ChangeVideoQuality implements TestScenario {
 
-    private static ChangeVideoQuality instance = null;
-
-    public static ChangeVideoQuality getInstance() {
-        if (instance == null) {
-            instance = new ChangeVideoQuality();
-        }
-        return instance;
-    }
-
     private String qualityOptionValue = null;
     private String currentQualityValue = null;
 
     @Override
     public TestScenario proceed() {
-
         try {
             LecturePage.Elements.videoElementPlaying().hover();
             LecturePage.Elements.settingButton().shouldBe(Condition.visible).click();

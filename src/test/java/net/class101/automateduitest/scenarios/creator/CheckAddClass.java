@@ -10,18 +10,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckAddClass implements TestScenario {
 
-    private static CheckAddClass instance = null;
-
-    public static CheckAddClass getInstance() {
-        if (instance == null) {
-            instance = new CheckAddClass();
-        }
-        return instance;
-    }
-
-    private CheckAddClass() {
-    }
-
     @Override
     public TestScenario proceed() {
         try {

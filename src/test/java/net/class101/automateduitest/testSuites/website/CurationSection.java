@@ -1,6 +1,7 @@
 package net.class101.automateduitest.testSuites.website;
 
 import com.codeborne.selenide.Configuration;
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
 import net.class101.automateduitest.scenarios.website.CheckCurationSection;
@@ -21,8 +22,8 @@ public class CurationSection {
 
     @Test
     void curation_section_is_visible() {
-        LoginAsNonSubscriber.getInstance().proceed().validate();
-        CheckCurationSection.getInstance().proceed().validate();
-        CheckSubscriptionPlan.getInstance().proceed().validate();
+        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
+        SF.getInstance(CheckCurationSection.class).proceed().validate();
+        SF.getInstance(CheckSubscriptionPlan.class).proceed().validate();
     }
 }

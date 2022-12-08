@@ -6,19 +6,6 @@ import net.class101.automateduitest.pages.plus.SignUpPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckKakaoLoginPage implements TestScenario {
-
-    private static CheckKakaoLoginPage instance;
-
-    public static CheckKakaoLoginPage getInstance() {
-        if (instance == null) {
-            instance = new CheckKakaoLoginPage();
-        }
-        return instance;
-    }
-
-    private CheckKakaoLoginPage() {
-    }
-
     @Override
     public TestScenario proceed() {
         SignUpPage.Actions.openPage();

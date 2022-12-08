@@ -11,17 +11,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
  */
 public class Logout implements TestScenario {
 
-    private static Logout instance = null;
-
-    public static Logout getInstance() {
-        if (instance == null) {
-            instance = new Logout();
-        }
-        return instance;
-    }
-
-    private Logout() {
-    }
 
     @Override
     public TestScenario proceed() {

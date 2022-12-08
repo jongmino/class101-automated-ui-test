@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.creator;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.scenarios.creator.CheckOrderAndShippingTab;
 import net.class101.automateduitest.scenarios.creator.CheckPaymentCompleted;
@@ -12,12 +13,12 @@ public class OrderAndShippingTab {
     @BeforeAll
     static void beforeAll() {
         CreatorHome.Actions.openPage();
-        LoginAsCreatorHasClass.getInstance().proceed().validate();
+        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
     }
 
     @Test
     void orderAndShippingTab() {
-        CheckOrderAndShippingTab.getInstance().proceed().validate();
-        CheckPaymentCompleted.getInstance().proceed().validate();
+        SF.getInstance(CheckOrderAndShippingTab.class).proceed().validate();
+        SF.getInstance(CheckPaymentCompleted.class).proceed().validate();
     }
 }

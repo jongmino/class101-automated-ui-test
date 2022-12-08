@@ -10,18 +10,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckAddDigitalFile implements TestScenario {
 
-    private static CheckAddDigitalFile instance = null;
-
-    public static CheckAddDigitalFile getInstance() {
-        if (instance == null) {
-            instance = new CheckAddDigitalFile();
-        }
-        return instance;
-    }
-
-    private CheckAddDigitalFile() {
-    }
-
     @Override
     public TestScenario proceed() {
         try {

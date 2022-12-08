@@ -8,15 +8,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckSettingTab implements TestScenario {
 
-    private static CheckSettingTab instance = null;
-
-    public static CheckSettingTab getInstance() {
-        if (instance == null) {
-            instance = new CheckSettingTab();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         try {

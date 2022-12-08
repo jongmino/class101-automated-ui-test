@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.creator;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.scenarios.creator.CheckNoticeTab;
 import net.class101.automateduitest.scenarios.creator.LoginAsCreatorNew;
@@ -10,11 +11,11 @@ public class NoticeTab {
     @BeforeAll
     static void beforeAll() {
         CreatorHome.Actions.openPage();
-        LoginAsCreatorNew.getInstance().proceed().validate();
+        SF.getInstance(LoginAsCreatorNew.class).proceed().validate();
     }
 
     @Test
     void noticeTab() {
-        CheckNoticeTab.getInstance().proceed().validate();
+        SF.getInstance(CheckNoticeTab.class).proceed().validate();
     }
 }

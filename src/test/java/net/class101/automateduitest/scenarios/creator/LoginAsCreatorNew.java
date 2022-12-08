@@ -7,15 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class LoginAsCreatorNew implements TestScenario {
 
-    private static LoginAsCreatorNew instance = null;
-
-    public static LoginAsCreatorNew getInstance() {
-        if(instance == null){
-            instance = new LoginAsCreatorNew();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         CreatorLoginPage.Actions.loginAsCreatorNew();

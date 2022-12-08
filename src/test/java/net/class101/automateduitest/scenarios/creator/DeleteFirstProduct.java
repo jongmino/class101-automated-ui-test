@@ -5,15 +5,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class DeleteFirstProduct implements TestScenario {
 
-    private static DeleteFirstProduct instance = null;
-
-    public static DeleteFirstProduct getInstance() {
-        if (instance == null) {
-            instance = new DeleteFirstProduct();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         CreatorProductPage.Actions.deleteFirstProduct();

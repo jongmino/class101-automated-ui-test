@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.creator;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.scenarios.creator.CheckAddClass;
@@ -17,7 +18,7 @@ public class AddProduct {
     @BeforeAll
     static void beforeAll() {
         CreatorHome.Actions.openPage();
-        LoginAsCreatorNew.getInstance().proceed().validate();
+        SF.getInstance(LoginAsCreatorNew.class).proceed().validate();
     }
 
     @BeforeEach
@@ -27,21 +28,21 @@ public class AddProduct {
 
     @AfterEach
     void tearDown() {
-        DeleteFirstProduct.getInstance().proceed();
+        SF.getInstance(DeleteFirstProduct.class).proceed();
     }
 
     @Test
     void addClass() {
-        CheckAddClass.getInstance().proceed().validate();
+        SF.getInstance(CheckAddClass.class).proceed().validate();
     }
 
     @Test
     void addDigitalFile() {
-        CheckAddDigitalFile.getInstance().proceed().validate();
+        SF.getInstance(CheckAddDigitalFile.class).proceed().validate();
     }
 
     @Test
     void addEBook() {
-        CheckAddEBook.getInstance().proceed().validate();
+        SF.getInstance(CheckAddEBook.class).proceed().validate();
     }
 }

@@ -9,16 +9,6 @@ import net.class101.automateduitest.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckKitPurchase implements TestScenario {
-
-    private static CheckKitPurchase instance;
-
-    public static CheckKitPurchase getInstance() {
-        if (instance == null) {
-            instance = new CheckKitPurchase();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         ProductDetailPage.Actions.openKitPage();

@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.website;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
 import net.class101.automateduitest.scenarios.website.CheckRecommendedClassSection;
@@ -23,7 +24,7 @@ public class RecommendationClassSection {
     @Test
     @Order(1)
     void recommendation_class_section_is_visible() {
-        LoginAsNonSubscriber.getInstance().proceed().validate();
-        CheckRecommendedClassSection.getInstance().proceed().validate();
+        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
+        SF.getInstance(CheckRecommendedClassSection.class).proceed().validate();
     }
 }

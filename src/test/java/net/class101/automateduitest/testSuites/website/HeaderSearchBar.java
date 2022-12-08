@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.website;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.website.SearchKeyword;
 import org.junit.jupiter.api.BeforeAll;
@@ -14,6 +15,6 @@ public class HeaderSearchBar {
 
     @Test
     void search_panel_is_visible() {
-        SearchKeyword.getInstance().proceed().validate();
+        SF.getInstance(SearchKeyword.class).proceed().validate();
     }
 }

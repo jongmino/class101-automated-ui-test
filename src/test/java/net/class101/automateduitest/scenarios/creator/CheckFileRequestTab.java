@@ -7,18 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckFileRequestTab implements TestScenario {
 
-    private static CheckFileRequestTab instance = null;
-
-    public static CheckFileRequestTab getInstance() {
-        if (instance == null) {
-            instance = new CheckFileRequestTab();
-        }
-        return instance;
-    }
-
-    private CheckFileRequestTab() {
-    }
-
     @Override
     public TestScenario proceed() {
         CreatorLeftNavigation.Elements.fileRequestTab().click();

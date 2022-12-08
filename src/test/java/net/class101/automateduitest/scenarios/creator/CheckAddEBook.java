@@ -10,18 +10,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckAddEBook implements TestScenario {
 
-    private static CheckAddEBook instance = null;
-
-    public static CheckAddEBook getInstance() {
-        if (instance == null) {
-            instance = new CheckAddEBook();
-        }
-        return instance;
-    }
-
-    private CheckAddEBook() {
-    }
-
     @Override
     public TestScenario proceed() {
         try {

@@ -6,19 +6,6 @@ import net.class101.automateduitest.pages.plus.SignUpPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckGoogleLoginPage implements TestScenario {
-
-    private static CheckGoogleLoginPage instance;
-
-    public static CheckGoogleLoginPage getInstance() {
-        if (instance == null) {
-            instance = new CheckGoogleLoginPage();
-        }
-        return instance;
-    }
-
-    private CheckGoogleLoginPage() {
-    }
-
     @Override
     public TestScenario proceed() {
         SignUpPage.Actions.openPage();

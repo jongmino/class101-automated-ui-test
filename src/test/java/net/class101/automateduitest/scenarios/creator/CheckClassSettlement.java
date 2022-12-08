@@ -7,18 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckClassSettlement implements TestScenario {
 
-    private static CheckClassSettlement instance = null;
-
-    public static CheckClassSettlement getInstance() {
-        if (instance == null) {
-            instance = new CheckClassSettlement();
-        }
-        return instance;
-    }
-
-    private CheckClassSettlement() {
-    }
-
     @Override
     public TestScenario proceed() {
         CreatorLeftNavigation.Elements.classSettlementTab().click();

@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.classmate;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusFalse;
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusTrue;
@@ -22,18 +23,18 @@ public class MyPageSubscription {
 
     @AfterEach
     void tearDown() {
-        Logout.getInstance().proceed();
+        SF.getInstance(Logout.class).proceed();
     }
 
     @Test
     void verifySubscriptionStatusWithNonSubscribed() {
-        LoginAsNonSubscriber.getInstance().proceed().validate();
-        CheckSubscriptionStatusFalse.getInstance().proceed().validate();
+        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
+        SF.getInstance(CheckSubscriptionStatusFalse.class).proceed().validate();
     }
 
     @Test
     void verifySubscriptionStatusWithSubscribed() {
-        LoginAsSubscriber.getInstance().proceed().validate();
-        CheckSubscriptionStatusTrue.getInstance().proceed().validate();
+        SF.getInstance(LoginAsSubscriber.class).proceed().validate();
+        SF.getInstance(CheckSubscriptionStatusTrue.class).proceed().validate();
     }
 }

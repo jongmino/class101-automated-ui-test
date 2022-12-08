@@ -1,6 +1,7 @@
 package net.class101.automateduitest.testSuites.website;
 
 import com.codeborne.selenide.Configuration;
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
 import net.class101.automateduitest.scenarios.website.SaveClass;
@@ -23,13 +24,11 @@ public class SaveAndUnSaveClass {
         Configuration.timeout = 20000;
     }
 
-
     @Test
     @Order(1)
     void verifySaveAndUnSaveClass() throws InterruptedException {
-        LoginAsNonSubscriber.getInstance().proceed().validate();
-        SaveClass.getInstance().proceed().validate();
-        UnSaveClass.getInstance().proceed().validate();
+        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
+        SF.getInstance(SaveClass.class).proceed().validate();
+        SF.getInstance(UnSaveClass.class).proceed().validate();
     }
-
 }

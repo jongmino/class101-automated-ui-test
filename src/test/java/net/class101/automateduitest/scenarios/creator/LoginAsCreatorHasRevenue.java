@@ -7,15 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class LoginAsCreatorHasRevenue implements TestScenario {
 
-    private static LoginAsCreatorHasRevenue instance = null;
-
-    public static LoginAsCreatorHasRevenue getInstance() {
-        if(instance == null){
-            instance = new LoginAsCreatorHasRevenue();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         CreatorLoginPage.Actions.loginAsCreatorHasRevenue();

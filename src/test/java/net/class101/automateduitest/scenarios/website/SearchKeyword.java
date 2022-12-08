@@ -7,15 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class SearchKeyword implements TestScenario {
 
-    private static SearchKeyword instance = null;
-
-    public static SearchKeyword getInstance() {
-        if(instance == null) {
-            instance = new SearchKeyword();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         try {
@@ -30,16 +21,14 @@ public class SearchKeyword implements TestScenario {
             Home.Elements.searchBarInput().pressEnter();
             Thread.sleep(2000);
 
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return this;
     }
 
     @Override
     public void validate() {
-
         //검색 결과 확인
         ProductListPage.Elements.craftsCategoryTab().shouldBe(Condition.visible);
     }

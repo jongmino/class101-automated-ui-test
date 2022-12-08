@@ -11,16 +11,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
  *
  * */
 public class CheckLectureTabMenu implements TestScenario {
-
-    private static CheckLectureTabMenu instance = null;
-
-    public static CheckLectureTabMenu getInstance() {
-        if (instance == null) {
-            instance = new CheckLectureTabMenu();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         LecturePage.Actions.openPage();

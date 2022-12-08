@@ -7,15 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckCashTab implements TestScenario {
 
-    private static CheckCashTab instance = null;
-
-    public static CheckCashTab getInstance() {
-        if (instance == null) {
-            instance = new CheckCashTab();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         //유저 네비게이션 프로필 이미지 클릭

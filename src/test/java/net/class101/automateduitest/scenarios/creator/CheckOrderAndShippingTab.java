@@ -7,18 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckOrderAndShippingTab implements TestScenario {
 
-    private static CheckOrderAndShippingTab instance = null;
-
-    public static CheckOrderAndShippingTab getInstance() {
-        if (instance == null) {
-            instance = new CheckOrderAndShippingTab();
-        }
-        return instance;
-    }
-
-    private CheckOrderAndShippingTab() {
-    }
-
     @Override
     public TestScenario proceed() {
         CreatorLeftNavigation.Elements.orderAndShippingTab().click();

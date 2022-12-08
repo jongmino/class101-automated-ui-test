@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.creator;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.scenarios.creator.CheckCreatorReferralTab;
 import net.class101.automateduitest.scenarios.creator.LoginAsCreatorHasClass;
@@ -11,11 +12,11 @@ public class Referral {
     @BeforeAll
     static void beforeAll() {
         CreatorHome.Actions.openPage();
-        LoginAsCreatorHasClass.getInstance().proceed().validate();
+        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
     }
 
     @Test
     void referralTab() {
-        CheckCreatorReferralTab.getInstance().proceed().validate();
+        SF.getInstance(CheckCreatorReferralTab.class).proceed().validate();
     }
 }

@@ -7,18 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckCreatorGuideTab implements TestScenario {
 
-    private static CheckCreatorGuideTab instance = null;
-
-    public static CheckCreatorGuideTab getInstance() {
-        if (instance == null) {
-            instance = new CheckCreatorGuideTab();
-        }
-        return instance;
-    }
-
-    private CheckCreatorGuideTab() {
-    }
-
     @Override
     public TestScenario proceed() {
         CreatorLeftNavigation.Elements.creatorGuideTab().shouldBe(Condition.enabled).click();

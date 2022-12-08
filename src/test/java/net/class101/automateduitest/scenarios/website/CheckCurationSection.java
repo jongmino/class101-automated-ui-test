@@ -6,19 +6,6 @@ import net.class101.automateduitest.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckCurationSection implements TestScenario {
-
-    private static CheckCurationSection instance = null;
-
-    public static CheckCurationSection getInstance() {
-        if (instance == null) {
-            instance = new CheckCurationSection();
-        }
-        return instance;
-    }
-
-    private CheckCurationSection() {
-    }
-
     @Override
     public TestScenario proceed() {
         Home.Elements.firstCurationItem().click();

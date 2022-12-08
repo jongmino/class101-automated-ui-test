@@ -11,18 +11,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
  */
 public class LoginAsNonSubscriber implements TestScenario {
 
-    private static LoginAsNonSubscriber instance;
-
-    public static LoginAsNonSubscriber getInstance() {
-        if (instance == null) {
-            instance = new LoginAsNonSubscriber();
-        }
-        return instance;
-    }
-
-    private LoginAsNonSubscriber() {
-    }
-
     public LoginAsNonSubscriber proceed() {
         //유저 네비게이션 우상단 로그인 버튼 클릭
         Home.Elements.loginButton().click();

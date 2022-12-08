@@ -13,32 +13,18 @@ import net.class101.automateduitest.scenarios.TestScenario;
  */
 public class LoginWithNaver implements TestScenario {
 
-    private static LoginWithNaver instance = null;
-
-    public static LoginWithNaver getInstance() {
-        if (instance == null) {
-            instance = new LoginWithNaver();
-        }
-        return instance;
-    }
-
-    private LoginWithNaver() {
-    }
 
     @Override
     public TestScenario proceed() {
-
         Home.Elements.loginButton().click();
         LoginPage.Elements.allLoginButton().click();
         AllLoginPage.Elements.loginWithNaverButton().click();
         NaverLoginPage.Actions.defaultLogin();
-
         return this;
     }
 
     @Override
     public void validate() {
-
         Home.Elements.userProfileImg().shouldBe(Condition.visible).hover();
     }
 }

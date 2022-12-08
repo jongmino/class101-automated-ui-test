@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.core;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
 import net.class101.automateduitest.scenarios.core.Logout;
@@ -26,12 +27,12 @@ public class EmailLogin {
     @Test
     @Order(1)
     void login_with_email() {
-        LoginAsNonSubscriber.getInstance().proceed().validate();
+        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
     }
 
     @Test
     @Order(2)
     void logout() {
-        Logout.getInstance().proceed().validate();
+        SF.getInstance(Logout.class).proceed().validate();
     }
 }

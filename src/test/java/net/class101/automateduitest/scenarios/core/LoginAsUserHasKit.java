@@ -8,18 +8,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class LoginAsUserHasKit implements TestScenario {
 
-    private static LoginAsUserHasKit instance;
-
-    public static LoginAsUserHasKit getInstance() {
-        if (instance == null) {
-            instance = new LoginAsUserHasKit();
-        }
-        return instance;
-    }
-
-    private LoginAsUserHasKit() {
-    }
-
     @Override
     public TestScenario proceed() {
         Home.Elements.loginButton().click();

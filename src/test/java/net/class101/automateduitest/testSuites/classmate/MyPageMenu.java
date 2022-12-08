@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.classmate;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.classmate.CheckCreatorCenterTab;
 import net.class101.automateduitest.scenarios.classmate.CheckEnquiryTab;
@@ -24,12 +25,12 @@ public class MyPageMenu {
 
     @Test
     void verifyMyPageMenu() throws InterruptedException {
-        LoginAsNonSubscriber.getInstance().proceed().validate();
-        CheckOrderTab.getInstance().proceed().validate();
-        CheckReferralTab.getInstance().proceed().validate();
-        CheckCreatorCenterTab.getInstance().proceed().validate();
-        CheckFAQTab.getInstance().proceed().validate();
-        CheckEnquiryTab.getInstance().proceed().validate();
-        CheckSettingTab.getInstance().proceed().validate();
+        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
+        SF.getInstance(CheckOrderTab.class).proceed().validate();
+        SF.getInstance(CheckReferralTab.class).proceed().validate();
+        SF.getInstance(CheckCreatorCenterTab.class).proceed().validate();
+        SF.getInstance(CheckFAQTab.class).proceed().validate();
+        SF.getInstance(CheckEnquiryTab.class).proceed().validate();
+        SF.getInstance(CheckSettingTab.class).proceed().validate();
     }
 }

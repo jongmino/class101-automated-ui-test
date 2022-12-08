@@ -1,6 +1,7 @@
 package net.class101.automateduitest.testSuites.core;
 
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.core.LoginWithNaver;
 import org.junit.jupiter.api.BeforeAll;
@@ -20,6 +21,6 @@ public class NaverLogin {
     @Test
     @Order(1)
     void login_with_naver() throws InterruptedException {
-        LoginWithNaver.getInstance().proceed().validate();
+        SF.getInstance(LoginWithNaver.class).proceed().validate();
     }
 }

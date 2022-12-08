@@ -7,18 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckCommentAnswered implements TestScenario {
 
-    private static CheckCommentAnswered instance = null;
-
-    public static CheckCommentAnswered getInstance() {
-        if (instance == null) {
-            instance = new CheckCommentAnswered();
-        }
-        return instance;
-    }
-
-    private CheckCommentAnswered() {
-    }
-
     @Override
     public TestScenario proceed() {
         try {

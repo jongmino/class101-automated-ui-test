@@ -9,18 +9,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckClassCommentTab implements TestScenario {
 
-    private static CheckClassCommentTab instance = null;
-
-    public static CheckClassCommentTab getInstance() {
-        if (instance == null) {
-            instance = new CheckClassCommentTab();
-        }
-        return instance;
-    }
-
-    private CheckClassCommentTab() {
-    }
-
     @Override
     public TestScenario proceed() {
         try {
@@ -31,7 +19,6 @@ public class CheckClassCommentTab implements TestScenario {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return this;
     }
 

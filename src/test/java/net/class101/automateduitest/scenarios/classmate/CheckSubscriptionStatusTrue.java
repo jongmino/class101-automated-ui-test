@@ -6,15 +6,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckSubscriptionStatusTrue implements TestScenario {
 
-    private static CheckSubscriptionStatusTrue instance = null;
-
-    public static CheckSubscriptionStatusTrue getInstance() {
-        if (instance == null) {
-            instance = new CheckSubscriptionStatusTrue();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         //유저 네비게이션 프로필 이미지 클릭

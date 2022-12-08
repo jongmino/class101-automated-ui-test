@@ -8,15 +8,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckOrderDetail implements TestScenario {
 
-    private static CheckOrderDetail instance;
-
-    public static CheckOrderDetail getInstance() {
-        if (instance == null) {
-            instance = new CheckOrderDetail();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         MyPage.Actions.openPage();

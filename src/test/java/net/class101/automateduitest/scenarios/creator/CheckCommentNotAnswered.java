@@ -7,18 +7,6 @@ import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckCommentNotAnswered implements TestScenario {
 
-    private static CheckCommentNotAnswered instance = null;
-
-    public static CheckCommentNotAnswered getInstance() {
-        if (instance == null) {
-            instance = new CheckCommentNotAnswered();
-        }
-        return instance;
-    }
-
-    private CheckCommentNotAnswered() {
-    }
-
     @Override
     public TestScenario proceed() {
         try {
@@ -30,7 +18,6 @@ public class CheckCommentNotAnswered implements TestScenario {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return this;
     }
 

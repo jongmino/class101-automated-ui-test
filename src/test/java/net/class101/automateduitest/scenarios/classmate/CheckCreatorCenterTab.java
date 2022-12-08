@@ -7,16 +7,6 @@ import net.class101.automateduitest.pages.plus.MyPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckCreatorCenterTab implements TestScenario {
-
-    private static CheckCreatorCenterTab instance = null;
-
-    public static CheckCreatorCenterTab getInstance() {
-        if (instance == null) {
-            instance = new CheckCreatorCenterTab();
-        }
-        return instance;
-    }
-
     @Override
     public TestScenario proceed() {
         try {

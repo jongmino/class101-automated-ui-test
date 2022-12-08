@@ -1,5 +1,6 @@
 package net.class101.automateduitest.testSuites.core;
 
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.core.CheckAppleLoginPage;
 import net.class101.automateduitest.scenarios.core.CheckEmailSignUpPage;
@@ -20,7 +21,7 @@ public class SignUpPage {
 
     @Test
     void signUpPage() {
-        CheckSignUpPage.getInstance().proceed().validate();
+        SF.getInstance(CheckSignUpPage.class).proceed().validate();
     }
 
     @Test
@@ -30,10 +31,10 @@ public class SignUpPage {
 
     @Test
     void thirdPartyPages() {
-        CheckAppleLoginPage.getInstance().proceed().validate();
-        CheckFacebookLoginPage.getInstance().proceed().validate();
-        CheckGoogleLoginPage.getInstance().proceed().validate();
-        CheckKakaoLoginPage.getInstance().proceed().validate();
-        CheckNaverLoginPage.getInstance().proceed().validate();
+        SF.getInstance(CheckAppleLoginPage.class).proceed().validate();
+        SF.getInstance(CheckFacebookLoginPage.class).proceed().validate();
+        SF.getInstance(CheckGoogleLoginPage.class).proceed().validate();
+        SF.getInstance(CheckKakaoLoginPage.class).proceed().validate();
+        SF.getInstance(CheckNaverLoginPage.class).proceed().validate();
     }
 }

@@ -4,6 +4,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.pages.plus.Home;
@@ -166,28 +167,28 @@ public class TestAll {
 
             @AfterEach
             void tearDown() {
-                Logout.getInstance().proceed().validate();
+                SF.getInstance(Logout.class).proceed().validate();
             }
 
             @Test
             @Order(1)
             @DisplayName("네이버 로그인")
             void verifyNaverLogin() {
-                LoginWithNaver.getInstance().proceed().validate();
+                SF.getInstance(LoginWithNaver.class).proceed().validate();
             }
 
             @Test
             @Order(3)
             @DisplayName("이메일 로그인")
             void verifyEmailLogin() {
-                LoginAsNonSubscriber.getInstance().proceed().validate();
+                SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
             }
 
 //            @Test
 //            @Order(3)
 //            @DisplayName("페이스북 로그인")
 //            void loginWithFacebook() {
-//                LoginWithFacebook.getInstance().proceed().validate();
+//                SF.getInstance(LoginWithFacebook.class).proceed().validate();
 //            }
         }
 
@@ -205,7 +206,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                LoginAsNonSubscriber.getInstance().proceed().validate();
+                SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
             }
 
             @AfterEach
@@ -221,26 +222,26 @@ public class TestAll {
             @Test
             @DisplayName("큐레이션 섹션 및 클래스 상세정보")
             void verifyCurationSection() {
-                CheckCurationSection.getInstance().proceed().validate();
-                CheckSubscriptionPlan.getInstance().proceed().validate();
+                SF.getInstance(CheckCurationSection.class).proceed().validate();
+                SF.getInstance(CheckSubscriptionPlan.class).proceed().validate();
             }
 
             @Test
             @DisplayName("검색 기능")
             void verifySearchBar() {
-                SearchKeyword.getInstance().proceed().validate();
+                SF.getInstance(SearchKeyword.class).proceed().validate();
             }
 
             @Test
             @DisplayName("추천 카테고리")
             void verifyRecommendedCategory() {
-                CheckRecommendedCategorySection.getInstance().proceed().validate();
+                SF.getInstance(CheckRecommendedCategorySection.class).proceed().validate();
             }
 
             @Test
             @DisplayName("추천 클래스")
             void verifyRecommendedClass() {
-                CheckRecommendedClassSection.getInstance().proceed().validate();
+                SF.getInstance(CheckRecommendedClassSection.class).proceed().validate();
             }
 
         }
@@ -252,7 +253,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                LoginAsSubscriber.getInstance().proceed().validate();
+                SF.getInstance(LoginAsSubscriber.class).proceed().validate();
             }
 
             @AfterEach
@@ -268,15 +269,15 @@ public class TestAll {
             @Test
             @DisplayName("내 클래스 섹션 검증")
             void verifyMyClass() {
-                CheckMyClassSection.getInstance().proceed().validate();
+                SF.getInstance(CheckMyClassSection.class).proceed().validate();
             }
 
 
             @Test
             @DisplayName("찜하기 추가 / 제거")
             void verifySaveClass() throws InterruptedException {
-                SaveClass.getInstance().proceed().validate();
-                UnSaveClass.getInstance().proceed().validate();
+                SF.getInstance(SaveClass.class).proceed().validate();
+                SF.getInstance(UnSaveClass.class).proceed().validate();
             }
         }
     }
@@ -292,7 +293,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                LoginAsNonSubscriber.getInstance().proceed().validate();
+                SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
             }
 
             @AfterAll
@@ -308,31 +309,31 @@ public class TestAll {
             @Test
             @DisplayName("마이페이지 캐시탭 확인")
             void verifyMyPageCashTab() {
-                CheckCashTab.getInstance().proceed().validate();
+                SF.getInstance(CheckCashTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("마이페이지 구독 탭 확인 - 미구독")
             void verifyMyPageSubscriptionStatus() {
-                CheckSubscriptionStatusFalse.getInstance().proceed().validate();
+                SF.getInstance(CheckSubscriptionStatusFalse.class).proceed().validate();
             }
 
             @Test
             @DisplayName("마이페이지 서비스 리전 변경 기능 확인")
             void verifyMyPageServiceRegion() {
-                ChangeServiceRegionEN.getInstance().proceed().validate();
-                ChangeServiceRegionJP.getInstance().proceed().validate();
+                SF.getInstance(ChangeServiceRegionEN.class).proceed().validate();
+                SF.getInstance(ChangeServiceRegionJP.class).proceed().validate();
             }
 
             @Test
             @DisplayName("마이페이지 좌측 네비게이션 메뉴 페이지 이동 확인")
             void verifyMyPageMenu() {
-                CheckOrderTab.getInstance().proceed().validate();
-                CheckReferralTab.getInstance().proceed().validate();
-                CheckCreatorCenterTab.getInstance().proceed().validate();
-                CheckFAQTab.getInstance().proceed().validate();
-                CheckEnquiryTab.getInstance().proceed().validate();
-                CheckSettingTab.getInstance().proceed().validate();
+                SF.getInstance(CheckOrderTab.class).proceed().validate();
+                SF.getInstance(CheckReferralTab.class).proceed().validate();
+                SF.getInstance(CheckCreatorCenterTab.class).proceed().validate();
+                SF.getInstance(CheckFAQTab.class).proceed().validate();
+                SF.getInstance(CheckEnquiryTab.class).proceed().validate();
+                SF.getInstance(CheckSettingTab.class).proceed().validate();
             }
         }
 
@@ -343,7 +344,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                LoginAsSubscriber.getInstance().proceed().validate();
+                SF.getInstance(LoginAsSubscriber.class).proceed().validate();
             }
 
             @AfterAll
@@ -359,28 +360,28 @@ public class TestAll {
             @Test
             @DisplayName("마이페이지 구독 탭 확인 - 구독")
             void verifyMyPageSubscriptionStatus() {
-                CheckSubscriptionStatusTrue.getInstance().proceed().validate();
+                SF.getInstance(CheckSubscriptionStatusTrue.class).proceed().validate();
             }
 
             @Test
             @DisplayName("영상 재생 확인")
             void verifyVideoPlay() {
-                CheckPlayLecture.getInstance().proceed().validate();
+                SF.getInstance(CheckPlayLecture.class).proceed().validate();
             }
 
             @Test
             @DisplayName("플레이어 기능 확인")
             void verifyVideoPlayerFunctionality() throws InterruptedException {
-                CheckPlayLecture.getInstance().proceed();
-                ChangePlaySpeed.getInstance().proceed().validate();
-                ChangeVideoQuality.getInstance().proceed().validate();
-                ChangeAutoPlay.getInstance().proceed().validate();
+                SF.getInstance(CheckPlayLecture.class).proceed();
+                SF.getInstance(ChangePlaySpeed.class).proceed().validate();
+                SF.getInstance(ChangeVideoQuality.class).proceed().validate();
+                SF.getInstance(ChangeAutoPlay.class).proceed().validate();
             }
 
             @Test
             @DisplayName("수강환경 탭 메뉴 확인")
             void lectureTabMenu() {
-                CheckLectureTabMenu.getInstance().proceed().validate();
+                SF.getInstance(CheckLectureTabMenu.class).proceed().validate();
             }
         }
     }
@@ -395,7 +396,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 CreatorHome.Actions.openPage();
-                LoginAsCreatorNew.getInstance().proceed().validate();
+                SF.getInstance(LoginAsCreatorNew.class).proceed().validate();
             }
 
             @AfterAll
@@ -410,25 +411,25 @@ public class TestAll {
 
             @AfterEach
             void tearDown() {
-                DeleteFirstProduct.getInstance().proceed();
+                SF.getInstance(DeleteFirstProduct.class).proceed();
             }
 
             @Test
             @DisplayName("클래스 만들기")
             void addClass() {
-                CheckAddClass.getInstance().proceed().validate();
+                SF.getInstance(CheckAddClass.class).proceed().validate();
             }
 
             @Test
             @DisplayName("디지털 파일 만들기")
             void addDigitalFile() {
-                CheckAddDigitalFile.getInstance().proceed().validate();
+                SF.getInstance(CheckAddDigitalFile.class).proceed().validate();
             }
 
             @Test
             @DisplayName("전자책 만들기")
             void addEBook() {
-                CheckAddEBook.getInstance().proceed().validate();
+                SF.getInstance(CheckAddEBook.class).proceed().validate();
             }
         }
 
@@ -439,7 +440,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 CreatorHome.Actions.openPage();
-                LoginAsCreatorHasClass.getInstance().proceed().validate();
+                SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
             }
 
             @AfterAll
@@ -455,79 +456,79 @@ public class TestAll {
             @Test
             @DisplayName("상품 리스트 목록")
             void productList() {
-                CheckProductList.getInstance().proceed().validate();
+                SF.getInstance(CheckProductList.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 댓글 페이지")
             void commentPage() {
-                CheckClassCommentTab.getInstance().proceed().validate();
+                SF.getInstance(CheckClassCommentTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 댓글 페이지 답변완료")
             void commentAnswered() {
-                CheckCommentAnswered.getInstance().proceed().validate();
+                SF.getInstance(CheckCommentAnswered.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 댓글 페이지 답변 대기중")
             void commentNotAnswered() {
-                CheckCommentNotAnswered.getInstance().proceed().validate();
+                SF.getInstance(CheckCommentNotAnswered.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 소식")
             void classNews() {
-                CheckClassNews.getInstance().proceed().validate();
+                SF.getInstance(CheckClassNews.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스101+ 초대")
             void referralTab() {
-                CheckCreatorReferralTab.getInstance().proceed().validate();
+                SF.getInstance(CheckCreatorReferralTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("파일 요청 내역")
             void fileRequestTab() {
-                CheckFileRequestTab.getInstance().proceed().validate();
+                SF.getInstance(CheckFileRequestTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("주문 및 배송")
             void orderAndShippingTab() {
-                CheckOrderAndShippingTab.getInstance().proceed().validate();
+                SF.getInstance(CheckOrderAndShippingTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("재고")
             void stockTab() {
-                CheckStockTab.getInstance().proceed().validate();
+                SF.getInstance(CheckStockTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 정산")
             void classSettlement() {
-                CheckClassSettlement.getInstance().proceed().validate();
+                SF.getInstance(CheckClassSettlement.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스101+ 정산")
             void plusSettlement() {
-                CheckPlusSettlement.getInstance().proceed().validate();
+                SF.getInstance(CheckPlusSettlement.class).proceed().validate();
             }
 
             @Test
             @DisplayName("키트 정산")
             void kitSettlement() {
-                CheckPlusSettlement.getInstance().proceed().validate();
+                SF.getInstance(CheckPlusSettlement.class).proceed().validate();
             }
 
             @Test
             @DisplayName("크리에이터 가이드 센터")
             void creatorGuideCenter() {
-                CheckCreatorGuideTab.getInstance().proceed().validate();
+                SF.getInstance(CheckCreatorGuideTab.class).proceed().validate();
             }
         }
     }
@@ -538,12 +539,12 @@ public class TestAll {
 
         @Nested
         @DisplayName("구독 계정")
-        public class Subscriber{
+        public class Subscriber {
 
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                LoginAsSubscriber.getInstance().proceed().validate();
+                SF.getInstance(LoginAsSubscriber.class).proceed().validate();
             }
 
             @AfterAll
@@ -559,18 +560,18 @@ public class TestAll {
             @Test
             @DisplayName("준비물 구매")
             void buyKit() {
-                CheckKitPurchase.getInstance().proceed().validate();
+                SF.getInstance(CheckKitPurchase.class).proceed().validate();
             }
         }
 
         @Nested
         @DisplayName("키트 계정")
-        public class UserHasKit{
+        public class UserHasKit {
 
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                LoginAsUserHasKit.getInstance().proceed().validate();
+                SF.getInstance(LoginAsUserHasKit.class).proceed().validate();
             }
 
             @AfterAll
@@ -586,19 +587,19 @@ public class TestAll {
             @Test
             @DisplayName("주문 및 배송 진입")
             void orderHistory() {
-                CheckOrderHistory.getInstance().proceed().validate();
+                SF.getInstance(CheckOrderHistory.class).proceed().validate();
             }
 
             @Test
             @DisplayName("주문 및 배송 자세히 보기")
             void orderDetail() {
-                CheckOrderDetail.getInstance().proceed().validate();
+                SF.getInstance(CheckOrderDetail.class).proceed().validate();
             }
 
             @Test
             @DisplayName("키트 환불")
             void refundKit() {
-                CheckRefundKit.getInstance().proceed().validate();
+                SF.getInstance(CheckRefundKit.class).proceed().validate();
             }
         }
     }
