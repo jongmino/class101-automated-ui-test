@@ -4,7 +4,7 @@ import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.pages.plus.MyPage;
 import net.class101.automateduitest.pages.plus.OrderDetailPage;
 import net.class101.automateduitest.pages.plus.OrderPage;
-import net.class101.automateduitest.pages.plus.RefundPage;
+import net.class101.automateduitest.pages.plus.KitRefundPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckRefundKit implements TestScenario {
@@ -20,6 +20,6 @@ public class CheckRefundKit implements TestScenario {
 
     @Override
     public void validate() {
-        RefundPage.Elements.refundPageTitle().shouldBe(Condition.visible);
+        KitRefundPage.Elements.kitRefundPageTitle().shouldBe(Condition.visible);
     }
 }

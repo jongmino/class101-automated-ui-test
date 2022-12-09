@@ -23,6 +23,9 @@ urls:
   selectPlanPage:
     dev: ""
     staging: "https://staging.class101.net/plus/ko/payment/select-subscription-product"
+  subscriptionPage:
+    dev: ""
+    staging: "https://staging.class101.net/plus/ko/mypage/subscription"
 
 accounts:
   plusNonSubscriber:
@@ -31,6 +34,9 @@ accounts:
   plusSubscriber:
     id: "sbtestc422@101.inc"
     pw: "test001!"
+  plusYearlySubscriber:
+    id: "referral_10@101.inc"
+    pw: "class101!"
   plusHasKit:
     id: "dora.testc@gmail.com"
     pw: "thwjd1205!"

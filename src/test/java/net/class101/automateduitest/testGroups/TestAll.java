@@ -24,7 +24,9 @@ import net.class101.automateduitest.scenarios.classmate.CheckSettingTab;
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusFalse;
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusTrue;
 import net.class101.automateduitest.scenarios.classmate.CheckPlayLecture;
+import net.class101.automateduitest.scenarios.commerce.CheckCancelSubscription;
 import net.class101.automateduitest.scenarios.commerce.CheckRefundKit;
+import net.class101.automateduitest.scenarios.commerce.CheckRefundSubscription;
 import net.class101.automateduitest.scenarios.commerce.CheckYearlySubscription;
 import net.class101.automateduitest.scenarios.core.CheckAppleLoginPage;
 import net.class101.automateduitest.scenarios.core.CheckEmailSignUpPage;
@@ -38,6 +40,7 @@ import net.class101.automateduitest.scenarios.commerce.CheckOrderDetail;
 import net.class101.automateduitest.scenarios.commerce.CheckOrderHistory;
 import net.class101.automateduitest.scenarios.core.LoginAsSubscriber;
 import net.class101.automateduitest.scenarios.core.LoginAsUserHasKit;
+import net.class101.automateduitest.scenarios.core.LoginAsYearlySubscriber;
 import net.class101.automateduitest.scenarios.core.LoginWithNaver;
 import net.class101.automateduitest.scenarios.core.Logout;
 import net.class101.automateduitest.scenarios.creator.CheckAddClass;
@@ -563,13 +566,13 @@ public class TestAll {
         }
 
         @Nested
-        @DisplayName("구독 계정")
+        @DisplayName("연간 구독 계정")
         public class Subscriber {
 
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.getInstance(LoginAsSubscriber.class).proceed().validate();
+                SF.getInstance(LoginAsYearlySubscriber.class).proceed().validate();
             }
 
             @AfterAll
@@ -586,6 +589,18 @@ public class TestAll {
             @DisplayName("준비물 구매")
             void buyKit() {
                 SF.getInstance(CheckKitPurchase.class).proceed().validate();
+            }
+
+            @Test
+            @DisplayName("구독 취소")
+            void cancelSubscription() {
+                SF.getInstance(CheckCancelSubscription.class).proceed().validate();
+            }
+
+            @Test
+            @DisplayName("구독 환불")
+            void refundSubscription() {
+                SF.getInstance(CheckRefundSubscription.class).proceed().validate();
             }
         }
 

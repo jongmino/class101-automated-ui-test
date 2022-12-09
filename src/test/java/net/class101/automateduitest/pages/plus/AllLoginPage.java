@@ -47,6 +47,8 @@ public class AllLoginPage {
         private static final String NON_SUBSCRIBED_PASSWORD = accounts.get("plusNonSubscriber").pw;
         private static final String SUBSCRIBED_USER_ID = accounts.get("plusSubscriber").id;
         private static final String SUBSCRIBED_PASSWORD = accounts.get("plusSubscriber").pw;
+        private static final String YEARLY_SUBSCRIBER_USER_ID = accounts.get("plusYearlySubscriber").id;
+        private static final String YEARLY_SUBSCRIBER_PASSWORD = accounts.get("plusYearlySubscriber").pw;
         private static final String KIT_USER_ID = accounts.get("plusHasKit").id;
         private static final String KIT_PASSWORD = accounts.get("plusHasKit").pw;
 
@@ -66,6 +68,10 @@ public class AllLoginPage {
 
         public static void loginAsUserHasKit() {
             loginWithEmail(KIT_USER_ID, KIT_PASSWORD);
+        }
+
+        public static void loginAsYearlySubscriber() {
+            loginWithEmail(YEARLY_SUBSCRIBER_USER_ID, YEARLY_SUBSCRIBER_PASSWORD);
         }
     }
 }
