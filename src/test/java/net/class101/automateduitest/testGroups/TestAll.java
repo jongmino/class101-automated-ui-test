@@ -60,6 +60,7 @@ import net.class101.automateduitest.scenarios.creator.CheckProductList;
 import net.class101.automateduitest.scenarios.creator.CheckStockTab;
 import net.class101.automateduitest.scenarios.creator.DeleteFirstProduct;
 import net.class101.automateduitest.scenarios.creator.LoginAsCreatorHasClass;
+import net.class101.automateduitest.scenarios.creator.LoginAsCreatorHasRevenue;
 import net.class101.automateduitest.scenarios.creator.LoginAsCreatorNew;
 import net.class101.automateduitest.scenarios.website.CheckCurationSection;
 import net.class101.automateduitest.scenarios.website.CheckMyClassSection;
@@ -487,12 +488,6 @@ public class TestAll {
             }
 
             @Test
-            @DisplayName("클래스101+ 초대")
-            void referralTab() {
-                SF.getInstance(CheckCreatorReferralTab.class).proceed().validate();
-            }
-
-            @Test
             @DisplayName("파일 요청 내역")
             void fileRequestTab() {
                 SF.getInstance(CheckFileRequestTab.class).proceed().validate();
@@ -515,13 +510,6 @@ public class TestAll {
             void classSettlement() {
                 SF.getInstance(CheckClassSettlement.class).proceed().validate();
             }
-
-            @Test
-            @DisplayName("클래스101+ 정산")
-            void plusSettlement() {
-                SF.getInstance(CheckPlusSettlement.class).proceed().validate();
-            }
-
             @Test
             @DisplayName("키트 정산")
             void kitSettlement() {
@@ -533,6 +521,39 @@ public class TestAll {
             void creatorGuideCenter() {
                 SF.getInstance(CheckCreatorGuideTab.class).proceed().validate();
             }
+        }
+
+        @Nested
+        @DisplayName("크리에이터 정산 테스트 계정")
+        public class CreatorHasRevenue {
+            @BeforeAll
+            static void beforeAll() {
+                CreatorHome.Actions.openPage();
+                SF.getInstance(LoginAsCreatorHasRevenue.class).proceed().validate();
+            }
+
+            @AfterAll
+            static void afterAll() {
+                closeWebDriver();
+            }
+
+            @AfterEach
+            void tearDown() {
+                CreatorHome.Actions.openPage();
+            }
+
+            @Test
+            @DisplayName("클래스101+ 초대")
+            void    referralTab() {
+                SF.getInstance(CheckCreatorReferralTab.class).proceed().validate();
+            }
+
+            @Test
+            @DisplayName("클래스101+ 정산")
+            void plusSettlement() {
+                SF.getInstance(CheckPlusSettlement.class).proceed().validate();
+            }
+
         }
     }
 
@@ -546,7 +567,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.getInstance(LoginAsSubscriber.class).proceed().validate();
+                SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
             }
 
             @AfterAll
