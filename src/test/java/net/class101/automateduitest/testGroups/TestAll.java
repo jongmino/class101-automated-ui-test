@@ -54,6 +54,7 @@ import net.class101.automateduitest.scenarios.creator.CheckCommentNotAnswered;
 import net.class101.automateduitest.scenarios.creator.CheckCreatorGuideTab;
 import net.class101.automateduitest.scenarios.creator.CheckCreatorReferralTab;
 import net.class101.automateduitest.scenarios.creator.CheckFileRequestTab;
+import net.class101.automateduitest.scenarios.creator.CheckKitSettlement;
 import net.class101.automateduitest.scenarios.creator.CheckOrderAndShippingTab;
 import net.class101.automateduitest.scenarios.creator.CheckPlusSettlement;
 import net.class101.automateduitest.scenarios.creator.CheckProductList;
@@ -513,7 +514,7 @@ public class TestAll {
             @Test
             @DisplayName("키트 정산")
             void kitSettlement() {
-                SF.getInstance(CheckPlusSettlement.class).proceed().validate();
+                SF.getInstance(CheckKitSettlement.class).proceed().validate();
             }
 
             @Test
