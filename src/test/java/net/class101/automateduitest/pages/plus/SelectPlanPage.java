@@ -9,12 +9,13 @@ import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.common.PropertyLoader;
 import org.openqa.selenium.By;
 
-public class SubscribePlanPage {
+public class SelectPlanPage {
 
     public class Elements {
 
         private static final By SUBSCRIPTION_PLAN_TITLE = withText("구독 상품");
         private static final By NEXT_BUTTON = byXpath("//button[contains(.,'다음')]");
+        private static final By SPAN_CONTAINS_FREE_TRIAL = byXpath("//span[contains(.,'무료 체험')]");
 
         public static SelenideElement subscribePlanTitle() {
             return $(SUBSCRIPTION_PLAN_TITLE);
@@ -22,6 +23,10 @@ public class SubscribePlanPage {
 
         public static SelenideElement nextButton() {
             return $(NEXT_BUTTON);
+        }
+
+        public static SelenideElement spanContainsFreeTrial() {
+            return $(SPAN_CONTAINS_FREE_TRIAL);
         }
     }
 

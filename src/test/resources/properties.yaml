@@ -28,6 +28,9 @@ urls:
     staging: "https://staging.class101.net/plus/ko/mypage/subscription"
 
 accounts:
+  plusNewUser:
+    id: "test_1@101.inc"
+    pw: "class101!"
   plusNonSubscriber:
     id: "referral_1@101.inc"
     pw: "class101!"

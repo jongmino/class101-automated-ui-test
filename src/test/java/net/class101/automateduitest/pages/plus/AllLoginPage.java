@@ -51,6 +51,9 @@ public class AllLoginPage {
         private static final String YEARLY_SUBSCRIBER_PASSWORD = accounts.get("plusYearlySubscriber").pw;
         private static final String KIT_USER_ID = accounts.get("plusHasKit").id;
         private static final String KIT_PASSWORD = accounts.get("plusHasKit").pw;
+        private static final String NEW_USER_ID = accounts.get("plusNewUser").id;
+        private static final String NEW_PASSWORD = accounts.get("plusNewUser").pw;
+
 
         private static void loginWithEmail(String email, String password) {
             AllLoginPage.Elements.emailInputField().sendKeys(email);
@@ -72,6 +75,10 @@ public class AllLoginPage {
 
         public static void loginAsYearlySubscriber() {
             loginWithEmail(YEARLY_SUBSCRIBER_USER_ID, YEARLY_SUBSCRIBER_PASSWORD);
+        }
+
+        public static void loginAsNewUser() {
+            loginWithEmail(NEW_USER_ID, NEW_PASSWORD);
         }
     }
 }

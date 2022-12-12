@@ -25,6 +25,7 @@ import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusF
 import net.class101.automateduitest.scenarios.classmate.CheckSubscriptionStatusTrue;
 import net.class101.automateduitest.scenarios.classmate.CheckPlayLecture;
 import net.class101.automateduitest.scenarios.commerce.CheckCancelSubscription;
+import net.class101.automateduitest.scenarios.commerce.CheckFreeTrial;
 import net.class101.automateduitest.scenarios.commerce.CheckRefundKit;
 import net.class101.automateduitest.scenarios.commerce.CheckRefundSubscription;
 import net.class101.automateduitest.scenarios.commerce.CheckYearlySubscription;
@@ -34,6 +35,7 @@ import net.class101.automateduitest.scenarios.core.CheckFacebookLoginPage;
 import net.class101.automateduitest.scenarios.core.CheckGoogleLoginPage;
 import net.class101.automateduitest.scenarios.core.CheckKakaoLoginPage;
 import net.class101.automateduitest.scenarios.core.CheckNaverLoginPage;
+import net.class101.automateduitest.scenarios.core.LoginAsNewUser;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
 import net.class101.automateduitest.scenarios.commerce.CheckKitPurchase;
 import net.class101.automateduitest.scenarios.commerce.CheckOrderDetail;
@@ -563,6 +565,22 @@ public class TestAll {
     public class CommercePlatform {
 
         @Nested
+        @DisplayName("신규 계정")
+        public class NewUser {
+            @BeforeAll
+            static void beforeAll() {
+                Home.Actions.openPage();
+                SF.getInstance(LoginAsNewUser.class).proceed().validate();
+            }
+
+            @Test
+            @DisplayName("무료 체험")
+            void freeTrial() {
+                SF.getInstance(CheckFreeTrial.class).proceed().validate();
+            }
+        }
+
+        @Nested
         @DisplayName("미구독 계정")
         public class NonSubscriber {
             @BeforeAll
@@ -582,6 +600,7 @@ public class TestAll {
             }
 
             @Test
+            @DisplayName("연간 구독")
             void yearlyPlan() {
                 SF.getInstance(CheckYearlySubscription.class).proceed().validate();
             }
