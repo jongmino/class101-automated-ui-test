@@ -60,6 +60,7 @@ import net.class101.automateduitest.scenarios.creator.CheckKitSettlement;
 import net.class101.automateduitest.scenarios.creator.CheckOrderAndShippingTab;
 import net.class101.automateduitest.scenarios.creator.CheckPlusSettlement;
 import net.class101.automateduitest.scenarios.creator.CheckProductList;
+import net.class101.automateduitest.scenarios.creator.CheckRequestClassReview;
 import net.class101.automateduitest.scenarios.creator.CheckStockTab;
 import net.class101.automateduitest.scenarios.creator.DeleteFirstProduct;
 import net.class101.automateduitest.scenarios.creator.LoginAsCreatorHasClass;
@@ -437,6 +438,12 @@ public class TestAll {
             @DisplayName("전자책 만들기")
             void addEBook() {
                 SF.getInstance(CheckAddEBook.class).proceed().validate();
+            }
+
+            @Test
+            @DisplayName("검토 요청")
+            void requestReview() {
+                SF.getInstance(CheckRequestClassReview.class).proceed().validate();
             }
         }
 

@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 
 public class CreatorProductPage {
     public class Elements {
-        private static final By CREATE_PRODUCT_BUTTON = byXpath("//a[@href='/center/products/add']");
+        private static final By CREATE_PRODUCT_BUTTON = byXpath("//button[not (@disabled)]//span[text()='상품 만들기']");
         private static final By PRODUCT_LIST = byXpath("//div[@aria-label='grid']/div");
         private static final By FIRST_PRODUCT_SELECT_BOX = byXpath("(//div[@aria-label='grid']//label)[1]");
         private static final By DELETE_BUTTON = byXpath("//button[contains(.,'삭제')]");

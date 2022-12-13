@@ -15,7 +15,6 @@ public class CheckAddClass implements TestScenario {
         try {
             Thread.sleep(2000);
             CreatorProductPage.Elements.createProductButton().shouldNotBe(Condition.disabled).click();
-            Thread.sleep(2000);
             CreatorAddProductPage.Elements.createClassButton().shouldBe(Condition.visible).click();
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -26,7 +25,6 @@ public class CheckAddClass implements TestScenario {
 
     @Override
     public void validate() {
-        System.out.println(Utils.getUrl());
         assertTrue(Utils.urlContains("klass"));
     }
 }

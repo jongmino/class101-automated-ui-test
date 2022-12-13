@@ -6,6 +6,7 @@ import net.class101.automateduitest.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.scenarios.creator.CheckAddClass;
 import net.class101.automateduitest.scenarios.creator.CheckAddDigitalFile;
 import net.class101.automateduitest.scenarios.creator.CheckAddEBook;
+import net.class101.automateduitest.scenarios.creator.CheckRequestClassReview;
 import net.class101.automateduitest.scenarios.creator.DeleteFirstProduct;
 import net.class101.automateduitest.scenarios.creator.LoginAsCreatorNew;
 import org.junit.jupiter.api.AfterEach;
@@ -44,5 +45,10 @@ public class AddProduct {
     @Test
     void addEBook() {
         SF.getInstance(CheckAddEBook.class).proceed().validate();
+    }
+
+    @Test
+    void requestReview() {
+        SF.getInstance(CheckRequestClassReview.class).proceed().validate();
     }
 }
