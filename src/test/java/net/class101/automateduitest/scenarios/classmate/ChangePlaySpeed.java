@@ -14,12 +14,13 @@ public class ChangePlaySpeed implements TestScenario {
     @Override
     public TestScenario proceed() {
         try {
-            LecturePage.Elements.videoElementPlaying().hover();
+            LecturePage.Actions.openPage();
+            LecturePage.Elements.videoPlayer().hover();
             LecturePage.Elements.playSpeedButton().shouldNotBe(Condition.disabled);
             playSpeedSvgPathBefore = LecturePage.Actions.getPlaySpeedSVGPathValue();
-            Thread.sleep(1000);
-            LecturePage.Elements.videoElementPlaying().hover();
+            LecturePage.Elements.videoPlayer().hover();
             LecturePage.Elements.playSpeedButton().shouldNotBe(Condition.disabled).click();
+            Thread.sleep(1000);
             playSpeedSvgPathAfter = LecturePage.Actions.getPlaySpeedSVGPathValue();
         } catch (InterruptedException e) {
             e.printStackTrace();

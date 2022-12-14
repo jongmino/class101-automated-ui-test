@@ -9,21 +9,15 @@ public class SearchKeyword implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-        try {
+        //검색창 클릭
+        Home.Elements.searchBar().click();
+        //검색 패널 확인
+        Home.Elements.searchPanelTitle().shouldBe(Condition.visible);
+        //검색 키워드 입력
+        Home.Elements.searchBarInput().sendKeys("공예");
+        //검색
+        Home.Elements.searchBarInput().pressEnter();
 
-            //검색창 클릭
-            Home.Elements.searchBar().click();
-            //검색 패널 확인
-            Home.Elements.searchPanelTitle().shouldBe(Condition.visible);
-            //검색 키워드 입력
-            Home.Elements.searchBarInput().sendKeys("공예");
-            //검색
-            Home.Elements.searchBarInput().pressEnter();
-            Thread.sleep(2000);
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return this;
     }
 

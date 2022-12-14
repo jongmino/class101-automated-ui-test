@@ -13,7 +13,7 @@ public class SelectPlanPage {
 
     public class Elements {
 
-        private static final By SUBSCRIPTION_PLAN_TITLE = withText("구독 상품");
+        private static final By SUBSCRIPTION_PLAN_TITLE = withText("연간 구독");
         private static final By NEXT_BUTTON = byXpath("//button[contains(.,'다음')]");
         private static final By SPAN_CONTAINS_FREE_TRIAL = byXpath("//span[contains(.,'무료 체험')]");
 

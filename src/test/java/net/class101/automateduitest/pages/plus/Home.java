@@ -91,9 +91,14 @@ public class Home {
 
         private static final String STAGING_PLUS_HOME_URL = PropertyLoader.getProperties().urls.get("plusHome").staging;
         private static final By SAVED_CLASSES_SECTION_TITLE = byXpath("//h4[contains(.,'찜한 클래스')]");
+        private static final By CLOSE_MESSAGE_BUTTON = byXpath("//button[@aria-label='Close Message']");
 
         public static void openPage() {
             open(STAGING_PLUS_HOME_URL);
+            //홈페이지에서 광고가 뜰 경우 끄기
+            if($$(CLOSE_MESSAGE_BUTTON).size() > 0){
+                $(CLOSE_MESSAGE_BUTTON).click();
+            }
         }
 
         public static void waitForSavedClassesDisappear() {

@@ -14,7 +14,7 @@ public class ChangeAutoPlay implements TestScenario {
     @Override
     public TestScenario proceed() {
         try {
-            LecturePage.Elements.videoElementPlaying().hover();
+            LecturePage.Elements.videoPlayer().hover();
             LecturePage.Elements.autoPlaySettingButton().shouldBe(Condition.visible).click();
             autoPlayOptionValue = LecturePage.Actions.getUnCheckedAutoPlayOptionValue();
             LecturePage.Elements.firstUnCheckedRadioButton().click();

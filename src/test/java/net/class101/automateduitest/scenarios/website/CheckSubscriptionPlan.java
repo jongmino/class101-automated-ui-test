@@ -9,14 +9,8 @@ public class CheckSubscriptionPlan implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-        try {
-            Thread.sleep(2000);
 
-            //(비구독) 구독 시작하기 버튼 클릭
-            ProductDetailPage.Elements.startSubscriptionButton().click();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        ProductDetailPage.Elements.startSubscriptionButton().shouldBe(Condition.visible).shouldBe(Condition.enabled).click();
         return this;
     }
 

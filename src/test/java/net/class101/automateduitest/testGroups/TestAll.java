@@ -380,7 +380,6 @@ public class TestAll {
             @Test
             @DisplayName("플레이어 기능 확인")
             void verifyVideoPlayerFunctionality() {
-                SF.getInstance(CheckPlayLecture.class).proceed();
                 SF.getInstance(ChangePlaySpeed.class).proceed().validate();
                 SF.getInstance(ChangeVideoQuality.class).proceed().validate();
                 SF.getInstance(ChangeAutoPlay.class).proceed().validate();

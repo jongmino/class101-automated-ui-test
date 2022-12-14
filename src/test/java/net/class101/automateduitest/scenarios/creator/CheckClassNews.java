@@ -13,7 +13,8 @@ public class CheckClassNews implements TestScenario {
         CreatorHome.Actions.openPage();
         CreatorLeftNavigation.Elements.classTab().click();
         CreatorLeftNavigation.Elements.classNewsTab().click();
-        CreatorClassNewsPage.Elements.classSelector().shouldBe(Condition.visible).selectOption(1);
+        CreatorClassNewsPage.Elements.classIdInput().shouldBe(Condition.visible).sendKeys(CreatorClassNewsPage.CLASS_ID);
+        CreatorClassNewsPage.Elements.classIdInput().pressEnter();
         return this;
     }
 

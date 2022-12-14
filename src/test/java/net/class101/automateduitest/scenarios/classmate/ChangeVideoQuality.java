@@ -14,7 +14,7 @@ public class ChangeVideoQuality implements TestScenario {
     @Override
     public TestScenario proceed() {
         try {
-            LecturePage.Elements.videoElementPlaying().hover();
+            LecturePage.Elements.videoPlayer().hover();
             LecturePage.Elements.settingButton().shouldBe(Condition.visible).click();
             LecturePage.Elements.videoQualitySettingButton().shouldBe(Condition.enabled).click();
             qualityOptionValue = LecturePage.Elements.firstUnCheckedRadioButton().find("input").getValue();

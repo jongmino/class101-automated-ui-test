@@ -11,13 +11,13 @@ import org.openqa.selenium.By;
 public class LecturePage {
 
     public class Elements {
-
-        private static final By VIDEO_PLAY_SPEED_BUTTON = byXpath("((//div[div[contains(@class,'video')]])[2]//span)[16]");
-        private static final By VIDEO_SETTING_BUTTON = byXpath("((//div[div[contains(@class,'video')]])[2]//span)[17]");
+        private static final By VIDEO_PLAY_SPEED_BUTTON = byXpath("(//div[div[contains(@class,'video')]]//span)[16]");
+        private static final By VIDEO_SETTING_BUTTON = byXpath("(//div[div[contains(@class,'video')]]//span)[17]");
         private static final By VIDEO_SETTING_QUALITY_BUTTON = byXpath("//div[div[p[text() = '화질']]]");
         private static final By VIDEO_SETTING_AUTO_PLAY_BUTTON = byXpath("//div[div[p[text() = '자동 재생']]]");
         private static final By VIDEO_SETTING_FIRST_RADIO_OPTION_NOT_CHECKED = byXpath("//label[input[@type='radio' and not(@checked)]]");
-        private static final By VIDEO_PLAYING = byXpath("(//div[contains(@class,'playing')])[2]");
+        private static final By VIDEO_PLAYING = byXpath("//div[contains(@class,'playing')]");
+        private static final By VIDEO_PLAYER = byXpath("//div[@aria-label='Video Player']");
         private static final By COMMENT_SECTION = byXpath("//h4[text()='댓글']");
         private static final By CURRICULUM_SECTION = byXpath("//li//span[text()='커리큘럼']");
         private static final By MATERIAL_SECTION = byXpath("//li//span[text()='수업자료']");
@@ -45,6 +45,10 @@ public class LecturePage {
 
         public static SelenideElement videoElementPlaying() {
             return $(VIDEO_PLAYING);
+        }
+
+        public static SelenideElement videoPlayer() {
+            return $(VIDEO_PLAYER);
         }
 
         public static SelenideElement commentSection() {

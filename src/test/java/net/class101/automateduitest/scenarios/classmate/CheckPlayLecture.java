@@ -10,7 +10,7 @@ public class CheckPlayLecture implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-        Home.Elements.firstCurationItem().click();
+        ProductDetailPage.Actions.openKitPage();
         ProductDetailPage.Elements.playLectureButton().shouldNotBe(Condition.disabled).click();
         return this;
     }

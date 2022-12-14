@@ -13,7 +13,7 @@ public class ProductDetailPage {
 
     public class Elements {
 
-        private static final By CLASS101_PLUS_SUBSCRIBE_BUTTON = withText("시작하기");
+        private static final By CLASS101_PLUS_SUBSCRIBE_BUTTON = byXpath("//span[text()='클래스101+ 시작하기']");
         private static final By CLASS_INTRODUCTION_TAB = byXpath("//span[contains(.,'클래스 소개')]");
         private static final By CREATOR_INTRODUCTION_TAB = byXpath("//span[contains(.,'크리에이터')]");
         private static final By PLAY_BUTTON = byXpath("//button[contains(.,'재생하기')]");
