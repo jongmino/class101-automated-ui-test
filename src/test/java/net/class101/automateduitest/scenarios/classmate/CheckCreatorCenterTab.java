@@ -3,6 +3,8 @@ package net.class101.automateduitest.scenarios.classmate;
 import static net.class101.automateduitest.common.Utils.urlContains;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import com.codeborne.selenide.Condition;
+import net.class101.automateduitest.pages.creatorCenter.CreatorLoginPage;
 import net.class101.automateduitest.pages.plus.MyPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
@@ -10,21 +12,14 @@ public class CheckCreatorCenterTab implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-        try {
-            MyPage.Actions.openPage();
+        MyPage.Actions.openPage();
+        MyPage.Elements.creatorCenterTab().click();
 
-            //크리에이터 센터 탭 확인
-            MyPage.Elements.creatorCenterTab().click();
-            Thread.sleep(500);
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return this;
     }
 
     @Override
     public void validate() {
-        assertTrue(urlContains("creator.class101.net"));
+        CreatorLoginPage.Elements.emailInputElement().shouldBe(Condition.visible);
     }
 }

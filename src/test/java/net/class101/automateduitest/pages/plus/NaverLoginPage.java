@@ -1,5 +1,6 @@
 package net.class101.automateduitest.pages.plus;
 
+import static com.codeborne.selenide.ClipboardConditions.content;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -41,25 +42,17 @@ public class NaverLoginPage {
         private static final String NAVER_PASSWORD = PropertyLoader.getProperties().accounts.get("plusNaver").pw;
 
         public static void fillDefaultEmail() {
-            try {
-                NaverLoginPage.Elements.emailInputElement().click();
-                Selenide.clipboard().setText(NAVER_USER_ID);
-                Thread.sleep(1000);
-                NaverLoginPage.Elements.emailInputElement().sendKeys(Utils.paste());
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            NaverLoginPage.Elements.emailInputElement().click();
+            Selenide.clipboard().setText(NAVER_USER_ID);
+            Selenide.clipboard().shouldHave(content(NAVER_USER_ID));
+            NaverLoginPage.Elements.emailInputElement().sendKeys(Utils.paste());
         }
 
         public static void fillDefaultPassword() {
-            try {
-                NaverLoginPage.Elements.passwordInputElement().click();
-                Selenide.clipboard().setText(NAVER_PASSWORD);
-                Thread.sleep(1000);
-                NaverLoginPage.Elements.passwordInputElement().sendKeys(Utils.paste());
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            NaverLoginPage.Elements.passwordInputElement().click();
+            Selenide.clipboard().setText(NAVER_PASSWORD);
+            Selenide.clipboard().shouldHave(content(NAVER_PASSWORD));
+            NaverLoginPage.Elements.passwordInputElement().sendKeys(Utils.paste());
         }
 
         public static void defaultLogin() {

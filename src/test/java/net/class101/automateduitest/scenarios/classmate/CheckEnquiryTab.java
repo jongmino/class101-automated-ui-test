@@ -8,15 +8,9 @@ public class CheckEnquiryTab implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-        try {
-            MyPage.Actions.openPage();
+        MyPage.Actions.openPage();
+        MyPage.Elements.enquiryTab().click();
 
-            //1:1 문의 탭 확인
-            MyPage.Elements.enquiryTab().click();
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return this;
     }
 

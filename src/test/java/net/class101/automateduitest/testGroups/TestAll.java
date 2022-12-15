@@ -1,9 +1,11 @@
 package net.class101.automateduitest.testGroups;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static com.codeborne.selenide.Selenide.webdriver;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import java.util.concurrent.TimeUnit;
 import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.pages.creatorCenter.CreatorProductPage;
@@ -43,6 +45,7 @@ import net.class101.automateduitest.scenarios.commerce.CheckOrderHistory;
 import net.class101.automateduitest.scenarios.core.LoginAsSubscriber;
 import net.class101.automateduitest.scenarios.core.LoginAsUserHasKit;
 import net.class101.automateduitest.scenarios.core.LoginAsYearlySubscriber;
+import net.class101.automateduitest.scenarios.core.LoginWithFacebook;
 import net.class101.automateduitest.scenarios.core.LoginWithNaver;
 import net.class101.automateduitest.scenarios.core.Logout;
 import net.class101.automateduitest.scenarios.creator.CheckAddClass;
