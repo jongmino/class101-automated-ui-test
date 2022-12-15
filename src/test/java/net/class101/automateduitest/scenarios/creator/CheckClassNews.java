@@ -15,6 +15,7 @@ public class CheckClassNews implements TestScenario {
         CreatorLeftNavigation.Elements.classNewsTab().click();
         CreatorClassNewsPage.Elements.classIdInput().shouldBe(Condition.visible).sendKeys(CreatorClassNewsPage.CLASS_ID);
         CreatorClassNewsPage.Elements.classIdInput().pressEnter();
+
         return this;
     }
 

@@ -11,6 +11,7 @@ public class CheckClassSettlement implements TestScenario {
     public TestScenario proceed() {
         CreatorLeftNavigation.Elements.classSettlementTab().click();
         CreatorLeftNavigation.Elements.individualClassSettlementTab().shouldBe(Condition.visible).click();
+
         return this;
     }
 

@@ -9,15 +9,11 @@ public class CheckCommentNotAnswered implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-        try {
-            CreatorHome.Actions.openPage();
-            CreatorLeftNavigation.Elements.classTab().click();
-            CreatorLeftNavigation.Elements.classCommentTab().click();
-            CreatorClassCommentPage.Elements.notAnsweredTab().click();
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        CreatorHome.Actions.openPage();
+        CreatorLeftNavigation.Elements.classTab().click();
+        CreatorLeftNavigation.Elements.classCommentTab().click();
+        CreatorClassCommentPage.Elements.notAnsweredTab().click();
+
         return this;
     }
 
