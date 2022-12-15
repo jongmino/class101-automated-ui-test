@@ -5,21 +5,19 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.pages.plus.Home;
+import net.class101.automateduitest.pages.plus.ProductListPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 public class CheckRecommendedCategorySection implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-        try {
-            //추천 카테고리 섹션 확인
-            Home.Elements.recommendedCategorySectionTitle().shouldBe(Condition.visible);
-            //영어 카테고리 클릭
-            Home.Elements.englishCategoryButton().shouldBe(Condition.enabled).click();
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        //추천 카테고리 섹션 확인
+        Home.Elements.recommendedCategorySectionTitle().scrollIntoView(true).shouldBe(Condition.visible);
+        //영어 카테고리 클릭
+        Home.Elements.englishCategoryButton().scrollIntoView(true).shouldBe(Condition.enabled).click();
+        ProductListPage.Elements.englishCategoryPageTitle().shouldBe(Condition.visible);
+
         return this;
     }
 

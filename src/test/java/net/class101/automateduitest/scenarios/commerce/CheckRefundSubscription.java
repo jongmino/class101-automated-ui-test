@@ -11,7 +11,7 @@ public class CheckRefundSubscription implements TestScenario {
     public TestScenario proceed() {
         SubscriptionPage.Actions.openPage();
         SubscriptionPage.Elements.cancelSubscriptionButton().shouldBe(Condition.visible);
-        SubscriptionPage.Elements.refundButton().shouldBe(Condition.enabled).click();
+        SubscriptionPage.Elements.refundButton().scrollIntoView(true).shouldBe(Condition.enabled).click();
 
         return this;
     }

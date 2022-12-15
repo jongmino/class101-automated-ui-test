@@ -73,6 +73,7 @@ import net.class101.automateduitest.scenarios.website.CheckCurationSection;
 import net.class101.automateduitest.scenarios.website.CheckMyClassSection;
 import net.class101.automateduitest.scenarios.website.CheckRecommendedCategorySection;
 import net.class101.automateduitest.scenarios.website.CheckRecommendedClassSection;
+import net.class101.automateduitest.scenarios.website.CheckSubCategory;
 import net.class101.automateduitest.scenarios.website.CheckSubscriptionPlan;
 import net.class101.automateduitest.scenarios.website.SaveClass;
 import net.class101.automateduitest.scenarios.website.SearchKeyword;
@@ -245,9 +246,10 @@ public class TestAll {
             }
 
             @Test
-            @DisplayName("추천 카테고리")
+            @DisplayName("추천 카테고리 / 서브카테고리")
             void verifyRecommendedCategory() {
                 SF.getInstance(CheckRecommendedCategorySection.class).proceed().validate();
+                SF.getInstance(CheckSubCategory.class).proceed().validate();
             }
 
             @Test

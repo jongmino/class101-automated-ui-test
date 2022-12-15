@@ -1,13 +1,13 @@
 urls:
   plusHome:
-    dev: "https://web-preview-master.class101.net/plus/ko"
-    staging: "https://staging.class101.net/plus/ko"
+    dev: "https://web-preview-master.class101.net/ko"
+    staging: "https://staging.class101.net/ko"
   plusSignUpPage:
     dev: ""
-    staging: "https://staging.class101.net/plus/ko/register"
+    staging: "https://staging.class101.net/ko/register"
   plusMyPage:
-    dev: "https://web-preview-master.class101.net/plus/ko/mypage"
-    staging: "https://staging.class101.net/plus/ko/mypage"
+    dev: "https://web-preview-master.class101.net/ko/mypage"
+    staging: "https://staging.class101.net/ko/mypage"
   creatorHome:
     dev: "https://staging-creator.class101.net/"
     staging: "https://staging-creator.class101.net/"
@@ -16,16 +16,16 @@ urls:
     staging: "https://staging-creator.class101.net/center/products"
   lecturePage:
     dev: ""
-    staging: "https://staging.class101.net/plus/ko/classes/5ee1d9b3260ecd6be569ce83/lectures/5ef6db612e1d730dbd5cc8a0"
+    staging: "https://staging.class101.net/ko/classes/5ee1d9b3260ecd6be569ce83/lectures/5ef6db612e1d730dbd5cc8a0"
   kitLecturePage:
     dev: ""
-    staging: "https://staging.class101.net/plus/ko/products/5e4b42bb3887d3076ee5976b"
+    staging: "https://staging.class101.net/ko/products/5e4b42bb3887d3076ee5976b"
   selectPlanPage:
     dev: ""
-    staging: "https://staging.class101.net/plus/ko/payment/select-subscription-product"
+    staging: "https://staging.class101.net/ko/payment/select-subscription-product"
   subscriptionPage:
     dev: ""
-    staging: "https://staging.class101.net/plus/ko/mypage/subscription"
+    staging: "https://staging.class101.net/ko/mypage/subscription"
 
 accounts:
   plusNewUser:
