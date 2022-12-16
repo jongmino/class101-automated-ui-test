@@ -15,6 +15,7 @@ public class LoginWithNaver implements TestScenario {
 
     @Override
     public TestScenario proceed() {
+        Home.Actions.openPage();
         Home.Elements.loginButton().click();
         LoginPage.Elements.allLoginButton().click();
         AllLoginPage.Elements.loginWithNaverButton().click();

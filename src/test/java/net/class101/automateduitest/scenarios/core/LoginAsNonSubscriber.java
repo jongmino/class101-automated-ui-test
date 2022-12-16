@@ -13,6 +13,7 @@ public class LoginAsNonSubscriber implements TestScenario {
 
     @Override
     public TestScenario proceed() {
+        Home.Actions.openPage();
         //유저 네비게이션 우상단 로그인 버튼 클릭
         Home.Elements.loginButton().click();
         //다른 방법으로 로그인 버튼 클릭

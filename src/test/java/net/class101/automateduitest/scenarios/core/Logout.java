@@ -13,8 +13,8 @@ public class Logout implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-        //우상단 유저 프로필 클릭
-        Home.Elements.userProfileImg().click();
+        //마이페이지 진입
+        MyPage.Actions.openPage();
         //마이페이지 로그아웃 버튼 클릭
         MyPage.Elements.logoutButton().click();
         return this;

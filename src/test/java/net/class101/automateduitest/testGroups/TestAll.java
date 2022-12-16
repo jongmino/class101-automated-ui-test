@@ -191,7 +191,7 @@ public class TestAll {
             }
 
             @Test
-            @Order(3)
+            @Order(2)
             @DisplayName("이메일 로그인")
             void verifyEmailLogin() {
                 SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
@@ -567,7 +567,6 @@ public class TestAll {
             void plusSettlement() {
                 SF.getInstance(CheckPlusSettlement.class).proceed().validate();
             }
-
         }
     }
 

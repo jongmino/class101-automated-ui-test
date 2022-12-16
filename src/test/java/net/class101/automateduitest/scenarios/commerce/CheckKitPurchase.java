@@ -15,6 +15,7 @@ public class CheckKitPurchase implements TestScenario {
         ProductDetailPage.Actions.openKitPage();
         ProductDetailPage.Elements.buyKitButton().shouldBe(Condition.visible).click();
         Selenide.switchTo().window(1);
+
         return this;
     }
 
