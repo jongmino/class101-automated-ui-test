@@ -8,7 +8,10 @@ import net.class101.automateduitest.pages.plus.LoginPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 /**
- * 페이스북 로그인 검증
+ *  로그인 - 페이스북 유저
+ *
+ *  Prerequisite:
+ *  1) 홈페이지를 연다
  */
 public class LoginWithFacebook implements TestScenario {
 

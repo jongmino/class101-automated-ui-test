@@ -6,8 +6,11 @@ import net.class101.automateduitest.pages.plus.MyPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 /**
- * Login Needed
- * 로그아웃 검증
+ *  로그아웃 - 기존 계정 - 임의의 로그인 수단으로 로그인 된 상태 - 로그아웃 시도
+ *
+ *  Prerequisite:
+ *  1) 홈페이지를 연다
+ *  2) 로그인 한다
  */
 public class Logout implements TestScenario {
 

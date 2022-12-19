@@ -6,6 +6,12 @@ import net.class101.automateduitest.pages.plus.LoginPage;
 import net.class101.automateduitest.pages.plus.SignUpPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
+/**
+ *  국내 - 회원가입 - 공통 - 회원가입 버튼 클릭
+ *
+ *  Prerequisite:
+ *  1) 홈페이지를 연다
+ */
 public class CheckSignUpPage implements TestScenario {
 
     @Override

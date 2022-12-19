@@ -8,8 +8,10 @@ import net.class101.automateduitest.pages.plus.NaverLoginPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 /**
- * 네이버 로그인 검증
- * 네이버 로그인은 오토메이션을 잡아내기 때문에 클립보드를 이용하는 방법으로 우회
+ *  로그인 - 네이버 유저
+ *
+ *  Prerequisite:
+ *  1) 홈페이지를 연다
  */
 public class LoginWithNaver implements TestScenario {
 

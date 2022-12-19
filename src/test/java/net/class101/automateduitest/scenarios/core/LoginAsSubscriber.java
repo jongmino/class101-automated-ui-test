@@ -6,8 +6,12 @@ import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.pages.plus.LoginPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
+
 /**
- * 자체 로그인 검증 Subscriber
+ *  로그인 - 구독 유저 (월간)
+ *
+ *  Prerequisite:
+ *  1) 홈페이지를 연다
  */
 public class LoginAsSubscriber implements TestScenario {
 
