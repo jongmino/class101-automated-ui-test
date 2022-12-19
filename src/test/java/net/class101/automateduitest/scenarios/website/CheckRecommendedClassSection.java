@@ -5,9 +5,11 @@ import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.TestScenario;
 
 /**
- * Login Needed
- * 추천 클래스 섹션 검증
- * Todo(boulder): 새로고침을 해도 추천클래스 실시간 반영이 안되는 경우가 많아서 검증 보류
+ * 구독 메인 - 클래스 섹션 - 취향 추천 클래스 - 섹션 노출 확인
+ *
+ * Prerequisite:
+ * 1) 홈페이지를 연다
+ * 2) 로그인한다
  */
 public class CheckRecommendedClassSection implements TestScenario {
 

@@ -4,6 +4,13 @@ import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.scenarios.TestScenario;
 
+/**
+ * 클래스 - 찜하기 - 추가 / 제거 - PLP에서 찜하기 추가/제거 확인 - 제거
+ *
+ * Prerequisite:
+ * 1) 홈페이지를 연다
+ * 2) 로그인한다
+ */
 public class UnSaveClass implements TestScenario {
 
     @Override

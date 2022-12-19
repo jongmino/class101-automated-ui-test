@@ -7,6 +7,13 @@ import com.codeborne.selenide.CollectionCondition;
 import net.class101.automateduitest.pages.plus.ProductListPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
+/**
+ * 클래스 - PLP - 카테고리 - 카테고리 선택 - 하위 카테고리 진입
+ *
+ * Prerequisite:
+ * 1) 홈페이지를 연다
+ * 2) 로그인한다
+ */
 public class CheckSubCategory implements TestScenario {
 
     @Override
