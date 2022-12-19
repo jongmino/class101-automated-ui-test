@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.pages.plus.LecturePage;
 import net.class101.automateduitest.scenarios.TestScenario;
+
 /**
  * 수강환경 - 플레이어 - 플레이어 기능 확인: 플레이어 기능 정상 동작 확인(재생 속도 변경)
  *

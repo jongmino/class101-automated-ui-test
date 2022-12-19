@@ -7,6 +7,13 @@ import net.class101.automateduitest.pages.plus.OrderPage;
 import net.class101.automateduitest.pages.plus.KitRefundPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
+/**
+ * 커머스 - 주문 및 배송 - 환불 - 주문상세페이지에서 상세보기 진입한 상태 - [환불하기] 버튼 클릭
+ *
+ * Prerequisite:
+ * 1) 홈페이지를 연다
+ * 2) 키트 주문 이력이 있는 계정으로 로그인 한다
+ */
 public class CheckRefundKit implements TestScenario {
 
     @Override
