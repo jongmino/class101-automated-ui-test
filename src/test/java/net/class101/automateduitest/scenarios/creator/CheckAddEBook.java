@@ -9,6 +9,13 @@ import net.class101.automateduitest.pages.creatorCenter.CreatorAddProductPage;
 import net.class101.automateduitest.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
+/**
+ * 크리에이터 센터 - 상품 - 스토어 상품 - 디지털 파일 '만들기' 버튼 클릭
+ *
+ * Prerequisite:
+ * 1) 크리에이터 홈을 연다
+ * 2) 크리에이터 신규 계정으로 로그인한다
+ */
 public class CheckAddEBook implements TestScenario {
 
     @Override

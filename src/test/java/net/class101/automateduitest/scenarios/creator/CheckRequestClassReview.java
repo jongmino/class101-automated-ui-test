@@ -6,6 +6,13 @@ import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.creatorCenter.CreatorNewClassPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
+/**
+ * 크리에이터 센터 - 상품 - 정규 클래스 - 클래스 생성 페이지 작성 필수 항목 작성 및 검토요청
+ *
+ * Prerequisite:
+ * 1) 크리에이터 홈으로 진입한다
+ * 2) 크리에이터 신규 계정으로 로그인한다
+ */
 public class CheckRequestClassReview implements TestScenario {
 
     @Override
