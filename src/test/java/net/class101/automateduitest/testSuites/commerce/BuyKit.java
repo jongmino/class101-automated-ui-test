@@ -12,11 +12,11 @@ public class BuyKit {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
-        SF.getInstance(LoginAsSubscriber.class).proceed().validate();
+        SF.get(LoginAsSubscriber.class).proceed().validate();
     }
 
     @Test
     void buyKit() {
-        SF.getInstance(CheckKitPurchase.class).proceed().validate();
+        SF.get(CheckKitPurchase.class).proceed().validate();
     }
 }

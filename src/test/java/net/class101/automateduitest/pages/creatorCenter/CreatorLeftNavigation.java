@@ -7,6 +7,7 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 public class CreatorLeftNavigation {
+
     public class Elements {
         private static final By NOTICE_TAB = byXpath("//span[text()='공지사항']");
         private static final By CLASS_TAB = byXpath("//span[text()='클래스']");
@@ -29,7 +30,7 @@ public class CreatorLeftNavigation {
             return $(CLASS_TAB);
         }
 
-        public static SelenideElement classCommentTab(){
+        public static SelenideElement classCommentTab() {
             return $(CLASS_COMMENT_TAB);
         }
 
@@ -68,7 +69,7 @@ public class CreatorLeftNavigation {
         public static SelenideElement individualClassSettlementTab() {
             return $(INDIVIDUAL_CLASS_SETTLEMENT_TAB);
         }
-        
+
         public static SelenideElement plusClassSettlementTab() {
             return $(PLUS_CLASS_SETTLEMENT_TAB);
         }
@@ -85,11 +86,8 @@ public class CreatorLeftNavigation {
             return $(CREATOR_GUIDE_TAB);
         }
 
-        public static SelenideElement noticeTab(){
+        public static SelenideElement noticeTab() {
             return $(NOTICE_TAB);
         }
-    }
-
-    public class Actions {
     }
 }

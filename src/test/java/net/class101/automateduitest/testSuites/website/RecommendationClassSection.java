@@ -24,7 +24,7 @@ public class RecommendationClassSection {
     @Test
     @Order(1)
     void recommendation_class_section_is_visible() {
-        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
-        SF.getInstance(CheckRecommendedClassSection.class).proceed().validate();
+        SF.get(LoginAsNonSubscriber.class).proceed().validate();
+        SF.get(CheckRecommendedClassSection.class).proceed().validate();
     }
 }

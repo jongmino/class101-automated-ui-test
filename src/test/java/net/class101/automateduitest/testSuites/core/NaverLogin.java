@@ -20,6 +20,6 @@ public class NaverLogin {
     @Test
     @Order(1)
     void login_with_naver() throws InterruptedException {
-        SF.getInstance(LoginWithNaver.class).proceed().validate();
+        SF.get(LoginWithNaver.class).proceed().validate();
     }
 }

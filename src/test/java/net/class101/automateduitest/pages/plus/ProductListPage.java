@@ -36,6 +36,7 @@ public class ProductListPage {
     }
 
     public class Actions {
+
         public static int getProductListSize() {
             return $$(PRODUCT_LIST_PAGE_ITEM).size();
         }

@@ -15,6 +15,6 @@ public class HeaderSearchBar {
 
     @Test
     void search_panel_is_visible() {
-        SF.getInstance(SearchKeyword.class).proceed().validate();
+        SF.get(SearchKeyword.class).proceed().validate();
     }
 }

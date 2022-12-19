@@ -12,11 +12,11 @@ public class GuideCenter {
     @BeforeAll
     static void beforeAll() {
         CreatorHome.Actions.openPage();
-        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
+        SF.get(LoginAsCreatorHasClass.class).proceed().validate();
     }
 
     @Test
     void creatorGuideCenter() {
-        SF.getInstance(CheckCreatorGuideTab.class).proceed().validate();
+        SF.get(CheckCreatorGuideTab.class).proceed().validate();
     }
 }

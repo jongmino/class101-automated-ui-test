@@ -35,7 +35,4 @@ public class OrderDetailPage {
             return $(REFUND_BUTTON);
         }
     }
-
-    public class Actions {
-    }
 }

@@ -15,6 +15,6 @@ public class EmailLogin {
 
     @Test
     void loginAsCreatorHasClass() {
-        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
+        SF.get(LoginAsCreatorHasClass.class).proceed().validate();
     }
 }

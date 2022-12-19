@@ -36,14 +36,4 @@ public class CreatorClassCommentPage {
             return $(COMMENT_PAGE_TITLE);
         }
     }
-
-    public class Actions {
-        public static void isAnsweredTab() {
-            CreatorClassCommentPage.Elements.markAsAnsweredButtons().shouldHave(CollectionCondition.size(0));
-        }
-
-        public static void isNotAnsweredTab() {
-            CreatorClassCommentPage.Elements.markAsAnsweredButtons().shouldHave(CollectionCondition.sizeGreaterThan(0));
-        }
-    }
 }

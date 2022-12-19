@@ -26,7 +26,4 @@ public class CreatorClassNewsPage {
             return $(CREATE_NOTICE_BUTTON);
         }
     }
-
-    public class Actions {
-    }
 }

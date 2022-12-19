@@ -12,11 +12,11 @@ public class Referral {
     @BeforeAll
     static void beforeAll() {
         CreatorHome.Actions.openPage();
-        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
+        SF.get(LoginAsCreatorHasClass.class).proceed().validate();
     }
 
     @Test
     void referralTab() {
-        SF.getInstance(CheckCreatorReferralTab.class).proceed().validate();
+        SF.get(CheckCreatorReferralTab.class).proceed().validate();
     }
 }

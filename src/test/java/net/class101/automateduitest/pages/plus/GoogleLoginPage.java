@@ -9,13 +9,11 @@ import org.openqa.selenium.By;
 public class GoogleLoginPage {
 
     public class Elements {
+
         private static final By GOOGLE_LOGIN_TITLE = byXpath("//div[text()='Google 계정으로 로그인']");
 
         public static SelenideElement googleLoginTitle() {
             return $(GOOGLE_LOGIN_TITLE);
         }
-    }
-
-    public class Actions {
     }
 }

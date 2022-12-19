@@ -12,11 +12,11 @@ public class RefundSubscription {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
-        SF.getInstance(LoginAsYearlySubscriber.class).proceed().validate();
+        SF.get(LoginAsYearlySubscriber.class).proceed().validate();
     }
 
     @Test
     void refundSubscription() {
-        SF.getInstance(CheckRefundSubscription.class).proceed().validate();
+        SF.get(CheckRefundSubscription.class).proceed().validate();
     }
 }

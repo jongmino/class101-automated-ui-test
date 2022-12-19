@@ -27,8 +27,8 @@ public class SaveAndUnSaveClass {
     @Test
     @Order(1)
     void verifySaveAndUnSaveClass() throws InterruptedException {
-        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
-        SF.getInstance(SaveClass.class).proceed().validate();
-        SF.getInstance(UnSaveClass.class).proceed().validate();
+        SF.get(LoginAsNonSubscriber.class).proceed().validate();
+        SF.get(SaveClass.class).proceed().validate();
+        SF.get(UnSaveClass.class).proceed().validate();
     }
 }

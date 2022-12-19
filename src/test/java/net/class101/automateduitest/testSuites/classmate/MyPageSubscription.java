@@ -23,18 +23,18 @@ public class MyPageSubscription {
 
     @AfterEach
     void tearDown() {
-        SF.getInstance(Logout.class).proceed();
+        SF.get(Logout.class).proceed();
     }
 
     @Test
     void verifySubscriptionStatusWithNonSubscribed() {
-        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
-        SF.getInstance(CheckSubscriptionStatusFalse.class).proceed().validate();
+        SF.get(LoginAsNonSubscriber.class).proceed().validate();
+        SF.get(CheckSubscriptionStatusFalse.class).proceed().validate();
     }
 
     @Test
     void verifySubscriptionStatusWithSubscribed() {
-        SF.getInstance(LoginAsSubscriber.class).proceed().validate();
-        SF.getInstance(CheckSubscriptionStatusTrue.class).proceed().validate();
+        SF.get(LoginAsSubscriber.class).proceed().validate();
+        SF.get(CheckSubscriptionStatusTrue.class).proceed().validate();
     }
 }

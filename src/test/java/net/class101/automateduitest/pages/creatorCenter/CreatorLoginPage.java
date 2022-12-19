@@ -8,7 +8,9 @@ import net.class101.automateduitest.common.Properties.Account;
 import net.class101.automateduitest.common.PropertyLoader;
 
 public class CreatorLoginPage {
+
     public class Elements {
+
         private static final String EMAIL_INPUT_FIELD = "input[name='email']";
         private static final String PASSWORD_INPUT_FIELD = "input[name='password']";
         private static final String LOGIN_BUTTON = "button[type='submit']";

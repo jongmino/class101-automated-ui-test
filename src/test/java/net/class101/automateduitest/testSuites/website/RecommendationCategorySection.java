@@ -18,7 +18,7 @@ public class RecommendationCategorySection {
 
     @Test
     void recommendation_category() {
-        SF.getInstance(CheckRecommendedCategorySection.class).proceed().validate();
+        SF.get(CheckRecommendedCategorySection.class).proceed().validate();
     }
 
 }

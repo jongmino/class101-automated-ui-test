@@ -63,6 +63,7 @@ public class MyPage {
             return $(MY_PAGE_ENQUIRY_TAB);
         }
 
+        // 설정 탭
         public static SelenideElement settingTab() {
             return $(MY_PAGE_SETTING_TAB);
         }

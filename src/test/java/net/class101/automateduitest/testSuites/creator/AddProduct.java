@@ -19,7 +19,7 @@ public class AddProduct {
     @BeforeAll
     static void beforeAll() {
         CreatorHome.Actions.openPage();
-        SF.getInstance(LoginAsCreatorNew.class).proceed().validate();
+        SF.get(LoginAsCreatorNew.class).proceed().validate();
     }
 
     @BeforeEach
@@ -29,26 +29,26 @@ public class AddProduct {
 
     @AfterEach
     void tearDown() {
-        SF.getInstance(DeleteFirstProduct.class).proceed();
+        SF.get(DeleteFirstProduct.class).proceed();
     }
 
     @Test
     void addClass() {
-        SF.getInstance(CheckAddClass.class).proceed().validate();
+        SF.get(CheckAddClass.class).proceed().validate();
     }
 
     @Test
     void addDigitalFile() {
-        SF.getInstance(CheckAddDigitalFile.class).proceed().validate();
+        SF.get(CheckAddDigitalFile.class).proceed().validate();
     }
 
     @Test
     void addEBook() {
-        SF.getInstance(CheckAddEBook.class).proceed().validate();
+        SF.get(CheckAddEBook.class).proceed().validate();
     }
 
     @Test
     void requestReview() {
-        SF.getInstance(CheckRequestClassReview.class).proceed().validate();
+        SF.get(CheckRequestClassReview.class).proceed().validate();
     }
 }

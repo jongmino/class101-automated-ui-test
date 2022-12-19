@@ -12,11 +12,11 @@ public class FreeTrial {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
-        SF.getInstance(LoginAsNewUser.class).proceed().validate();
+        SF.get(LoginAsNewUser.class).proceed().validate();
     }
 
     @Test
     void freeTrial() {
-        SF.getInstance(CheckFreeTrial.class).proceed().validate();
+        SF.get(CheckFreeTrial.class).proceed().validate();
     }
 }

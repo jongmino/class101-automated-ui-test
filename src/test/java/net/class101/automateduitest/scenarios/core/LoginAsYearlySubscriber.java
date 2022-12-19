@@ -26,5 +26,4 @@ public class LoginAsYearlySubscriber implements TestScenario {
     public void validate() {
         Home.Elements.userProfileImg().shouldBe(Condition.visible).hover();
     }
-
 }

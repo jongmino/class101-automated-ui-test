@@ -2,7 +2,7 @@ package net.class101.automateduitest.testSuites.classmate;
 
 import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.pages.plus.Home;
-import net.class101.automateduitest.scenarios.classmate.ChangeServiceRegionEN;
+import net.class101.automateduitest.scenarios.classmate.ChangeServiceRegionToEN;
 import net.class101.automateduitest.scenarios.classmate.ChangeServiceRegionJP;
 import net.class101.automateduitest.scenarios.core.LoginAsNonSubscriber;
 import org.junit.jupiter.api.BeforeAll;
@@ -20,8 +20,8 @@ public class MyPageServiceRegion {
 
     @Test
     void verifyChangingServiceRegion() throws InterruptedException {
-        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
-        SF.getInstance(ChangeServiceRegionEN.class).proceed().validate();
-        SF.getInstance(ChangeServiceRegionJP.class).proceed().validate();
+        SF.get(LoginAsNonSubscriber.class).proceed().validate();
+        SF.get(ChangeServiceRegionToEN.class).proceed().validate();
+        SF.get(ChangeServiceRegionJP.class).proceed().validate();
     }
 }

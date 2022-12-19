@@ -20,7 +20,4 @@ public class CreatorPlusSettlementPage {
             return $(SETTLEMENT_DETAILS_MODAL_TITLE);
         }
     }
-
-    public class Actions {
-    }
 }

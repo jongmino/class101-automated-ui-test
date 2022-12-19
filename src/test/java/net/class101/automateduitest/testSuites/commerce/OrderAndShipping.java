@@ -13,16 +13,16 @@ public class OrderAndShipping {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
-        SF.getInstance(LoginAsUserHasKit.class).proceed().validate();
+        SF.get(LoginAsUserHasKit.class).proceed().validate();
     }
 
     @Test
     void orderHistory() {
-        SF.getInstance(CheckOrderHistory.class).proceed().validate();
+        SF.get(CheckOrderHistory.class).proceed().validate();
     }
 
     @Test
     void orderDetail() {
-        SF.getInstance(CheckOrderDetail.class).proceed().validate();
+        SF.get(CheckOrderDetail.class).proceed().validate();
     }
 }

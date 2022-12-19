@@ -20,14 +20,14 @@ public class VideoPlayerFunctionality {
     static void beforeAll() {
         Configuration.timeout = 20000;
         Home.Actions.openPage();
-        SF.getInstance(LoginAsSubscriber.class).proceed().validate();
+        SF.get(LoginAsSubscriber.class).proceed().validate();
     }
 
     @Test
     void verifyVideoPlayerFunctionality() {
-        SF.getInstance(CheckPlayLecture.class).proceed().validate();
-        SF.getInstance(ChangePlaySpeed.class).proceed().validate();
-        SF.getInstance(ChangeVideoQuality.class).proceed().validate();
-        SF.getInstance(ChangeAutoPlay.class).proceed().validate();
+        SF.get(CheckPlayLecture.class).proceed().validate();
+        SF.get(ChangePlaySpeed.class).proceed().validate();
+        SF.get(ChangeVideoQuality.class).proceed().validate();
+        SF.get(ChangeAutoPlay.class).proceed().validate();
     }
 }

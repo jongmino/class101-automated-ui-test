@@ -5,13 +5,12 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.common.PropertyLoader;
-import net.class101.automateduitest.pages.plus.ProductListPage;
 import org.openqa.selenium.By;
 
 public class CreatorProductPage {
+
     public class Elements {
         private static final By CREATE_PRODUCT_BUTTON = byXpath("//button[@style='color: rgb(255, 255, 255); --system-on-color:#ffffff;']//span[text()='상품 만들기']");
         private static final By PRODUCT_LIST = byXpath("//div[@aria-label='grid']/div");
@@ -51,6 +50,7 @@ public class CreatorProductPage {
     }
 
     public class Actions {
+
         private static final String STAGING_CREATOR_PRODUCT_PAGE =
                 PropertyLoader.getProperties().urls.get("creatorProduct").staging;
 
@@ -59,12 +59,12 @@ public class CreatorProductPage {
         }
 
         public static void deleteFirstProduct() {
-                CreatorProductPage.Elements.creatorCenterLogo().click();
-                CreatorProductPage.Elements.privateStatus().shouldBe(Condition.visible);
-                CreatorProductPage.Elements.firstProductSelectBox().shouldBe(Condition.visible).click();
-                CreatorProductPage.Elements.deleteButton().shouldBe(Condition.visible).click();
-                CreatorProductPage.Elements.modalDeleteButton().shouldBe(Condition.visible).click();
-                CreatorProductPage.Elements.modalDeleteButton().should(Condition.disappear);
+            CreatorProductPage.Elements.creatorCenterLogo().click();
+            CreatorProductPage.Elements.privateStatus().shouldBe(Condition.visible);
+            CreatorProductPage.Elements.firstProductSelectBox().shouldBe(Condition.visible).click();
+            CreatorProductPage.Elements.deleteButton().shouldBe(Condition.visible).click();
+            CreatorProductPage.Elements.modalDeleteButton().shouldBe(Condition.visible).click();
+            CreatorProductPage.Elements.modalDeleteButton().should(Condition.disappear);
         }
     }
 }

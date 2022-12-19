@@ -12,11 +12,11 @@ public class CancelSubscription {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
-        SF.getInstance(LoginAsYearlySubscriber.class).proceed().validate();
+        SF.get(LoginAsYearlySubscriber.class).proceed().validate();
     }
 
     @Test
     void cancelSubscription() {
-        SF.getInstance(CheckCancelSubscription.class).proceed().validate();
+        SF.get(CheckCancelSubscription.class).proceed().validate();
     }
 }

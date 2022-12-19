@@ -16,21 +16,21 @@ public class ClassComment {
     static void beforeAll() {
         Configuration.timeout = 40000;
         CreatorHome.Actions.openPage();
-        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
+        SF.get(LoginAsCreatorHasClass.class).proceed().validate();
     }
 
     @Test
     void commentPage() {
-        SF.getInstance(CheckClassCommentTab.class).proceed().validate();
+        SF.get(CheckClassCommentTab.class).proceed().validate();
     }
 
     @Test
     void commentAnswered() {
-        SF.getInstance(CheckCommentAnswered.class).proceed().validate();
+        SF.get(CheckCommentAnswered.class).proceed().validate();
     }
 
     @Test
     void commentNotAnswered() {
-        SF.getInstance(CheckCommentNotAnswered.class).proceed().validate();
+        SF.get(CheckCommentNotAnswered.class).proceed().validate();
     }
 }

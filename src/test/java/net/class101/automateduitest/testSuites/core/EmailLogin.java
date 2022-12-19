@@ -26,12 +26,12 @@ public class EmailLogin {
     @Test
     @Order(1)
     void login_with_email() {
-        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
+        SF.get(LoginAsNonSubscriber.class).proceed().validate();
     }
 
     @Test
     @Order(2)
     void logout() {
-        SF.getInstance(Logout.class).proceed().validate();
+        SF.get(Logout.class).proceed().validate();
     }
 }

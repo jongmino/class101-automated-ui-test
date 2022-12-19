@@ -12,11 +12,11 @@ public class FileRequestTab {
     @BeforeAll
     static void beforeAll() {
         CreatorHome.Actions.openPage();
-        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
+        SF.get(LoginAsCreatorHasClass.class).proceed().validate();
     }
 
     @Test
     void fileRequestTab() {
-        SF.getInstance(CheckFileRequestTab.class).proceed().validate();
+        SF.get(CheckFileRequestTab.class).proceed().validate();
     }
 }

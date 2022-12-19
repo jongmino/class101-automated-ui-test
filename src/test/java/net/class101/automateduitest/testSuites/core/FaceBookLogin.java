@@ -20,6 +20,6 @@ public class FaceBookLogin {
     @Test
     @Order(1)
     void login_with_facebook() {
-        SF.getInstance(LoginWithFacebook.class).proceed().validate();
+        SF.get(LoginWithFacebook.class).proceed().validate();
     }
 }

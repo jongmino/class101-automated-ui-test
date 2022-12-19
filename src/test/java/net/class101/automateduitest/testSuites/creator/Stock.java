@@ -14,11 +14,11 @@ public class Stock {
     static void beforeAll() {
         Configuration.timeout = 20000;
         CreatorHome.Actions.openPage();
-        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
+        SF.get(LoginAsCreatorHasClass.class).proceed().validate();
     }
 
     @Test
     void stockPage() {
-        SF.getInstance(CheckStockTab.class).proceed().validate();
+        SF.get(CheckStockTab.class).proceed().validate();
     }
 }

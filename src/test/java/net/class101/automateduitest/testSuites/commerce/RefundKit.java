@@ -14,11 +14,11 @@ public class RefundKit {
     static void beforeAll() {
         Configuration.timeout = 20000;
         Home.Actions.openPage();
-        SF.getInstance(LoginAsUserHasKit.class).proceed().validate();
+        SF.get(LoginAsUserHasKit.class).proceed().validate();
     }
 
     @Test
     void refundKit() {
-        SF.getInstance(CheckRefundKit.class).proceed().validate();
+        SF.get(CheckRefundKit.class).proceed().validate();
     }
 }

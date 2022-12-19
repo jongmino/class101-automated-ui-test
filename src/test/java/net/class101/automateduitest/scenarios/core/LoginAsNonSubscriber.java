@@ -6,12 +6,11 @@ import net.class101.automateduitest.pages.plus.Home;
 import net.class101.automateduitest.pages.plus.LoginPage;
 import net.class101.automateduitest.scenarios.TestScenario;
 
-
 /**
- *  로그인 - 미구독 유저
- *
- *  Prerequisite:
- *  1) 홈페이지를 연다
+ * @설명: 미구독 유저로 로그인이 정상적으로 되는지를 테스트 한다.
+ * @분류: 로그인 - 미구독 유저
+ * @테스트 선행조건:
+ *   1) 홈페이지를 연다
  */
 public class LoginAsNonSubscriber implements TestScenario {
 

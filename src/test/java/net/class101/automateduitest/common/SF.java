@@ -10,7 +10,7 @@ import java.util.Map;
 public class SF {
     private static Map<String, Object> instances = new HashMap<>();
 
-    public static <T> T getInstance(Class<T> type) {
+    public static <T> T get(Class<T> type) {
         try {
             final String typeName = type.getName();
             if (!instances.containsKey(typeName)) {

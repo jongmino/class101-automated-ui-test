@@ -11,11 +11,11 @@ public class NoticeTab {
     @BeforeAll
     static void beforeAll() {
         CreatorHome.Actions.openPage();
-        SF.getInstance(LoginAsCreatorNew.class).proceed().validate();
+        SF.get(LoginAsCreatorNew.class).proceed().validate();
     }
 
     @Test
     void noticeTab() {
-        SF.getInstance(CheckNoticeTab.class).proceed().validate();
+        SF.get(CheckNoticeTab.class).proceed().validate();
     }
 }

@@ -17,6 +17,7 @@ public class CreatorHome {
     }
 
     public class Actions {
+
         private static final String CREATOR_CENTER_STAGING_URL = PropertyLoader.getProperties().urls.get("creatorHome").staging;
 
         public static void openPage() {

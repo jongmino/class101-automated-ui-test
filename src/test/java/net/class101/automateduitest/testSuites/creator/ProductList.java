@@ -12,11 +12,11 @@ public class ProductList {
     @BeforeAll
     static void beforeAll() {
         CreatorHome.Actions.openPage();
-        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
+        SF.get(LoginAsCreatorHasClass.class).proceed().validate();
     }
 
     @Test
     void productList() {
-        SF.getInstance(CheckProductList.class).proceed().validate();
+        SF.get(CheckProductList.class).proceed().validate();
     }
 }

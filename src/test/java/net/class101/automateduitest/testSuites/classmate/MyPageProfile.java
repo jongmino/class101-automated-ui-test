@@ -19,7 +19,7 @@ public class MyPageProfile {
 
     @Test
     void verifyCashTab() {
-        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
-        SF.getInstance(CheckCashTab.class).proceed().validate();
+        SF.get(LoginAsNonSubscriber.class).proceed().validate();
+        SF.get(CheckCashTab.class).proceed().validate();
     }
 }

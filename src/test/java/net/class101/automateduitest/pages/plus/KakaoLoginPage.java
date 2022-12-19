@@ -15,7 +15,4 @@ public class KakaoLoginPage {
             return $(KAKAO_LOGO);
         }
     }
-
-    public class Actions {
-    }
 }

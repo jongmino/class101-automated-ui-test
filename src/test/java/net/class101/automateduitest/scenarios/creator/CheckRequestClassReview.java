@@ -17,7 +17,7 @@ public class CheckRequestClassReview implements TestScenario {
 
     @Override
     public TestScenario proceed() {
-        SF.getInstance(CheckAddClass.class).proceed();
+        SF.get(CheckAddClass.class).proceed();
 
         //커버 이미지(필수) 추가
         CreatorNewClassPage.Elements.coverImageSection().shouldBe(Condition.visible).click();

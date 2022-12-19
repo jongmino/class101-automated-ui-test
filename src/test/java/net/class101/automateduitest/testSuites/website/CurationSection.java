@@ -22,8 +22,8 @@ public class CurationSection {
 
     @Test
     void curation_section_is_visible() {
-        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
-        SF.getInstance(CheckCurationSection.class).proceed().validate();
-        SF.getInstance(CheckSubscriptionPlan.class).proceed().validate();
+        SF.get(LoginAsNonSubscriber.class).proceed().validate();
+        SF.get(CheckCurationSection.class).proceed().validate();
+        SF.get(CheckSubscriptionPlan.class).proceed().validate();
     }
 }

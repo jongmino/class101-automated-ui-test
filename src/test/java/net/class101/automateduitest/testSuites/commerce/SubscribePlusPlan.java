@@ -12,11 +12,11 @@ public class SubscribePlusPlan {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
-        SF.getInstance(LoginAsNonSubscriber.class).proceed().validate();
+        SF.get(LoginAsNonSubscriber.class).proceed().validate();
     }
 
     @Test
     void yearlyPlan() {
-        SF.getInstance(CheckYearlySubscription.class).proceed().validate();
+        SF.get(CheckYearlySubscription.class).proceed().validate();
     }
 }

@@ -1,5 +1,6 @@
 package net.class101.automateduitest.scenarios.creator;
 
+import com.codeborne.selenide.CollectionCondition;
 import net.class101.automateduitest.pages.creatorCenter.CreatorClassCommentPage;
 import net.class101.automateduitest.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.pages.creatorCenter.CreatorLeftNavigation;
@@ -26,6 +27,6 @@ public class CheckCommentAnswered implements TestScenario {
 
     @Override
     public void validate() {
-        CreatorClassCommentPage.Actions.isAnsweredTab();
+        CreatorClassCommentPage.Elements.markAsAnsweredButtons().shouldHave(CollectionCondition.size(0));
     }
 }

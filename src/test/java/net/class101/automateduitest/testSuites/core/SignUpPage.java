@@ -21,20 +21,20 @@ public class SignUpPage {
 
     @Test
     void signUpPage() {
-        SF.getInstance(CheckSignUpPage.class).proceed().validate();
+        SF.get(CheckSignUpPage.class).proceed().validate();
     }
 
     @Test
     void emailSignUp() {
-        SF.getInstance(CheckEmailSignUpPage.class).proceed().validate();
+        SF.get(CheckEmailSignUpPage.class).proceed().validate();
     }
 
     @Test
     void thirdPartyPages() {
-        SF.getInstance(CheckAppleLoginPage.class).proceed().validate();
-        SF.getInstance(CheckFacebookLoginPage.class).proceed().validate();
-        SF.getInstance(CheckGoogleLoginPage.class).proceed().validate();
-        SF.getInstance(CheckKakaoLoginPage.class).proceed().validate();
-        SF.getInstance(CheckNaverLoginPage.class).proceed().validate();
+        SF.get(CheckAppleLoginPage.class).proceed().validate();
+        SF.get(CheckFacebookLoginPage.class).proceed().validate();
+        SF.get(CheckGoogleLoginPage.class).proceed().validate();
+        SF.get(CheckKakaoLoginPage.class).proceed().validate();
+        SF.get(CheckNaverLoginPage.class).proceed().validate();
     }
 }

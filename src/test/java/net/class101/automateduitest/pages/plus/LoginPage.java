@@ -20,7 +20,4 @@ public class LoginPage {
             return $(SIGN_UP_BUTTON);
         }
     }
-
-    public class Actions {
-    }
 }

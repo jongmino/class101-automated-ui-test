@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 public class EmailSignUpPage {
 
     public class Elements {
+
         private static final By SIGN_UP_TITLE = byXpath("//h3[text()='회원가입']");
         private static final By EMAIL_INPUT = byXpath("//input[@name='email']");
         private static final By PASSWORD_INPUT = byXpath("//input[@name='password']");
@@ -45,9 +46,4 @@ public class EmailSignUpPage {
             return $(MORE_OPTIONS_BUTTON);
         }
     }
-
-    public class Actions {
-
-    }
-
 }

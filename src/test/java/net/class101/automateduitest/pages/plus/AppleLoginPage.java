@@ -15,7 +15,4 @@ public class AppleLoginPage {
             return $(APPLE_LOGO);
         }
     }
-
-    public class Actions {
-    }
 }

@@ -17,7 +17,7 @@ public class Settlement {
     static void beforeAll() {
         Configuration.timeout = 20000;
         CreatorHome.Actions.openPage();
-        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
+        SF.get(LoginAsCreatorHasClass.class).proceed().validate();
     }
 
     @AfterEach
@@ -27,16 +27,16 @@ public class Settlement {
 
     @Test
     void classSettlement() {
-        SF.getInstance(CheckClassSettlement.class).proceed().validate();
+        SF.get(CheckClassSettlement.class).proceed().validate();
     }
 
     @Test
     void plusSettlement() {
-        SF.getInstance(CheckPlusSettlement.class).proceed().validate();
+        SF.get(CheckPlusSettlement.class).proceed().validate();
     }
 
     @Test
     void kitSettlement() {
-        SF.getInstance(CheckKitSettlement.class).proceed().validate();
+        SF.get(CheckKitSettlement.class).proceed().validate();
     }
 }

@@ -12,11 +12,11 @@ public class PlayLecture {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
-        SF.getInstance(LoginAsSubscriber.class).proceed().validate();
+        SF.get(LoginAsSubscriber.class).proceed().validate();
     }
 
     @Test
     void verifyPlayingVideo() {
-        SF.getInstance(CheckPlayLecture.class).proceed().validate();
+        SF.get(CheckPlayLecture.class).proceed().validate();
     }
 }

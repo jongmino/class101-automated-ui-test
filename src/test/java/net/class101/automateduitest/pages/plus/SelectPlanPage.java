@@ -31,6 +31,7 @@ public class SelectPlanPage {
     }
 
     public class Actions {
+
         private static final String STAGING_SELECT_PLAN_PAGE_URL = PropertyLoader.getProperties().urls.get("selectPlanPage").staging;
 
         public static void openPage() {

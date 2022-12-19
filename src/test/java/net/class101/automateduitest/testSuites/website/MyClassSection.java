@@ -16,7 +16,7 @@ public class MyClassSection {
 
     @Test
     void my_class_section_is_visible() {
-        SF.getInstance(LoginAsSubscriber.class).proceed().validate();
-        SF.getInstance(CheckMyClassSection.class).proceed().validate();
+        SF.get(LoginAsSubscriber.class).proceed().validate();
+        SF.get(CheckMyClassSection.class).proceed().validate();
     }
 }

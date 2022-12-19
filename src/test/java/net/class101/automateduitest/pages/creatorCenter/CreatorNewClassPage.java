@@ -1,6 +1,5 @@
 package net.class101.automateduitest.pages.creatorCenter;
 
-import static com.codeborne.selenide.Selectors.by;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -8,9 +7,9 @@ import static com.codeborne.selenide.Selenide.$$;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import org.testcontainers.shaded.org.bouncycastle.asn1.sec.SECNamedCurves;
 
 public class CreatorNewClassPage {
+
     private static final By ADD_CLASS_TITLE = byXpath("//*[text()='정규 클래스']");
     private static final By COVER_IMAGE_SECTION = byXpath("//p[text()='커버 이미지']");
     private static final By COVER_IMAGE_INPUT = byXpath("//input[@type='file' and contains(@name,'coverImage')]");
@@ -41,7 +40,6 @@ public class CreatorNewClassPage {
     private static final By IMG_UNDER_CLASS_INFO = byXpath("//div[div[span[text()='클래스 기본 정보']]]//form//img");
 
     public class Elements {
-
 
         public static SelenideElement addClassTitle() {
             return $(ADD_CLASS_TITLE);
@@ -153,6 +151,7 @@ public class CreatorNewClassPage {
     }
 
     public class Actions {
+
         public static void waitForFileUploaded() {
             $$(IMG_UNDER_CLASS_INFO).shouldBe(CollectionCondition.size(2));
         }

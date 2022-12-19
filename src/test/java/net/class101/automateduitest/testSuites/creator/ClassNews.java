@@ -12,11 +12,11 @@ public class ClassNews {
     @BeforeAll
     static void beforeAll() {
         CreatorHome.Actions.openPage();
-        SF.getInstance(LoginAsCreatorHasClass.class).proceed().validate();
+        SF.get(LoginAsCreatorHasClass.class).proceed().validate();
     }
 
     @Test
     void classNews() {
-        SF.getInstance(CheckClassNews.class).proceed().validate();
+        SF.get(CheckClassNews.class).proceed().validate();
     }
 }

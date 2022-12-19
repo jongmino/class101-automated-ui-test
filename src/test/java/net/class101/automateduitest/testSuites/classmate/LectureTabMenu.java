@@ -14,11 +14,11 @@ public class LectureTabMenu {
     static void beforeAll() {
         Configuration.timeout = 20000;
         Home.Actions.openPage();
-        SF.getInstance(LoginAsSubscriber.class).proceed().validate();
+        SF.get(LoginAsSubscriber.class).proceed().validate();
     }
 
     @Test
     void lectureTabMenu() {
-        SF.getInstance(CheckLectureTabMenu.class).proceed().validate();
+        SF.get(CheckLectureTabMenu.class).proceed().validate();
     }
 }

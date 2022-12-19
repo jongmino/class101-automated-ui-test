@@ -41,6 +41,7 @@ public class ProductDetailPage {
     }
 
     public class Actions {
+
         private static final String STAGING_PDP_HAS_KIT_URL = PropertyLoader.getProperties().urls.get("kitLecturePage").staging;
 
         public static void openKitPage(){
