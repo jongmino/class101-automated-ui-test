@@ -14,7 +14,7 @@ public class SF {
         try {
             final String typeName = type.getName();
             if (!instances.containsKey(typeName)) {
-                instances.put(typeName, type.getConstructor().newInstance());
+                createInstance(type);
             }
             return (T) instances.get(typeName);
         } catch (Exception e) {
@@ -22,7 +22,18 @@ public class SF {
         }
     }
 
-    public static void clear() {
+    private static synchronized <T> void createInstance(Class<T> type) {
+        try {
+            final String typeName = type.getName();
+            if (!instances.containsKey(typeName)) {
+                instances.put(typeName, type.getConstructor().newInstance());
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static synchronized void clear() {
         instances.clear();
     }
 }
