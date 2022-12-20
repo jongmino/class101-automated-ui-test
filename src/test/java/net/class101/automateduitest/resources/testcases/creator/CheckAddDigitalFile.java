@@ -3,7 +3,7 @@ package net.class101.automateduitest.resources.testcases.creator;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
-import net.class101.automateduitest.common.Utils;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorAddDigitalProductPage;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorAddProductPage;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
@@ -20,9 +20,9 @@ public class CheckAddDigitalFile implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorProductPage.Elements.createProductButton().shouldNotBe(Condition.disabled).click();
-        CreatorAddProductPage.Elements.createDigitalFileButton().shouldBe(Condition.visible).click();
-        CreatorAddDigitalProductPage.Elements.pageTitle().shouldBe(Condition.visible);
+        CreatorProductPage.createProductButton().shouldNotBe(Condition.disabled).click();
+        CreatorAddProductPage.createDigitalFileButton().shouldBe(Condition.visible).click();
+        CreatorAddDigitalProductPage.pageTitle().shouldBe(Condition.visible);
 
         return this;
     }

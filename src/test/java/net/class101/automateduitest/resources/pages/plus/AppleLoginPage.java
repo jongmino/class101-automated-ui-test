@@ -8,11 +8,9 @@ import org.openqa.selenium.By;
 
 public class AppleLoginPage {
 
-    public class Elements {
-        private static final By APPLE_LOGO = byXpath("(//*[contains(@class,'ac-gn-apple')])[2]");
+    private static final By APPLE_LOGO = byXpath("(//*[contains(@class,'ac-gn-apple')])[2]");
 
-        public static SelenideElement appleLogo() {
-            return $(APPLE_LOGO);
-        }
+    public static SelenideElement appleLogo() {
+        return $(APPLE_LOGO);
     }
 }

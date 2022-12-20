@@ -16,18 +16,18 @@ public class CheckEmailSignUpPage implements TestCase {
     @Override
     public TestCase proceed() {
         SignUpPage.Actions.openPage();
-        SignUpPage.Elements.emailButton().click();
+        SignUpPage.emailButton().click();
         return this;
     }
 
     @Override
     public void validate() {
-        EmailSignUpPage.Elements.signUpTitle().shouldBe(Condition.visible);
-        EmailSignUpPage.Elements.emailInput().shouldBe(Condition.visible);
-        EmailSignUpPage.Elements.passwordInput().shouldBe(Condition.visible);
-        EmailSignUpPage.Elements.confirmPasswordInput().shouldBe(Condition.visible);
-        EmailSignUpPage.Elements.nextButton().shouldBe(Condition.visible);
-        EmailSignUpPage.Elements.kakaoSignUpButton().shouldBe(Condition.visible);
-        EmailSignUpPage.Elements.moreOptionButton().shouldBe(Condition.visible);
+        EmailSignUpPage.signUpTitle().shouldBe(Condition.visible);
+        EmailSignUpPage.emailInput().shouldBe(Condition.visible);
+        EmailSignUpPage.passwordInput().shouldBe(Condition.visible);
+        EmailSignUpPage.confirmPasswordInput().shouldBe(Condition.visible);
+        EmailSignUpPage.nextButton().shouldBe(Condition.visible);
+        EmailSignUpPage.kakaoSignUpButton().shouldBe(Condition.visible);
+        EmailSignUpPage.moreOptionButton().shouldBe(Condition.visible);
     }
 }

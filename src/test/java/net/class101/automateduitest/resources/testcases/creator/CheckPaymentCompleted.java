@@ -15,12 +15,12 @@ public class CheckPaymentCompleted implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorOrderAndShippingPage.Elements.paymentCompletedTab().shouldBe(Condition.visible).click();
+        CreatorOrderAndShippingPage.paymentCompletedTab().shouldBe(Condition.visible).click();
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorOrderAndShippingPage.Elements.paymentCompletedTitle().shouldBe(Condition.visible);
+        CreatorOrderAndShippingPage.paymentCompletedTitle().shouldBe(Condition.visible);
     }
 }

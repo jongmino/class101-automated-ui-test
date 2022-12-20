@@ -8,12 +8,9 @@ import org.openqa.selenium.By;
 
 public class PaymentPage {
 
-    public class Elements {
+    private static final By PAYMENT_PRICE = byXpath("//p[text()='189,000원']");
 
-        private static final By PAYMENT_PRICE = byXpath("//p[text()='189,000원']");
-
-        public static SelenideElement paymentPrice() {
-            return $(PAYMENT_PRICE);
-        }
+    public static SelenideElement paymentPrice() {
+        return $(PAYMENT_PRICE);
     }
 }

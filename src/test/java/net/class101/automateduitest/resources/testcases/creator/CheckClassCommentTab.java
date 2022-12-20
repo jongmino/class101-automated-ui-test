@@ -3,7 +3,7 @@ package net.class101.automateduitest.resources.testcases.creator;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
-import net.class101.automateduitest.common.Utils;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorClassCommentPage;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNavigation;
@@ -21,9 +21,9 @@ public class CheckClassCommentTab implements TestCase {
     @Override
     public TestCase proceed() {
         CreatorHome.Actions.openPage();
-        CreatorLeftNavigation.Elements.classTab().click();
-        CreatorLeftNavigation.Elements.classCommentTab().click();
-        CreatorClassCommentPage.Elements.commentPageTitle().shouldBe(Condition.visible);
+        CreatorLeftNavigation.classTab().click();
+        CreatorLeftNavigation.classCommentTab().click();
+        CreatorClassCommentPage.commentPageTitle().shouldBe(Condition.visible);
 
         return this;
     }

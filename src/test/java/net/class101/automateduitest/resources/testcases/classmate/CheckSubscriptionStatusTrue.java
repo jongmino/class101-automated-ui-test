@@ -23,6 +23,6 @@ public class CheckSubscriptionStatusTrue implements TestCase {
     @Override
     public void validate() {
         //구독 탭 확인
-        MyPage.Elements.subscriptionStatusTrue().shouldBe(Condition.visible);
+        MyPage.subscriptionStatusTrue().shouldBe(Condition.visible);
     }
 }

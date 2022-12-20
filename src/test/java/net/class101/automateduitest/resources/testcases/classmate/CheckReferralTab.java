@@ -1,6 +1,6 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
-import static net.class101.automateduitest.common.Utils.urlContains;
+import static net.class101.automateduitest.resources.common.Utils.urlContains;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
@@ -20,8 +20,8 @@ public class CheckReferralTab implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.Elements.referralTab().click();
-        ClassmateReferralPage.Elements.copyReferralLinkButton().shouldBe(Condition.visible);
+        MyPage.referralTab().click();
+        ClassmateReferralPage.copyReferralLinkButton().shouldBe(Condition.visible);
 
         return this;
     }

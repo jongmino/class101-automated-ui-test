@@ -1,6 +1,6 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
-import static net.class101.automateduitest.common.Utils.urlContains;
+import static net.class101.automateduitest.resources.common.Utils.urlContains;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
@@ -19,8 +19,8 @@ public class CheckSettingTab implements TestCase {
 
     @Override
     public TestCase proceed() {
-        MyPage.Elements.settingTab().click();
-        SettingPage.Elements.serviceRegionSettingButton().shouldBe(Condition.visible);
+        MyPage.settingTab().click();
+        SettingPage.serviceRegionSettingButton().shouldBe(Condition.visible);
         return this;
     }
 

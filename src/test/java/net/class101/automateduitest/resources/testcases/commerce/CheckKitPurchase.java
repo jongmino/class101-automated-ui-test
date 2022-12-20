@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
-import net.class101.automateduitest.common.Utils;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
@@ -20,7 +20,7 @@ public class CheckKitPurchase implements TestCase {
     @Override
     public TestCase proceed() {
         ProductDetailPage.Actions.openKitPage();
-        ProductDetailPage.Elements.buyKitButton().shouldBe(Condition.visible).click();
+        ProductDetailPage.buyKitButton().shouldBe(Condition.visible).click();
         Selenide.switchTo().window(1);
 
         return this;

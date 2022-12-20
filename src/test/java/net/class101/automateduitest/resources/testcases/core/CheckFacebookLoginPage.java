@@ -16,12 +16,12 @@ public class CheckFacebookLoginPage implements TestCase {
     @Override
     public TestCase proceed() {
         SignUpPage.Actions.openPage();
-        SignUpPage.Elements.facebookButton().shouldNotBe(Condition.disabled).click();
+        SignUpPage.facebookButton().shouldNotBe(Condition.disabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        FaceBookLoginPage.Elements.facebookLogo().shouldNotBe(Condition.visible);
+        FaceBookLoginPage.facebookLogo().shouldNotBe(Condition.visible);
     }
 }

@@ -16,12 +16,12 @@ public class CheckAppleLoginPage implements TestCase {
     @Override
     public TestCase proceed() {
         SignUpPage.Actions.openPage();
-        SignUpPage.Elements.appleButton().shouldNotBe(Condition.disabled).click();
+        SignUpPage.appleButton().shouldNotBe(Condition.disabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        AppleLoginPage.Elements.appleLogo().shouldBe(Condition.visible);
+        AppleLoginPage.appleLogo().shouldBe(Condition.visible);
     }
 }

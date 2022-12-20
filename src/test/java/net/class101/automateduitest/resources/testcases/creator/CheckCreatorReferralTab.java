@@ -16,12 +16,12 @@ public class CheckCreatorReferralTab implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorLeftNavigation.Elements.referralTab().click();
+        CreatorLeftNavigation.referralTab().click();
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorReferralPage.Elements.referralLinkCopyButton().shouldBe(Condition.visible);
+        CreatorReferralPage.referralLinkCopyButton().shouldBe(Condition.visible);
     }
 }

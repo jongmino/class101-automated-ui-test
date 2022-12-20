@@ -21,6 +21,6 @@ public class CheckRecommendedClassSection implements TestCase {
 
     @Override
     public void validate() {
-        Home.Elements.recommendedClassSectionTitle().shouldBe(Condition.visible);
+        Home.recommendedClassSectionTitle().shouldBe(Condition.visible);
     }
 }

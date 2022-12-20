@@ -16,12 +16,12 @@ public class CheckNaverLoginPage implements TestCase {
     @Override
     public TestCase proceed() {
         SignUpPage.Actions.openPage();
-        SignUpPage.Elements.naverButton().shouldNotBe(Condition.disabled).click();
+        SignUpPage.naverButton().shouldNotBe(Condition.disabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        NaverLoginPage.Elements.naverLogo().shouldBe(Condition.visible);
+        NaverLoginPage.naverLogo().shouldBe(Condition.visible);
     }
 }

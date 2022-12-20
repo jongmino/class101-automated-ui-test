@@ -18,14 +18,14 @@ public class CheckCommentNotAnswered implements TestCase {
     @Override
     public TestCase proceed() {
         CreatorHome.Actions.openPage();
-        CreatorLeftNavigation.Elements.classTab().click();
-        CreatorLeftNavigation.Elements.classCommentTab().click();
-        CreatorClassCommentPage.Elements.notAnsweredTab().click();
+        CreatorLeftNavigation.classTab().click();
+        CreatorLeftNavigation.classCommentTab().click();
+        CreatorClassCommentPage.notAnsweredTab().click();
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorClassCommentPage.Elements.markAsAnsweredButtons().shouldHave(CollectionCondition.sizeGreaterThan(0));
+        CreatorClassCommentPage.markAsAnsweredButtons().shouldHave(CollectionCondition.sizeGreaterThan(0));
     }
 }

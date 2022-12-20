@@ -19,13 +19,13 @@ public class CheckCurationSection implements TestCase {
 
     @Override
     public TestCase proceed() {
-        Home.Elements.firstCurationItem().click();
+        Home.firstCurationItem().click();
         return this;
     }
 
     @Override
     public void validate() {
-        ProductDetailPage.Elements.classInfoTab().shouldBe(Condition.visible);
-        ProductDetailPage.Elements.creatorInfoTab().shouldBe(Condition.visible);
+        ProductDetailPage.classInfoTab().shouldBe(Condition.visible);
+        ProductDetailPage.creatorInfoTab().shouldBe(Condition.visible);
     }
 }

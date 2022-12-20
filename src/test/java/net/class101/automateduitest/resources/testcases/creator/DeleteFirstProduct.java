@@ -1,5 +1,6 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
+import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
@@ -14,7 +15,12 @@ public class DeleteFirstProduct implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorProductPage.Actions.deleteFirstProduct();
+        CreatorProductPage.creatorCenterLogo().click();
+        CreatorProductPage.privateStatus().shouldBe(Condition.visible);
+        CreatorProductPage.firstProductSelectBox().shouldBe(Condition.visible).click();
+        CreatorProductPage.deleteButton().shouldBe(Condition.visible).click();
+        CreatorProductPage.modalDeleteButton().shouldBe(Condition.visible).click();
+        CreatorProductPage.modalDeleteButton().should(Condition.disappear);
         return this;
     }
 

@@ -19,8 +19,8 @@ public class SaveClass implements TestCase {
         try {
             //실시간 인기 클래스 첫번째 아이템 찜하기
             Thread.sleep(2000);
-            Home.Elements.trendingNowSectionTitle().shouldBe(Condition.visible).scrollIntoView(true);
-            Home.Elements.firstSaveButtonOnTrendingNow().shouldBe(Condition.enabled).click();
+            Home.trendingNowSectionTitle().shouldBe(Condition.visible).scrollIntoView(true);
+            Home.firstSaveButtonOnTrendingNow().shouldBe(Condition.enabled).click();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -30,6 +30,6 @@ public class SaveClass implements TestCase {
     @Override
     public void validate() {
         //찜하기 섹션 생성 확인
-        Home.Elements.savedClassesSectionTitle().shouldBe(Condition.visible);
+        Home.savedClassesSectionTitle().shouldBe(Condition.visible);
     }
 }

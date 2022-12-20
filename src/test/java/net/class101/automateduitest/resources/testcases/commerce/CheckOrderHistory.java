@@ -17,14 +17,14 @@ public class CheckOrderHistory implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.Elements.orderTab().click();
+        MyPage.orderTab().click();
         return this;
     }
 
     @Override
     public void validate() {
-        OrderPage.Elements.orderHistoryTitle().shouldBe(Condition.visible);
-        OrderPage.Elements.shippingInfoButton().shouldBe(Condition.visible);
-        OrderPage.Elements.orderViewDetailButton().shouldBe(Condition.visible);
+        OrderPage.orderHistoryTitle().shouldBe(Condition.visible);
+        OrderPage.shippingInfoButton().shouldBe(Condition.visible);
+        OrderPage.orderViewDetailButton().shouldBe(Condition.visible);
     }
 }

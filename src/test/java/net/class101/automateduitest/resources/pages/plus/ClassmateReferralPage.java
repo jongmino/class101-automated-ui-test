@@ -7,11 +7,9 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 public class ClassmateReferralPage {
-    public class Elements {
-        private static final By COPY_REFERRAL_LINK_BUTTON = byXpath("//span[text()='초대 링크 복사']");
+    private static final By COPY_REFERRAL_LINK_BUTTON = byXpath("//span[text()='초대 링크 복사']");
 
-        public static SelenideElement copyReferralLinkButton() {
-            return $(COPY_REFERRAL_LINK_BUTTON);
-        }
+    public static SelenideElement copyReferralLinkButton() {
+        return $(COPY_REFERRAL_LINK_BUTTON);
     }
 }

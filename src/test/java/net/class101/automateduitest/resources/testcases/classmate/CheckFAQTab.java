@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
-import net.class101.automateduitest.common.Utils;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
@@ -20,7 +20,7 @@ public class CheckFAQTab implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.Elements.faqTab().shouldBe(Condition.visible).click();
+        MyPage.faqTab().shouldBe(Condition.visible).click();
         Selenide.switchTo().window(1);
         return this;
     }

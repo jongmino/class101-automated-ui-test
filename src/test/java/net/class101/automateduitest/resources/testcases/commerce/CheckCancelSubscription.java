@@ -17,12 +17,12 @@ public class CheckCancelSubscription implements TestCase {
     @Override
     public TestCase proceed() {
         SubscriptionPage.Actions.openPage();
-        SubscriptionPage.Elements.cancelSubscriptionButton().shouldBe(Condition.visible).click();
+        SubscriptionPage.cancelSubscriptionButton().shouldBe(Condition.visible).click();
         return this;
     }
 
     @Override
     public void validate() {
-        CancelSubscriptionPage.Elements.cancelButton().shouldBe(Condition.visible);
+        CancelSubscriptionPage.cancelButton().shouldBe(Condition.visible);
     }
 }

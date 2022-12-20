@@ -18,13 +18,13 @@ public class CheckCashTab implements TestCase {
     public TestCase proceed() {
         //유저 네비게이션 프로필 이미지 클릭
         Home.Actions.openPage();
-        Home.Elements.userProfileImg().shouldBe(Condition.visible).click();
+        Home.userProfileImg().shouldBe(Condition.visible).click();
         return this;
     }
 
     @Override
     public void validate() {
         //캐시탭 확인
-        MyPage.Elements.cashTab().shouldBe(Condition.visible);
+        MyPage.cashTab().shouldBe(Condition.visible);
     }
 }

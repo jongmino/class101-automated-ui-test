@@ -6,12 +6,9 @@ import com.codeborne.selenide.SelenideElement;
 
 public class CreatorStockPage {
 
-    public class Elements {
+    private static final String STOCK_TABLE = "table";
 
-        private static final String STOCK_TABLE = "table";
-
-        public static SelenideElement stockTable() {
-            return $(STOCK_TABLE);
-        }
+    public static SelenideElement stockTable() {
+        return $(STOCK_TABLE);
     }
 }

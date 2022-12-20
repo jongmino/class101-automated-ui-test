@@ -17,12 +17,12 @@ public class CheckPlayLecture implements TestCase {
     @Override
     public TestCase proceed() {
         ProductDetailPage.Actions.openKitPage();
-        ProductDetailPage.Elements.playLectureButton().shouldNotBe(Condition.disabled).click();
+        ProductDetailPage.playLectureButton().shouldNotBe(Condition.disabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        LecturePage.Elements.videoElementPlaying().shouldBe(Condition.visible);
+        LecturePage.videoElementPlaying().shouldBe(Condition.visible);
     }
 }

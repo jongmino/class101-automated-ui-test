@@ -22,12 +22,12 @@ public class ChangeVideoQuality implements TestCase {
     @Override
     public TestCase proceed() {
         try {
-            LecturePage.Elements.videoPlayer().hover();
-            LecturePage.Elements.settingButton().shouldBe(Condition.visible).click();
-            LecturePage.Elements.videoQualitySettingButton().shouldBe(Condition.enabled).click();
-            qualityOptionValue = LecturePage.Elements.firstUnCheckedRadioButton().find("input").getValue();
-            LecturePage.Elements.firstUnCheckedRadioButton().shouldBe(Condition.enabled).click();
-            LecturePage.Elements.settingButton().click();
+            LecturePage.videoPlayer().hover();
+            LecturePage.settingButton().shouldBe(Condition.visible).click();
+            LecturePage.videoQualitySettingButton().shouldBe(Condition.enabled).click();
+            qualityOptionValue = LecturePage.firstUnCheckedRadioButton().find("input").getValue();
+            LecturePage.firstUnCheckedRadioButton().shouldBe(Condition.enabled).click();
+            LecturePage.settingButton().click();
             Thread.sleep(1000);
             currentQualityValue = LecturePage.Actions.getVideoQualityValue();
         } catch (InterruptedException e) {

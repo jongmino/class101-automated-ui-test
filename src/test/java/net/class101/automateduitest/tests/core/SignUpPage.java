@@ -1,6 +1,6 @@
 package net.class101.automateduitest.tests.core;
 
-import net.class101.automateduitest.common.SF;
+import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.core.CheckAppleLoginPage;
 import net.class101.automateduitest.resources.testcases.core.CheckEmailSignUpPage;

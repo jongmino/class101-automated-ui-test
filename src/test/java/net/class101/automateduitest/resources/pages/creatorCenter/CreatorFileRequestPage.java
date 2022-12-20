@@ -8,12 +8,9 @@ import org.openqa.selenium.By;
 
 public class CreatorFileRequestPage {
 
-    public class Elements {
+    private static final By FILE_REQUEST_HISTORY_TITLE = byXpath("//h4[contains(.,'나의 자료 요청 내역')]");
 
-        private static final By FILE_REQUEST_HISTORY_TITLE = byXpath("//h4[contains(.,'나의 자료 요청 내역')]");
-
-        public static SelenideElement fileRequestTitle() {
-            return $(FILE_REQUEST_HISTORY_TITLE);
-        }
+    public static SelenideElement fileRequestTitle() {
+        return $(FILE_REQUEST_HISTORY_TITLE);
     }
 }

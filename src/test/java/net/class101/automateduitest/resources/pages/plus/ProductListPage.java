@@ -16,29 +16,19 @@ public class ProductListPage {
     private static final By ENGLISH_CATEGORY_PAGE_TITLE = byXpath("(//h1[text()='영어'])[2]");
     private static final By PRODUCT_LIST_PAGE_ITEM = byXpath("//li");
 
-    public class Elements {
-
-        public static SelenideElement englishCommunicationSubCategoryButton() {
-            return $(SUBCATEGORY_ENGLISH_COMMUNICATION);
-        }
-
-        public static SelenideElement craftsCategoryTab() {
-            return $(SEARCH_RESULT_CRAFTS_CATEGORY);
-        }
-
-        public static SelenideElement englishCategoryPageTitle() {
-            return $(ENGLISH_CATEGORY_PAGE_TITLE);
-        }
-
-        public static ElementsCollection productItemList() {
-            return $$(PRODUCT_LIST_PAGE_ITEM);
-        }
+    public static SelenideElement englishCommunicationSubCategoryButton() {
+        return $(SUBCATEGORY_ENGLISH_COMMUNICATION);
     }
 
-    public class Actions {
+    public static SelenideElement craftsCategoryTab() {
+        return $(SEARCH_RESULT_CRAFTS_CATEGORY);
+    }
 
-        public static int getProductListSize() {
-            return $$(PRODUCT_LIST_PAGE_ITEM).size();
-        }
+    public static SelenideElement englishCategoryPageTitle() {
+        return $(ENGLISH_CATEGORY_PAGE_TITLE);
+    }
+
+    public static ElementsCollection productItemList() {
+        return $$(PRODUCT_LIST_PAGE_ITEM);
     }
 }

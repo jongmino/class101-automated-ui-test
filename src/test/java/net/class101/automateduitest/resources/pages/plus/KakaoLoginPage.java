@@ -8,11 +8,9 @@ import org.openqa.selenium.By;
 
 public class KakaoLoginPage {
 
-    public class Elements {
-        private static final By KAKAO_LOGO = byXpath("//span[text()='Kakao']");
+    private static final By KAKAO_LOGO = byXpath("//span[text()='Kakao']");
 
-        public static SelenideElement kakaoLogo() {
-            return $(KAKAO_LOGO);
-        }
+    public static SelenideElement kakaoLogo() {
+        return $(KAKAO_LOGO);
     }
 }

@@ -17,13 +17,13 @@ public class CheckSubscriptionPlan implements TestCase {
     @Override
     public TestCase proceed() {
 
-        ProductDetailPage.Elements.startSubscriptionButton().shouldBe(Condition.visible).shouldBe(Condition.enabled).click();
+        ProductDetailPage.startSubscriptionButton().shouldBe(Condition.visible).shouldBe(Condition.enabled).click();
         return this;
     }
 
     @Override
     public void validate() {
         //플랜 선택 페이지 이동 확인
-        SelectPlanPage.Elements.subscribePlanTitle().shouldBe(Condition.visible);
+        SelectPlanPage.subscribePlanTitle().shouldBe(Condition.visible);
     }
 }

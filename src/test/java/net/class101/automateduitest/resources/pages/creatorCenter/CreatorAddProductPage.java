@@ -8,22 +8,19 @@ import org.openqa.selenium.By;
 
 public class CreatorAddProductPage {
 
-    public class Elements {
+    private static final By CREATE_CLASS_BUTTON = byXpath("(//span[text()='만들기'])[1]");
+    private static final By CREATE_DIGITAL_FILE_BUTTON = byXpath("(//span[text()='만들기'])[2]");
+    private static final By CREATE_E_BOOK_BUTTON = byXpath("(//span[text()='만들기'])[3]");
 
-        private static final By CREATE_CLASS_BUTTON = byXpath("(//span[text()='만들기'])[1]");
-        private static final By CREATE_DIGITAL_FILE_BUTTON = byXpath("(//span[text()='만들기'])[2]");
-        private static final By CREATE_E_BOOK_BUTTON = byXpath("(//span[text()='만들기'])[3]");
+    public static SelenideElement createClassButton() {
+        return $(CREATE_CLASS_BUTTON);
+    }
 
-        public static SelenideElement createClassButton() {
-            return $(CREATE_CLASS_BUTTON);
-        }
+    public static SelenideElement createDigitalFileButton() {
+        return $(CREATE_DIGITAL_FILE_BUTTON);
+    }
 
-        public static SelenideElement createDigitalFileButton() {
-            return $(CREATE_DIGITAL_FILE_BUTTON);
-        }
-
-        public static SelenideElement createEBookButton() {
-            return $(CREATE_E_BOOK_BUTTON);
-        }
+    public static SelenideElement createEBookButton() {
+        return $(CREATE_E_BOOK_BUTTON);
     }
 }

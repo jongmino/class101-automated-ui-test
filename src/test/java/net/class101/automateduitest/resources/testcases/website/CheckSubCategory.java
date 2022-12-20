@@ -1,6 +1,6 @@
 package net.class101.automateduitest.resources.testcases.website;
 
-import static net.class101.automateduitest.common.Utils.urlContains;
+import static net.class101.automateduitest.resources.common.Utils.urlContains;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.CollectionCondition;
@@ -19,8 +19,8 @@ public class CheckSubCategory implements TestCase {
     @Override
     public TestCase proceed() {
 
-        ProductListPage.Elements.englishCommunicationSubCategoryButton().click();
-        ProductListPage.Elements.productItemList().shouldHave(CollectionCondition.sizeLessThan(20));
+        ProductListPage.englishCommunicationSubCategoryButton().click();
+        ProductListPage.productItemList().shouldHave(CollectionCondition.sizeLessThan(20));
         return this;
     }
 

@@ -1,6 +1,6 @@
 package net.class101.automateduitest.tests.creator;
 
-import net.class101.automateduitest.common.SF;
+import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.testcases.creator.CheckProductList;
 import net.class101.automateduitest.resources.testcases.creator.LoginAsCreatorHasClass;

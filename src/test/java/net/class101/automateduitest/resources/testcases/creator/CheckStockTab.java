@@ -16,13 +16,13 @@ public class CheckStockTab implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorLeftNavigation.Elements.stockTab().shouldBe(Condition.enabled).click();
-        CreatorLeftNavigation.Elements.stockAllTab().shouldBe(Condition.visible).click();
+        CreatorLeftNavigation.stockTab().shouldBe(Condition.enabled).click();
+        CreatorLeftNavigation.stockAllTab().shouldBe(Condition.visible).click();
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorStockPage.Elements.stockTable().shouldBe(Condition.visible);
+        CreatorStockPage.stockTable().shouldBe(Condition.visible);
     }
 }

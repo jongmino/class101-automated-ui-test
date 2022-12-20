@@ -16,12 +16,12 @@ public class CheckGoogleLoginPage implements TestCase {
     @Override
     public TestCase proceed() {
         SignUpPage.Actions.openPage();
-        SignUpPage.Elements.googleButton().shouldNotBe(Condition.disabled).click();
+        SignUpPage.googleButton().shouldNotBe(Condition.disabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        GoogleLoginPage.Elements.googleLoginTitle().shouldBe(Condition.visible);
+        GoogleLoginPage.googleLoginTitle().shouldBe(Condition.visible);
     }
 }

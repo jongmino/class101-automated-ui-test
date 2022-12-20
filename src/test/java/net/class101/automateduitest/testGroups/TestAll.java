@@ -4,7 +4,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import net.class101.automateduitest.common.SF;
+import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.resources.pages.plus.Home;
@@ -415,7 +415,7 @@ public class TestAll {
 
             @BeforeEach
             void setUp() {
-                CreatorProductPage.Elements.creatorCenterLogo().click();
+                CreatorProductPage.creatorCenterLogo().click();
             }
 
             @AfterEach

@@ -1,6 +1,6 @@
 package net.class101.automateduitest.resources.testcases.website;
 
-import static net.class101.automateduitest.common.Utils.urlContains;
+import static net.class101.automateduitest.resources.common.Utils.urlContains;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
@@ -20,10 +20,10 @@ public class CheckRecommendedCategorySection implements TestCase {
     @Override
     public TestCase proceed() {
         //추천 카테고리 섹션 확인
-        Home.Elements.recommendedCategorySectionTitle().scrollIntoView(true).shouldBe(Condition.visible);
+        Home.recommendedCategorySectionTitle().scrollIntoView(true).shouldBe(Condition.visible);
         //영어 카테고리 클릭
-        Home.Elements.englishCategoryButton().scrollIntoView(true).shouldBe(Condition.enabled).click();
-        ProductListPage.Elements.englishCategoryPageTitle().shouldBe(Condition.visible);
+        Home.englishCategoryButton().scrollIntoView(true).shouldBe(Condition.enabled).click();
+        ProductListPage.englishCategoryPageTitle().shouldBe(Condition.visible);
 
         return this;
     }

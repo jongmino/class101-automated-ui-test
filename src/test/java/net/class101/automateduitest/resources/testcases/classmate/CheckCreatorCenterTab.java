@@ -17,13 +17,13 @@ public class CheckCreatorCenterTab implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.Elements.creatorCenterTab().click();
+        MyPage.creatorCenterTab().click();
 
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorLoginPage.Elements.emailInputElement().shouldBe(Condition.visible);
+        CreatorLoginPage.emailInputElement().shouldBe(Condition.visible);
     }
 }

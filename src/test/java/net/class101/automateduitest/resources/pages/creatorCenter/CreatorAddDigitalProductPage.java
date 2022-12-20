@@ -8,12 +8,9 @@ import org.openqa.selenium.By;
 
 public class CreatorAddDigitalProductPage {
 
-    public class Elements {
+    private static final By PAGE_TITLE = byXpath("//*[text()='상품 오픈 준비 중']");
 
-        private static final By PAGE_TITLE = byXpath("//*[text()='상품 오픈 준비 중']");
-
-        public static SelenideElement pageTitle() {
-            return $(PAGE_TITLE);
-        }
+    public static SelenideElement pageTitle() {
+        return $(PAGE_TITLE);
     }
 }

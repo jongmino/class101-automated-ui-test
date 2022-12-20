@@ -1,4 +1,4 @@
-package net.class101.automateduitest.common;
+package net.class101.automateduitest.resources.common;
 
 import java.util.Map;
 

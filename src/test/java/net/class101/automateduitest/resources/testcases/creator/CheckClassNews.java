@@ -18,16 +18,16 @@ public class CheckClassNews implements TestCase {
     @Override
     public TestCase proceed() {
         CreatorHome.Actions.openPage();
-        CreatorLeftNavigation.Elements.classTab().click();
-        CreatorLeftNavigation.Elements.classNewsTab().click();
-        CreatorClassNewsPage.Elements.classIdInput().shouldBe(Condition.visible).sendKeys(CreatorClassNewsPage.CLASS_ID);
-        CreatorClassNewsPage.Elements.classIdInput().pressEnter();
+        CreatorLeftNavigation.classTab().click();
+        CreatorLeftNavigation.classNewsTab().click();
+        CreatorClassNewsPage.classIdInput().shouldBe(Condition.visible).sendKeys(CreatorClassNewsPage.CLASS_ID);
+        CreatorClassNewsPage.classIdInput().pressEnter();
 
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorClassNewsPage.Elements.createNoticeButton().shouldBe(Condition.visible);
+        CreatorClassNewsPage.createNoticeButton().shouldBe(Condition.visible);
     }
 }

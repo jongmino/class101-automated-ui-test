@@ -16,14 +16,14 @@ public class CheckClassSettlement implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorLeftNavigation.Elements.classSettlementTab().click();
-        CreatorLeftNavigation.Elements.individualClassSettlementTab().shouldBe(Condition.visible).click();
+        CreatorLeftNavigation.classSettlementTab().click();
+        CreatorLeftNavigation.individualClassSettlementTab().shouldBe(Condition.visible).click();
 
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorClassSettlementPage.Elements.settlementTable().shouldBe(Condition.visible);
+        CreatorClassSettlementPage.settlementTable().shouldBe(Condition.visible);
     }
 }

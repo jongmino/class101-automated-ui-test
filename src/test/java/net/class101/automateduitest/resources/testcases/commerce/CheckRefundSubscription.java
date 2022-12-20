@@ -17,14 +17,14 @@ public class CheckRefundSubscription implements TestCase {
     @Override
     public TestCase proceed() {
         SubscriptionPage.Actions.openPage();
-        SubscriptionPage.Elements.cancelSubscriptionButton().shouldBe(Condition.visible).scrollIntoView(true);
-        SubscriptionPage.Elements.refundButton().shouldBe(Condition.enabled).scrollIntoView(true).click();
+        SubscriptionPage.cancelSubscriptionButton().shouldBe(Condition.visible).scrollIntoView(true);
+        SubscriptionPage.refundButton().shouldBe(Condition.enabled).scrollIntoView(true).click();
 
         return this;
     }
 
     @Override
     public void validate() {
-        RefundSubscriptionPage.Elements.refundPageTitle().shouldBe(Condition.visible);
+        RefundSubscriptionPage.refundPageTitle().shouldBe(Condition.visible);
     }
 }

@@ -17,12 +17,12 @@ public class CheckEnquiryTab implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.Elements.enquiryTab().click();
+        MyPage.enquiryTab().click();
         return this;
     }
 
     @Override
     public void validate() {
-        MyPage.Elements.channelTalkModal().shouldBe(Condition.visible);
+        MyPage.channelTalkModal().shouldBe(Condition.visible);
     }
 }

@@ -16,13 +16,13 @@ public class CheckOrderAndShippingTab implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorLeftNavigation.Elements.orderAndShippingTab().click();
-        CreatorLeftNavigation.Elements.orderAndShippingShopTab().click();
+        CreatorLeftNavigation.orderAndShippingTab().click();
+        CreatorLeftNavigation.orderAndShippingShopTab().click();
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorOrderAndShippingPage.Elements.orderAndShippingTitle().shouldBe(Condition.visible);
+        CreatorOrderAndShippingPage.orderAndShippingTitle().shouldBe(Condition.visible);
     }
 }

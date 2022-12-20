@@ -16,12 +16,12 @@ public class CheckFileRequestTab implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorLeftNavigation.Elements.fileRequestTab().click();
+        CreatorLeftNavigation.fileRequestTab().click();
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorFileRequestPage.Elements.fileRequestTitle().shouldBe(Condition.visible);
+        CreatorFileRequestPage.fileRequestTitle().shouldBe(Condition.visible);
     }
 }

@@ -18,15 +18,15 @@ public class CheckCommentAnswered implements TestCase {
     @Override
     public TestCase proceed() {
         CreatorHome.Actions.openPage();
-        CreatorLeftNavigation.Elements.classTab().click();
-        CreatorLeftNavigation.Elements.classCommentTab().click();
-        CreatorClassCommentPage.Elements.answeredTab().click();
+        CreatorLeftNavigation.classTab().click();
+        CreatorLeftNavigation.classCommentTab().click();
+        CreatorClassCommentPage.answeredTab().click();
 
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorClassCommentPage.Elements.markAsAnsweredButtons().shouldHave(CollectionCondition.size(0));
+        CreatorClassCommentPage.markAsAnsweredButtons().shouldHave(CollectionCondition.size(0));
     }
 }

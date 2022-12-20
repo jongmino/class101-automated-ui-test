@@ -21,6 +21,6 @@ public class CheckMyClassSection implements TestCase {
 
     @Override
     public void validate() {
-        Home.Elements.myClassSectionTitle().shouldBe(Condition.visible);
+        Home.myClassSectionTitle().shouldBe(Condition.visible);
     }
 }

@@ -16,13 +16,13 @@ public class CheckKitSettlement implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorLeftNavigation.Elements.kitSettlementTab().click();
-        CreatorLeftNavigation.Elements.kitSettlementSubTab().shouldBe(Condition.visible).click();
+        CreatorLeftNavigation.kitSettlementTab().click();
+        CreatorLeftNavigation.kitSettlementSubTab().shouldBe(Condition.visible).click();
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorKitSettlementPage.Elements.settlementTable().shouldBe(Condition.visible);
+        CreatorKitSettlementPage.settlementTable().shouldBe(Condition.visible);
     }
 }

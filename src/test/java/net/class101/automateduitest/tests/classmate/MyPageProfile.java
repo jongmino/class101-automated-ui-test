@@ -1,6 +1,6 @@
 package net.class101.automateduitest.tests.classmate;
 
-import net.class101.automateduitest.common.SF;
+import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.classmate.CheckCashTab;
 import net.class101.automateduitest.resources.testcases.core.LoginAsNonSubscriber;

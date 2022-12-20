@@ -4,7 +4,6 @@ import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -40,157 +39,135 @@ public class CreatorNewClassPage {
     private static final By IN_REVIEW_STATUS = byXpath("//div[*[text()='상품 상태']]//p[text()='검토 중']");
     private static final By IMG_UNDER_CLASS_INFO = byXpath("//div[div[span[text()='클래스 기본 정보']]]//form//img");
 
-    public class Elements {
-
-        public static SelenideElement addClassTitle() {
-            return $(ADD_CLASS_TITLE);
-        }
-
-        public static SelenideElement coverImageSection() {
-            return $(COVER_IMAGE_SECTION);
-        }
-
-        public static SelenideElement coverImageInput() {
-            return $(COVER_IMAGE_INPUT);
-        }
-
-        public static SelenideElement coverImageSaveButton() {
-            return $(COVER_IMAGE_SAVE_BUTTON);
-        }
-
-        public static SelenideElement classTitleSection() {
-            return $(CLASS_TITLE_SECTION);
-        }
-
-        public static SelenideElement classTitleInput() {
-            return $(CLASS_TITLE_INPUT);
-        }
-
-        public static SelenideElement classTitleSaveButton() {
-            return $(CLASS_TITLE_SAVE_BUTTON);
-        }
-
-        public static SelenideElement categorySection() {
-            return $(CATEGORY_SECTION);
-        }
-
-        public static SelenideElement firstCategorySelector() {
-            return $(FIRST_CATEGORY_SELECTOR);
-        }
-
-        public static SelenideElement secondCategorySelector() {
-            return $(SECOND_CATEGORY_SELECTOR);
-        }
-
-        public static SelenideElement thirdCategorySelector() {
-            return $(THIRD_CATEGORY_SELECTOR);
-        }
-
-        public static SelenideElement categorySaveButton() {
-            return $(CATEGORY_SAVE_BUTTON);
-        }
-
-        public static SelenideElement classDescriptionSection() {
-            return $(CLASS_DESCRIPTION_SECTION);
-        }
-
-        public static SelenideElement classDescriptionInput() {
-            return $(CLASS_DESCRIPTION_INPUT);
-        }
-
-        public static SelenideElement classDescriptionSaveButton() {
-            return $(CLASS_DESCRIPTION_SAVE_BUTTON);
-        }
-
-        public static SelenideElement creatorDescriptionSection() {
-            return $(CREATOR_DESCRIPTION_SECTION);
-        }
-
-        public static SelenideElement creatorDescriptionInput() {
-            return $(CREATOR_DESCRIPTION_INPUT);
-        }
-
-        public static SelenideElement creatorDescriptionSaveButton() {
-            return $(CREATOR_DESCRIPTION_SAVE_BUTTON);
-        }
-
-        public static SelenideElement classAndKitTab() {
-            return $(CLASS_AND_KIT_TAB);
-        }
-
-        public static SelenideElement whatToLearnSection() {
-            return $(WHAT_TO_LEARN_SECTION);
-        }
-
-        public static SelenideElement addSkillButton() {
-            return $(ADD_SKILL_BUTTON);
-        }
-
-        public static SelenideElement addSkillTitleInput() {
-            return $(ADD_SKILL_TITLE_INPUT);
-        }
-
-        public static SelenideElement addSkillDescriptionInput() {
-            return $(ADD_SKILL_DESCRIPTION_INPUT);
-        }
-
-        public static SelenideElement addSkillSaveButton() {
-            return $(ADD_SKILL_SAVE_BUTTON);
-        }
-
-        public static SelenideElement requestReviewButton() {
-            return $(REQUEST_REVIEW_BUTTON);
-        }
-
-        public static SelenideElement modalRequestReviewButton() {
-            return $(MODAL_REQUEST_REVIEW_BUTTON);
-        }
-
-        public static SelenideElement inReviewStatus() {
-            return $(IN_REVIEW_STATUS);
-        }
-
-        public static ElementsCollection allImageUnderClassInfo() {
-            return $$(IMG_UNDER_CLASS_INFO);
-        }
-
-        public static ElementsCollection allCoverImageSaveButton() {
-            return $$(COVER_IMAGE_SAVE_BUTTON);
-        }
-
-        public static ElementsCollection allClassTitleSaveButton() {
-            return $$(CLASS_TITLE_SAVE_BUTTON);
-        }
-
-        public static ElementsCollection allCategorySaveButton() {
-            return $$(CATEGORY_SAVE_BUTTON);
-        }
+    public static SelenideElement addClassTitle() {
+        return $(ADD_CLASS_TITLE);
     }
 
-    public class Actions {
+    public static SelenideElement coverImageSection() {
+        return $(COVER_IMAGE_SECTION);
+    }
 
-//        public static void waitForFileUploaded() {
-//            $$(IMG_UNDER_CLASS_INFO).shouldBe(CollectionCondition.size(2));
-//        }
+    public static SelenideElement coverImageInput() {
+        return $(COVER_IMAGE_INPUT);
+    }
 
-//        public static void waitForSubmitCoverImage() {
-//            $$(COVER_IMAGE_SAVE_BUTTON).shouldBe(CollectionCondition.size(0));
-//        }
+    public static SelenideElement coverImageSaveButton() {
+        return $(COVER_IMAGE_SAVE_BUTTON);
+    }
 
-//        public static void waitForSubmitClassTitle() {
-//            $$(CLASS_TITLE_SAVE_BUTTON).shouldBe(CollectionCondition.size(0));
-//        }
+    public static SelenideElement classTitleSection() {
+        return $(CLASS_TITLE_SECTION);
+    }
 
-//        public static void waitForSubmitCategory() {
-//            $$(CATEGORY_SAVE_BUTTON).shouldBe(CollectionCondition.size(0));
-//        }
+    public static SelenideElement classTitleInput() {
+        return $(CLASS_TITLE_INPUT);
+    }
 
-        public static void waitForSubmitClassDescription() {
-            $$(CLASS_DESCRIPTION_SAVE_BUTTON).shouldBe(CollectionCondition.size(0));
-        }
+    public static SelenideElement classTitleSaveButton() {
+        return $(CLASS_TITLE_SAVE_BUTTON);
+    }
 
-        public static void waitForSubmitCreatorDescription() {
-            $$(CREATOR_DESCRIPTION_SAVE_BUTTON).shouldBe(CollectionCondition.size(0));
-        }
+    public static SelenideElement categorySection() {
+        return $(CATEGORY_SECTION);
+    }
+
+    public static SelenideElement firstCategorySelector() {
+        return $(FIRST_CATEGORY_SELECTOR);
+    }
+
+    public static SelenideElement secondCategorySelector() {
+        return $(SECOND_CATEGORY_SELECTOR);
+    }
+
+    public static SelenideElement thirdCategorySelector() {
+        return $(THIRD_CATEGORY_SELECTOR);
+    }
+
+    public static SelenideElement categorySaveButton() {
+        return $(CATEGORY_SAVE_BUTTON);
+    }
+
+    public static SelenideElement classDescriptionSection() {
+        return $(CLASS_DESCRIPTION_SECTION);
+    }
+
+    public static SelenideElement classDescriptionInput() {
+        return $(CLASS_DESCRIPTION_INPUT);
+    }
+
+    public static SelenideElement classDescriptionSaveButton() {
+        return $(CLASS_DESCRIPTION_SAVE_BUTTON);
+    }
+
+    public static SelenideElement creatorDescriptionSection() {
+        return $(CREATOR_DESCRIPTION_SECTION);
+    }
+
+    public static SelenideElement creatorDescriptionInput() {
+        return $(CREATOR_DESCRIPTION_INPUT);
+    }
+
+    public static SelenideElement creatorDescriptionSaveButton() {
+        return $(CREATOR_DESCRIPTION_SAVE_BUTTON);
+    }
+
+    public static SelenideElement classAndKitTab() {
+        return $(CLASS_AND_KIT_TAB);
+    }
+
+    public static SelenideElement whatToLearnSection() {
+        return $(WHAT_TO_LEARN_SECTION);
+    }
+
+    public static SelenideElement addSkillButton() {
+        return $(ADD_SKILL_BUTTON);
+    }
+
+    public static SelenideElement addSkillTitleInput() {
+        return $(ADD_SKILL_TITLE_INPUT);
+    }
+
+    public static SelenideElement addSkillDescriptionInput() {
+        return $(ADD_SKILL_DESCRIPTION_INPUT);
+    }
+
+    public static SelenideElement addSkillSaveButton() {
+        return $(ADD_SKILL_SAVE_BUTTON);
+    }
+
+    public static SelenideElement requestReviewButton() {
+        return $(REQUEST_REVIEW_BUTTON);
+    }
+
+    public static SelenideElement modalRequestReviewButton() {
+        return $(MODAL_REQUEST_REVIEW_BUTTON);
+    }
+
+    public static SelenideElement inReviewStatus() {
+        return $(IN_REVIEW_STATUS);
+    }
+
+    public static ElementsCollection allImageUnderClassInfo() {
+        return $$(IMG_UNDER_CLASS_INFO);
+    }
+
+    public static ElementsCollection allCoverImageSaveButton() {
+        return $$(COVER_IMAGE_SAVE_BUTTON);
+    }
+
+    public static ElementsCollection allClassTitleSaveButton() {
+        return $$(CLASS_TITLE_SAVE_BUTTON);
+    }
+
+    public static ElementsCollection allCategorySaveButton() {
+        return $$(CATEGORY_SAVE_BUTTON);
+    }
+
+    public static ElementsCollection allClassDescriptionSaveButtons() {
+        return $$(CLASS_DESCRIPTION_SAVE_BUTTON);
+    }
+
+    public static ElementsCollection allCreatorDescriptionSaveButtons() {
+        return $$(CREATOR_DESCRIPTION_SAVE_BUTTON);
     }
 }

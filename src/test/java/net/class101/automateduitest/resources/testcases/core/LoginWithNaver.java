@@ -18,15 +18,15 @@ public class LoginWithNaver implements TestCase {
     @Override
     public TestCase proceed() {
         Home.Actions.openPage();
-        Home.Elements.loginButton().click();
-        LoginPage.Elements.allLoginButton().click();
-        AllLoginPage.Elements.loginWithNaverButton().click();
+        Home.loginButton().click();
+        LoginPage.allLoginButton().click();
+        AllLoginPage.loginWithNaverButton().click();
         NaverLoginPage.Actions.defaultLogin();
         return this;
     }
 
     @Override
     public void validate() {
-        Home.Elements.userProfileImg().shouldBe(Condition.visible).hover();
+        Home.userProfileImg().shouldBe(Condition.visible).hover();
     }
 }

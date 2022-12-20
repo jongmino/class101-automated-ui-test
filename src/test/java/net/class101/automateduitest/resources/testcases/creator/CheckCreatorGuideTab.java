@@ -16,12 +16,12 @@ public class CheckCreatorGuideTab implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorLeftNavigation.Elements.creatorGuideTab().shouldBe(Condition.enabled).click();
+        CreatorLeftNavigation.creatorGuideTab().shouldBe(Condition.enabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorGuideCenterPage.Elements.creatorGuideCenterTitle().shouldBe(Condition.visible);
+        CreatorGuideCenterPage.creatorGuideCenterTitle().shouldBe(Condition.visible);
     }
 }

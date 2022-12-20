@@ -18,16 +18,16 @@ public class CheckOrderDetail implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.Elements.orderTab().click();
-        OrderPage.Elements.orderViewDetailButton().shouldBe(Condition.visible).click();
+        MyPage.orderTab().click();
+        OrderPage.orderViewDetailButton().shouldBe(Condition.visible).click();
         return this;
     }
 
     @Override
     public void validate() {
-        OrderDetailPage.Elements.orderDetailPageTitle().shouldBe(Condition.visible);
-        OrderDetailPage.Elements.paymentInfoSection().shouldBe(Condition.visible);
-        OrderDetailPage.Elements.shippingInfoSection().shouldBe(Condition.visible);
-        OrderDetailPage.Elements.orderedItemInfoSection().shouldBe(Condition.visible);
+        OrderDetailPage.orderDetailPageTitle().shouldBe(Condition.visible);
+        OrderDetailPage.paymentInfoSection().shouldBe(Condition.visible);
+        OrderDetailPage.shippingInfoSection().shouldBe(Condition.visible);
+        OrderDetailPage.orderedItemInfoSection().shouldBe(Condition.visible);
     }
 }

@@ -17,12 +17,12 @@ public class CheckYearlySubscription implements TestCase {
     @Override
     public TestCase proceed() {
         SelectPlanPage.Actions.openPage();
-        SelectPlanPage.Elements.nextButton().shouldNotBe(Condition.disabled).click();
+        SelectPlanPage.nextButton().shouldNotBe(Condition.disabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        PaymentPage.Elements.paymentPrice().shouldBe(Condition.visible);
+        PaymentPage.paymentPrice().shouldBe(Condition.visible);
     }
 }

@@ -16,14 +16,14 @@ public class CheckPlusSettlement implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorLeftNavigation.Elements.classSettlementTab().click();
-        CreatorLeftNavigation.Elements.plusClassSettlementTab().shouldBe(Condition.visible).click();
-        CreatorPlusSettlementPage.Elements.settlementDetailsButton().shouldBe(Condition.visible).click();
+        CreatorLeftNavigation.classSettlementTab().click();
+        CreatorLeftNavigation.plusClassSettlementTab().shouldBe(Condition.visible).click();
+        CreatorPlusSettlementPage.settlementDetailsButton().shouldBe(Condition.visible).click();
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorPlusSettlementPage.Elements.settlementDetailsModalTitle().shouldBe(Condition.visible);
+        CreatorPlusSettlementPage.settlementDetailsModalTitle().shouldBe(Condition.visible);
     }
 }

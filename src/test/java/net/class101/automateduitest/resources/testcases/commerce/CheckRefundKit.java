@@ -19,14 +19,14 @@ public class CheckRefundKit implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.Elements.orderTab().click();
-        OrderPage.Elements.refundableOrderDetailButton().shouldBe(Condition.enabled).click();
-        OrderDetailPage.Elements.refundButton().shouldBe(Condition.enabled).click();
+        MyPage.orderTab().click();
+        OrderPage.refundableOrderDetailButton().shouldBe(Condition.enabled).click();
+        OrderDetailPage.refundButton().shouldBe(Condition.enabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        KitRefundPage.Elements.kitRefundPageTitle().shouldBe(Condition.visible);
+        KitRefundPage.kitRefundPageTitle().shouldBe(Condition.visible);
     }
 }

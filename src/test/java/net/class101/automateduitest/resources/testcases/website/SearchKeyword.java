@@ -18,13 +18,13 @@ public class SearchKeyword implements TestCase {
     @Override
     public TestCase proceed() {
         //검색창 클릭
-        Home.Elements.searchBar().click();
+        Home.searchBar().click();
         //검색 패널 확인
-        Home.Elements.searchPanelTitle().shouldBe(Condition.visible);
+        Home.searchPanelTitle().shouldBe(Condition.visible);
         //검색 키워드 입력
-        Home.Elements.searchBarInput().sendKeys("공예");
+        Home.searchBarInput().sendKeys("공예");
         //검색
-        Home.Elements.searchBarInput().pressEnter();
+        Home.searchBarInput().pressEnter();
 
         return this;
     }
@@ -32,6 +32,6 @@ public class SearchKeyword implements TestCase {
     @Override
     public void validate() {
         //검색 결과 확인
-        ProductListPage.Elements.craftsCategoryTab().shouldBe(Condition.visible);
+        ProductListPage.craftsCategoryTab().shouldBe(Condition.visible);
     }
 }

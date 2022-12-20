@@ -22,11 +22,11 @@ public class ChangePlaySpeed implements TestCase {
     public TestCase proceed() {
         try {
             LecturePage.Actions.openPage();
-            LecturePage.Elements.videoPlayer().hover();
-            LecturePage.Elements.playSpeedButton().shouldNotBe(Condition.disabled);
+            LecturePage.videoPlayer().hover();
+            LecturePage.playSpeedButton().shouldNotBe(Condition.disabled);
             playSpeedSvgPathBefore = LecturePage.Actions.getPlaySpeedSVGPathValue();
-            LecturePage.Elements.videoPlayer().hover();
-            LecturePage.Elements.playSpeedButton().shouldNotBe(Condition.disabled).click();
+            LecturePage.videoPlayer().hover();
+            LecturePage.playSpeedButton().shouldNotBe(Condition.disabled).click();
             Thread.sleep(1000);
             playSpeedSvgPathAfter = LecturePage.Actions.getPlaySpeedSVGPathValue();
         } catch (InterruptedException e) {

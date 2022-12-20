@@ -17,12 +17,12 @@ public class CheckFreeTrial implements TestCase {
     @Override
     public TestCase proceed() {
         SubscriptionPage.Actions.openPage();
-        SubscriptionPage.Elements.subscribeButton().shouldNotBe(Condition.disabled).click();
+        SubscriptionPage.subscribeButton().shouldNotBe(Condition.disabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        SelectPlanPage.Elements.spanContainsFreeTrial().shouldBe(Condition.visible);
+        SelectPlanPage.spanContainsFreeTrial().shouldBe(Condition.visible);
     }
 }

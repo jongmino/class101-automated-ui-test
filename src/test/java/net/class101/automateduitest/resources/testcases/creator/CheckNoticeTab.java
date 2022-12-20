@@ -16,12 +16,12 @@ public class CheckNoticeTab implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorLeftNavigation.Elements.noticeTab().click();
+        CreatorLeftNavigation.noticeTab().click();
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorNoticePage.Elements.noticeSection().shouldBe(Condition.visible);
+        CreatorNoticePage.noticeSection().shouldBe(Condition.visible);
     }
 }

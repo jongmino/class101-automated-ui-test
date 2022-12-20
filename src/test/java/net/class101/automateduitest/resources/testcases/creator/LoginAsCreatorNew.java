@@ -1,8 +1,8 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
 import com.codeborne.selenide.Condition;
-import net.class101.automateduitest.common.Properties;
-import net.class101.automateduitest.common.PropertyLoader;
+import net.class101.automateduitest.resources.common.Properties;
+import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLoginPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
@@ -22,15 +22,12 @@ public class LoginAsCreatorNew implements TestCase {
         final Map<String, Properties.Account> accounts = PropertyLoader.getProperties().accounts;
         final String email = accounts.get("creatorNew").id;
         final String password = accounts.get("creatorNew").pw;
-        CreatorLoginPage.Elements.emailInputElement().sendKeys(email);
-        CreatorLoginPage.Elements.passwordInputElement().sendKeys(password);
-        CreatorLoginPage.Elements.loginButtonElement().click();
-
+        CreatorLoginPage.Actions.login(email, password);
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorHome.Elements.profileImg().shouldBe(Condition.visible).hover();
+        CreatorHome.profileImg().shouldBe(Condition.visible).hover();
     }
 }

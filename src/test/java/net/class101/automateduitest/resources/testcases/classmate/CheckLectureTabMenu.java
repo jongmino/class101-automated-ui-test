@@ -21,9 +21,9 @@ public class CheckLectureTabMenu implements TestCase {
 
     @Override
     public void validate() {
-        LecturePage.Elements.commentSection().shouldBe(Condition.visible);
-        LecturePage.Elements.curriculumSection().shouldBe(Condition.visible);
-        LecturePage.Elements.materialSection().shouldBe(Condition.visible);
-        LecturePage.Elements.noticeSection().shouldBe(Condition.visible);
+        LecturePage.commentSection().shouldBe(Condition.visible);
+        LecturePage.curriculumSection().shouldBe(Condition.visible);
+        LecturePage.materialSection().shouldBe(Condition.visible);
+        LecturePage.noticeSection().shouldBe(Condition.visible);
     }
 }

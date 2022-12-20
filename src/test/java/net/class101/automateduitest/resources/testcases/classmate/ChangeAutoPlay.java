@@ -22,11 +22,11 @@ public class ChangeAutoPlay implements TestCase {
     @Override
     public TestCase proceed() {
         try {
-            LecturePage.Elements.videoPlayer().hover();
-            LecturePage.Elements.autoPlaySettingButton().shouldBe(Condition.visible).click();
+            LecturePage.videoPlayer().hover();
+            LecturePage.autoPlaySettingButton().shouldBe(Condition.visible).click();
             autoPlayOptionValue = LecturePage.Actions.getUnCheckedAutoPlayOptionValue();
-            LecturePage.Elements.firstUnCheckedRadioButton().click();
-            LecturePage.Elements.settingButton().click();
+            LecturePage.firstUnCheckedRadioButton().click();
+            LecturePage.settingButton().click();
             Thread.sleep(1000);
             currentAutoPlayOptionValue = LecturePage.Actions.getAutoPlayValue();
         } catch (InterruptedException e) {

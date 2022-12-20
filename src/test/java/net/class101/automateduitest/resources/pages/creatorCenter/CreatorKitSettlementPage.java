@@ -8,12 +8,9 @@ import org.openqa.selenium.By;
 
 public class CreatorKitSettlementPage {
 
-    public class Elements {
+    private static final By SETTLEMENT_TABLE = byXpath("//div[contains(@class,'table')]");
 
-        private static final By SETTLEMENT_TABLE = byXpath("//div[contains(@class,'table')]");
-
-        public static SelenideElement settlementTable() {
-            return $(SETTLEMENT_TABLE);
-        }
+    public static SelenideElement settlementTable() {
+        return $(SETTLEMENT_TABLE);
     }
 }

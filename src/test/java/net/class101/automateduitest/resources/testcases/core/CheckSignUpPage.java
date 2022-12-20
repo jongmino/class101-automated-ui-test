@@ -16,18 +16,18 @@ public class CheckSignUpPage implements TestCase {
 
     @Override
     public TestCase proceed() {
-        Home.Elements.loginButton().shouldNotBe(Condition.disabled).click();
-        LoginPage.Elements.signUpButton().shouldNotBe(Condition.disabled).click();
+        Home.loginButton().shouldNotBe(Condition.disabled).click();
+        LoginPage.signUpButton().shouldNotBe(Condition.disabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        SignUpPage.Elements.appleButton().shouldBe(Condition.visible);
-        SignUpPage.Elements.facebookButton().shouldBe(Condition.visible);
-        SignUpPage.Elements.googleButton().shouldBe(Condition.visible);
-        SignUpPage.Elements.kakaoButton().shouldBe(Condition.visible);
-        SignUpPage.Elements.naverButton().shouldBe(Condition.visible);
-        SignUpPage.Elements.emailButton().shouldBe(Condition.visible);
+        SignUpPage.appleButton().shouldBe(Condition.visible);
+        SignUpPage.facebookButton().shouldBe(Condition.visible);
+        SignUpPage.googleButton().shouldBe(Condition.visible);
+        SignUpPage.kakaoButton().shouldBe(Condition.visible);
+        SignUpPage.naverButton().shouldBe(Condition.visible);
+        SignUpPage.emailButton().shouldBe(Condition.visible);
     }
 }

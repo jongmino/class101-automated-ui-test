@@ -1,8 +1,7 @@
-package net.class101.automateduitest.common;
+package net.class101.automateduitest.resources.common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import net.class101.automateduitest.common.Properties;
 
 import java.io.File;
 
