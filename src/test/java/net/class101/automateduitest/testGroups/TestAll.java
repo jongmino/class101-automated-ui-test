@@ -8,73 +8,73 @@ import net.class101.automateduitest.common.SF;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.resources.pages.plus.Home;
-import net.class101.automateduitest.resources.actions.classmate.ChangeAutoPlay;
-import net.class101.automateduitest.resources.actions.classmate.ChangePlaySpeed;
-import net.class101.automateduitest.resources.actions.classmate.ChangeServiceRegionToEN;
-import net.class101.automateduitest.resources.actions.classmate.ChangeServiceRegionJP;
-import net.class101.automateduitest.resources.actions.classmate.ChangeVideoQuality;
-import net.class101.automateduitest.resources.actions.classmate.CheckCashTab;
-import net.class101.automateduitest.resources.actions.classmate.CheckCreatorCenterTab;
-import net.class101.automateduitest.resources.actions.classmate.CheckEnquiryTab;
-import net.class101.automateduitest.resources.actions.classmate.CheckFAQTab;
-import net.class101.automateduitest.resources.actions.classmate.CheckLectureTabMenu;
-import net.class101.automateduitest.resources.actions.classmate.CheckOrderTab;
-import net.class101.automateduitest.resources.actions.classmate.CheckReferralTab;
-import net.class101.automateduitest.resources.actions.classmate.CheckSettingTab;
-import net.class101.automateduitest.resources.actions.classmate.CheckSubscriptionStatusFalse;
-import net.class101.automateduitest.resources.actions.classmate.CheckSubscriptionStatusTrue;
-import net.class101.automateduitest.resources.actions.classmate.CheckPlayLecture;
-import net.class101.automateduitest.resources.actions.commerce.CheckCancelSubscription;
-import net.class101.automateduitest.resources.actions.commerce.CheckFreeTrial;
-import net.class101.automateduitest.resources.actions.commerce.CheckRefundKit;
-import net.class101.automateduitest.resources.actions.commerce.CheckRefundSubscription;
-import net.class101.automateduitest.resources.actions.commerce.CheckYearlySubscription;
-import net.class101.automateduitest.resources.actions.core.CheckAppleLoginPage;
-import net.class101.automateduitest.resources.actions.core.CheckEmailSignUpPage;
-import net.class101.automateduitest.resources.actions.core.CheckFacebookLoginPage;
-import net.class101.automateduitest.resources.actions.core.CheckGoogleLoginPage;
-import net.class101.automateduitest.resources.actions.core.CheckKakaoLoginPage;
-import net.class101.automateduitest.resources.actions.core.CheckNaverLoginPage;
-import net.class101.automateduitest.resources.actions.core.LoginAsNewUser;
-import net.class101.automateduitest.resources.actions.core.LoginAsNonSubscriber;
-import net.class101.automateduitest.resources.actions.commerce.CheckKitPurchase;
-import net.class101.automateduitest.resources.actions.commerce.CheckOrderDetail;
-import net.class101.automateduitest.resources.actions.commerce.CheckOrderHistory;
-import net.class101.automateduitest.resources.actions.core.LoginAsSubscriber;
-import net.class101.automateduitest.resources.actions.core.LoginAsUserHasKit;
-import net.class101.automateduitest.resources.actions.core.LoginAsYearlySubscriber;
-import net.class101.automateduitest.resources.actions.core.LoginWithNaver;
-import net.class101.automateduitest.resources.actions.core.Logout;
-import net.class101.automateduitest.resources.actions.creator.CheckAddClass;
-import net.class101.automateduitest.resources.actions.creator.CheckAddDigitalFile;
-import net.class101.automateduitest.resources.actions.creator.CheckAddEBook;
-import net.class101.automateduitest.resources.actions.creator.CheckClassCommentTab;
-import net.class101.automateduitest.resources.actions.creator.CheckClassNews;
-import net.class101.automateduitest.resources.actions.creator.CheckClassSettlement;
-import net.class101.automateduitest.resources.actions.creator.CheckCommentAnswered;
-import net.class101.automateduitest.resources.actions.creator.CheckCommentNotAnswered;
-import net.class101.automateduitest.resources.actions.creator.CheckCreatorGuideTab;
-import net.class101.automateduitest.resources.actions.creator.CheckCreatorReferralTab;
-import net.class101.automateduitest.resources.actions.creator.CheckFileRequestTab;
-import net.class101.automateduitest.resources.actions.creator.CheckKitSettlement;
-import net.class101.automateduitest.resources.actions.creator.CheckOrderAndShippingTab;
-import net.class101.automateduitest.resources.actions.creator.CheckPlusSettlement;
-import net.class101.automateduitest.resources.actions.creator.CheckProductList;
-import net.class101.automateduitest.resources.actions.creator.CheckRequestClassReview;
-import net.class101.automateduitest.resources.actions.creator.CheckStockTab;
-import net.class101.automateduitest.resources.actions.creator.DeleteFirstProduct;
-import net.class101.automateduitest.resources.actions.creator.LoginAsCreatorHasClass;
-import net.class101.automateduitest.resources.actions.creator.LoginAsCreatorHasRevenue;
-import net.class101.automateduitest.resources.actions.creator.LoginAsCreatorNew;
-import net.class101.automateduitest.resources.actions.website.CheckCurationSection;
-import net.class101.automateduitest.resources.actions.website.CheckMyClassSection;
-import net.class101.automateduitest.resources.actions.website.CheckRecommendedCategorySection;
-import net.class101.automateduitest.resources.actions.website.CheckRecommendedClassSection;
-import net.class101.automateduitest.resources.actions.website.CheckSubCategory;
-import net.class101.automateduitest.resources.actions.website.CheckSubscriptionPlan;
-import net.class101.automateduitest.resources.actions.website.SaveClass;
-import net.class101.automateduitest.resources.actions.website.SearchKeyword;
-import net.class101.automateduitest.resources.actions.website.UnSaveClass;
+import net.class101.automateduitest.resources.testcases.classmate.ChangeAutoPlay;
+import net.class101.automateduitest.resources.testcases.classmate.ChangePlaySpeed;
+import net.class101.automateduitest.resources.testcases.classmate.ChangeServiceRegionToEN;
+import net.class101.automateduitest.resources.testcases.classmate.ChangeServiceRegionJP;
+import net.class101.automateduitest.resources.testcases.classmate.ChangeVideoQuality;
+import net.class101.automateduitest.resources.testcases.classmate.CheckCashTab;
+import net.class101.automateduitest.resources.testcases.classmate.CheckCreatorCenterTab;
+import net.class101.automateduitest.resources.testcases.classmate.CheckEnquiryTab;
+import net.class101.automateduitest.resources.testcases.classmate.CheckFAQTab;
+import net.class101.automateduitest.resources.testcases.classmate.CheckLectureTabMenu;
+import net.class101.automateduitest.resources.testcases.classmate.CheckOrderTab;
+import net.class101.automateduitest.resources.testcases.classmate.CheckReferralTab;
+import net.class101.automateduitest.resources.testcases.classmate.CheckSettingTab;
+import net.class101.automateduitest.resources.testcases.classmate.CheckSubscriptionStatusFalse;
+import net.class101.automateduitest.resources.testcases.classmate.CheckSubscriptionStatusTrue;
+import net.class101.automateduitest.resources.testcases.classmate.CheckPlayLecture;
+import net.class101.automateduitest.resources.testcases.commerce.CheckCancelSubscription;
+import net.class101.automateduitest.resources.testcases.commerce.CheckFreeTrial;
+import net.class101.automateduitest.resources.testcases.commerce.CheckRefundKit;
+import net.class101.automateduitest.resources.testcases.commerce.CheckRefundSubscription;
+import net.class101.automateduitest.resources.testcases.commerce.CheckYearlySubscription;
+import net.class101.automateduitest.resources.testcases.core.CheckAppleLoginPage;
+import net.class101.automateduitest.resources.testcases.core.CheckEmailSignUpPage;
+import net.class101.automateduitest.resources.testcases.core.CheckFacebookLoginPage;
+import net.class101.automateduitest.resources.testcases.core.CheckGoogleLoginPage;
+import net.class101.automateduitest.resources.testcases.core.CheckKakaoLoginPage;
+import net.class101.automateduitest.resources.testcases.core.CheckNaverLoginPage;
+import net.class101.automateduitest.resources.testcases.core.LoginAsNewUser;
+import net.class101.automateduitest.resources.testcases.core.LoginAsNonSubscriber;
+import net.class101.automateduitest.resources.testcases.commerce.CheckKitPurchase;
+import net.class101.automateduitest.resources.testcases.commerce.CheckOrderDetail;
+import net.class101.automateduitest.resources.testcases.commerce.CheckOrderHistory;
+import net.class101.automateduitest.resources.testcases.core.LoginAsSubscriber;
+import net.class101.automateduitest.resources.testcases.core.LoginAsUserHasKit;
+import net.class101.automateduitest.resources.testcases.core.LoginAsYearlySubscriber;
+import net.class101.automateduitest.resources.testcases.core.LoginWithNaver;
+import net.class101.automateduitest.resources.testcases.core.Logout;
+import net.class101.automateduitest.resources.testcases.creator.CheckAddClass;
+import net.class101.automateduitest.resources.testcases.creator.CheckAddDigitalFile;
+import net.class101.automateduitest.resources.testcases.creator.CheckAddEBook;
+import net.class101.automateduitest.resources.testcases.creator.CheckClassCommentTab;
+import net.class101.automateduitest.resources.testcases.creator.CheckClassNews;
+import net.class101.automateduitest.resources.testcases.creator.CheckClassSettlement;
+import net.class101.automateduitest.resources.testcases.creator.CheckCommentAnswered;
+import net.class101.automateduitest.resources.testcases.creator.CheckCommentNotAnswered;
+import net.class101.automateduitest.resources.testcases.creator.CheckCreatorGuideTab;
+import net.class101.automateduitest.resources.testcases.creator.CheckCreatorReferralTab;
+import net.class101.automateduitest.resources.testcases.creator.CheckFileRequestTab;
+import net.class101.automateduitest.resources.testcases.creator.CheckKitSettlement;
+import net.class101.automateduitest.resources.testcases.creator.CheckOrderAndShippingTab;
+import net.class101.automateduitest.resources.testcases.creator.CheckPlusSettlement;
+import net.class101.automateduitest.resources.testcases.creator.CheckProductList;
+import net.class101.automateduitest.resources.testcases.creator.CheckRequestClassReview;
+import net.class101.automateduitest.resources.testcases.creator.CheckStockTab;
+import net.class101.automateduitest.resources.testcases.creator.DeleteFirstProduct;
+import net.class101.automateduitest.resources.testcases.creator.LoginAsCreatorHasClass;
+import net.class101.automateduitest.resources.testcases.creator.LoginAsCreatorHasRevenue;
+import net.class101.automateduitest.resources.testcases.creator.LoginAsCreatorNew;
+import net.class101.automateduitest.resources.testcases.website.CheckCurationSection;
+import net.class101.automateduitest.resources.testcases.website.CheckMyClassSection;
+import net.class101.automateduitest.resources.testcases.website.CheckRecommendedCategorySection;
+import net.class101.automateduitest.resources.testcases.website.CheckRecommendedClassSection;
+import net.class101.automateduitest.resources.testcases.website.CheckSubCategory;
+import net.class101.automateduitest.resources.testcases.website.CheckSubscriptionPlan;
+import net.class101.automateduitest.resources.testcases.website.SaveClass;
+import net.class101.automateduitest.resources.testcases.website.SearchKeyword;
+import net.class101.automateduitest.resources.testcases.website.UnSaveClass;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -121,37 +121,37 @@ public class TestAll {
             @Test
             @DisplayName("회원가입 - 애플 로그인 페이지")
             void appleLoginPage() {
-                SF.get(CheckAppleLoginPage.class).execute().validate();
+                SF.get(CheckAppleLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 페이스북 로그인 페이지")
             void facebookLoginPage() {
-                SF.get(CheckFacebookLoginPage.class).execute().validate();
+                SF.get(CheckFacebookLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 구글 로그인 페이지")
             void googleLoginPage() {
-                SF.get(CheckGoogleLoginPage.class).execute().validate();
+                SF.get(CheckGoogleLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 카카오 로그인 페이지")
             void kakaoPage() {
-                SF.get(CheckKakaoLoginPage.class).execute().validate();
+                SF.get(CheckKakaoLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 네이버 로그인 페이지")
             void naverPage() {
-                SF.get(CheckNaverLoginPage.class).execute().validate();
+                SF.get(CheckNaverLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 이메일로 시작하기")
             void emailSignUpPage() {
-                SF.get(CheckEmailSignUpPage.class).execute().validate();
+                SF.get(CheckEmailSignUpPage.class).proceed().validate();
             }
         }
 
@@ -177,21 +177,21 @@ public class TestAll {
 
             @AfterEach
             void tearDown() {
-                SF.get(Logout.class).execute().validate();
+                SF.get(Logout.class).proceed().validate();
             }
 
             @Test
             @Order(1)
             @DisplayName("네이버 로그인")
             void verifyNaverLogin() {
-                SF.get(LoginWithNaver.class).execute().validate();
+                SF.get(LoginWithNaver.class).proceed().validate();
             }
 
             @Test
             @Order(2)
             @DisplayName("이메일 로그인")
             void verifyEmailLogin() {
-                SF.get(LoginAsNonSubscriber.class).execute().validate();
+                SF.get(LoginAsNonSubscriber.class).proceed().validate();
             }
 
 //            @Test
@@ -216,7 +216,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsNonSubscriber.class).execute().validate();
+                SF.get(LoginAsNonSubscriber.class).proceed().validate();
             }
 
             @AfterEach
@@ -232,27 +232,27 @@ public class TestAll {
             @Test
             @DisplayName("큐레이션 섹션 및 클래스 상세정보")
             void verifyCurationSection() {
-                SF.get(CheckCurationSection.class).execute().validate();
-                SF.get(CheckSubscriptionPlan.class).execute().validate();
+                SF.get(CheckCurationSection.class).proceed().validate();
+                SF.get(CheckSubscriptionPlan.class).proceed().validate();
             }
 
             @Test
             @DisplayName("검색 기능")
             void verifySearchBar() {
-                SF.get(SearchKeyword.class).execute().validate();
+                SF.get(SearchKeyword.class).proceed().validate();
             }
 
             @Test
             @DisplayName("추천 카테고리 / 서브카테고리")
             void verifyRecommendedCategory() {
-                SF.get(CheckRecommendedCategorySection.class).execute().validate();
-                SF.get(CheckSubCategory.class).execute().validate();
+                SF.get(CheckRecommendedCategorySection.class).proceed().validate();
+                SF.get(CheckSubCategory.class).proceed().validate();
             }
 
             @Test
             @DisplayName("추천 클래스")
             void verifyRecommendedClass() {
-                SF.get(CheckRecommendedClassSection.class).execute().validate();
+                SF.get(CheckRecommendedClassSection.class).proceed().validate();
             }
 
         }
@@ -264,7 +264,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsSubscriber.class).execute().validate();
+                SF.get(LoginAsSubscriber.class).proceed().validate();
             }
 
             @AfterEach
@@ -280,14 +280,14 @@ public class TestAll {
             @Test
             @DisplayName("내 클래스 섹션 검증")
             void verifyMyClass() {
-                SF.get(CheckMyClassSection.class).execute().validate();
+                SF.get(CheckMyClassSection.class).proceed().validate();
             }
 
             @Test
             @DisplayName("찜하기 추가 / 제거")
             void verifySaveClass() throws InterruptedException {
-                SF.get(SaveClass.class).execute().validate();
-                SF.get(UnSaveClass.class).execute().validate();
+                SF.get(SaveClass.class).proceed().validate();
+                SF.get(UnSaveClass.class).proceed().validate();
             }
         }
     }
@@ -303,7 +303,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsNonSubscriber.class).execute().validate();
+                SF.get(LoginAsNonSubscriber.class).proceed().validate();
             }
 
             @AfterAll
@@ -319,31 +319,31 @@ public class TestAll {
             @Test
             @DisplayName("마이페이지 캐시탭 확인")
             void verifyMyPageCashTab() {
-                SF.get(CheckCashTab.class).execute().validate();
+                SF.get(CheckCashTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("마이페이지 구독 탭 확인 - 미구독")
             void verifyMyPageSubscriptionStatus() {
-                SF.get(CheckSubscriptionStatusFalse.class).execute().validate();
+                SF.get(CheckSubscriptionStatusFalse.class).proceed().validate();
             }
 
             @Test
             @DisplayName("마이페이지 서비스 리전 변경 기능 확인")
             void verifyMyPageServiceRegion() {
-                SF.get(ChangeServiceRegionToEN.class).execute().validate();
-                SF.get(ChangeServiceRegionJP.class).execute().validate();
+                SF.get(ChangeServiceRegionToEN.class).proceed().validate();
+                SF.get(ChangeServiceRegionJP.class).proceed().validate();
             }
 
             @Test
             @DisplayName("마이페이지 좌측 네비게이션 메뉴 페이지 이동 확인")
             void verifyMyPageMenu() {
-                SF.get(CheckOrderTab.class).execute().validate();
-                SF.get(CheckReferralTab.class).execute().validate();
-                SF.get(CheckCreatorCenterTab.class).execute().validate();
-                SF.get(CheckFAQTab.class).execute().validate();
-                SF.get(CheckEnquiryTab.class).execute().validate();
-                SF.get(CheckSettingTab.class).execute().validate();
+                SF.get(CheckOrderTab.class).proceed().validate();
+                SF.get(CheckReferralTab.class).proceed().validate();
+                SF.get(CheckCreatorCenterTab.class).proceed().validate();
+                SF.get(CheckFAQTab.class).proceed().validate();
+                SF.get(CheckEnquiryTab.class).proceed().validate();
+                SF.get(CheckSettingTab.class).proceed().validate();
             }
         }
 
@@ -354,7 +354,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsSubscriber.class).execute().validate();
+                SF.get(LoginAsSubscriber.class).proceed().validate();
             }
 
             @AfterAll
@@ -370,27 +370,27 @@ public class TestAll {
             @Test
             @DisplayName("마이페이지 구독 탭 확인 - 구독")
             void verifyMyPageSubscriptionStatus() {
-                SF.get(CheckSubscriptionStatusTrue.class).execute().validate();
+                SF.get(CheckSubscriptionStatusTrue.class).proceed().validate();
             }
 
             @Test
             @DisplayName("영상 재생 확인")
             void verifyVideoPlay() {
-                SF.get(CheckPlayLecture.class).execute().validate();
+                SF.get(CheckPlayLecture.class).proceed().validate();
             }
 
             @Test
             @DisplayName("플레이어 기능 확인")
             void verifyVideoPlayerFunctionality() {
-                SF.get(ChangePlaySpeed.class).execute().validate();
-                SF.get(ChangeVideoQuality.class).execute().validate();
-                SF.get(ChangeAutoPlay.class).execute().validate();
+                SF.get(ChangePlaySpeed.class).proceed().validate();
+                SF.get(ChangeVideoQuality.class).proceed().validate();
+                SF.get(ChangeAutoPlay.class).proceed().validate();
             }
 
             @Test
             @DisplayName("수강환경 탭 메뉴 확인")
             void lectureTabMenu() {
-                SF.get(CheckLectureTabMenu.class).execute().validate();
+                SF.get(CheckLectureTabMenu.class).proceed().validate();
             }
         }
     }
@@ -405,7 +405,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 CreatorHome.Actions.openPage();
-                SF.get(LoginAsCreatorNew.class).execute().validate();
+                SF.get(LoginAsCreatorNew.class).proceed().validate();
             }
 
             @AfterAll
@@ -420,31 +420,31 @@ public class TestAll {
 
             @AfterEach
             void tearDown() {
-                SF.get(DeleteFirstProduct.class).execute();
+                SF.get(DeleteFirstProduct.class).proceed();
             }
 
             @Test
             @DisplayName("클래스 만들기")
             void addClass() {
-                SF.get(CheckAddClass.class).execute().validate();
+                SF.get(CheckAddClass.class).proceed().validate();
             }
 
             @Test
             @DisplayName("디지털 파일 만들기")
             void addDigitalFile() {
-                SF.get(CheckAddDigitalFile.class).execute().validate();
+                SF.get(CheckAddDigitalFile.class).proceed().validate();
             }
 
             @Test
             @DisplayName("전자책 만들기")
             void addEBook() {
-                SF.get(CheckAddEBook.class).execute().validate();
+                SF.get(CheckAddEBook.class).proceed().validate();
             }
 
             @Test
             @DisplayName("검토 요청")
             void requestReview() {
-                SF.get(CheckRequestClassReview.class).execute().validate();
+                SF.get(CheckRequestClassReview.class).proceed().validate();
             }
         }
 
@@ -455,7 +455,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 CreatorHome.Actions.openPage();
-                SF.get(LoginAsCreatorHasClass.class).execute().validate();
+                SF.get(LoginAsCreatorHasClass.class).proceed().validate();
             }
 
             @AfterAll
@@ -471,66 +471,66 @@ public class TestAll {
             @Test
             @DisplayName("상품 리스트 목록")
             void productList() {
-                SF.get(CheckProductList.class).execute().validate();
+                SF.get(CheckProductList.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 댓글 페이지")
             void commentPage() {
-                SF.get(CheckClassCommentTab.class).execute().validate();
+                SF.get(CheckClassCommentTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 댓글 페이지 답변완료")
             void commentAnswered() {
-                SF.get(CheckCommentAnswered.class).execute().validate();
+                SF.get(CheckCommentAnswered.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 댓글 페이지 답변 대기중")
             void commentNotAnswered() {
-                SF.get(CheckCommentNotAnswered.class).execute().validate();
+                SF.get(CheckCommentNotAnswered.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 소식")
             void classNews() {
-                SF.get(CheckClassNews.class).execute().validate();
+                SF.get(CheckClassNews.class).proceed().validate();
             }
 
             @Test
             @DisplayName("파일 요청 내역")
             void fileRequestTab() {
-                SF.get(CheckFileRequestTab.class).execute().validate();
+                SF.get(CheckFileRequestTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("주문 및 배송")
             void orderAndShippingTab() {
-                SF.get(CheckOrderAndShippingTab.class).execute().validate();
+                SF.get(CheckOrderAndShippingTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("재고")
             void stockTab() {
-                SF.get(CheckStockTab.class).execute().validate();
+                SF.get(CheckStockTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 정산")
             void classSettlement() {
-                SF.get(CheckClassSettlement.class).execute().validate();
+                SF.get(CheckClassSettlement.class).proceed().validate();
             }
             @Test
             @DisplayName("키트 정산")
             void kitSettlement() {
-                SF.get(CheckKitSettlement.class).execute().validate();
+                SF.get(CheckKitSettlement.class).proceed().validate();
             }
 
             @Test
             @DisplayName("크리에이터 가이드 센터")
             void creatorGuideCenter() {
-                SF.get(CheckCreatorGuideTab.class).execute().validate();
+                SF.get(CheckCreatorGuideTab.class).proceed().validate();
             }
         }
 
@@ -540,7 +540,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 CreatorHome.Actions.openPage();
-                SF.get(LoginAsCreatorHasRevenue.class).execute().validate();
+                SF.get(LoginAsCreatorHasRevenue.class).proceed().validate();
             }
 
             @AfterAll
@@ -556,13 +556,13 @@ public class TestAll {
             @Test
             @DisplayName("클래스101+ 초대")
             void    referralTab() {
-                SF.get(CheckCreatorReferralTab.class).execute().validate();
+                SF.get(CheckCreatorReferralTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스101+ 정산")
             void plusSettlement() {
-                SF.get(CheckPlusSettlement.class).execute().validate();
+                SF.get(CheckPlusSettlement.class).proceed().validate();
             }
         }
     }
@@ -577,13 +577,13 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsNewUser.class).execute().validate();
+                SF.get(LoginAsNewUser.class).proceed().validate();
             }
 
             @Test
             @DisplayName("무료 체험")
             void freeTrial() {
-                SF.get(CheckFreeTrial.class).execute().validate();
+                SF.get(CheckFreeTrial.class).proceed().validate();
             }
         }
 
@@ -593,7 +593,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsNonSubscriber.class).execute().validate();
+                SF.get(LoginAsNonSubscriber.class).proceed().validate();
             }
 
             @AfterAll
@@ -609,7 +609,7 @@ public class TestAll {
             @Test
             @DisplayName("연간 구독")
             void yearlyPlan() {
-                SF.get(CheckYearlySubscription.class).execute().validate();
+                SF.get(CheckYearlySubscription.class).proceed().validate();
             }
         }
 
@@ -620,7 +620,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsYearlySubscriber.class).execute().validate();
+                SF.get(LoginAsYearlySubscriber.class).proceed().validate();
             }
 
             @AfterAll
@@ -636,19 +636,19 @@ public class TestAll {
             @Test
             @DisplayName("준비물 구매")
             void buyKit() {
-                SF.get(CheckKitPurchase.class).execute().validate();
+                SF.get(CheckKitPurchase.class).proceed().validate();
             }
 
             @Test
             @DisplayName("구독 취소")
             void cancelSubscription() {
-                SF.get(CheckCancelSubscription.class).execute().validate();
+                SF.get(CheckCancelSubscription.class).proceed().validate();
             }
 
             @Test
             @DisplayName("구독 환불")
             void refundSubscription() {
-                SF.get(CheckRefundSubscription.class).execute().validate();
+                SF.get(CheckRefundSubscription.class).proceed().validate();
             }
         }
 
@@ -659,7 +659,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsUserHasKit.class).execute().validate();
+                SF.get(LoginAsUserHasKit.class).proceed().validate();
             }
 
             @AfterAll
@@ -675,19 +675,19 @@ public class TestAll {
             @Test
             @DisplayName("주문 및 배송 진입")
             void orderHistory() {
-                SF.get(CheckOrderHistory.class).execute().validate();
+                SF.get(CheckOrderHistory.class).proceed().validate();
             }
 
             @Test
             @DisplayName("주문 및 배송 자세히 보기")
             void orderDetail() {
-                SF.get(CheckOrderDetail.class).execute().validate();
+                SF.get(CheckOrderDetail.class).proceed().validate();
             }
 
             @Test
             @DisplayName("키트 환불")
             void refundKit() {
-                SF.get(CheckRefundKit.class).execute().validate();
+                SF.get(CheckRefundKit.class).proceed().validate();
             }
         }
     }

@@ -5,6 +5,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 import com.codeborne.selenide.CollectionCondition;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
@@ -148,25 +149,41 @@ public class CreatorNewClassPage {
         public static SelenideElement inReviewStatus() {
             return $(IN_REVIEW_STATUS);
         }
+
+        public static ElementsCollection allImageUnderClassInfo() {
+            return $$(IMG_UNDER_CLASS_INFO);
+        }
+
+        public static ElementsCollection allCoverImageSaveButton() {
+            return $$(COVER_IMAGE_SAVE_BUTTON);
+        }
+
+        public static ElementsCollection allClassTitleSaveButton() {
+            return $$(CLASS_TITLE_SAVE_BUTTON);
+        }
+
+        public static ElementsCollection allCategorySaveButton() {
+            return $$(CATEGORY_SAVE_BUTTON);
+        }
     }
 
     public class Actions {
 
-        public static void waitForFileUploaded() {
-            $$(IMG_UNDER_CLASS_INFO).shouldBe(CollectionCondition.size(2));
-        }
+//        public static void waitForFileUploaded() {
+//            $$(IMG_UNDER_CLASS_INFO).shouldBe(CollectionCondition.size(2));
+//        }
 
-        public static void waitForSubmitCoverImage() {
-            $$(COVER_IMAGE_SAVE_BUTTON).shouldBe(CollectionCondition.size(0));
-        }
+//        public static void waitForSubmitCoverImage() {
+//            $$(COVER_IMAGE_SAVE_BUTTON).shouldBe(CollectionCondition.size(0));
+//        }
 
-        public static void waitForSubmitClassTitle() {
-            $$(CLASS_TITLE_SAVE_BUTTON).shouldBe(CollectionCondition.size(0));
-        }
+//        public static void waitForSubmitClassTitle() {
+//            $$(CLASS_TITLE_SAVE_BUTTON).shouldBe(CollectionCondition.size(0));
+//        }
 
-        public static void waitForSubmitCategory() {
-            $$(CATEGORY_SAVE_BUTTON).shouldBe(CollectionCondition.size(0));
-        }
+//        public static void waitForSubmitCategory() {
+//            $$(CATEGORY_SAVE_BUTTON).shouldBe(CollectionCondition.size(0));
+//        }
 
         public static void waitForSubmitClassDescription() {
             $$(CLASS_DESCRIPTION_SAVE_BUTTON).shouldBe(CollectionCondition.size(0));
