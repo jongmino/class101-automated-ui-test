@@ -3,6 +3,7 @@ package net.class101.automateduitest.resources.pages.creatorCenter;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
@@ -26,66 +27,66 @@ public class CreatorLeftNavigation {
     private static final By CREATOR_GUIDE_TAB = byXpath("//span[text()='크리에이터 가이드 센터']");
 
     public static SelenideElement classTab() {
-        return $(CLASS_TAB);
+        return $(CLASS_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement classCommentTab() {
-        return $(CLASS_COMMENT_TAB);
+        return $(CLASS_COMMENT_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement classNewsTab() {
-        return $(CLASS_NEWS_TAB);
+        return $(CLASS_NEWS_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement referralTab() {
-        return $(REFERRAL_TAB);
+        return $(REFERRAL_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement fileRequestTab() {
-        return $(FILE_REQUEST_HISTORY_TAB);
+        return $(FILE_REQUEST_HISTORY_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement orderAndShippingTab() {
-        return $(ORDER_AND_SHIPPING_TAB);
+        return $(ORDER_AND_SHIPPING_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement orderAndShippingShopTab() {
-        return $(ORDER_AND_SHIPPING_SHOP_TAB);
+        return $(ORDER_AND_SHIPPING_SHOP_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement stockTab() {
-        return $(STOCK_TAB);
+        return $(STOCK_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement stockAllTab() {
-        return $(STOCK_ALL_TAB);
+        return $(STOCK_ALL_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement classSettlementTab() {
-        return $(CLASS_SETTLEMENT_TAB);
+        return $(CLASS_SETTLEMENT_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement individualClassSettlementTab() {
-        return $(INDIVIDUAL_CLASS_SETTLEMENT_TAB);
+        return $(INDIVIDUAL_CLASS_SETTLEMENT_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement plusClassSettlementTab() {
-        return $(PLUS_CLASS_SETTLEMENT_TAB);
+        return $(PLUS_CLASS_SETTLEMENT_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement kitSettlementTab() {
-        return $(KIT_SETTLEMENT_TAB);
+        return $(KIT_SETTLEMENT_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement kitSettlementSubTab() {
-        return $(KIT_SETTLEMENT_SUB_TAB);
+        return $(KIT_SETTLEMENT_SUB_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement creatorGuideTab() {
-        return $(CREATOR_GUIDE_TAB);
+        return $(CREATOR_GUIDE_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement noticeTab() {
-        return $(NOTICE_TAB);
+        return $(NOTICE_TAB).shouldBe(Condition.visible);
     }
 }

@@ -3,6 +3,7 @@ package net.class101.automateduitest.resources.pages.plus;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
@@ -17,30 +18,30 @@ public class EmailSignUpPage {
     private static final By MORE_OPTIONS_BUTTON = byXpath("//a[@href='/ko/register']");
 
     public static SelenideElement signUpTitle() {
-        return $(SIGN_UP_TITLE);
+        return $(SIGN_UP_TITLE).shouldBe(Condition.visible);
     }
 
     public static SelenideElement emailInput() {
-        return $(EMAIL_INPUT);
+        return $(EMAIL_INPUT).shouldBe(Condition.visible);
     }
 
     public static SelenideElement passwordInput() {
-        return $(PASSWORD_INPUT);
+        return $(PASSWORD_INPUT).shouldBe(Condition.visible);
     }
 
     public static SelenideElement confirmPasswordInput() {
-        return $(CONFIRM_PASSWORD_INPUT);
+        return $(CONFIRM_PASSWORD_INPUT).shouldBe(Condition.visible);
     }
 
     public static SelenideElement nextButton() {
-        return $(NEXT_BUTTON);
+        return $(NEXT_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement kakaoSignUpButton() {
-        return $(KAKAO_SIGN_UP_BUTTON);
+        return $(KAKAO_SIGN_UP_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement moreOptionButton() {
-        return $(MORE_OPTIONS_BUTTON);
+        return $(MORE_OPTIONS_BUTTON).shouldBe(Condition.visible);
     }
 }

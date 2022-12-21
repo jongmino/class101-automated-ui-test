@@ -17,11 +17,12 @@ public class CheckKakaoLoginPage implements TestCase {
     public TestCase proceed() {
         SignUpPage.Actions.openPage();
         SignUpPage.kakaoButton().shouldNotBe(Condition.disabled).click();
+        KakaoLoginPage.kakaoLogo();
         return this;
     }
 
     @Override
     public void validate() {
-        KakaoLoginPage.kakaoLogo().shouldBe(Condition.visible);
+        KakaoLoginPage.kakaoLogo();
     }
 }

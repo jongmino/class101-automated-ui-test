@@ -3,6 +3,7 @@ package net.class101.automateduitest.resources.pages.plus;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
@@ -15,22 +16,22 @@ public class OrderDetailPage {
     private static final By REFUND_BUTTON = byXpath("//button//span[text()='환불하기']");
 
     public static SelenideElement orderDetailPageTitle() {
-        return $(ORDER_DETAIL_PAGE_TITLE);
+        return $(ORDER_DETAIL_PAGE_TITLE).shouldBe(Condition.visible);
     }
 
     public static SelenideElement paymentInfoSection() {
-        return $(PAYMENT_INFO_SECTION);
+        return $(PAYMENT_INFO_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement shippingInfoSection() {
-        return $(SHIPPING_INFO_SECTION);
+        return $(SHIPPING_INFO_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement orderedItemInfoSection() {
-        return $(ORDERED_ITEM_INFO_SECTION);
+        return $(ORDERED_ITEM_INFO_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement refundButton() {
-        return $(REFUND_BUTTON);
+        return $(REFUND_BUTTON).shouldBe(Condition.visible);
     }
 }

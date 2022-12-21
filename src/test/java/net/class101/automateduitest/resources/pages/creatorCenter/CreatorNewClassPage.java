@@ -4,6 +4,7 @@ import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -40,111 +41,111 @@ public class CreatorNewClassPage {
     private static final By IMG_UNDER_CLASS_INFO = byXpath("//div[div[span[text()='클래스 기본 정보']]]//form//img");
 
     public static SelenideElement addClassTitle() {
-        return $(ADD_CLASS_TITLE);
+        return $(ADD_CLASS_TITLE).shouldBe(Condition.visible);
     }
 
     public static SelenideElement coverImageSection() {
-        return $(COVER_IMAGE_SECTION);
+        return $(COVER_IMAGE_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement coverImageInput() {
-        return $(COVER_IMAGE_INPUT);
+        return $(COVER_IMAGE_INPUT).shouldBe(Condition.visible);
     }
 
     public static SelenideElement coverImageSaveButton() {
-        return $(COVER_IMAGE_SAVE_BUTTON);
+        return $(COVER_IMAGE_SAVE_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement classTitleSection() {
-        return $(CLASS_TITLE_SECTION);
+        return $(CLASS_TITLE_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement classTitleInput() {
-        return $(CLASS_TITLE_INPUT);
+        return $(CLASS_TITLE_INPUT).shouldBe(Condition.visible);
     }
 
     public static SelenideElement classTitleSaveButton() {
-        return $(CLASS_TITLE_SAVE_BUTTON);
+        return $(CLASS_TITLE_SAVE_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement categorySection() {
-        return $(CATEGORY_SECTION);
+        return $(CATEGORY_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement firstCategorySelector() {
-        return $(FIRST_CATEGORY_SELECTOR);
+        return $(FIRST_CATEGORY_SELECTOR).shouldBe(Condition.visible);
     }
 
     public static SelenideElement secondCategorySelector() {
-        return $(SECOND_CATEGORY_SELECTOR);
+        return $(SECOND_CATEGORY_SELECTOR).shouldBe(Condition.visible);
     }
 
     public static SelenideElement thirdCategorySelector() {
-        return $(THIRD_CATEGORY_SELECTOR);
+        return $(THIRD_CATEGORY_SELECTOR).shouldBe(Condition.visible);
     }
 
     public static SelenideElement categorySaveButton() {
-        return $(CATEGORY_SAVE_BUTTON);
+        return $(CATEGORY_SAVE_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement classDescriptionSection() {
-        return $(CLASS_DESCRIPTION_SECTION);
+        return $(CLASS_DESCRIPTION_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement classDescriptionInput() {
-        return $(CLASS_DESCRIPTION_INPUT);
+        return $(CLASS_DESCRIPTION_INPUT).shouldBe(Condition.visible);
     }
 
     public static SelenideElement classDescriptionSaveButton() {
-        return $(CLASS_DESCRIPTION_SAVE_BUTTON);
+        return $(CLASS_DESCRIPTION_SAVE_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement creatorDescriptionSection() {
-        return $(CREATOR_DESCRIPTION_SECTION);
+        return $(CREATOR_DESCRIPTION_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement creatorDescriptionInput() {
-        return $(CREATOR_DESCRIPTION_INPUT);
+        return $(CREATOR_DESCRIPTION_INPUT).shouldBe(Condition.visible);
     }
 
     public static SelenideElement creatorDescriptionSaveButton() {
-        return $(CREATOR_DESCRIPTION_SAVE_BUTTON);
+        return $(CREATOR_DESCRIPTION_SAVE_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement classAndKitTab() {
-        return $(CLASS_AND_KIT_TAB);
+        return $(CLASS_AND_KIT_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement whatToLearnSection() {
-        return $(WHAT_TO_LEARN_SECTION);
+        return $(WHAT_TO_LEARN_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement addSkillButton() {
-        return $(ADD_SKILL_BUTTON);
+        return $(ADD_SKILL_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement addSkillTitleInput() {
-        return $(ADD_SKILL_TITLE_INPUT);
+        return $(ADD_SKILL_TITLE_INPUT).shouldBe(Condition.visible);
     }
 
     public static SelenideElement addSkillDescriptionInput() {
-        return $(ADD_SKILL_DESCRIPTION_INPUT);
+        return $(ADD_SKILL_DESCRIPTION_INPUT).shouldBe(Condition.visible);
     }
 
     public static SelenideElement addSkillSaveButton() {
-        return $(ADD_SKILL_SAVE_BUTTON);
+        return $(ADD_SKILL_SAVE_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement requestReviewButton() {
-        return $(REQUEST_REVIEW_BUTTON);
+        return $(REQUEST_REVIEW_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement modalRequestReviewButton() {
-        return $(MODAL_REQUEST_REVIEW_BUTTON);
+        return $(MODAL_REQUEST_REVIEW_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement inReviewStatus() {
-        return $(IN_REVIEW_STATUS);
+        return $(IN_REVIEW_STATUS).shouldBe(Condition.visible);
     }
 
     public static ElementsCollection allImageUnderClassInfo() {

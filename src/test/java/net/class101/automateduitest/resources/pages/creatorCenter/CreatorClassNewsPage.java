@@ -3,6 +3,7 @@ package net.class101.automateduitest.resources.pages.creatorCenter;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
@@ -14,14 +15,14 @@ public class CreatorClassNewsPage {
     private static final By CREATE_NOTICE_BUTTON = byXpath("//div[text()='공지하기']");
 
     public static SelenideElement classSelector() {
-        return $(CLASS_SELECTOR);
+        return $(CLASS_SELECTOR).shouldBe(Condition.visible);
     }
 
     public static SelenideElement classIdInput() {
-        return $(CLASS_ID_INPUT);
+        return $(CLASS_ID_INPUT).shouldBe(Condition.visible);
     }
 
     public static SelenideElement createNoticeButton() {
-        return $(CREATE_NOTICE_BUTTON);
+        return $(CREATE_NOTICE_BUTTON).shouldBe(Condition.visible);
     }
 }

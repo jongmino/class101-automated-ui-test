@@ -2,6 +2,8 @@ package net.class101.automateduitest.resources.pages.creatorCenter;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
@@ -16,30 +18,30 @@ public class CreatorProductPage {
     private static final By PRIVATE_STATUS = byXpath("//p[text()='비공개']");
 
     public static SelenideElement createProductButton() {
-        return $(CREATE_PRODUCT_BUTTON);
+        return $(CREATE_PRODUCT_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement productList() {
-        return $(PRODUCT_LIST);
+        return $(PRODUCT_LIST).shouldBe(Condition.visible);
     }
 
     public static SelenideElement firstProductSelectBox() {
-        return $(FIRST_PRODUCT_SELECT_BOX);
+        return $(FIRST_PRODUCT_SELECT_BOX).shouldBe(Condition.visible);
     }
 
     public static SelenideElement deleteButton() {
-        return $(DELETE_BUTTON);
+        return $(DELETE_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement modalDeleteButton() {
-        return $(MODAL_DELETE_BUTTON);
+        return $(MODAL_DELETE_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement creatorCenterLogo() {
-        return $(CREATOR_CENTER_LOGO);
+        return $(CREATOR_CENTER_LOGO).shouldBe(Condition.visible);
     }
 
     public static SelenideElement privateStatus() {
-        return $(PRIVATE_STATUS);
+        return $(PRIVATE_STATUS).shouldBe(Condition.visible);
     }
 }

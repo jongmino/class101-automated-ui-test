@@ -9,9 +9,8 @@ import net.class101.automateduitest.resources.testcases.classmate.CheckOrderTab;
 import net.class101.automateduitest.resources.testcases.classmate.CheckReferralTab;
 import net.class101.automateduitest.resources.testcases.classmate.CheckSettingTab;
 import net.class101.automateduitest.resources.testcases.core.LoginAsNonSubscriber;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import net.class101.automateduitest.resources.testcases.core.Logout;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
 @TestInstance(Lifecycle.PER_CLASS)
@@ -20,6 +19,11 @@ public class MyPageMenu {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
+    }
+
+    @AfterAll
+    void tearDown() {
+        SF.get(Logout.class).proceed();
     }
 
     @Test

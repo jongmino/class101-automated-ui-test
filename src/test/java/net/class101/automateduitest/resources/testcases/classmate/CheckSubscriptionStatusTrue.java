@@ -4,7 +4,6 @@ import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static net.class101.automateduitest.resources.common.Utils.waitFor;
 
 /**
  * @설명: 구독 계정으로 로그인 했을 때 마이페이지에 구독 탭에서 계정 상태에 따른 구독 상태가 보여지는지 테스트한다
@@ -25,6 +24,6 @@ public class CheckSubscriptionStatusTrue implements TestCase {
     @Override
     public void validate() {
         //구독 탭 확인
-        waitFor(MyPage.subscriptionStatusTrue()).shouldBe(Condition.visible);
+        MyPage.subscriptionStatusTrue().shouldBe(Condition.visible);
     }
 }

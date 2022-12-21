@@ -5,6 +5,7 @@ import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.Keys;
 
 public class Utils {
+
     public static String getUrl() {
         return WebDriverRunner.url();
     }
@@ -43,5 +44,26 @@ public class Utils {
             throw new RuntimeException(element + " not exist");
         }
         return element;
+    }
+
+    public static void waitFor(final boolean condition) {
+        waitFor(condition, 10000, 100);
+    }
+
+    public static void waitFor(final boolean condition, final long timeout) {
+        waitFor(condition, timeout, 100);
+    }
+
+    public static void waitFor(final boolean condition, final long timeout, final long sleepAmount) {
+        final long count = (timeout / sleepAmount) + 1;
+        for (int i = 0; i < count; ++i) {
+            if (condition) {
+                break;
+            }
+            try {
+                Thread.sleep(sleepAmount);
+            } catch (Exception e) {
+            }
+        }
     }
 }

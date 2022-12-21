@@ -3,6 +3,7 @@ package net.class101.automateduitest.resources.pages.creatorCenter;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
@@ -13,14 +14,14 @@ public class CreatorOrderAndShippingPage {
     private static final By PAYMENT_COMPLETED_TITLE = byXpath("//h4[text()='결제 완료']");
 
     public static SelenideElement paymentCompletedTab() {
-        return $(PAYMENT_COMPLETED_TAB);
+        return $(PAYMENT_COMPLETED_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement paymentCompletedTitle() {
-        return $(PAYMENT_COMPLETED_TITLE);
+        return $(PAYMENT_COMPLETED_TITLE).shouldBe(Condition.visible);
     }
 
     public static SelenideElement orderAndShippingTitle() {
-        return $(ORDER_AND_SHIPPING_TITLE);
+        return $(ORDER_AND_SHIPPING_TITLE).shouldBe(Condition.visible);
     }
 }

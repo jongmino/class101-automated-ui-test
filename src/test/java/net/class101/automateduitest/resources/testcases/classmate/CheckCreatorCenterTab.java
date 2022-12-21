@@ -19,7 +19,7 @@ public class CheckCreatorCenterTab implements TestCase {
     public TestCase proceed() {
         MyPage.Actions.openPage();
         MyPage.creatorCenterTab().click();
-        Utils.waitFor(CreatorLoginPage.emailInputElement());
+        CreatorLoginPage.emailInputElement();
         return this;
     }
 

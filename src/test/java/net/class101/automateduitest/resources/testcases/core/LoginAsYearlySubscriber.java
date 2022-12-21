@@ -9,7 +9,6 @@ import net.class101.automateduitest.resources.pages.plus.LoginPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 import java.util.Map;
 
-import static net.class101.automateduitest.resources.common.Utils.waitFor;
 
 /**
  * @설명: 연간 구독 중인 유저로 로그인한다
@@ -21,8 +20,8 @@ public class LoginAsYearlySubscriber implements TestCase {
 
     @Override
     public TestCase proceed() {
-        waitFor(Home.loginButton()).click();
-        waitFor(LoginPage.allLoginButton()).click();
+        Home.loginButton().click();
+        LoginPage.allLoginButton().click();
 
         final Map<String, Properties.Account> accounts = PropertyLoader.getProperties().accounts;
         final String YEARLY_SUBSCRIBER_USER_ID = accounts.get("plusYearlySubscriber").id;
@@ -33,6 +32,6 @@ public class LoginAsYearlySubscriber implements TestCase {
 
     @Override
     public void validate() {
-        waitFor(Home.userProfileImg()).shouldBe(Condition.visible).hover();
+        Home.userProfileImg().shouldBe(Condition.visible).hover();
     }
 }

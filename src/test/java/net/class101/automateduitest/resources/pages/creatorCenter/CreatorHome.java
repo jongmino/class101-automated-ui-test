@@ -3,6 +3,7 @@ package net.class101.automateduitest.resources.pages.creatorCenter;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.resources.common.PropertyLoader;
 
@@ -11,7 +12,7 @@ public class CreatorHome {
     private static final String NAVIGATION_PROFILE_IMG = "img[alt='profile']";
 
     public static SelenideElement profileImg() {
-        return $(NAVIGATION_PROFILE_IMG);
+        return $(NAVIGATION_PROFILE_IMG).shouldBe(Condition.visible);
     }
 
     public class Actions {

@@ -7,10 +7,7 @@ import net.class101.automateduitest.resources.testcases.classmate.CheckSubscript
 import net.class101.automateduitest.resources.testcases.core.LoginAsNonSubscriber;
 import net.class101.automateduitest.resources.testcases.core.LoginAsSubscriber;
 import net.class101.automateduitest.resources.testcases.core.Logout;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
 @TestInstance(Lifecycle.PER_CLASS)
@@ -21,7 +18,7 @@ public class MyPageSubscription {
         Home.Actions.openPage();
     }
 
-    @AfterEach
+    @AfterAll
     void tearDown() {
         SF.get(Logout.class).proceed();
     }

@@ -1,7 +1,6 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
 import static net.class101.automateduitest.resources.common.Utils.urlContains;
-import static net.class101.automateduitest.resources.common.Utils.waitFor;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
@@ -23,13 +22,13 @@ public class ChangeServiceRegionToEN implements TestCase {
     public TestCase proceed() {
         MyPage.Actions.openPage();
         //설정 탭 클릭
-        waitFor(MyPage.settingTab()).click();
+        MyPage.settingTab().click();
         //지역변경 버튼 클릭
-        waitFor(SettingPage.serviceRegionSettingButton()).click();
+        SettingPage.serviceRegionSettingButton().click();
         //영어로 변경
-        waitFor(SettingPage.serviceRegionUSButton()).click();
+        SettingPage.serviceRegionUSButton().click();
         // 유저 프로필이 뜰 때까지 기다린다
-        waitFor(Home.userProfileImg()).shouldBe(Condition.visible);
+        Home.userProfileImg().shouldBe(Condition.visible);
         return this;
     }
 

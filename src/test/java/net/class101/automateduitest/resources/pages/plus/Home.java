@@ -7,6 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.resources.common.PropertyLoader;
@@ -30,58 +31,58 @@ public class Home {
     private static final By CLOSE_MESSAGE_BUTTON = byXpath("//button[@aria-label='Close Message']");
 
     public static SelenideElement loginButton() {
-        return $(USER_NAVIGATION_LOGIN_BUTTON);
+        return $(USER_NAVIGATION_LOGIN_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement userProfileImg() {
-        return $(USER_NAVIGATION_PROFILE_IMG);
+        return $(USER_NAVIGATION_PROFILE_IMG).shouldBe(Condition.visible);
     }
 
     public static SelenideElement trendingNowSectionTitle() {
-        return $(TRENDING_CLASS_SECTION);
+        return $(TRENDING_CLASS_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement firstSaveButtonOnTrendingNow() {
-        return $(FIRST_SAVE_BUTTON_ON_TRENDING_NOW);
+        return $(FIRST_SAVE_BUTTON_ON_TRENDING_NOW).shouldBe(Condition.visible);
     }
 
     public static SelenideElement savedClassesSectionTitle() {
-        return $(SAVED_CLASSES_SECTION_TITLE);
+        return $(SAVED_CLASSES_SECTION_TITLE).shouldBe(Condition.visible);
     }
 
     public static SelenideElement recommendedClassSectionTitle() {
-        return $(RECOMMENDED_CLASS_SECTION);
+        return $(RECOMMENDED_CLASS_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement recommendedCategorySectionTitle() {
-        return $(RECOMMENDED_CATEGORY_SECTION);
+        return $(RECOMMENDED_CATEGORY_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement englishCategoryButton() {
-        return $(ENGLISH_CATEGORY_BUTTON);
+        return $(ENGLISH_CATEGORY_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement firstCurationItem() {
-        return $(FIRST_CURATION_ITEM);
+        return $(FIRST_CURATION_ITEM).shouldBe(Condition.visible);
     }
 
     public static SelenideElement myClassSectionTitle() {
-        return $(MY_CLASS_SECTION);
+        return $(MY_CLASS_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement searchBar() {
-        return $(SEARCH_BAR);
+        return $(SEARCH_BAR).shouldBe(Condition.visible);
     }
 
     public static SelenideElement searchBarInput() {
         if ($$(SEARCH_BAR_INPUT_AFTER_CLICK).size() == 0) {
             searchBar().click();
         }
-        return $(SEARCH_BAR_INPUT_AFTER_CLICK);
+        return $(SEARCH_BAR_INPUT_AFTER_CLICK).shouldBe(Condition.visible);
     }
 
     public static SelenideElement searchPanelTitle() {
-        return $(SEARCH_PANEL_TITLE);
+        return $(SEARCH_PANEL_TITLE).shouldBe(Condition.visible);
     }
 
     public static ElementsCollection allSavedClassesSectionTitles() {
@@ -95,7 +96,7 @@ public class Home {
 
             //홈페이지에서 광고가 뜰 경우 끄기
             if ($$(CLOSE_MESSAGE_BUTTON).size() > 0) {
-                $(CLOSE_MESSAGE_BUTTON).click();
+                $(CLOSE_MESSAGE_BUTTON).shouldBe(Condition.visible).click();
             }
         }
     }

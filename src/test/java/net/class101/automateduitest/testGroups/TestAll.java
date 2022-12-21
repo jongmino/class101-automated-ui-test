@@ -264,7 +264,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsSubscriber.class).proceed().validate();
+                SF.get(LoginAsSubscriber.class).proceed();
             }
 
             @AfterEach
@@ -354,7 +354,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsSubscriber.class).proceed().validate();
+                SF.get(LoginAsSubscriber.class).proceed();
             }
 
             @AfterAll

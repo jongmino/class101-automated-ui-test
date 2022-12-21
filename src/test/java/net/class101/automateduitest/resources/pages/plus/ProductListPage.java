@@ -4,6 +4,7 @@ import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -17,15 +18,15 @@ public class ProductListPage {
     private static final By PRODUCT_LIST_PAGE_ITEM = byXpath("//li");
 
     public static SelenideElement englishCommunicationSubCategoryButton() {
-        return $(SUBCATEGORY_ENGLISH_COMMUNICATION);
+        return $(SUBCATEGORY_ENGLISH_COMMUNICATION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement craftsCategoryTab() {
-        return $(SEARCH_RESULT_CRAFTS_CATEGORY);
+        return $(SEARCH_RESULT_CRAFTS_CATEGORY).shouldBe(Condition.visible);
     }
 
     public static SelenideElement englishCategoryPageTitle() {
-        return $(ENGLISH_CATEGORY_PAGE_TITLE);
+        return $(ENGLISH_CATEGORY_PAGE_TITLE).shouldBe(Condition.visible);
     }
 
     public static ElementsCollection productItemList() {

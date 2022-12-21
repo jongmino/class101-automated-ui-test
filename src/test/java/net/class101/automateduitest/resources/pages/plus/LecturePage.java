@@ -3,8 +3,8 @@ package net.class101.automateduitest.resources.pages.plus;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static net.class101.automateduitest.resources.common.Utils.waitFor;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.resources.common.PropertyLoader;
 import org.openqa.selenium.By;
@@ -24,47 +24,47 @@ public class LecturePage {
     private static final By NOTICE_SECTION = byXpath("//li//span[text()='소식']");
 
     public static SelenideElement playSpeedButton() {
-        return $(VIDEO_PLAY_SPEED_BUTTON);
+        return $(VIDEO_PLAY_SPEED_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement settingButton() {
-        return $(VIDEO_SETTING_BUTTON);
+        return $(VIDEO_SETTING_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement videoQualitySettingButton() {
-        return $(VIDEO_SETTING_QUALITY_BUTTON);
+        return $(VIDEO_SETTING_QUALITY_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement autoPlaySettingButton() {
-        return $(VIDEO_SETTING_AUTO_PLAY_BUTTON);
+        return $(VIDEO_SETTING_AUTO_PLAY_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement firstUnCheckedRadioButton() {
-        return $(VIDEO_SETTING_FIRST_RADIO_OPTION_NOT_CHECKED);
+        return $(VIDEO_SETTING_FIRST_RADIO_OPTION_NOT_CHECKED).shouldBe(Condition.visible);
     }
 
     public static SelenideElement videoElementPlaying() {
-        return $(VIDEO_PLAYING);
+        return $(VIDEO_PLAYING).shouldBe(Condition.visible);
     }
 
     public static SelenideElement videoPlayer() {
-        return $(VIDEO_PLAYER);
+        return $(VIDEO_PLAYER).shouldBe(Condition.visible);
     }
 
     public static SelenideElement commentSection() {
-        return $(COMMENT_SECTION);
+        return $(COMMENT_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement curriculumSection() {
-        return $(CURRICULUM_SECTION);
+        return $(CURRICULUM_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement materialSection() {
-        return $(MATERIAL_SECTION);
+        return $(MATERIAL_SECTION).shouldBe(Condition.visible);
     }
 
     public static SelenideElement noticeSection() {
-        return $(NOTICE_SECTION);
+        return $(NOTICE_SECTION).shouldBe(Condition.visible);
     }
 
     public class Actions {
@@ -79,19 +79,19 @@ public class LecturePage {
         }
 
         public static String getVideoQualityValue() {
-            return $(VIDEO_SETTING_QUALITY_CURRENT_VALUE).getText();
+            return $(VIDEO_SETTING_QUALITY_CURRENT_VALUE).shouldBe(Condition.visible).getText();
         }
 
         public static String getAutoPlayValue() {
-            return $(VIDEO_SETTING_AUTO_PLAY_CURRENT_VALUE).getText();
+            return $(VIDEO_SETTING_AUTO_PLAY_CURRENT_VALUE).shouldBe(Condition.visible).getText();
         }
 
         public static String getUnCheckedAutoPlayOptionValue() {
-            return $(UNCHECKED_AUTO_PLAY_OPTION_TEXT).getText();
+            return $(UNCHECKED_AUTO_PLAY_OPTION_TEXT).shouldBe(Condition.visible).getText();
         }
 
         public static String getPlaySpeedSVGPathValue() {
-            return waitFor(LecturePage.playSpeedButton()).find("svg").find("path").getAttribute("d");
+            return LecturePage.playSpeedButton().find("svg").find("path").getAttribute("d");
         }
     }
 }

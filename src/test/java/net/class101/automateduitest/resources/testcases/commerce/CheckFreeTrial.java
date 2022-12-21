@@ -5,7 +5,6 @@ import net.class101.automateduitest.resources.pages.plus.SelectPlanPage;
 import net.class101.automateduitest.resources.pages.plus.SubscriptionPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static net.class101.automateduitest.resources.common.Utils.waitFor;
 
 /**
  * @설명: 신규계정으로 로그인 시 무료체험이 정상적으로 되는지 테스트한다
@@ -18,12 +17,12 @@ public class CheckFreeTrial implements TestCase {
     @Override
     public TestCase proceed() {
         SubscriptionPage.Actions.openPage();
-        waitFor(SubscriptionPage.subscribeButton()).shouldNotBe(Condition.disabled).click();
+        SubscriptionPage.subscribeButton().shouldNotBe(Condition.disabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        waitFor(SelectPlanPage.spanContainsFreeTrial()).shouldBe(Condition.visible);
+        SelectPlanPage.spanContainsFreeTrial().shouldBe(Condition.visible);
     }
 }

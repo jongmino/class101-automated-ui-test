@@ -18,7 +18,7 @@ public class CheckEnquiryTab implements TestCase {
     public TestCase proceed() {
         MyPage.Actions.openPage();
         MyPage.enquiryTab().click();
-        Utils.waitFor(MyPage.channelTalkModal());
+        MyPage.channelTalkModal();
         return this;
     }
 

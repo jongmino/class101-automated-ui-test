@@ -5,7 +5,6 @@ import net.class101.automateduitest.resources.pages.plus.CancelSubscriptionPage;
 import net.class101.automateduitest.resources.pages.plus.SubscriptionPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static net.class101.automateduitest.resources.common.Utils.waitFor;
 
 /**
  * @설명: 정기결제 중 구독 해지가 정상적으로 되는지 테스트한다
@@ -18,12 +17,12 @@ public class CheckCancelSubscription implements TestCase {
     @Override
     public TestCase proceed() {
         SubscriptionPage.Actions.openPage();
-        waitFor(SubscriptionPage.cancelSubscriptionButton()).shouldBe(Condition.visible).click();
+        SubscriptionPage.cancelSubscriptionButton().shouldBe(Condition.visible).click();
         return this;
     }
 
     @Override
     public void validate() {
-        waitFor(CancelSubscriptionPage.cancelButton()).shouldBe(Condition.visible);
+        CancelSubscriptionPage.cancelButton().shouldBe(Condition.visible);
     }
 }

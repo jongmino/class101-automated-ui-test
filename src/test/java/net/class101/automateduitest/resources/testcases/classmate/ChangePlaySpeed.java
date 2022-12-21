@@ -22,11 +22,15 @@ public class ChangePlaySpeed implements TestCase {
     @Override
     public TestCase proceed() {
         LecturePage.Actions.openPage();
-        waitFor(LecturePage.videoPlayer()).hover();
-        waitFor(LecturePage.playSpeedButton()).shouldNotBe(Condition.disabled);
+        LecturePage.videoPlayer().hover();
+        LecturePage.playSpeedButton().shouldNotBe(Condition.disabled);
         playSpeedSvgPathBefore = LecturePage.Actions.getPlaySpeedSVGPathValue();
-        waitFor(LecturePage.videoPlayer()).hover();
-        waitFor(LecturePage.playSpeedButton()).shouldNotBe(Condition.disabled).click();
+        LecturePage.videoPlayer().hover();
+        LecturePage.playSpeedButton().shouldNotBe(Condition.disabled).click();
+
+        // play speed SVG path 값이 바뀔때까지 기다린다
+        waitFor(!playSpeedSvgPathBefore.equals(LecturePage.Actions.getPlaySpeedSVGPathValue()));
+
         playSpeedSvgPathAfter = LecturePage.Actions.getPlaySpeedSVGPathValue();
         return this;
     }

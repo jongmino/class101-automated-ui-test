@@ -4,6 +4,7 @@ import static com.codeborne.selenide.ClipboardConditions.content;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.resources.common.PropertyLoader;
@@ -18,19 +19,19 @@ public class NaverLoginPage {
     private static final By NAVER_LOGO = byXpath("//a[contains(.,'NAVER')]");
 
     public static SelenideElement emailInputElement() {
-        return $(EMAIL_INPUT_ELEMENT);
+        return $(EMAIL_INPUT_ELEMENT).shouldBe(Condition.visible);
     }
 
     public static SelenideElement passwordInputElement() {
-        return $(PASSWORD_INPUT_ELEMENT);
+        return $(PASSWORD_INPUT_ELEMENT).shouldBe(Condition.visible);
     }
 
     public static SelenideElement loginButton() {
-        return $(NAVER_LOGIN_BUTTON);
+        return $(NAVER_LOGIN_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement naverLogo() {
-        return $(NAVER_LOGO);
+        return $(NAVER_LOGO).shouldBe(Condition.visible);
     }
 
     public class Actions {

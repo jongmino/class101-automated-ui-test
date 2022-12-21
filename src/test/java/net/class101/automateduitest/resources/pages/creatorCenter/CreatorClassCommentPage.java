@@ -4,6 +4,7 @@ import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
@@ -17,11 +18,11 @@ public class CreatorClassCommentPage {
     private static final By MARK_AS_ANSWERED_BUTTON = byXpath("//button[text()='답변 완료로 표기']");
 
     public static SelenideElement answeredTab() {
-        return $(ANSWERED_TAB);
+        return $(ANSWERED_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement notAnsweredTab() {
-        return $(NOT_ANSWERED_TAB);
+        return $(NOT_ANSWERED_TAB).shouldBe(Condition.visible);
     }
 
     public static ElementsCollection markAsAnsweredButtons() {
@@ -29,6 +30,6 @@ public class CreatorClassCommentPage {
     }
 
     public static SelenideElement commentPageTitle() {
-        return $(COMMENT_PAGE_TITLE);
+        return $(COMMENT_PAGE_TITLE).shouldBe(Condition.visible);
     }
 }

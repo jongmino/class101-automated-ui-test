@@ -2,6 +2,7 @@ package net.class101.automateduitest.resources.pages.creatorCenter;
 
 import static com.codeborne.selenide.Selenide.$;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 public class CreatorLoginPage {
@@ -11,15 +12,15 @@ public class CreatorLoginPage {
     private static final String LOGIN_BUTTON = "button[type='submit']";
 
     public static SelenideElement emailInputElement() {
-        return $(EMAIL_INPUT_FIELD);
+        return $(EMAIL_INPUT_FIELD).shouldBe(Condition.visible);
     }
 
     public static SelenideElement passwordInputElement() {
-        return $(PASSWORD_INPUT_FIELD);
+        return $(PASSWORD_INPUT_FIELD).shouldBe(Condition.visible);
     }
 
     public static SelenideElement loginButtonElement() {
-        return $(LOGIN_BUTTON);
+        return $(LOGIN_BUTTON).shouldBe(Condition.visible);
     }
 
     public class Actions {

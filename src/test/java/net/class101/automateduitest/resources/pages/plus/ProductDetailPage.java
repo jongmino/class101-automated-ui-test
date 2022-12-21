@@ -4,6 +4,7 @@ import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.resources.common.PropertyLoader;
 import org.openqa.selenium.By;
@@ -17,23 +18,23 @@ public class ProductDetailPage {
     private static final By BUY_KIT_BUTTON = byXpath("//span[text()='준비물 구매']");
 
     public static SelenideElement startSubscriptionButton() {
-        return $(CLASS101_PLUS_SUBSCRIBE_BUTTON);
+        return $(CLASS101_PLUS_SUBSCRIBE_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement playLectureButton() {
-        return $(PLAY_BUTTON);
+        return $(PLAY_BUTTON).shouldBe(Condition.visible);
     }
 
     public static SelenideElement classInfoTab() {
-        return $(CLASS_INTRODUCTION_TAB);
+        return $(CLASS_INTRODUCTION_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement creatorInfoTab() {
-        return $(CREATOR_INTRODUCTION_TAB);
+        return $(CREATOR_INTRODUCTION_TAB).shouldBe(Condition.visible);
     }
 
     public static SelenideElement buyKitButton() {
-        return $(BUY_KIT_BUTTON);
+        return $(BUY_KIT_BUTTON).shouldBe(Condition.visible);
     }
 
     public class Actions {
