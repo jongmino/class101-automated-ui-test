@@ -10,10 +10,10 @@ import net.class101.automateduitest.resources.testcases.TestCase;
 import java.util.Map;
 
 /**
- * 로그인 - 구독 유저 (월간)
- * <p>
- * Prerequisite:
- * 1) 홈페이지를 연다
+ * @설명: 클래스 수강 이력이 있는 구독 유저로 로그인한다
+ * @분류: 로그인 - 구독 유저 (월간)
+ * @테스트_선행조건:
+ *  1) 홈페이지를 연다
  */
 public class LoginAsSubscriber implements TestCase {
 

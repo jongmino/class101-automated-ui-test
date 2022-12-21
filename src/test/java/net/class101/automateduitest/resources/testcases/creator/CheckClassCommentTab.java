@@ -10,11 +10,11 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNav
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
- * 크리에이터 센터 - 클래스 (클래스 댓글) - 페이지 진입 - SNB > 클래스 > 클래스 댓글 클릭
- *
- * Prerequisite:
- * 1) 크리에이터 홈으로 진입한다
- * 2) 클래스를 보유한 계정으로 로그인한다.
+ * @설명: 크리에이터 센터에서 클래스 댓글 메뉴 클릭시 클래스 댓글 페이지로 정상 이동 되는지 테스트한다
+ * @분류: 크리에이터 센터 - 클래스 (클래스 댓글) - 페이지 진입 - SNB > 클래스 > 클래스 댓글 클릭
+ * @테스트_선행조건:
+ *  1) 크리에이터 홈으로 진입한다
+ *  2) 클래스를 보유한 계정으로 로그인한다.
  */
 public class CheckClassCommentTab implements TestCase {
 

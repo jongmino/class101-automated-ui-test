@@ -5,11 +5,11 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProduct
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
- * 상품 관련 테스트케이스 실행 후 추가된 상품 제거용 시나리오
+ * @설명: 크리에이터 센터 상품을 정상적으로 제거가 가능한지 테스트한다
  *
- * Prerequisite:
- * 1) 상품이 생성되는 테스트 케이스를 실행한다
- * 2) 해당 시나리오를 불러준다 (tearDown에 넣어주거나 다음 라인에 추가해준다)
+ * @테스트_선행조건:
+ *  1) 크리에이터 홈으로 진입한다
+ *  2) 상품이 생성되는 테스트 케이스를 실행한다
  */
 public class DeleteFirstProduct implements TestCase {
 

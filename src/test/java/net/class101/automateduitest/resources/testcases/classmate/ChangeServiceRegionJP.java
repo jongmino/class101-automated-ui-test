@@ -10,11 +10,11 @@ import net.class101.automateduitest.resources.pages.plus.SettingPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
- * 마이페이지 - 설정 - 지역 설정 - 언어 및 국가 클릭 - 서비스 리전 변경 가능하다 - 일본
- *
- * Prerequisite:
- * 1) 홈페이지를 연다
- * 2) 로그인 한다
+ * @설명: 서비스 지역을 일본으로 변경할 수 있는지 테스트한다.
+ * @분류: 마이페이지 - 설정 - 지역 설정 - 언어 및 국가 클릭 - 서비스 리전 변경 가능하다 - 일본
+ * @테스트_선행조건:
+ *  1) 홈페이지를 연다
+ *  2) 로그인 한다
  */
 public class ChangeServiceRegionJP implements TestCase {
 

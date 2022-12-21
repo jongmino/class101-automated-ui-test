@@ -10,10 +10,10 @@ import net.class101.automateduitest.resources.testcases.TestCase;
 import java.util.Map;
 
 /**
- * 로그인 - 크리에이터 신규 계정
- *
- * Prerequisite:
- * 1) 크리에이터 홈으로 진입한다
+ * @설명: 상품 생성을 테스트하기 위한 신규 계정으로 로그인한다
+ * @분류: 로그인 - 크리에이터 신규 계정
+ * @테스트_선행조건:
+ *  1) 크리에이터 홈으로 진입한다
  */
 public class LoginAsCreatorNew implements TestCase {
 

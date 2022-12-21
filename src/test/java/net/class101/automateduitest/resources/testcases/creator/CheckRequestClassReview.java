@@ -8,11 +8,11 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorNewClas
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
- * 크리에이터 센터 - 상품 - 정규 클래스 - 클래스 생성 페이지 작성 필수 항목 작성 및 검토요청
- *
- * Prerequisite:
- * 1) 크리에이터 홈으로 진입한다
- * 2) 크리에이터 신규 계정으로 로그인한다
+ * @설명: 크리에이터 센터 '클래스 생성 페이지'에서 필수 항목 작성 후 '검토요청'버튼 클릭시 상태가 검토중으로 변경 되는지 테스트한다
+ * @분류: 크리에이터 센터 - 상품 - 정규 클래스 - 클래스 생성 페이지 작성 필수 항목 작성 및 검토요청
+ * @테스트_선행조건:
+ *  1) 크리에이터 홈으로 진입한다
+ *  2) 크리에이터 신규 계정으로 로그인한다
  */
 public class CheckRequestClassReview implements TestCase {
 

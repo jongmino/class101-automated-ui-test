@@ -5,12 +5,13 @@ import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
- * 클래스 - 찜하기 - 추가 / 제거 - PLP에서 찜하기 추가/제거 확인 - 추가
- * 클래스 - 찜하기 - 찜한 클래스 섹션 - 찜한 클래스 유무 = T - 찜한 클래스 목록 확인
- *
- * Prerequisite:
- * 1) 홈페이지를 연다
- * 2) 로그인한다
+ * @설명: 찜하기가 없는 상태에서 찜하기를 눌렀을 시 '찜한 클래스' 섹션이 정상 노출 되는지 테스트한다
+ * @분류:
+ *  1) 클래스 - 찜하기 - 추가 / 제거 - PLP에서 찜하기 추가/제거 확인 - 추가
+ *  2) 클래스 - 찜하기 - 찜한 클래스 섹션 - 찜한 클래스 유무 = T - 찜한 클래스 목록 확인
+ * @테스트_선행조건:
+ *  1) 홈페이지를 연다
+ *  2) 로그인한다
  */
 public class SaveClass implements TestCase {
 

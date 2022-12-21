@@ -5,11 +5,11 @@ import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
- * 마이페이지 - 구독 - 구독 상태 확인 - 계정 상태에 맞는 구독 상태가 표기된다 - 구독
- *
- * Prerequisite:
- * 1) 홈페이지를 연다
- * 2) 로그인 한다
+ * @설명: 구독 계정으로 로그인 했을 때 마이페이지에 구독 탭에서 계정 상태에 따른 구독 상태가 보여지는지 테스트한다
+ * @분류: 마이페이지 - 구독 - 구독 상태 확인 - 계정 상태에 맞는 구독 상태가 표기된다 - 구독
+ * @테스트_선행조건:
+ *  1) 홈페이지를 연다
+ *  2) 구독 계정으로 로그인 한다
  */
 public class CheckSubscriptionStatusTrue implements TestCase {
 

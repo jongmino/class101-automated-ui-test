@@ -11,9 +11,9 @@ import net.class101.automateduitest.resources.testcases.TestCase;
 import static com.codeborne.selenide.Condition.text;
 
 /**
- *  로그인 - 페이스북 유저
- *
- *  Prerequisite:
+ * @설명: 페이스북 유저로 로그인한다
+ * @분류: 로그인 - 페이스북 유저
+ * @테스트_선행조건:
  *  1) 홈페이지를 연다
  */
 public class LoginWithFacebook implements TestCase {

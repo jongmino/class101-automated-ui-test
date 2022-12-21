@@ -6,11 +6,11 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorNoticeP
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
- * 크리에이터 센터 - 공지사항 - 진입 - SNB > 공지사항 클릭
- *
- * Prerequisite:
- * 1) 크리에이터 홈을 연다
- * 2) 로그인 한다
+ * @설명: 크리에이터 센터에서 '공지사항'메뉴 클릭 시 해당 페이지로 정상 이동되는지 테스트한다
+ * @분류: 크리에이터 센터 - 공지사항 - 진입 - SNB > 공지사항 클릭
+ * @테스트_선행조건:
+ *  1) 크리에이터 홈을 연다
+ *  2) 로그인 한다
  */
 public class CheckNoticeTab implements TestCase {
 

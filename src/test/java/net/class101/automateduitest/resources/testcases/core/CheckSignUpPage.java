@@ -7,9 +7,9 @@ import net.class101.automateduitest.resources.pages.plus.SignUpPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
- *  국내 - 회원가입 - 공통 - 회원가입 버튼 클릭
- *
- *  Prerequisite:
+ * @설명: 로그인 페이지에서 회원가입 버튼을 눌렀을 때 회원가입 페이지로 정상적으로 이동되는지 테스트한다
+ * @분류: 국내 - 회원가입 - 공통 - 회원가입 버튼 클릭
+ * @테스트_선행조건:
  *  1) 홈페이지를 연다
  */
 public class CheckSignUpPage implements TestCase {

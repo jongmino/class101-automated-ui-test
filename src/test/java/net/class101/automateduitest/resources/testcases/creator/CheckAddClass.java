@@ -10,11 +10,11 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProduct
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
- * 크리에이터 센터 - 상품 - 정규 클래스 - 정규 클래스 '만들기' 버튼 클릭
- *
- * Prerequisite:
- * 1) 크리에이터 홈을 연다
- * 2) 크리에이터 신규 계정으로 로그인한다
+ * @설명: 크리에이터 센터에서 클래스 만들기 페이지로 정상 진입이 가능한지 테스트한다
+ * @분류: 크리에이터 센터 - 상품 - 정규 클래스 - 정규 클래스 '만들기' 버튼 클릭
+ * @테스트_선행조건:
+ *  1) 크리에이터 홈을 연다
+ *  2) 크리에이터 신규 계정으로 로그인한다
  */
 public class CheckAddClass implements TestCase {
 

@@ -6,9 +6,9 @@ import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
- *  로그아웃 - 기존 계정 - 임의의 로그인 수단으로 로그인 된 상태 - 로그아웃 시도
- *
- *  Prerequisite:
+ * @설명: 로그인 상태에서 로그아웃이 정상적으로 되는지 테스트한다
+ * @분류: 로그아웃 - 기존 계정 - 임의의 로그인 수단으로 로그인 된 상태 - 로그아웃 시도
+ * @테스트_선행조건:
  *  1) 홈페이지를 연다
  *  2) 로그인 한다
  */

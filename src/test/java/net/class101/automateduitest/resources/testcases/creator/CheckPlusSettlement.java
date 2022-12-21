@@ -6,6 +6,7 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorPlusSet
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
+ * @설명: 크리에이터 센터에서 '클래스 정산'메뉴 아래 '클래스 101+ 수익' 메뉴 클릭시 해당 페이지로 정상 이동되는지 테스트한다
  * 크리에이터 센터 - 클래스 101+ 수익 (클래스 정산) - 진입 - SNB > 클래스 정산 > 클래스 101+ 수익 클릭
  *
  * Prerequisite:

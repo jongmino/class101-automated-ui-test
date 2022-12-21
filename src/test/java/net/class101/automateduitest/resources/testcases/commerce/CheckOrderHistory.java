@@ -6,9 +6,9 @@ import net.class101.automateduitest.resources.pages.plus.OrderPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
- * 커머스 - 주문 및 배송 - 진입 - 마이페이지에서 주문 및 배송 진입한 상태 - 주문 및 배송 페이지 확인
- *
- * Prerequisite:
+ * @설명: 주문 및 배송 페이지에서 주문 정보가 제대로 표시되는지 테스트한다
+ * @분류: 커머스 - 주문 및 배송 - 진입 - 마이페이지에서 주문 및 배송 진입한 상태 - 주문 및 배송 페이지 확인
+ * @테스트_선행조건:
  * 1) 홈페이지를 연다
  * 2) 키트 주문 이력이 있는 계정으로 로그인 한다
  */

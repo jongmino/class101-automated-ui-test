@@ -8,11 +8,11 @@ import net.class101.automateduitest.resources.pages.plus.KitRefundPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 /**
- * 커머스 - 주문 및 배송 - 환불 - 주문상세페이지에서 상세보기 진입한 상태 - [환불하기] 버튼 클릭
- *
- * Prerequisite:
- * 1) 홈페이지를 연다
- * 2) 키트 주문 이력이 있는 계정으로 로그인 한다
+ * @설명: 주문 상세 페이지에서 환불하기 버튼을 클릭했을 때 정상적으로 환불하기 페이지로 이동되는지 테스트한다
+ * @분류: 커머스 - 주문 및 배송 - 환불 - 주문상세페이지에서 상세보기 진입한 상태 - [환불하기] 버튼 클릭
+ * @테스트_선행조건:
+ *  1) 홈페이지를 연다
+ *  2) 키트 주문 이력이 있는 계정으로 로그인 한다
  */
 public class CheckRefundKit implements TestCase {
 

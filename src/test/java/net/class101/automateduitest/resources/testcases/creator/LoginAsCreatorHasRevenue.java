@@ -10,10 +10,10 @@ import net.class101.automateduitest.resources.testcases.TestCase;
 import java.util.Map;
 
 /**
- * 로그인 - 클래스 101+ 정산 내역을 보유한 계정
- *
- * Prerequisite:
- * 1) 크리에이터 홈으로 진입한다
+ * @설명: 클래스 101+ 정산 내역을 보유한 크리에이터 계정으로 로그인한다
+ * @분류: 로그인 - 클래스 101+ 정산 내역을 보유한 계정
+ * @테스트_선행조건:
+ *  1) 크리에이터 홈으로 진입한다
  */
 public class LoginAsCreatorHasRevenue implements TestCase {
 
