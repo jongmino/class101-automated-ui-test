@@ -5,6 +5,8 @@ import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static net.class101.automateduitest.resources.common.Utils.waitFor;
+
 /**
  * @설명: 홈에서 우상단 프로필 사진을 클릭했을 때 캐시탭이 정상 노출되는지 확인한다
  * @분류: 마이페이지 프로필 영역 - 프로필 영역 확인 - 내 정보 관리 페이지로 이동되고 보유 중인 캐시가 노출된다
@@ -18,13 +20,13 @@ public class CheckCashTab implements TestCase {
     public TestCase proceed() {
         //유저 네비게이션 프로필 이미지 클릭
         Home.Actions.openPage();
-        Home.userProfileImg().shouldBe(Condition.visible).click();
+        waitFor(Home.userProfileImg()).shouldBe(Condition.visible).click();
         return this;
     }
 
     @Override
     public void validate() {
         //캐시탭 확인
-        MyPage.cashTab().shouldBe(Condition.visible);
+        waitFor(MyPage.cashTab()).shouldBe(Condition.visible);
     }
 }

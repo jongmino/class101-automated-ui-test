@@ -9,6 +9,8 @@ import net.class101.automateduitest.resources.pages.plus.LoginPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 import java.util.Map;
 
+import static net.class101.automateduitest.resources.common.Utils.waitFor;
+
 /**
  * @설명: 클래스 수강 이력이 있는 구독 유저로 로그인한다
  * @분류: 로그인 - 구독 유저 (월간)
@@ -19,8 +21,8 @@ public class LoginAsSubscriber implements TestCase {
 
     @Override
     public TestCase proceed() {
-        Home.loginButton().click();
-        LoginPage.allLoginButton().click();
+        waitFor(Home.loginButton()).click();
+        waitFor(LoginPage.allLoginButton()).click();
 
         final Map<String, Properties.Account> accounts = PropertyLoader.getProperties().accounts;
         final String SUBSCRIBED_USER_ID = accounts.get("plusSubscriber").id;
@@ -31,6 +33,6 @@ public class LoginAsSubscriber implements TestCase {
 
     @Override
     public void validate() {
-        Home.userProfileImg().shouldBe(Condition.visible).hover();
+        waitFor(Home.userProfileImg()).shouldBe(Condition.visible).hover();
     }
 }

@@ -3,6 +3,7 @@ package net.class101.automateduitest.resources.pages.plus;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static net.class101.automateduitest.resources.common.Utils.waitFor;
 
 import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.resources.common.PropertyLoader;
@@ -90,7 +91,7 @@ public class LecturePage {
         }
 
         public static String getPlaySpeedSVGPathValue() {
-            return LecturePage.playSpeedButton().find("svg").find("path").getAttribute("d");
+            return waitFor(LecturePage.playSpeedButton()).find("svg").find("path").getAttribute("d");
         }
     }
 }

@@ -10,6 +10,8 @@ import net.class101.automateduitest.resources.testcases.TestCase;
 
 import java.util.Map;
 
+import static net.class101.automateduitest.resources.common.Utils.waitFor;
+
 /**
  * @설명: 준비물 구매 이력이 있는 유저로 로그인한
  * @분류: 로그인 - 키트 주문 이력 보유 유저다
@@ -20,8 +22,8 @@ public class LoginAsUserHasKit implements TestCase {
 
     @Override
     public TestCase proceed() {
-        Home.loginButton().click();
-        LoginPage.allLoginButton().click();
+        waitFor(Home.loginButton()).click();
+        waitFor(LoginPage.allLoginButton()).click();
 
         final Map<String, Properties.Account> accounts = PropertyLoader.getProperties().accounts;
         final String KIT_USER_ID = accounts.get("plusHasKit").id;
@@ -32,6 +34,6 @@ public class LoginAsUserHasKit implements TestCase {
 
     @Override
     public void validate() {
-        Home.userProfileImg().shouldBe(Condition.visible).hover();
+        waitFor(Home.userProfileImg()).shouldBe(Condition.visible).hover();
     }
 }

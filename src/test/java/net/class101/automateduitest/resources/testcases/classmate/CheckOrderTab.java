@@ -1,6 +1,7 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
 import static net.class101.automateduitest.resources.common.Utils.urlContains;
+import static net.class101.automateduitest.resources.common.Utils.waitFor;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
@@ -20,8 +21,8 @@ public class CheckOrderTab implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.orderTab().click();
-        OrderPage.shippingInfoButton().shouldBe(Condition.visible);
+        waitFor(MyPage.orderTab()).click();
+        waitFor(OrderPage.shippingInfoButton()).shouldBe(Condition.visible);
         return this;
     }
 

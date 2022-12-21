@@ -19,7 +19,7 @@ public class MyPageServiceRegion {
     }
 
     @Test
-    void verifyChangingServiceRegion() throws InterruptedException {
+    void verifyChangingServiceRegion() {
         SF.get(LoginAsNonSubscriber.class).proceed().validate();
         SF.get(ChangeServiceRegionToEN.class).proceed().validate();
         SF.get(ChangeServiceRegionJP.class).proceed().validate();

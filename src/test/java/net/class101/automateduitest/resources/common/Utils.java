@@ -18,18 +18,20 @@ public class Utils {
         return isMac ? Keys.COMMAND + "v" : Keys.LEFT_CONTROL + "v";
     }
 
-    public static void waitFor(final SelenideElement element) {
-        waitFor(element, 5000, 100);
+    public static SelenideElement waitFor(final SelenideElement element) {
+        return waitFor(element, 10000, 100);
     }
 
-    public static void waitFor(final SelenideElement element, final long timeout) {
-        waitFor(element, timeout, 100);
+    public static SelenideElement waitFor(final SelenideElement element, final long timeout) {
+        return waitFor(element, timeout, 100);
     }
 
-    public static void waitFor(final SelenideElement element, final long timeout, final long sleepAmount) {
+    public static SelenideElement waitFor(final SelenideElement element, final long timeout, final long sleepAmount) {
         final long count = (timeout / sleepAmount) + 1;
+        boolean exists = false;
         for (int i = 0; i < count; ++i) {
             if (element.exists()) {
+                exists = true;
                 break;
             }
             try {
@@ -37,5 +39,9 @@ public class Utils {
             } catch (Exception e) {
             }
         }
+        if (!exists) {
+            throw new RuntimeException(element + " not exist");
+        }
+        return element;
     }
 }

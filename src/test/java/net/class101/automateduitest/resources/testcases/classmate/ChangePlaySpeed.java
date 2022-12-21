@@ -1,5 +1,6 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
+import static net.class101.automateduitest.resources.common.Utils.waitFor;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import com.codeborne.selenide.Condition;
@@ -20,18 +21,13 @@ public class ChangePlaySpeed implements TestCase {
 
     @Override
     public TestCase proceed() {
-        try {
-            LecturePage.Actions.openPage();
-            LecturePage.videoPlayer().hover();
-            LecturePage.playSpeedButton().shouldNotBe(Condition.disabled);
-            playSpeedSvgPathBefore = LecturePage.Actions.getPlaySpeedSVGPathValue();
-            LecturePage.videoPlayer().hover();
-            LecturePage.playSpeedButton().shouldNotBe(Condition.disabled).click();
-            Thread.sleep(1000);
-            playSpeedSvgPathAfter = LecturePage.Actions.getPlaySpeedSVGPathValue();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        LecturePage.Actions.openPage();
+        waitFor(LecturePage.videoPlayer()).hover();
+        waitFor(LecturePage.playSpeedButton()).shouldNotBe(Condition.disabled);
+        playSpeedSvgPathBefore = LecturePage.Actions.getPlaySpeedSVGPathValue();
+        waitFor(LecturePage.videoPlayer()).hover();
+        waitFor(LecturePage.playSpeedButton()).shouldNotBe(Condition.disabled).click();
+        playSpeedSvgPathAfter = LecturePage.Actions.getPlaySpeedSVGPathValue();
         return this;
     }
 

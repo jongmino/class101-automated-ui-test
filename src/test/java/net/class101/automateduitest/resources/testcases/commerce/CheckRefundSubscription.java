@@ -5,6 +5,8 @@ import net.class101.automateduitest.resources.pages.plus.RefundSubscriptionPage;
 import net.class101.automateduitest.resources.pages.plus.SubscriptionPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static net.class101.automateduitest.resources.common.Utils.waitFor;
+
 /**
  * @설명: 연간 구독 중 환불이 정상적으로 되는지 테스트한다
  * @분류: 커머스 - 결제 및 환불 - 환불 - 연간 구독 중 - 연간 구독 중 환불 확인
@@ -17,14 +19,14 @@ public class CheckRefundSubscription implements TestCase {
     @Override
     public TestCase proceed() {
         SubscriptionPage.Actions.openPage();
-        SubscriptionPage.cancelSubscriptionButton().shouldBe(Condition.visible).scrollIntoView(true);
-        SubscriptionPage.refundButton().shouldBe(Condition.enabled).scrollIntoView(true).click();
+        waitFor(SubscriptionPage.cancelSubscriptionButton()).shouldBe(Condition.visible).scrollIntoView(true);
+        waitFor(SubscriptionPage.refundButton().shouldBe(Condition.enabled)).scrollIntoView(true).click();
 
         return this;
     }
 
     @Override
     public void validate() {
-        RefundSubscriptionPage.refundPageTitle().shouldBe(Condition.visible);
+        waitFor(RefundSubscriptionPage.refundPageTitle()).shouldBe(Condition.visible);
     }
 }

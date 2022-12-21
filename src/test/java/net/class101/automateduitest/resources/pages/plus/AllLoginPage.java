@@ -2,8 +2,10 @@ package net.class101.automateduitest.resources.pages.plus;
 
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
+import static net.class101.automateduitest.resources.common.Utils.waitFor;
 
 import com.codeborne.selenide.SelenideElement;
+import net.class101.automateduitest.resources.common.Utils;
 import org.openqa.selenium.By;
 
 public class AllLoginPage {
@@ -36,9 +38,9 @@ public class AllLoginPage {
 
     public class Actions {
         public static void login(final String email, final String password) {
-            AllLoginPage.emailInputField().sendKeys(email);
-            AllLoginPage.passwordInputField().sendKeys(password);
-            AllLoginPage.loginButton().click();
+            waitFor(AllLoginPage.emailInputField()).sendKeys(email);
+            waitFor(AllLoginPage.passwordInputField()).sendKeys(password);
+            waitFor(AllLoginPage.loginButton()).click();
         }
     }
 }

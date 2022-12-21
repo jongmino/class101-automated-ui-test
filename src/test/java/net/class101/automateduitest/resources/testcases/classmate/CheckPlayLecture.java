@@ -5,6 +5,8 @@ import net.class101.automateduitest.resources.pages.plus.LecturePage;
 import net.class101.automateduitest.resources.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static net.class101.automateduitest.resources.common.Utils.waitFor;
+
 /**
  * @설명: 플레이어가 정상적으로 재생되는지 테스트한다
  * @분류: 수강환경 - 플레이어 = 영상 재생 확인
@@ -17,12 +19,12 @@ public class CheckPlayLecture implements TestCase {
     @Override
     public TestCase proceed() {
         ProductDetailPage.Actions.openKitPage();
-        ProductDetailPage.playLectureButton().shouldNotBe(Condition.disabled).click();
+        waitFor(ProductDetailPage.playLectureButton()).shouldNotBe(Condition.disabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        LecturePage.videoElementPlaying().shouldBe(Condition.visible);
+        waitFor(LecturePage.videoElementPlaying()).shouldBe(Condition.visible);
     }
 }

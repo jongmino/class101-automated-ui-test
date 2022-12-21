@@ -7,6 +7,8 @@ import net.class101.automateduitest.resources.pages.plus.OrderPage;
 import net.class101.automateduitest.resources.pages.plus.KitRefundPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static net.class101.automateduitest.resources.common.Utils.waitFor;
+
 /**
  * @설명: 주문 상세 페이지에서 환불하기 버튼을 클릭했을 때 정상적으로 환불하기 페이지로 이동되는지 테스트한다
  * @분류: 커머스 - 주문 및 배송 - 환불 - 주문상세페이지에서 상세보기 진입한 상태 - [환불하기] 버튼 클릭
@@ -19,14 +21,14 @@ public class CheckRefundKit implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.orderTab().click();
-        OrderPage.refundableOrderDetailButton().shouldBe(Condition.enabled).click();
-        OrderDetailPage.refundButton().shouldBe(Condition.enabled).click();
+        waitFor(MyPage.orderTab()).click();
+        waitFor(OrderPage.refundableOrderDetailButton()).shouldBe(Condition.enabled).click();
+        waitFor(OrderDetailPage.refundButton()).shouldBe(Condition.enabled).click();
         return this;
     }
 
     @Override
     public void validate() {
-        KitRefundPage.kitRefundPageTitle().shouldBe(Condition.visible);
+        waitFor(KitRefundPage.kitRefundPageTitle()).shouldBe(Condition.visible);
     }
 }
