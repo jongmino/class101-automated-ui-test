@@ -6,6 +6,8 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNavigation;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static org.junit.Assert.assertTrue;
+
 /**
  * @설명: 크리에이터 센터의 클래스 댓글 페이지에서 '답변완료' 탭 클릭시 답변 완료된 댓글들이 정상적으로 노출되는지 테스트한다
  * @분류: 크리에이터 센터 - 클래스 (클래스 댓글) - 답변 완료 - 답변 완료 탭 클릭

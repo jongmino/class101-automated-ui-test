@@ -1,11 +1,12 @@
 package net.class101.automateduitest.resources.testcases.website;
 
 import static net.class101.automateduitest.resources.common.Utils.urlContains;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.CollectionCondition;
 import net.class101.automateduitest.resources.pages.plus.ProductListPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 카테고리 페이지에서 하위 카테고리 클릭 시 하위 카테고리 페이지로 정상 진입되는지 테스트한다

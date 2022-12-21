@@ -1,9 +1,10 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorKitSettlementPage;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNavigation;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 크리에이터 센터에서 '키트 정산' 메뉴 아래 키트 스토어 클릭시 해당 스토어의 키트 정산 페이지로 정상 이동되는지 테스트한다
@@ -17,12 +18,12 @@ public class CheckKitSettlement implements TestCase {
     @Override
     public TestCase proceed() {
         CreatorLeftNavigation.kitSettlementTab().click();
-        CreatorLeftNavigation.kitSettlementSubTab().shouldBe(Condition.visible).click();
+        CreatorLeftNavigation.kitSettlementSubTab().click();
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorKitSettlementPage.settlementTable().shouldBe(Condition.visible);
+        assertTrue(CreatorKitSettlementPage.settlementTable().exists());
     }
 }

@@ -7,6 +7,8 @@ import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorNewClassPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static org.junit.Assert.assertTrue;
+
 /**
  * @설명: 크리에이터 센터 '클래스 생성 페이지'에서 필수 항목 작성 후 '검토요청'버튼 클릭시 상태가 검토중으로 변경 되는지 테스트한다
  * @분류: 크리에이터 센터 - 상품 - 정규 클래스 - 클래스 생성 페이지 작성 필수 항목 작성 및 검토요청
@@ -21,7 +23,7 @@ public class CheckRequestClassReview implements TestCase {
         SF.get(CheckAddClass.class).proceed();
 
         //커버 이미지(필수) 추가
-        CreatorNewClassPage.coverImageSection().shouldBe(Condition.visible).click();
+        CreatorNewClassPage.coverImageSection().click();
         CreatorNewClassPage.coverImageInput().uploadFile(new File("src/test/images/cover.png"));
         CreatorNewClassPage.allImageUnderClassInfo()
                 .shouldBe(CollectionCondition.size(2)); // wait for file uploaded
@@ -31,7 +33,7 @@ public class CheckRequestClassReview implements TestCase {
 
         //클래스 제목(필수) 입력
         CreatorNewClassPage.classTitleSection().click();
-        CreatorNewClassPage.classTitleInput().shouldBe(Condition.visible).sendKeys("제다이의 광선검 101");
+        CreatorNewClassPage.classTitleInput().sendKeys("제다이의 광선검 101");
         CreatorNewClassPage.classTitleSaveButton().shouldBe(Condition.enabled).click();
         CreatorNewClassPage.allClassTitleSaveButton()
                 .shouldBe(CollectionCondition.size(0)); // wait for submit class title
@@ -79,6 +81,6 @@ public class CheckRequestClassReview implements TestCase {
 
     @Override
     public void validate() {
-        CreatorNewClassPage.inReviewStatus().shouldBe(Condition.visible);
+        assertTrue(CreatorNewClassPage.inReviewStatus().exists());
     }
 }

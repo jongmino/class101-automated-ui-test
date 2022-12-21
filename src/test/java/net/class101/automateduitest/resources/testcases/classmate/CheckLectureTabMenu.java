@@ -1,8 +1,9 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.LecturePage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 수강환경 페이지에서 탭 메뉴들이 정상적으로 보이는지 테스트한다
@@ -21,9 +22,9 @@ public class CheckLectureTabMenu implements TestCase {
 
     @Override
     public void validate() {
-        LecturePage.commentSection().shouldBe(Condition.visible);
-        LecturePage.curriculumSection().shouldBe(Condition.visible);
-        LecturePage.materialSection().shouldBe(Condition.visible);
-        LecturePage.noticeSection().shouldBe(Condition.visible);
+        assertTrue(LecturePage.commentSection().exists());
+        assertTrue(LecturePage.curriculumSection().exists());
+        assertTrue(LecturePage.materialSection().exists());
+        assertTrue(LecturePage.noticeSection().exists());
     }
 }

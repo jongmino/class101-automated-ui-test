@@ -1,12 +1,12 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
 import static net.class101.automateduitest.resources.common.Utils.urlContains;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.pages.plus.SettingPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 마이페이지에서 설정 메뉴를 클릭했을 때 페이지가 정상적으로 이동되는지 테스트한다
@@ -20,7 +20,7 @@ public class CheckSettingTab implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.settingTab().click();
-        SettingPage.serviceRegionSettingButton().shouldBe(Condition.visible);
+        SettingPage.serviceRegionSettingButton();
         return this;
     }
 

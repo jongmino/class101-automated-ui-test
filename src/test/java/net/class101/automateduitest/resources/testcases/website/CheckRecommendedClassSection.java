@@ -1,8 +1,9 @@
 package net.class101.automateduitest.resources.testcases.website;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 로그인 유저의 홈화면에 취향 추천 클래스 섹션이 정상 노출 되는지 테스트한다
@@ -21,6 +22,6 @@ public class CheckRecommendedClassSection implements TestCase {
 
     @Override
     public void validate() {
-        Home.recommendedClassSectionTitle().shouldBe(Condition.visible);
+        assertTrue(Home.recommendedClassSectionTitle().exists());
     }
 }

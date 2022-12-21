@@ -7,6 +7,8 @@ import net.class101.automateduitest.resources.pages.plus.OrderPage;
 import net.class101.automateduitest.resources.pages.plus.KitRefundPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static org.junit.Assert.assertTrue;
+
 
 /**
  * @설명: 주문 상세 페이지에서 환불하기 버튼을 클릭했을 때 정상적으로 환불하기 페이지로 이동되는지 테스트한다
@@ -28,6 +30,6 @@ public class CheckRefundKit implements TestCase {
 
     @Override
     public void validate() {
-        KitRefundPage.kitRefundPageTitle().shouldBe(Condition.visible);
+        assertTrue(KitRefundPage.kitRefundPageTitle().exists());
     }
 }

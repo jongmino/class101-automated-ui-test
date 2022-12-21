@@ -1,9 +1,9 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
-import com.codeborne.selenide.Condition;
-import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 마이페이지에서 1:1문의 메뉴를 클릭했을 때 채널톡 모달이 정상적으로 뜨는지 테스트한다
@@ -24,6 +24,6 @@ public class CheckEnquiryTab implements TestCase {
 
     @Override
     public void validate() {
-        MyPage.channelTalkModal().shouldBe(Condition.visible);
+        assertTrue(MyPage.channelTalkModal().exists());
     }
 }

@@ -1,9 +1,10 @@
 package net.class101.automateduitest.resources.testcases.website;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.pages.plus.ProductListPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 검색 창 클릭 시 검색 패널이 정상 노출이 되는지 확인하고, 검색어 입력시 알맞은 검색 결과가 나오는지 테스트한다
@@ -21,7 +22,7 @@ public class SearchKeyword implements TestCase {
         //검색창 클릭
         Home.searchBar().click();
         //검색 패널 확인
-        Home.searchPanelTitle().shouldBe(Condition.visible);
+        Home.searchPanelTitle();
         //검색 키워드 입력
         Home.searchBarInput().sendKeys("공예");
         //검색
@@ -33,6 +34,6 @@ public class SearchKeyword implements TestCase {
     @Override
     public void validate() {
         //검색 결과 확인
-        ProductListPage.craftsCategoryTab().shouldBe(Condition.visible);
+        assertTrue(ProductListPage.craftsCategoryTab().exists());
     }
 }

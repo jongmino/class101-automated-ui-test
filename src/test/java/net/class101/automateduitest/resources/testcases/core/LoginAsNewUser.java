@@ -1,12 +1,13 @@
 package net.class101.automateduitest.resources.testcases.core;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.common.Properties;
 import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.pages.plus.AllLoginPage;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.pages.plus.LoginPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 import java.util.Map;
 
 /**
@@ -26,12 +27,12 @@ public class LoginAsNewUser implements TestCase {
         final String NEW_USER_ID = accounts.get("plusNewUser").id;
         final String NEW_PASSWORD = accounts.get("plusNewUser").pw;
         AllLoginPage.Actions.login(NEW_USER_ID, NEW_PASSWORD);
-        Home.userProfileImg().shouldBe(Condition.visible);
+        Home.userProfileImg();
         return this;
     }
 
     @Override
     public void validate() {
-        Home.userProfileImg().shouldBe(Condition.visible).hover();
+        assertTrue(Home.userProfileImg().exists());
     }
 }

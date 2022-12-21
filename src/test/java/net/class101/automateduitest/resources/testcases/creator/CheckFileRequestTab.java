@@ -1,9 +1,10 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorFileRequestPage;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNavigation;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 크리에이터 센터에서 '파일 요청 내역' 메뉴 클릭시 해당 페이지로 정상적으로 이동되는지 테스트한다
@@ -22,6 +23,6 @@ public class CheckFileRequestTab implements TestCase {
 
     @Override
     public void validate() {
-        CreatorFileRequestPage.fileRequestTitle().shouldBe(Condition.visible);
+        assertTrue(CreatorFileRequestPage.fileRequestTitle().exists());
     }
 }

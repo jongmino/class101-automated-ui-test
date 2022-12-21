@@ -1,8 +1,9 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorOrderAndShippingPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 크리에이터 센터 '주문 및 배송' 페이지에서 '결제완료'탭 클릭시 결제 완료 필드가 정상 노출되는지 테스트한다
@@ -15,12 +16,12 @@ public class CheckPaymentCompleted implements TestCase {
 
     @Override
     public TestCase proceed() {
-        CreatorOrderAndShippingPage.paymentCompletedTab().shouldBe(Condition.visible).click();
+        CreatorOrderAndShippingPage.paymentCompletedTab().click();
         return this;
     }
 
     @Override
     public void validate() {
-        CreatorOrderAndShippingPage.paymentCompletedTitle().shouldBe(Condition.visible);
+        assertTrue(CreatorOrderAndShippingPage.paymentCompletedTitle().exists());
     }
 }

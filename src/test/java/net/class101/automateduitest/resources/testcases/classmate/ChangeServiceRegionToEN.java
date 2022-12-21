@@ -1,9 +1,8 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
 import static net.class101.automateduitest.resources.common.Utils.urlContains;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertTrue;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.pages.plus.SettingPage;
@@ -28,7 +27,7 @@ public class ChangeServiceRegionToEN implements TestCase {
         //영어로 변경
         SettingPage.serviceRegionUSButton().click();
         // 유저 프로필이 뜰 때까지 기다린다
-        Home.userProfileImg().shouldBe(Condition.visible);
+        Home.userProfileImg();
         return this;
     }
 

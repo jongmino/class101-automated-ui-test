@@ -1,12 +1,12 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
 import static net.class101.automateduitest.resources.common.Utils.urlContains;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.ClassmateReferralPage;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 마이페이지에서 친구 초대 메뉴를 클릭했을 때 페이지가 정상적으로 이동되는지 테스트한다
@@ -21,7 +21,7 @@ public class CheckReferralTab implements TestCase {
     public TestCase proceed() {
         MyPage.Actions.openPage();
         MyPage.referralTab().click();
-        ClassmateReferralPage.copyReferralLinkButton().shouldBe(Condition.visible);
+        ClassmateReferralPage.copyReferralLinkButton();
 
         return this;
     }

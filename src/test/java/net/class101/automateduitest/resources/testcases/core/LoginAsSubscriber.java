@@ -1,12 +1,12 @@
 package net.class101.automateduitest.resources.testcases.core;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.common.Properties;
 import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.pages.plus.AllLoginPage;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.pages.plus.LoginPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
 import java.util.Map;
 
 

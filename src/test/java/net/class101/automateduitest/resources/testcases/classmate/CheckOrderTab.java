@@ -1,12 +1,12 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
 import static net.class101.automateduitest.resources.common.Utils.urlContains;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.pages.plus.OrderPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 마이페이지 주문 및 배송 메뉴를 클릭했을 때 페이지가 정상적으로 이동되는지 테스트한다
@@ -21,7 +21,7 @@ public class CheckOrderTab implements TestCase {
     public TestCase proceed() {
         MyPage.Actions.openPage();
         MyPage.orderTab().click();
-        OrderPage.shippingInfoButton().shouldBe(Condition.visible);
+        OrderPage.shippingInfoButton();
         return this;
     }
 

@@ -16,10 +16,10 @@ public class DeleteFirstProduct implements TestCase {
     @Override
     public TestCase proceed() {
         CreatorProductPage.creatorCenterLogo().click();
-        CreatorProductPage.privateStatus().shouldBe(Condition.visible);
-        CreatorProductPage.firstProductSelectBox().shouldBe(Condition.visible).click();
-        CreatorProductPage.deleteButton().shouldBe(Condition.visible).click();
-        CreatorProductPage.modalDeleteButton().shouldBe(Condition.visible).click();
+        CreatorProductPage.privateStatus();
+        CreatorProductPage.firstProductSelectBox().click();
+        CreatorProductPage.deleteButton().click();
+        CreatorProductPage.modalDeleteButton().click();
         CreatorProductPage.modalDeleteButton().should(Condition.disappear);
         return this;
     }

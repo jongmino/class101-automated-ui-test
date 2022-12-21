@@ -5,6 +5,8 @@ import net.class101.automateduitest.resources.pages.plus.PaymentPage;
 import net.class101.automateduitest.resources.pages.plus.SelectPlanPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static org.junit.Assert.assertTrue;
+
 /**
  * @설명: 연간 결제가 정상적으로 되는지 테스트한다
  * @분류: 커머스 - 정기 결제 - 미구독 계정 - 연간 결제 확인
@@ -23,6 +25,6 @@ public class CheckYearlySubscription implements TestCase {
 
     @Override
     public void validate() {
-        PaymentPage.paymentPrice().shouldBe(Condition.visible);
+        assertTrue(PaymentPage.paymentPrice().exists());
     }
 }

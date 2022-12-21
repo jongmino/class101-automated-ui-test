@@ -1,9 +1,10 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNavigation;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorOrderAndShippingPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 크리에이터 센터에서 '주문 및 배송' 아래 임의의 스토어 클릭 시 해당 스토어의 주문 및 배송 페이지로 정상 이동되는지 테스트한다
@@ -23,6 +24,6 @@ public class CheckOrderAndShippingTab implements TestCase {
 
     @Override
     public void validate() {
-        CreatorOrderAndShippingPage.orderAndShippingTitle().shouldBe(Condition.visible);
+        assertTrue(CreatorOrderAndShippingPage.orderAndShippingTitle().exists());
     }
 }

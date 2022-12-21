@@ -32,7 +32,5 @@ public class UnSaveClass implements TestCase {
         //찜하기 섹션 사라짐 확인
         Home.allSavedClassesSectionTitles()
                 .shouldHave(CollectionCondition.size(0)); // wait For Saved Classes Disappear
-        
-        
     }
 }

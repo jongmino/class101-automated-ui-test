@@ -1,9 +1,10 @@
 package net.class101.automateduitest.resources.testcases.commerce;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.CancelSubscriptionPage;
 import net.class101.automateduitest.resources.pages.plus.SubscriptionPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 
 /**
@@ -17,12 +18,12 @@ public class CheckCancelSubscription implements TestCase {
     @Override
     public TestCase proceed() {
         SubscriptionPage.Actions.openPage();
-        SubscriptionPage.cancelSubscriptionButton().shouldBe(Condition.visible).click();
+        SubscriptionPage.cancelSubscriptionButton().click();
         return this;
     }
 
     @Override
     public void validate() {
-        CancelSubscriptionPage.cancelButton().shouldBe(Condition.visible);
+        assertTrue(CancelSubscriptionPage.cancelButton().exists());
     }
 }

@@ -5,6 +5,8 @@ import net.class101.automateduitest.resources.pages.plus.AppleLoginPage;
 import net.class101.automateduitest.resources.pages.plus.SignUpPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static org.junit.Assert.assertTrue;
+
 /**
  * @설명: 간편수단 회원가입 중 Apple로 시작하기 버튼을 클릭했을 때 정상적으로 애플 로그인 페이지로 이동되는지 테스트한다
  * @분류: 국내 - 회원가입 - 간편수단 - 간편수단으로 시작하기 - 회원가입 시도 - 애플
@@ -22,6 +24,6 @@ public class CheckAppleLoginPage implements TestCase {
 
     @Override
     public void validate() {
-        AppleLoginPage.appleLogo().shouldBe(Condition.visible);
+        assertTrue(AppleLoginPage.appleLogo().exists());
     }
 }

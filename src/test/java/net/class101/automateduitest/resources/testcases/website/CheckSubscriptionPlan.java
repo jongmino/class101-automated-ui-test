@@ -5,6 +5,8 @@ import net.class101.automateduitest.resources.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.resources.pages.plus.SelectPlanPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static org.junit.Assert.assertTrue;
+
 //TODO: 분리
 /**
  * @설명:
@@ -18,13 +20,13 @@ public class CheckSubscriptionPlan implements TestCase {
     @Override
     public TestCase proceed() {
 
-        ProductDetailPage.startSubscriptionButton().shouldBe(Condition.visible).shouldBe(Condition.enabled).click();
+        ProductDetailPage.startSubscriptionButton().shouldBe(Condition.enabled).click();
         return this;
     }
 
     @Override
     public void validate() {
         //플랜 선택 페이지 이동 확인
-        SelectPlanPage.subscribePlanTitle().shouldBe(Condition.visible);
+        assertTrue(SelectPlanPage.subscribePlanTitle().exists());
     }
 }

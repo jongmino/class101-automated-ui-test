@@ -1,12 +1,11 @@
 package net.class101.automateduitest.resources.testcases.commerce;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 준비물 구매하기 버튼을 클릭했을 때 준비물 구매 페이지로 이동되는지 테스트한다
@@ -20,7 +19,7 @@ public class CheckKitPurchase implements TestCase {
     @Override
     public TestCase proceed() {
         ProductDetailPage.Actions.openKitPage();
-        ProductDetailPage.buyKitButton().shouldBe(Condition.visible).click();
+        ProductDetailPage.buyKitButton().click();
         Selenide.switchTo().window(1);
 
         return this;

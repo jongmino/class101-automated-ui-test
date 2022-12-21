@@ -1,13 +1,13 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorAddDigitalProductPage;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorAddProductPage;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 크리에이터 센터에서 전자책 만들기 페이지로 정상 진입이 가능한지 테스트한다
@@ -21,9 +21,8 @@ public class CheckAddEBook implements TestCase {
     @Override
     public TestCase proceed() {
         CreatorProductPage.createProductButton().shouldNotBe(Condition.disabled).click();
-        CreatorAddProductPage.createEBookButton().shouldBe(Condition.visible).click();
-        CreatorAddDigitalProductPage.pageTitle().shouldBe(Condition.visible);
-
+        CreatorAddProductPage.createEBookButton().click();
+        CreatorAddDigitalProductPage.pageTitle();
         return this;
     }
 

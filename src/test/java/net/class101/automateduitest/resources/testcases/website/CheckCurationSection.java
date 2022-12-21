@@ -1,9 +1,10 @@
 package net.class101.automateduitest.resources.testcases.website;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 큐레이션 섹션의 클래스를 클릭했을 경우 클래스 상세페이지로 정상 진입 되는지 테스트한다
@@ -26,7 +27,7 @@ public class CheckCurationSection implements TestCase {
 
     @Override
     public void validate() {
-        ProductDetailPage.classInfoTab().shouldBe(Condition.visible);
-        ProductDetailPage.creatorInfoTab().shouldBe(Condition.visible);
+        assertTrue(ProductDetailPage.classInfoTab().exists());
+        assertTrue(ProductDetailPage.creatorInfoTab().exists());
     }
 }

@@ -1,12 +1,11 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 마이페이지에서 자주묻는질문 메뉴를 클릭했을 때 페이지가 정상적으로 이동되는지 테스트한다
@@ -20,7 +19,7 @@ public class CheckFAQTab implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.faqTab().shouldBe(Condition.visible).click();
+        MyPage.faqTab().click();
         Selenide.switchTo().window(1);
         return this;
     }

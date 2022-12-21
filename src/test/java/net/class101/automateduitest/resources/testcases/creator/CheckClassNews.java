@@ -1,10 +1,11 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorClassNewsPage;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNavigation;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 크리에이터 센터에서 클래스 소식 메뉴 클릭시 클래스 소식 페이지로 정상 진입 되는지 테스트한다
@@ -20,7 +21,7 @@ public class CheckClassNews implements TestCase {
         CreatorHome.Actions.openPage();
         CreatorLeftNavigation.classTab().click();
         CreatorLeftNavigation.classNewsTab().click();
-        CreatorClassNewsPage.classIdInput().shouldBe(Condition.visible).sendKeys(CreatorClassNewsPage.CLASS_ID);
+        CreatorClassNewsPage.classIdInput().sendKeys(CreatorClassNewsPage.CLASS_ID);
         CreatorClassNewsPage.classIdInput().pressEnter();
 
         return this;
@@ -28,6 +29,6 @@ public class CheckClassNews implements TestCase {
 
     @Override
     public void validate() {
-        CreatorClassNewsPage.createNoticeButton().shouldBe(Condition.visible);
+        assertTrue(CreatorClassNewsPage.createNoticeButton().exists());
     }
 }

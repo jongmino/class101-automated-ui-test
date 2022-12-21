@@ -6,6 +6,8 @@ import net.class101.automateduitest.resources.pages.plus.LoginPage;
 import net.class101.automateduitest.resources.pages.plus.SignUpPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static org.junit.Assert.assertTrue;
+
 /**
  * @설명: 로그인 페이지에서 회원가입 버튼을 눌렀을 때 회원가입 페이지로 정상적으로 이동되는지 테스트한다
  * @분류: 국내 - 회원가입 - 공통 - 회원가입 버튼 클릭
@@ -23,11 +25,11 @@ public class CheckSignUpPage implements TestCase {
 
     @Override
     public void validate() {
-        SignUpPage.appleButton().shouldBe(Condition.visible);
-        SignUpPage.facebookButton().shouldBe(Condition.visible);
-        SignUpPage.googleButton().shouldBe(Condition.visible);
-        SignUpPage.kakaoButton().shouldBe(Condition.visible);
-        SignUpPage.naverButton().shouldBe(Condition.visible);
-        SignUpPage.emailButton().shouldBe(Condition.visible);
+        assertTrue(SignUpPage.appleButton().exists());
+        assertTrue(SignUpPage.facebookButton().exists());
+        assertTrue(SignUpPage.googleButton().exists());
+        assertTrue(SignUpPage.kakaoButton().exists());
+        assertTrue(SignUpPage.naverButton().exists());
+        assertTrue(SignUpPage.emailButton().exists());
     }
 }

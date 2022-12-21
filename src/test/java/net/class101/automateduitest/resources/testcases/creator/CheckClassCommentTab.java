@@ -1,13 +1,12 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorClassCommentPage;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNavigation;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 크리에이터 센터에서 클래스 댓글 메뉴 클릭시 클래스 댓글 페이지로 정상 이동 되는지 테스트한다
@@ -23,7 +22,7 @@ public class CheckClassCommentTab implements TestCase {
         CreatorHome.Actions.openPage();
         CreatorLeftNavigation.classTab().click();
         CreatorLeftNavigation.classCommentTab().click();
-        CreatorClassCommentPage.commentPageTitle().shouldBe(Condition.visible);
+        CreatorClassCommentPage.commentPageTitle();
 
         return this;
     }

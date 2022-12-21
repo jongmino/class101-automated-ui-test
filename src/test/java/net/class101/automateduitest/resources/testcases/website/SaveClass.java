@@ -4,6 +4,8 @@ import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static org.junit.Assert.assertTrue;
+
 /**
  * @설명: 찜하기가 없는 상태에서 찜하기를 눌렀을 시 '찜한 클래스' 섹션이 정상 노출 되는지 테스트한다
  * @분류:
@@ -20,7 +22,7 @@ public class SaveClass implements TestCase {
         try {
             //실시간 인기 클래스 첫번째 아이템 찜하기
             Thread.sleep(2000);
-            Home.trendingNowSectionTitle().shouldBe(Condition.visible).scrollIntoView(true);
+            Home.trendingNowSectionTitle().scrollIntoView(true);
             Home.firstSaveButtonOnTrendingNow().shouldBe(Condition.enabled).click();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -31,6 +33,6 @@ public class SaveClass implements TestCase {
     @Override
     public void validate() {
         //찜하기 섹션 생성 확인
-        Home.savedClassesSectionTitle().shouldBe(Condition.visible);
+        assertTrue(Home.savedClassesSectionTitle().exists());
     }
 }

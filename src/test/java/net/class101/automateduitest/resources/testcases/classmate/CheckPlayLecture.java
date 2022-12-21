@@ -5,6 +5,8 @@ import net.class101.automateduitest.resources.pages.plus.LecturePage;
 import net.class101.automateduitest.resources.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static org.junit.Assert.assertTrue;
+
 
 /**
  * @설명: 플레이어가 정상적으로 재생되는지 테스트한다
@@ -24,6 +26,6 @@ public class CheckPlayLecture implements TestCase {
 
     @Override
     public void validate() {
-        LecturePage.videoElementPlaying().shouldBe(Condition.visible);
+        assertTrue(LecturePage.videoElementPlaying().exists());
     }
 }

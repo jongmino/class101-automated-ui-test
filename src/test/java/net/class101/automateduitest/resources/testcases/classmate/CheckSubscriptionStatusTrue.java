@@ -1,8 +1,9 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 
 /**
@@ -24,6 +25,6 @@ public class CheckSubscriptionStatusTrue implements TestCase {
     @Override
     public void validate() {
         //구독 탭 확인
-        MyPage.subscriptionStatusTrue().shouldBe(Condition.visible);
+        assertTrue(MyPage.subscriptionStatusTrue().exists());
     }
 }

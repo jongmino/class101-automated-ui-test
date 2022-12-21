@@ -1,11 +1,12 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.common.Properties;
 import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLoginPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 import java.util.Map;
 
@@ -28,6 +29,6 @@ public class LoginAsCreatorHasClass implements TestCase {
 
     @Override
     public void validate() {
-        CreatorHome.profileImg().shouldBe(Condition.visible).hover();
+        assertTrue(CreatorHome.profileImg().exists());
     }
 }

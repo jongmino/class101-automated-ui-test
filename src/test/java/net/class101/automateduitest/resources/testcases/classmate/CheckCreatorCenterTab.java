@@ -1,10 +1,10 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
-import com.codeborne.selenide.Condition;
-import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLoginPage;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 마이페이지에서 크리에이터 센터 탭을 클릭했을 때 페이지가 정상적으로 이동되는지 테스트한다
@@ -25,6 +25,6 @@ public class CheckCreatorCenterTab implements TestCase {
 
     @Override
     public void validate() {
-        CreatorLoginPage.emailInputElement().shouldBe(Condition.visible);
+        assertTrue(CreatorLoginPage.emailInputElement().exists());
     }
 }

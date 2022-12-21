@@ -1,9 +1,10 @@
 package net.class101.automateduitest.resources.testcases.core;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.EmailSignUpPage;
 import net.class101.automateduitest.resources.pages.plus.SignUpPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 간편수단 회원가입 중 이메일 주소로 시작하기 버튼을 클릭했을 때 정상적으로 이메일 회원가입 페이지로 이동되는지 테스트한다
@@ -22,12 +23,12 @@ public class CheckEmailSignUpPage implements TestCase {
 
     @Override
     public void validate() {
-        EmailSignUpPage.signUpTitle().shouldBe(Condition.visible);
-        EmailSignUpPage.emailInput().shouldBe(Condition.visible);
-        EmailSignUpPage.passwordInput().shouldBe(Condition.visible);
-        EmailSignUpPage.confirmPasswordInput().shouldBe(Condition.visible);
-        EmailSignUpPage.nextButton().shouldBe(Condition.visible);
-        EmailSignUpPage.kakaoSignUpButton().shouldBe(Condition.visible);
-        EmailSignUpPage.moreOptionButton().shouldBe(Condition.visible);
+        assertTrue(EmailSignUpPage.signUpTitle().exists());
+        assertTrue(EmailSignUpPage.emailInput().exists());
+        assertTrue(EmailSignUpPage.passwordInput().exists());
+        assertTrue(EmailSignUpPage.confirmPasswordInput().exists());
+        assertTrue(EmailSignUpPage.nextButton().exists());
+        assertTrue(EmailSignUpPage.kakaoSignUpButton().exists());
+        assertTrue(EmailSignUpPage.moreOptionButton().exists());
     }
 }

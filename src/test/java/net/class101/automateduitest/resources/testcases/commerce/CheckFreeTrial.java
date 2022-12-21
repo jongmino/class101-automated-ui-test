@@ -5,6 +5,8 @@ import net.class101.automateduitest.resources.pages.plus.SelectPlanPage;
 import net.class101.automateduitest.resources.pages.plus.SubscriptionPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
+import static org.junit.Assert.assertTrue;
+
 
 /**
  * @설명: 신규계정으로 로그인 시 무료체험이 정상적으로 되는지 테스트한다
@@ -23,6 +25,6 @@ public class CheckFreeTrial implements TestCase {
 
     @Override
     public void validate() {
-        SelectPlanPage.spanContainsFreeTrial().shouldBe(Condition.visible);
+        assertTrue(SelectPlanPage.spanContainsFreeTrial().exists());
     }
 }

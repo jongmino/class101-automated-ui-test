@@ -1,11 +1,11 @@
 package net.class101.automateduitest.resources.testcases.core;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 import static org.junit.Assert.assertTrue;
+
 
 /**
  * @설명: 로그인 상태에서 로그아웃이 정상적으로 되는지 테스트한다
@@ -21,7 +21,7 @@ public class Logout implements TestCase {
         //마이페이지 진입
         MyPage.Actions.openPage();
         //마이페이지 로그아웃 버튼 클릭
-        MyPage.logoutButton().shouldBe(Condition.visible).click();
+        MyPage.logoutButton().click();
         Home.trendingNowSectionTitle();
         return this;
     }

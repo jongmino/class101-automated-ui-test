@@ -1,9 +1,10 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -26,6 +27,6 @@ public class CheckProductList implements TestCase {
 
     @Override
     public void validate() {
-        CreatorProductPage.productList().shouldBe(Condition.visible);
+        assertTrue(CreatorProductPage.productList().exists());
     }
 }

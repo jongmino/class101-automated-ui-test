@@ -1,10 +1,9 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.LecturePage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 비디오 플레이어에서 자동 재생 옵션을 변경 할 수 있는지 테스트한다
@@ -22,7 +21,7 @@ public class ChangeAutoPlay implements TestCase {
     @Override
     public TestCase proceed() {
         LecturePage.videoPlayer().hover();
-        LecturePage.autoPlaySettingButton().shouldBe(Condition.visible).click();
+        LecturePage.autoPlaySettingButton().click();
         autoPlayOptionValue = LecturePage.Actions.getUnCheckedAutoPlayOptionValue();
         LecturePage.firstUnCheckedRadioButton().click();
         LecturePage.settingButton().click();

@@ -1,10 +1,11 @@
 package net.class101.automateduitest.resources.testcases.commerce;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.pages.plus.OrderDetailPage;
 import net.class101.automateduitest.resources.pages.plus.OrderPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @설명: 주문 상세페이지의 필수 정보가 모두 표시 되는지 테스트한다
@@ -19,15 +20,15 @@ public class CheckOrderDetail implements TestCase {
     public TestCase proceed() {
         MyPage.Actions.openPage();
         MyPage.orderTab().click();
-        OrderPage.orderViewDetailButton().shouldBe(Condition.visible).click();
+        OrderPage.orderViewDetailButton().click();
         return this;
     }
 
     @Override
     public void validate() {
-        OrderDetailPage.orderDetailPageTitle().shouldBe(Condition.visible);
-        OrderDetailPage.paymentInfoSection().shouldBe(Condition.visible);
-        OrderDetailPage.shippingInfoSection().shouldBe(Condition.visible);
-        OrderDetailPage.orderedItemInfoSection().shouldBe(Condition.visible);
+        assertTrue(OrderDetailPage.orderDetailPageTitle().exists());
+        assertTrue(OrderDetailPage.paymentInfoSection().exists());
+        assertTrue(OrderDetailPage.shippingInfoSection().exists());
+        assertTrue(OrderDetailPage.orderedItemInfoSection().exists());
     }
 }
