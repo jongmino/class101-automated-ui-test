@@ -1,6 +1,7 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
 import com.codeborne.selenide.Condition;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLoginPage;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
@@ -18,7 +19,7 @@ public class CheckCreatorCenterTab implements TestCase {
     public TestCase proceed() {
         MyPage.Actions.openPage();
         MyPage.creatorCenterTab().click();
-
+        Utils.waitFor(CreatorLoginPage.emailInputElement());
         return this;
     }
 

@@ -23,7 +23,7 @@ public class MyPageMenu {
     }
 
     @Test
-    void verifyMyPageMenu() throws InterruptedException {
+    void verifyMyPageMenu() {
         SF.get(LoginAsNonSubscriber.class).proceed().validate();
         SF.get(CheckOrderTab.class).proceed().validate();
         SF.get(CheckReferralTab.class).proceed().validate();

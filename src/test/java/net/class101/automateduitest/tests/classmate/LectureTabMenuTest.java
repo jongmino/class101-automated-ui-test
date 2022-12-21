@@ -8,7 +8,7 @@ import net.class101.automateduitest.resources.testcases.core.LoginAsSubscriber;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class LectureTabMenu {
+public class LectureTabMenuTest {
 
     @BeforeAll
     static void beforeAll() {
@@ -18,7 +18,7 @@ public class LectureTabMenu {
     }
 
     @Test
-    void lectureTabMenu() {
+    void testLectureTabMenu() {
         SF.get(CheckLectureTabMenu.class).proceed().validate();
     }
 }
