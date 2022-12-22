@@ -14,7 +14,7 @@ public class Stock {
     static void beforeAll() {
         Configuration.timeout = 20000;
         CreatorHome.Actions.openPage();
-        SF.get(LoginAsCreatorHasClass.class).proceed().validate();
+        SF.get(LoginAsCreatorHasClass.class).proceed();
     }
 
     @Test

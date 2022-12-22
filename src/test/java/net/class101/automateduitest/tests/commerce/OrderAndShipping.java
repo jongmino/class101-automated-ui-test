@@ -13,7 +13,7 @@ public class OrderAndShipping {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
-        SF.get(LoginAsUserHasKit.class).proceed().validate();
+        SF.get(LoginAsUserHasKit.class).proceed();
     }
 
     @Test

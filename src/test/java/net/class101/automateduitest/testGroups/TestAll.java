@@ -191,7 +191,7 @@ public class TestAll {
             @Order(2)
             @DisplayName("이메일 로그인")
             void verifyEmailLogin() {
-                SF.get(LoginAsNonSubscriber.class).proceed().validate();
+                SF.get(LoginAsNonSubscriber.class).proceed();
             }
 
 //            @Test
@@ -216,7 +216,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsNonSubscriber.class).proceed().validate();
+                SF.get(LoginAsNonSubscriber.class).proceed();
             }
 
             @AfterEach
@@ -303,7 +303,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsNonSubscriber.class).proceed().validate();
+                SF.get(LoginAsNonSubscriber.class).proceed();
             }
 
             @AfterAll
@@ -405,7 +405,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 CreatorHome.Actions.openPage();
-                SF.get(LoginAsCreatorNew.class).proceed().validate();
+                SF.get(LoginAsCreatorNew.class).proceed();
             }
 
             @AfterAll
@@ -455,7 +455,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 CreatorHome.Actions.openPage();
-                SF.get(LoginAsCreatorHasClass.class).proceed().validate();
+                SF.get(LoginAsCreatorHasClass.class).proceed();
             }
 
             @AfterAll
@@ -540,7 +540,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 CreatorHome.Actions.openPage();
-                SF.get(LoginAsCreatorHasRevenue.class).proceed().validate();
+                SF.get(LoginAsCreatorHasRevenue.class).proceed();
             }
 
             @AfterAll
@@ -577,7 +577,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsNewUser.class).proceed().validate();
+                SF.get(LoginAsNewUser.class).proceed();
             }
 
             @Test
@@ -593,7 +593,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsNonSubscriber.class).proceed().validate();
+                SF.get(LoginAsNonSubscriber.class).proceed();
             }
 
             @AfterAll
@@ -620,7 +620,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsYearlySubscriber.class).proceed().validate();
+                SF.get(LoginAsYearlySubscriber.class).proceed();
             }
 
             @AfterAll
@@ -659,7 +659,7 @@ public class TestAll {
             @BeforeAll
             static void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsUserHasKit.class).proceed().validate();
+                SF.get(LoginAsUserHasKit.class).proceed();
             }
 
             @AfterAll

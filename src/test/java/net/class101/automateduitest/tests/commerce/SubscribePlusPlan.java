@@ -12,7 +12,7 @@ public class SubscribePlusPlan {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
-        SF.get(LoginAsNonSubscriber.class).proceed().validate();
+        SF.get(LoginAsNonSubscriber.class).proceed();
     }
 
     @Test

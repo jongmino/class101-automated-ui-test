@@ -28,7 +28,7 @@ public class MyPageMenu {
 
     @Test
     void verifyMyPageMenu() {
-        SF.get(LoginAsNonSubscriber.class).proceed().validate();
+        SF.get(LoginAsNonSubscriber.class).proceed();
         SF.get(CheckOrderTab.class).proceed().validate();
         SF.get(CheckReferralTab.class).proceed().validate();
         SF.get(CheckCreatorCenterTab.class).proceed().validate();

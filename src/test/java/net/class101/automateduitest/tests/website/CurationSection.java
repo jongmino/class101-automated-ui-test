@@ -18,11 +18,11 @@ public class CurationSection {
     static void beforeAll() {
         Configuration.timeout = 20000;
         Home.Actions.openPage();
+        SF.get(LoginAsNonSubscriber.class).proceed();
     }
 
     @Test
     void curation_section_is_visible() {
-        SF.get(LoginAsNonSubscriber.class).proceed().validate();
         SF.get(CheckCurationSection.class).proceed().validate();
         SF.get(CheckSubscriptionPlan.class).proceed().validate();
     }

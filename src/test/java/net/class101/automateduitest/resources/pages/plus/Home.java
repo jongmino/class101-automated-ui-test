@@ -28,7 +28,7 @@ public class Home {
     private static final By SEARCH_BAR = byXpath("(//button[@type='button'])[9]");
     private static final By SEARCH_PANEL_TITLE = withText("지금 인기있는");
     private static final By SEARCH_BAR_INPUT_AFTER_CLICK = byTagName("input");
-    private static final By CLOSE_MESSAGE_BUTTON = byXpath("//button[@aria-label='Close Message']");
+    private static final By CLOSE_MESSAGE_BUTTON = byXpath("//button[@aria-label='Close']");
 
     public static SelenideElement loginButton() {
         return $(USER_NAVIGATION_LOGIN_BUTTON).shouldBe(Condition.visible);

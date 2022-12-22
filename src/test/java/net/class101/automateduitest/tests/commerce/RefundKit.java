@@ -14,7 +14,7 @@ public class RefundKit {
     static void beforeAll() {
         Configuration.timeout = 20000;
         Home.Actions.openPage();
-        SF.get(LoginAsUserHasKit.class).proceed().validate();
+        SF.get(LoginAsUserHasKit.class).proceed();
     }
 
     @Test

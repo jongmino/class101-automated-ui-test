@@ -12,11 +12,11 @@ public class MyClassSection {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
+        SF.get(LoginAsSubscriber.class).proceed();
     }
 
     @Test
     void my_class_section_is_visible() {
-        SF.get(LoginAsSubscriber.class).proceed().validate();
         SF.get(CheckMyClassSection.class).proceed().validate();
     }
 }

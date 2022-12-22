@@ -18,7 +18,6 @@ public class CheckOrderHistory implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.orderTab().click();
         return this;
     }
 

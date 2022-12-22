@@ -20,14 +20,14 @@ public class SaveAndUnSaveClass {
 
     @BeforeAll
     static void beforeAll() {
-        Home.Actions.openPage();
         Configuration.timeout = 20000;
+        Home.Actions.openPage();
+        SF.get(LoginAsNonSubscriber.class).proceed();
     }
 
     @Test
     @Order(1)
     void verifySaveAndUnSaveClass() throws InterruptedException {
-        SF.get(LoginAsNonSubscriber.class).proceed().validate();
         SF.get(SaveClass.class).proceed().validate();
         SF.get(UnSaveClass.class).proceed().validate();
     }

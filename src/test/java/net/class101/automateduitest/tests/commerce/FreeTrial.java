@@ -12,7 +12,7 @@ public class FreeTrial {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
-        SF.get(LoginAsNewUser.class).proceed().validate();
+        SF.get(LoginAsNewUser.class).proceed();
     }
 
     @Test

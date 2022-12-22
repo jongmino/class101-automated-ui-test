@@ -28,6 +28,7 @@ public class LoginAsYearlySubscriber implements TestCase {
         final String YEARLY_SUBSCRIBER_USER_ID = accounts.get("plusYearlySubscriber").id;
         final String YEARLY_SUBSCRIBER_PASSWORD = accounts.get("plusYearlySubscriber").pw;
         AllLoginPage.Actions.login(YEARLY_SUBSCRIBER_USER_ID, YEARLY_SUBSCRIBER_PASSWORD);
+        Home.trendingNowSectionTitle();
         return this;
     }
 

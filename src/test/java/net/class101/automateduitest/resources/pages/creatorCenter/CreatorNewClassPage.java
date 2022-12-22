@@ -49,7 +49,7 @@ public class CreatorNewClassPage {
     }
 
     public static SelenideElement coverImageInput() {
-        return $(COVER_IMAGE_INPUT).shouldBe(Condition.visible);
+        return $(COVER_IMAGE_INPUT);
     }
 
     public static SelenideElement coverImageSaveButton() {

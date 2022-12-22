@@ -22,7 +22,6 @@ public class CheckRefundKit implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.orderTab().click();
         OrderPage.refundableOrderDetailButton().shouldBe(Condition.enabled).click();
         OrderDetailPage.refundButton().shouldBe(Condition.enabled).click();
         return this;

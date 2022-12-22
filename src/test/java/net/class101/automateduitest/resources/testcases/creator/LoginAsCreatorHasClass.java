@@ -4,6 +4,7 @@ import net.class101.automateduitest.resources.common.Properties;
 import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLoginPage;
+import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 import static org.junit.Assert.assertTrue;
@@ -24,6 +25,7 @@ public class LoginAsCreatorHasClass implements TestCase {
         final String email = accounts.get("creatorHasClass").id;
         final String password = accounts.get("creatorHasRevenue").pw;
         CreatorLoginPage.Actions.login(email, password);
+        CreatorProductPage.creatorCenterLogo();
         return this;
     }
 

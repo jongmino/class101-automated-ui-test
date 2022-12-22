@@ -19,12 +19,12 @@ public class RecommendationClassSection {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
+        SF.get(LoginAsNonSubscriber.class).proceed();
     }
 
     @Test
     @Order(1)
     void recommendation_class_section_is_visible() {
-        SF.get(LoginAsNonSubscriber.class).proceed().validate();
         SF.get(CheckRecommendedClassSection.class).proceed().validate();
     }
 }

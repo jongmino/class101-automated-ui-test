@@ -27,7 +27,7 @@ public class LoginAsNewUser implements TestCase {
         final String NEW_USER_ID = accounts.get("plusNewUser").id;
         final String NEW_PASSWORD = accounts.get("plusNewUser").pw;
         AllLoginPage.Actions.login(NEW_USER_ID, NEW_PASSWORD);
-        Home.userProfileImg();
+        Home.trendingNowSectionTitle();
         return this;
     }
 

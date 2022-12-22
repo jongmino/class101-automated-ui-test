@@ -22,6 +22,6 @@ public class CheckFacebookLoginPage implements TestCase {
 
     @Override
     public void validate() {
-        FaceBookLoginPage.facebookLogo().shouldNotBe(Condition.visible);
+        FaceBookLoginPage.facebookLogo().shouldBe(Condition.visible);
     }
 }

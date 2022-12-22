@@ -15,6 +15,7 @@ public class MyPageServiceRegion {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
+        SF.get(LoginAsNonSubscriber.class).proceed();
     }
 
     @AfterAll
@@ -24,7 +25,6 @@ public class MyPageServiceRegion {
 
     @Test
     void verifyChangingServiceRegion() {
-        SF.get(LoginAsNonSubscriber.class).proceed().validate();
         SF.get(ChangeServiceRegionToEN.class).proceed().validate();
         SF.get(ChangeServiceRegionJP.class).proceed().validate();
     }

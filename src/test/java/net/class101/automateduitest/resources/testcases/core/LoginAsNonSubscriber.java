@@ -32,7 +32,7 @@ public class LoginAsNonSubscriber implements TestCase {
         final String plusNonSubscriberId = accounts.get("plusNonSubscriber").id;
         final String plusNonSubscriberPw = accounts.get("plusNonSubscriber").pw;
         AllLoginPage.Actions.login(plusNonSubscriberId, plusNonSubscriberPw);
-        Home.userProfileImg();
+        Home.trendingNowSectionTitle();
         return this;
     }
 

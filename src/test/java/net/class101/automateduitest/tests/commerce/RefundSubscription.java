@@ -12,7 +12,7 @@ public class RefundSubscription {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
-        SF.get(LoginAsYearlySubscriber.class).proceed().validate();
+        SF.get(LoginAsYearlySubscriber.class).proceed();
     }
 
     @Test

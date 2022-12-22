@@ -19,7 +19,6 @@ public class CheckOrderDetail implements TestCase {
     @Override
     public TestCase proceed() {
         MyPage.Actions.openPage();
-        MyPage.orderTab().click();
         OrderPage.orderViewDetailButton().click();
         return this;
     }

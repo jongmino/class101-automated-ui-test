@@ -18,20 +18,20 @@ public class MyPageSubscription {
         Home.Actions.openPage();
     }
 
-    @AfterAll
+    @AfterEach
     void tearDown() {
         SF.get(Logout.class).proceed();
     }
 
     @Test
     void verifySubscriptionStatusWithNonSubscribed() {
-        SF.get(LoginAsNonSubscriber.class).proceed().validate();
+        SF.get(LoginAsNonSubscriber.class).proceed();
         SF.get(CheckSubscriptionStatusFalse.class).proceed().validate();
     }
 
     @Test
     void verifySubscriptionStatusWithSubscribed() {
-        SF.get(LoginAsSubscriber.class).proceed().validate();
+        SF.get(LoginAsSubscriber.class).proceed();
         SF.get(CheckSubscriptionStatusTrue.class).proceed().validate();
     }
 }

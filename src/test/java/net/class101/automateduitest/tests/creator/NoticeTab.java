@@ -11,7 +11,7 @@ public class NoticeTab {
     @BeforeAll
     static void beforeAll() {
         CreatorHome.Actions.openPage();
-        SF.get(LoginAsCreatorNew.class).proceed().validate();
+        SF.get(LoginAsCreatorNew.class).proceed();
     }
 
     @Test

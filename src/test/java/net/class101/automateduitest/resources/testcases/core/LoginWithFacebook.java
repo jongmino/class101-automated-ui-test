@@ -32,7 +32,7 @@ public class LoginWithFacebook implements TestCase {
         FaceBookLoginPage.passwordInputElement().sendKeys(FACEBOOK_PASSWORD);
         FaceBookLoginPage.passwordInputElement().shouldHave(text(FACEBOOK_PASSWORD));
         FaceBookLoginPage.loginButton().click();
-
+        Home.trendingNowSectionTitle();
         return this;
     }
 

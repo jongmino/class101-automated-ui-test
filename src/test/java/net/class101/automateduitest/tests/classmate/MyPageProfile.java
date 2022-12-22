@@ -14,6 +14,7 @@ public class MyPageProfile {
     @BeforeAll
     static void beforeAll() {
         Home.Actions.openPage();
+        SF.get(LoginAsNonSubscriber.class).proceed();
     }
 
     @AfterAll
@@ -23,7 +24,6 @@ public class MyPageProfile {
 
     @Test
     void verifyCashTab() {
-        SF.get(LoginAsNonSubscriber.class).proceed().validate();
         SF.get(CheckCashTab.class).proceed().validate();
     }
 }
