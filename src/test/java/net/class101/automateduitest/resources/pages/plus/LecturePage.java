@@ -10,9 +10,8 @@ import net.class101.automateduitest.resources.common.PropertyLoader;
 import org.openqa.selenium.By;
 
 public class LecturePage {
-
-    private static final By VIDEO_PLAY_SPEED_BUTTON = byXpath("(//div[div[contains(@class,'video')]]//span)[16]");
-    private static final By VIDEO_SETTING_BUTTON = byXpath("(//div[div[contains(@class,'video')]]//span)[17]");
+    private static final By VIDEO_PLAY_SPEED_BUTTON = byXpath("//div[div[contains(@class,'video')]]//div[div[div[p[text()='a']]]]/div[3]/div[1]");
+    private static final By VIDEO_SETTING_BUTTON = byXpath("//div[div[contains(@class,'video')]]//div[div[div[p[text()='a']]]]/div[3]/div[3]");
     private static final By VIDEO_SETTING_QUALITY_BUTTON = byXpath("//div[div[p[text() = '화질']]]");
     private static final By VIDEO_SETTING_AUTO_PLAY_BUTTON = byXpath("//div[div[p[text() = '자동 재생']]]");
     private static final By VIDEO_SETTING_FIRST_RADIO_OPTION_NOT_CHECKED = byXpath("//label[input[@type='radio' and not(@checked)]]");

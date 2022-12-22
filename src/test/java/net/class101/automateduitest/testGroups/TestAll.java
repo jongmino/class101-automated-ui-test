@@ -120,37 +120,37 @@ public class TestAll {
 
             @Test
             @DisplayName("회원가입 - 애플 로그인 페이지")
-            void appleLoginPage() {
+            void testAppleLoginPage() {
                 SF.get(CheckAppleLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 페이스북 로그인 페이지")
-            void facebookLoginPage() {
+            void testFacebookLoginPage() {
                 SF.get(CheckFacebookLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 구글 로그인 페이지")
-            void googleLoginPage() {
+            void testGoogleLoginPage() {
                 SF.get(CheckGoogleLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 카카오 로그인 페이지")
-            void kakaoPage() {
+            void testKakaoPage() {
                 SF.get(CheckKakaoLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 네이버 로그인 페이지")
-            void naverPage() {
+            void testNaverPage() {
                 SF.get(CheckNaverLoginPage.class).proceed().validate();
             }
 
             @Test
             @DisplayName("회원가입 - 이메일로 시작하기")
-            void emailSignUpPage() {
+            void testEmailSignUpPage() {
                 SF.get(CheckEmailSignUpPage.class).proceed().validate();
             }
         }
@@ -183,14 +183,14 @@ public class TestAll {
             @Test
             @Order(1)
             @DisplayName("네이버 로그인")
-            void verifyNaverLogin() {
+            void testNaverLogin() {
                 SF.get(LoginWithNaver.class).proceed().validate();
             }
 
             @Test
             @Order(2)
             @DisplayName("이메일 로그인")
-            void verifyEmailLogin() {
+            void testEmailLogin() {
                 SF.get(LoginAsNonSubscriber.class).proceed();
             }
 
@@ -231,27 +231,27 @@ public class TestAll {
 
             @Test
             @DisplayName("큐레이션 섹션 및 클래스 상세정보")
-            void verifyCurationSection() {
+            void testCurationSection() {
                 SF.get(CheckCurationSection.class).proceed().validate();
                 SF.get(CheckSubscriptionPlan.class).proceed().validate();
             }
 
             @Test
             @DisplayName("검색 기능")
-            void verifySearchBar() {
+            void testSearchBar() {
                 SF.get(SearchKeyword.class).proceed().validate();
             }
 
             @Test
             @DisplayName("추천 카테고리 / 서브카테고리")
-            void verifyRecommendedCategory() {
+            void testRecommendedCategory() {
                 SF.get(CheckRecommendedCategorySection.class).proceed().validate();
                 SF.get(CheckSubCategory.class).proceed().validate();
             }
 
             @Test
             @DisplayName("추천 클래스")
-            void verifyRecommendedClass() {
+            void testRecommendedClass() {
                 SF.get(CheckRecommendedClassSection.class).proceed().validate();
             }
 
@@ -279,13 +279,13 @@ public class TestAll {
 
             @Test
             @DisplayName("내 클래스 섹션 검증")
-            void verifyMyClass() {
+            void testMyClass() {
                 SF.get(CheckMyClassSection.class).proceed().validate();
             }
 
             @Test
             @DisplayName("찜하기 추가 / 제거")
-            void verifySaveClass() throws InterruptedException {
+            void testSaveClass() throws InterruptedException {
                 SF.get(SaveClass.class).proceed().validate();
                 SF.get(UnSaveClass.class).proceed().validate();
             }
@@ -318,26 +318,26 @@ public class TestAll {
 
             @Test
             @DisplayName("마이페이지 캐시탭 확인")
-            void verifyMyPageCashTab() {
+            void testMyPageCashTab() {
                 SF.get(CheckCashTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("마이페이지 구독 탭 확인 - 미구독")
-            void verifyMyPageSubscriptionStatus() {
+            void testMyPageSubscriptionStatus() {
                 SF.get(CheckSubscriptionStatusFalse.class).proceed().validate();
             }
 
             @Test
             @DisplayName("마이페이지 서비스 리전 변경 기능 확인")
-            void verifyMyPageServiceRegion() {
+            void testMyPageServiceRegion() {
                 SF.get(ChangeServiceRegionToEN.class).proceed().validate();
                 SF.get(ChangeServiceRegionJP.class).proceed().validate();
             }
 
             @Test
             @DisplayName("마이페이지 좌측 네비게이션 메뉴 페이지 이동 확인")
-            void verifyMyPageMenu() {
+            void testMyPageMenu() {
                 SF.get(CheckOrderTab.class).proceed().validate();
                 SF.get(CheckReferralTab.class).proceed().validate();
                 SF.get(CheckCreatorCenterTab.class).proceed().validate();
@@ -369,27 +369,37 @@ public class TestAll {
 
             @Test
             @DisplayName("마이페이지 구독 탭 확인 - 구독")
-            void verifyMyPageSubscriptionStatus() {
+            void testMyPageSubscriptionStatus() {
                 SF.get(CheckSubscriptionStatusTrue.class).proceed().validate();
             }
 
             @Test
             @DisplayName("영상 재생 확인")
-            void verifyVideoPlay() {
+            void testVideoPlay() {
                 SF.get(CheckPlayLecture.class).proceed().validate();
             }
 
             @Test
-            @DisplayName("플레이어 기능 확인")
-            void verifyVideoPlayerFunctionality() {
+            @DisplayName("플레이어 기능 확인 - 재생 속도")
+            void testVideoPlayerPlaySpeed() {
                 SF.get(ChangePlaySpeed.class).proceed().validate();
+            }
+
+            @Test
+            @DisplayName("플레이어 기능 확인 - 화질 설정")
+            void testVideoPlayerVideoQuality() {
                 SF.get(ChangeVideoQuality.class).proceed().validate();
+            }
+
+            @Test
+            @DisplayName("플레이어 기능 확인 - 자동 재생 설정")
+            void testVideoPlayerAutoPlay() {
                 SF.get(ChangeAutoPlay.class).proceed().validate();
             }
 
             @Test
             @DisplayName("수강환경 탭 메뉴 확인")
-            void lectureTabMenu() {
+            void testLectureTabMenu() {
                 SF.get(CheckLectureTabMenu.class).proceed().validate();
             }
         }
@@ -425,25 +435,25 @@ public class TestAll {
 
             @Test
             @DisplayName("클래스 만들기")
-            void addClass() {
+            void testAddClass() {
                 SF.get(CheckAddClass.class).proceed().validate();
             }
 
             @Test
             @DisplayName("디지털 파일 만들기")
-            void addDigitalFile() {
+            void testAddDigitalFile() {
                 SF.get(CheckAddDigitalFile.class).proceed().validate();
             }
 
             @Test
             @DisplayName("전자책 만들기")
-            void addEBook() {
+            void testAddEBook() {
                 SF.get(CheckAddEBook.class).proceed().validate();
             }
 
             @Test
             @DisplayName("검토 요청")
-            void requestReview() {
+            void testRequestReview() {
                 SF.get(CheckRequestClassReview.class).proceed().validate();
             }
         }
@@ -470,66 +480,66 @@ public class TestAll {
 
             @Test
             @DisplayName("상품 리스트 목록")
-            void productList() {
+            void testProductList() {
                 SF.get(CheckProductList.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 댓글 페이지")
-            void commentPage() {
+            void testCommentPage() {
                 SF.get(CheckClassCommentTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 댓글 페이지 답변완료")
-            void commentAnswered() {
+            void testCommentAnswered() {
                 SF.get(CheckCommentAnswered.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 댓글 페이지 답변 대기중")
-            void commentNotAnswered() {
+            void testCommentNotAnswered() {
                 SF.get(CheckCommentNotAnswered.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 소식")
-            void classNews() {
+            void testClassNews() {
                 SF.get(CheckClassNews.class).proceed().validate();
             }
 
             @Test
             @DisplayName("파일 요청 내역")
-            void fileRequestTab() {
+            void testFileRequestTab() {
                 SF.get(CheckFileRequestTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("주문 및 배송")
-            void orderAndShippingTab() {
+            void testOrderAndShippingTab() {
                 SF.get(CheckOrderAndShippingTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("재고")
-            void stockTab() {
+            void testStockTab() {
                 SF.get(CheckStockTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스 정산")
-            void classSettlement() {
+            void testClassSettlement() {
                 SF.get(CheckClassSettlement.class).proceed().validate();
             }
             @Test
             @DisplayName("키트 정산")
-            void kitSettlement() {
+            void testKitSettlement() {
                 SF.get(CheckKitSettlement.class).proceed().validate();
             }
 
             @Test
             @DisplayName("크리에이터 가이드 센터")
-            void creatorGuideCenter() {
+            void testCreatorGuideCenter() {
                 SF.get(CheckCreatorGuideTab.class).proceed().validate();
             }
         }
@@ -555,13 +565,13 @@ public class TestAll {
 
             @Test
             @DisplayName("클래스101+ 초대")
-            void    referralTab() {
+            void testReferralTab() {
                 SF.get(CheckCreatorReferralTab.class).proceed().validate();
             }
 
             @Test
             @DisplayName("클래스101+ 정산")
-            void plusSettlement() {
+            void testPlusSettlement() {
                 SF.get(CheckPlusSettlement.class).proceed().validate();
             }
         }
@@ -582,7 +592,7 @@ public class TestAll {
 
             @Test
             @DisplayName("무료 체험")
-            void freeTrial() {
+            void testFreeTrial() {
                 SF.get(CheckFreeTrial.class).proceed().validate();
             }
         }
@@ -608,7 +618,7 @@ public class TestAll {
 
             @Test
             @DisplayName("연간 구독")
-            void yearlyPlan() {
+            void testYearlyPlan() {
                 SF.get(CheckYearlySubscription.class).proceed().validate();
             }
         }
@@ -635,19 +645,19 @@ public class TestAll {
 
             @Test
             @DisplayName("준비물 구매")
-            void buyKit() {
+            void testBuyKit() {
                 SF.get(CheckKitPurchase.class).proceed().validate();
             }
 
             @Test
             @DisplayName("구독 취소")
-            void cancelSubscription() {
+            void testCancelSubscription() {
                 SF.get(CheckCancelSubscription.class).proceed().validate();
             }
 
             @Test
             @DisplayName("구독 환불")
-            void refundSubscription() {
+            void testRefundSubscription() {
                 SF.get(CheckRefundSubscription.class).proceed().validate();
             }
         }
@@ -674,19 +684,19 @@ public class TestAll {
 
             @Test
             @DisplayName("주문 및 배송 진입")
-            void orderHistory() {
+            void testOrderHistory() {
                 SF.get(CheckOrderHistory.class).proceed().validate();
             }
 
             @Test
             @DisplayName("주문 및 배송 자세히 보기")
-            void orderDetail() {
+            void testOrderDetail() {
                 SF.get(CheckOrderDetail.class).proceed().validate();
             }
 
             @Test
             @DisplayName("키트 환불")
-            void refundKit() {
+            void testRefundKit() {
                 SF.get(CheckRefundKit.class).proceed().validate();
             }
         }

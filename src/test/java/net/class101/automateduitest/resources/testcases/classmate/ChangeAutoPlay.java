@@ -1,5 +1,6 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
+import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.pages.plus.LecturePage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
@@ -20,11 +21,13 @@ public class ChangeAutoPlay implements TestCase {
 
     @Override
     public TestCase proceed() {
+        LecturePage.Actions.openPage();
         LecturePage.videoPlayer().hover();
-        LecturePage.autoPlaySettingButton().click();
+        LecturePage.settingButton().shouldBe(Condition.enabled).click();
+        LecturePage.autoPlaySettingButton().shouldBe(Condition.enabled).click();
         autoPlayOptionValue = LecturePage.Actions.getUnCheckedAutoPlayOptionValue();
-        LecturePage.firstUnCheckedRadioButton().click();
-        LecturePage.settingButton().click();
+        LecturePage.firstUnCheckedRadioButton().shouldBe(Condition.enabled).click();
+        LecturePage.settingButton().shouldBe(Condition.enabled).click();
         currentAutoPlayOptionValue = LecturePage.Actions.getAutoPlayValue();
         return this;
     }

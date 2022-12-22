@@ -16,7 +16,7 @@ urls:
     staging: "https://staging-creator.class101.net/center/products"
   lecturePage:
     dev: ""
-    staging: "https://staging.class101.net/ko/classes/5ee1d9b3260ecd6be569ce83/lectures/5ef6db612e1d730dbd5cc8a0"
+    staging: "https://staging.class101.net/plus/ko/classes/5f0a82797438143a52a1c86b/lectures/5f27a08ded2c180021dd1885"
   kitLecturePage:
     dev: ""
     staging: "https://staging.class101.net/ko/products/5e4b42bb3887d3076ee5976b"

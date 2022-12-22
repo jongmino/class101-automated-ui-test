@@ -1,23 +1,22 @@
-package net.class101.automateduitest.tests.classmate;
+package net.class101.automateduitest.tests.commerce;
 
-import com.codeborne.selenide.Configuration;
 import net.class101.automateduitest.resources.common.SF;
+import com.codeborne.selenide.Configuration;
 import net.class101.automateduitest.resources.pages.plus.Home;
-import net.class101.automateduitest.resources.testcases.classmate.CheckLectureTabMenu;
-import net.class101.automateduitest.resources.testcases.core.LoginAsSubscriber;
+import net.class101.automateduitest.resources.testcases.commerce.CheckRefundKit;
+import net.class101.automateduitest.resources.testcases.core.LoginAsUserHasKit;
 import net.class101.automateduitest.resources.testcases.core.Logout;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
-public class LectureTabMenuTest {
+public class RefundKitTest {
 
     @BeforeAll
     static void beforeAll() {
         Configuration.timeout = 20000;
         Home.Actions.openPage();
-        SF.get(LoginAsSubscriber.class).proceed();
+        SF.get(LoginAsUserHasKit.class).proceed();
     }
 
     @AfterAll
@@ -26,7 +25,7 @@ public class LectureTabMenuTest {
     }
 
     @Test
-    void testLectureTabMenu() {
-        SF.get(CheckLectureTabMenu.class).proceed().validate();
+    void testRefundKit() {
+        SF.get(CheckRefundKit.class).proceed().validate();
     }
 }

@@ -19,7 +19,7 @@ public class CheckSubscriptionPlan implements TestCase {
 
     @Override
     public TestCase proceed() {
-
+        ProductDetailPage.Actions.openKitPage();
         ProductDetailPage.startSubscriptionButton().shouldBe(Condition.enabled).click();
         return this;
     }

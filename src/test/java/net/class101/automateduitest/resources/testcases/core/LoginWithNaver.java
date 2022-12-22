@@ -15,7 +15,7 @@ import static org.junit.Assert.assertTrue;
  *  1) 홈페이지를 연다
  */
 public class LoginWithNaver implements TestCase {
-
+    //TODO: 네이버 로그인이 간헐적으로 안되는 경우가 있음
     @Override
     public TestCase proceed() {
         Home.Actions.openPage();

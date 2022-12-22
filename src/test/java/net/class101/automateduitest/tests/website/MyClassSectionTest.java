@@ -1,21 +1,18 @@
-package net.class101.automateduitest.tests.classmate;
+package net.class101.automateduitest.tests.website;
 
-import com.codeborne.selenide.Configuration;
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.pages.plus.Home;
-import net.class101.automateduitest.resources.testcases.classmate.CheckLectureTabMenu;
 import net.class101.automateduitest.resources.testcases.core.LoginAsSubscriber;
 import net.class101.automateduitest.resources.testcases.core.Logout;
+import net.class101.automateduitest.resources.testcases.website.CheckMyClassSection;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
-public class LectureTabMenuTest {
+public class MyClassSectionTest {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.timeout = 20000;
         Home.Actions.openPage();
         SF.get(LoginAsSubscriber.class).proceed();
     }
@@ -26,7 +23,7 @@ public class LectureTabMenuTest {
     }
 
     @Test
-    void testLectureTabMenu() {
-        SF.get(CheckLectureTabMenu.class).proceed().validate();
+    void testMyClassSection() {
+        SF.get(CheckMyClassSection.class).proceed().validate();
     }
 }

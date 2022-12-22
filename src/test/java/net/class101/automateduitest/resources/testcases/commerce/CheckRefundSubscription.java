@@ -21,6 +21,7 @@ public class CheckRefundSubscription implements TestCase {
     public TestCase proceed() {
         SubscriptionPage.Actions.openPage();
         SubscriptionPage.cancelSubscriptionButton().scrollIntoView(true);
+        //TODO(Boulder): 해당 클릭 부분에서 컴포넌트는 로딩이 됐지만, 연간구독인지 판단하는 상태 업데이트가 늦어서 연간구독 여부가 F인 상태로 클릭되는 문제 해결 필요
         SubscriptionPage.refundButton().shouldBe(Condition.enabled).scrollIntoView(true).click();
         return this;
     }
