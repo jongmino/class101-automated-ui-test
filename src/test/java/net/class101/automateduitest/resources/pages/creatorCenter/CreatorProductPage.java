@@ -2,9 +2,11 @@ package net.class101.automateduitest.resources.pages.creatorCenter;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import net.class101.automateduitest.resources.common.PropertyLoader;
 import org.openqa.selenium.By;
 
 public class CreatorProductPage {
@@ -43,5 +45,13 @@ public class CreatorProductPage {
 
     public static SelenideElement privateStatus() {
         return $(PRIVATE_STATUS).shouldBe(Condition.visible);
+    }
+
+    public class Actions {
+        public static void openPage() {
+            final String STAGING_CREATOR_PRODUCT_PAGE =
+                PropertyLoader.getProperties().urls.get("creatorProduct").staging;
+            open(STAGING_CREATOR_PRODUCT_PAGE);
+        }
     }
 }

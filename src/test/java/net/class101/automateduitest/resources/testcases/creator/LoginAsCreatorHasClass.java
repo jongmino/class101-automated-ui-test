@@ -23,7 +23,7 @@ public class LoginAsCreatorHasClass implements TestCase {
     public TestCase proceed() {
         final Map<String, Properties.Account> accounts = PropertyLoader.getProperties().accounts;
         final String email = accounts.get("creatorHasClass").id;
-        final String password = accounts.get("creatorHasRevenue").pw;
+        final String password = accounts.get("creatorHasClass").pw;
         CreatorLoginPage.Actions.login(email, password);
         CreatorProductPage.creatorCenterLogo();
         return this;

@@ -19,9 +19,7 @@ public class CheckProductList implements TestCase {
 
     @Override
     public TestCase proceed() {
-        final String STAGING_CREATOR_PRODUCT_PAGE =
-                PropertyLoader.getProperties().urls.get("creatorProduct").staging;
-        open(STAGING_CREATOR_PRODUCT_PAGE);
+        CreatorProductPage.Actions.openPage();
         return this;
     }
 
