@@ -8,6 +8,7 @@ import net.class101.automateduitest.resources.testcases.creator.CheckClassSettle
 import net.class101.automateduitest.resources.testcases.creator.CheckKitSettlement;
 import net.class101.automateduitest.resources.testcases.creator.CheckPlusSettlement;
 import net.class101.automateduitest.resources.testcases.creator.LoginAsCreatorHasClass;
+import net.class101.automateduitest.resources.testcases.creator.LogoutCreatorCenter;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -24,7 +25,7 @@ public class SettlementTest {
 
     @AfterAll
     static void afterAll() {
-        SF.get(Logout.class).proceed();
+        SF.get(LogoutCreatorCenter.class).proceed();
     }
 
     @AfterEach

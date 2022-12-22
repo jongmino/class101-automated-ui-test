@@ -17,8 +17,8 @@ public class MyPageSubscriptionTest {
         Home.Actions.openPage();
     }
 
-    @AfterAll
-    static void afterAll() {
+    @AfterEach
+    void tearDown() {
         SF.get(Logout.class).proceed();
     }
 

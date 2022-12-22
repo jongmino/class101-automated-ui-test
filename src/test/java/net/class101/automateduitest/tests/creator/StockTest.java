@@ -6,6 +6,7 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.testcases.core.Logout;
 import net.class101.automateduitest.resources.testcases.creator.CheckStockTab;
 import net.class101.automateduitest.resources.testcases.creator.LoginAsCreatorHasClass;
+import net.class101.automateduitest.resources.testcases.creator.LogoutCreatorCenter;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -21,7 +22,7 @@ public class StockTest {
 
     @AfterAll
     static void afterAll() {
-        SF.get(Logout.class).proceed();
+        SF.get(LogoutCreatorCenter.class).proceed();
     }
 
     @Test

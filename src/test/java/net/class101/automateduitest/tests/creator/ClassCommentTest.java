@@ -8,6 +8,7 @@ import net.class101.automateduitest.resources.testcases.creator.CheckClassCommen
 import net.class101.automateduitest.resources.testcases.creator.CheckCommentAnswered;
 import net.class101.automateduitest.resources.testcases.creator.CheckCommentNotAnswered;
 import net.class101.automateduitest.resources.testcases.creator.LoginAsCreatorHasClass;
+import net.class101.automateduitest.resources.testcases.creator.LogoutCreatorCenter;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -23,7 +24,7 @@ public class ClassCommentTest {
 
     @AfterAll
     static void afterAll() {
-        SF.get(Logout.class).proceed();
+        SF.get(LogoutCreatorCenter.class).proceed();
     }
 
     @Test

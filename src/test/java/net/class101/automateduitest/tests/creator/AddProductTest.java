@@ -1,5 +1,7 @@
 package net.class101.automateduitest.tests.creator;
 
+import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
@@ -10,6 +12,7 @@ import net.class101.automateduitest.resources.testcases.creator.CheckAddEBook;
 import net.class101.automateduitest.resources.testcases.creator.CheckRequestClassReview;
 import net.class101.automateduitest.resources.testcases.creator.DeleteFirstProduct;
 import net.class101.automateduitest.resources.testcases.creator.LoginAsCreatorNew;
+import net.class101.automateduitest.resources.testcases.creator.LogoutCreatorCenter;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -20,13 +23,14 @@ public class AddProductTest {
 
     @BeforeAll
     static void beforeAll() {
+        Configuration.timeout = 20000;
         CreatorHome.Actions.openPage();
         SF.get(LoginAsCreatorNew.class).proceed();
     }
 
     @AfterAll
     static void afterAll() {
-        SF.get(Logout.class).proceed();
+        SF.get(LogoutCreatorCenter.class).proceed();
     }
 
     @BeforeEach
