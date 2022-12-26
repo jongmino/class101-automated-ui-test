@@ -21,6 +21,7 @@ public class CheckCurationSection implements TestCase {
 
     @Override
     public TestCase proceed() {
+        Home.Actions.openPage();
         Home.firstCurationItem().click();
         return this;
     }

@@ -24,9 +24,10 @@ public class ChangeAutoPlay implements TestCase {
         LecturePage.Actions.openPage();
         LecturePage.videoPlayer().hover();
         LecturePage.settingButton().shouldBe(Condition.enabled).click();
-        LecturePage.autoPlaySettingButton().shouldBe(Condition.enabled).click();
+        LecturePage.autoPlaySettingButton().shouldBe(Condition.visible).shouldBe(Condition.enabled).click();
         autoPlayOptionValue = LecturePage.Actions.getUnCheckedAutoPlayOptionValue();
         LecturePage.firstUnCheckedRadioButton().shouldBe(Condition.enabled).click();
+        LecturePage.autoPlaySettingButton().shouldNotBe(Condition.visible);
         LecturePage.settingButton().shouldBe(Condition.enabled).click();
         currentAutoPlayOptionValue = LecturePage.Actions.getAutoPlayValue();
         return this;

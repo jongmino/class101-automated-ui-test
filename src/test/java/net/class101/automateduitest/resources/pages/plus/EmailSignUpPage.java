@@ -15,7 +15,7 @@ public class EmailSignUpPage {
     private static final By CONFIRM_PASSWORD_INPUT = byXpath("//input[@name='confirmPassword']");
     private static final By NEXT_BUTTON = byXpath("//button[contains(.,'다음')]");
     private static final By KAKAO_SIGN_UP_BUTTON = byXpath("//p[text()='카카오로 3초 만에 시작하기']");
-    private static final By MORE_OPTIONS_BUTTON = byXpath("//a[@href='/plus/ko/register']");
+    private static final By MORE_OPTIONS_BUTTON = byXpath("//a[contains(@href, '/ko/register')]");
 
     public static SelenideElement signUpTitle() {
         return $(SIGN_UP_TITLE).shouldBe(Condition.visible);

@@ -46,9 +46,9 @@ accounts:
   plusNaver:
     id: "candy6731"
     pw: "class101!"
-  plusFaceBook:
-    id: "steven@101.inc"
-    pw: "class101!"
+  plusFacebook:
+    id: "class101_fb@101.inc"
+    pw: "Class101!"
   creatorHasRevenue:
     id: "revenue_referral_ko@101.inc"
     pw: "revenue_referral_ko@101.inc"

@@ -31,11 +31,11 @@ public class LecturePage {
     }
 
     public static SelenideElement videoQualitySettingButton() {
-        return $(VIDEO_SETTING_QUALITY_BUTTON).shouldBe(Condition.visible);
+        return $(VIDEO_SETTING_QUALITY_BUTTON);
     }
 
     public static SelenideElement autoPlaySettingButton() {
-        return $(VIDEO_SETTING_AUTO_PLAY_BUTTON).shouldBe(Condition.visible);
+        return $(VIDEO_SETTING_AUTO_PLAY_BUTTON);
     }
 
     public static SelenideElement firstUnCheckedRadioButton() {

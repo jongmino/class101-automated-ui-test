@@ -28,9 +28,7 @@ public class LoginWithFacebook implements TestCase {
         final String FACEBOOK_USER_ID = PropertyLoader.getProperties().accounts.get("plusFacebook").id;
         final String FACEBOOK_PASSWORD = PropertyLoader.getProperties().accounts.get("plusFacebook").pw;
         FaceBookLoginPage.emailInputElement().sendKeys(FACEBOOK_USER_ID);
-        FaceBookLoginPage.emailInputElement().shouldHave(text(FACEBOOK_USER_ID));
         FaceBookLoginPage.passwordInputElement().sendKeys(FACEBOOK_PASSWORD);
-        FaceBookLoginPage.passwordInputElement().shouldHave(text(FACEBOOK_PASSWORD));
         FaceBookLoginPage.loginButton().click();
         Home.trendingNowSectionTitle();
         return this;
