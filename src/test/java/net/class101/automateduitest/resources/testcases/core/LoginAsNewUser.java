@@ -2,6 +2,7 @@ package net.class101.automateduitest.resources.testcases.core;
 
 import net.class101.automateduitest.resources.common.Properties;
 import net.class101.automateduitest.resources.common.PropertyLoader;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.AllLoginPage;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.pages.plus.LoginPage;
@@ -22,7 +23,6 @@ public class LoginAsNewUser implements TestCase {
     public TestCase proceed() {
         Home.loginButton().click();
         LoginPage.allLoginButton().click();
-
         final Map<String, Properties.Account> accounts = PropertyLoader.getProperties().accounts;
         final String NEW_USER_ID = accounts.get("plusNewUser").id;
         final String NEW_PASSWORD = accounts.get("plusNewUser").pw;

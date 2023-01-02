@@ -11,7 +11,9 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import net.class101.automateduitest.resources.common.PropertyLoader;
+import net.class101.automateduitest.resources.common.Utils;
 import org.openqa.selenium.By;
+import org.testcontainers.shaded.org.bouncycastle.jce.provider.BrokenPBE;
 
 public class Home {
 
@@ -90,6 +92,8 @@ public class Home {
     }
 
     public class Actions {
+//        public static Boolean hasAdvertisement = null;
+
         public static void openPage() {
             final String plusHome = PropertyLoader.getProperties().urls.get("plusHome").staging;
             open(plusHome);
@@ -98,6 +102,14 @@ public class Home {
             if ($$(CLOSE_MESSAGE_BUTTON).size() > 0) {
                 $(CLOSE_MESSAGE_BUTTON).shouldBe(Condition.visible).click();
             }
+
+//            if (hasAdvertisement == null) {
+//                Utils.sleep(10000);
+//                hasAdvertisement = $$(CLOSE_MESSAGE_BUTTON).size() > 0;
+//            }
+//            if (hasAdvertisement) {
+//                $(CLOSE_MESSAGE_BUTTON).shouldBe(Condition.visible).click();
+//            }
         }
     }
 }

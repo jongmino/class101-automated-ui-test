@@ -22,7 +22,6 @@ public class CheckFreeTrial implements TestCase {
         SubscriptionPage.subscribeButton().shouldNotBe(Condition.disabled).click();
         return this;
     }
-
     @Override
     public void validate() {
         assertTrue(SelectPlanPage.spanContainsFreeTrial().exists());

@@ -66,4 +66,11 @@ public class Utils {
             }
         }
     }
+
+    public static void sleep(final long sleepAmount) {
+        try {
+            Thread.sleep(sleepAmount);
+        } catch (Exception e) {
+        }
+    }
 }
