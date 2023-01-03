@@ -21,6 +21,7 @@ public class DeleteFirstProduct implements TestCase {
         CreatorProductPage.deleteButton().click();
         CreatorProductPage.modalDeleteButton().click();
         CreatorProductPage.modalDeleteButton().should(Condition.disappear);
+        CreatorProductPage.deletedToast();
         return this;
     }
 

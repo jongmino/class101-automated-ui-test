@@ -10,17 +10,17 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
-
+@TestInstance(Lifecycle.PER_CLASS)
 public class PlayLectureTest {
 
     @BeforeAll
-    static void beforeAll() {
+    void beforeAll() {
         Home.Actions.openPage();
         SF.get(LoginAsSubscriber.class).proceed();
     }
 
     @AfterAll
-    static void afterAll() {
+    void afterAll() {
         SF.get(Logout.class).proceed();
     }
 

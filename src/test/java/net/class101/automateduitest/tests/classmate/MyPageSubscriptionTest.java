@@ -9,7 +9,7 @@ import net.class101.automateduitest.resources.testcases.core.LoginAsSubscriber;
 import net.class101.automateduitest.resources.testcases.core.Logout;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
-
+@TestInstance(Lifecycle.PER_CLASS)
 public class MyPageSubscriptionTest {
 
     @BeforeAll

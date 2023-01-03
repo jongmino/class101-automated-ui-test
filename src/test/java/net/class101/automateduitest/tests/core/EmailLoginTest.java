@@ -14,8 +14,8 @@ import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.TestMethodOrder;
 
-@DisplayName("이메일 로그인")
 @TestMethodOrder(MethodOrderer.MethodName.class)
+@TestInstance(Lifecycle.PER_CLASS)
 public class EmailLoginTest {
 
     @BeforeAll

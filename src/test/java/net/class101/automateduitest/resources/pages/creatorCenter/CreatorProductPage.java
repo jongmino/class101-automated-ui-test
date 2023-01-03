@@ -18,6 +18,7 @@ public class CreatorProductPage {
     private static final By MODAL_DELETE_BUTTON = byXpath("//div[@id='modalBottomSheet']//button[contains(.,'삭제')]");
     private static final By CREATOR_CENTER_LOGO = byXpath("//a[@href='/center/products']");
     private static final By PRIVATE_STATUS = byXpath("//p[text()='비공개']");
+    private static final By DELETED_TOAST = byXpath("//*[contains(.,'삭제되었어요.')]");
 
     public static SelenideElement createProductButton() {
         return $(CREATE_PRODUCT_BUTTON).shouldBe(Condition.visible);
@@ -45,6 +46,10 @@ public class CreatorProductPage {
 
     public static SelenideElement privateStatus() {
         return $(PRIVATE_STATUS).shouldBe(Condition.visible);
+    }
+
+    public static SelenideElement deletedToast() {
+        return $(DELETED_TOAST).shouldBe(Condition.visible);
     }
 
     public class Actions {
