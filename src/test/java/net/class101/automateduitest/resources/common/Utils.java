@@ -2,6 +2,7 @@ package net.class101.automateduitest.resources.common;
 
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
+import java.util.concurrent.Callable;
 import org.openqa.selenium.Keys;
 
 public class Utils {
@@ -46,23 +47,25 @@ public class Utils {
         return element;
     }
 
-    public static void waitFor(final boolean condition) {
-        waitFor(condition, 10000, 100);
+    public static void waitFor(final Callable<Boolean> func) {
+        waitFor(func, 10000, 100);
     }
 
-    public static void waitFor(final boolean condition, final long timeout) {
-        waitFor(condition, timeout, 100);
+    public static void waitFor(final Callable<Boolean> func, final long timeout) {
+        waitFor(func, timeout, 100);
     }
 
-    public static void waitFor(final boolean condition, final long timeout, final long sleepAmount) {
+    public static void waitFor(final Callable<Boolean> func, final long timeout, final long sleepAmount) {
         final long count = (timeout / sleepAmount) + 1;
         for (int i = 0; i < count; ++i) {
-            if (condition) {
-                break;
-            }
             try {
+                final Boolean status = func.call();
+                if (status == true) {
+                    return;
+                }
                 Thread.sleep(sleepAmount);
             } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
@@ -71,6 +74,7 @@ public class Utils {
         try {
             Thread.sleep(sleepAmount);
         } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

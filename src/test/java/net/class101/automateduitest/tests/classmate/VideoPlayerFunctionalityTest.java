@@ -6,11 +6,9 @@ import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.classmate.ChangeAutoPlay;
 import net.class101.automateduitest.resources.testcases.classmate.ChangePlaySpeed;
 import net.class101.automateduitest.resources.testcases.classmate.ChangeVideoQuality;
-import net.class101.automateduitest.resources.testcases.classmate.CheckPlayLecture;
 import net.class101.automateduitest.resources.testcases.core.LoginAsSubscriber;
 import net.class101.automateduitest.resources.testcases.core.Logout;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.TestInstance.Lifecycle;
 
 public class VideoPlayerFunctionalityTest {
 
