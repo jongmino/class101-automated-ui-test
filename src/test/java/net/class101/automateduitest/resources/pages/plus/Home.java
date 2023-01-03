@@ -92,24 +92,19 @@ public class Home {
     }
 
     public class Actions {
-//        public static Boolean hasAdvertisement = null;
+        public static Boolean hasAdvertisement = null;
 
         public static void openPage() {
             final String plusHome = PropertyLoader.getProperties().urls.get("plusHome").staging;
             open(plusHome);
 
-            //홈페이지에서 광고가 뜰 경우 끄기
-            if ($$(CLOSE_MESSAGE_BUTTON).size() > 0) {
+            if (hasAdvertisement == null) {
+                Utils.sleep(10000);
+                hasAdvertisement = $$(CLOSE_MESSAGE_BUTTON).size() > 0;
+            }
+            if (hasAdvertisement) {
                 $(CLOSE_MESSAGE_BUTTON).shouldBe(Condition.visible).click();
             }
-
-//            if (hasAdvertisement == null) {
-//                Utils.sleep(10000);
-//                hasAdvertisement = $$(CLOSE_MESSAGE_BUTTON).size() > 0;
-//            }
-//            if (hasAdvertisement) {
-//                $(CLOSE_MESSAGE_BUTTON).shouldBe(Condition.visible).click();
-//            }
         }
     }
 }
