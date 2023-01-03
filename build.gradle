@@ -1,3 +1,6 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 plugins {
     id 'java'
     id 'io.qameta.allure' version '2.9.3'
@@ -38,7 +41,27 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+    systemProperty("selenide.browser", System.getProperty("selenide.browser"))
+    String includedTagsProperty = System.getProperty("includeTags")
+    boolean includedTagsPropertySet = includedTagsProperty != null
+    String excludedTagsProperty = System.getProperty("excludedTags")
+    boolean excludedTagsPropertySet = excludedTagsProperty != null
+    if(includedTagsPropertySet && excludedTagsPropertySet) {
+        useJUnitPlatform{
+            includeTags includedTagsProperty
+            excludeTags excludedTagsProperty
+        }
+    } else if (includedTagsPropertySet && !excludedTagsPropertySet) {
+        useJUnitPlatform {
+            includeTags includedTagsProperty
+        }
+    } else if (!includedTagsPropertySet && excludedTagsPropertySet) {
+        useJUnitPlatform {
+            excludeTags excludedTagsProperty
+        }
+    } else {
+        useJUnitPlatform()
+    }
 }
 allure {
     autoconfigure = true
@@ -47,4 +70,60 @@ allure {
     useJUnit5 {
         version = "${allureVersion}"
     }
+}
+
+tasks.withType(Test) {
+    testLogging {
+        // set options for log level LIFECYCLE
+        events TestLogEvent.FAILED,
+                TestLogEvent.PASSED,
+                TestLogEvent.SKIPPED,
+                TestLogEvent.STANDARD_OUT
+        exceptionFormat TestExceptionFormat.FULL
+        showExceptions true
+        showCauses true
+        showStackTraces true
+
+        // set options for log level DEBUG and INFO
+        debug {
+            events TestLogEvent.STARTED,
+                    TestLogEvent.FAILED,
+                    TestLogEvent.PASSED,
+                    TestLogEvent.SKIPPED,
+                    TestLogEvent.STANDARD_ERROR,
+                    TestLogEvent.STANDARD_OUT
+            exceptionFormat TestExceptionFormat.FULL
+        }
+        info.events = debug.events
+        info.exceptionFormat = debug.exceptionFormat
+
+        afterSuite { desc, result ->
+            if (!desc.parent) { // will match the outermost suite
+                def output = "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} passed, ${result.failedTestCount} failed, ${result.skippedTestCount} skipped)"
+                def startItem = '|  ', endItem = '  |'
+                def repeatLength = startItem.length() + output.length() + endItem.length()
+                println('\n' + ('-' * repeatLength) + '\n' + startItem + output + endItem + '\n' + ('-' * repeatLength))
+            }
+        }
+    }
+}
+
+
+task libs(type: Sync) {
+    from configurations.testRuntimeClasspath
+    into "$buildDir/lib"
+}
+
+classes.dependsOn libs
+
+[compileJava, compileTestJava]*.options.collect {options -> options.encoding = 'UTF-8'}
+[compileJava, compileTestJava]*.options.collect {options -> options.debug = true}
+
+tasks.withType(Test).all { testTask ->
+    testTask.systemProperties = [
+            'file.encoding': 'UTF-8',
+            'BUILD_URL': System.getenv()['BUILD_URL']
+    ]
+    testTask.testLogging.showStandardStreams = true
+    testTask.outputs.upToDateWhen { false }
 }

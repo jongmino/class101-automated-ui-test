@@ -1,6 +1,7 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
 import com.codeborne.selenide.Condition;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.LecturePage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
@@ -21,19 +22,17 @@ public class ChangeAutoPlay implements TestCase {
 
     @Override
     public TestCase proceed() {
-        try {
-            LecturePage.Actions.openPage();
-            LecturePage.videoPlayer().hover();
-            LecturePage.settingButton().shouldBe(Condition.enabled).click();
-            LecturePage.autoPlaySettingButton().shouldBe(Condition.enabled).click();
-            autoPlayOptionValue = LecturePage.Actions.getUnCheckedAutoPlayOptionValue();
-            LecturePage.firstUnCheckedRadioButton().shouldBe(Condition.enabled).click();
-            Thread.sleep(1000);
-            LecturePage.settingButton().shouldBe(Condition.enabled).click();
-            currentAutoPlayOptionValue = LecturePage.Actions.getAutoPlayValue();
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        LecturePage.Actions.openPage();
+        LecturePage.videoPlayer().hover();
+        LecturePage.settingButton().shouldBe(Condition.enabled).click();
+        LecturePage.autoPlaySettingButton().shouldBe(Condition.enabled).click();
+        autoPlayOptionValue = LecturePage.Actions.getUnCheckedAutoPlayOptionValue();
+        LecturePage.firstUnCheckedRadioButton().shouldBe(Condition.enabled).click();
+        Utils.sleep(1000);
+        LecturePage.videoPlayer().hover();
+        LecturePage.settingButton().shouldBe(Condition.enabled).click();
+        currentAutoPlayOptionValue = LecturePage.Actions.getAutoPlayValue();
+
         return this;
     }
 

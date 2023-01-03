@@ -7,9 +7,8 @@ import net.class101.automateduitest.resources.testcases.TestCase;
 
 import static org.junit.Assert.assertTrue;
 
-//TODO: 분리
 /**
- * @설명:
+ * @설명: PDP에서 [클래스 101+시작하기] 버튼 클릭시 정기결제 구독 플랜 페이지로 정상 이동 되는지 테스트한다
  * @분류: 구독 메인 - 클래스 섹션 - 큐레이션 컬렉션 - 하단 CTA 버튼 [클래스 101+ 시작하기] 클릭 - 정기결제 구독 플랜 페이지로 이동한다
  * @테스트_선행조건:
  *  1) 홈페이지를 연다

@@ -11,9 +11,9 @@ import org.openqa.selenium.By;
 
 public class CreatorProductPage {
 
-    private static final By CREATE_PRODUCT_BUTTON = byXpath("//button[@style='color: rgb(255, 255, 255); --system-on-color:#ffffff;']//span[text()='상품 만들기']");
+    private static final By CREATE_PRODUCT_BUTTON = byXpath("//button[contains(@style,'color: rgb(255, 255, 255);')]//span[text()='상품 만들기']");
     private static final By PRODUCT_LIST = byXpath("//div[@aria-label='grid']/div");
-    private static final By FIRST_PRODUCT_SELECT_BOX = byXpath("(//div[@aria-label='grid']//label)[1]");
+    private static final By FIRST_PRODUCT_SELECT_BOX = byXpath("(//div[@aria-label='grid']//div[label])[1]");
     private static final By DELETE_BUTTON = byXpath("//button[contains(.,'삭제')]");
     private static final By MODAL_DELETE_BUTTON = byXpath("//div[@id='modalBottomSheet']//button[contains(.,'삭제')]");
     private static final By CREATOR_CENTER_LOGO = byXpath("//a[@href='/center/products']");

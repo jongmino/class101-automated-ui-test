@@ -2,6 +2,7 @@ package net.class101.automateduitest.resources.testcases.website;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
@@ -16,14 +17,9 @@ public class UnSaveClass implements TestCase {
 
     @Override
     public TestCase proceed() {
-        try {
-            Thread.sleep(2000);
-            //실시간 인기 클래스 첫번째 아이템 찜하기 취소
-            Home.firstSaveButtonOnTrendingNow().shouldBe(Condition.enabled).click();
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Utils.sleep(2000);
+        //실시간 인기 클래스 첫번째 아이템 찜하기 취소
+        Home.firstSaveButtonOnTrendingNow().shouldBe(Condition.enabled).click();
         return this;
     }
 

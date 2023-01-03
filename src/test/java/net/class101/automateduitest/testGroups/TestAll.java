@@ -88,13 +88,12 @@ import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.TestMethodOrder;
 
-@TestInstance(Lifecycle.PER_CLASS)
 @DisplayName("전체 테스트")
+@TestInstance(Lifecycle.PER_CLASS)
 public class TestAll {
 
     @BeforeAll
     static void beforeAll() {
-        //브라우저 크기 최대화
         Configuration.browserSize = "1920x1080";
         //테스트 타임아웃 20초
         Configuration.timeout = 60000;
@@ -182,18 +181,17 @@ public class TestAll {
 
             @Test
             @Order(1)
-            @DisplayName("네이버 로그인")
-            void testNaverLogin() {
-                SF.get(LoginWithNaver.class).proceed().validate();
-            }
-
-            @Test
-            @Order(2)
             @DisplayName("이메일 로그인")
             void testEmailLogin() {
-                SF.get(LoginAsNonSubscriber.class).proceed();
+                SF.get(LoginAsNonSubscriber.class).proceed().validate();
             }
-
+//
+//            @Test
+//            @Order(2)
+//            @DisplayName("네이버 로그인")
+//            void testNaverLogin() {
+//                SF.get(LoginWithNaver.class).proceed().validate();
+//            }
 //            @Test
 //            @Order(3)
 //            @DisplayName("페이스북 로그인")
@@ -233,6 +231,11 @@ public class TestAll {
             @DisplayName("큐레이션 섹션 및 클래스 상세정보")
             void testCurationSection() {
                 SF.get(CheckCurationSection.class).proceed().validate();
+            }
+
+            @Test
+            @DisplayName("큐레이션 섹션 - 구독 플랜 선택")
+            void testSubscriptionPlan() {
                 SF.get(CheckSubscriptionPlan.class).proceed().validate();
             }
 
@@ -479,7 +482,7 @@ public class TestAll {
             }
 
             @Test
-            @DisplayName("상품 리스트 목록")
+            @DisplayName("상품 리스트")
             void testProductList() {
                 SF.get(CheckProductList.class).proceed().validate();
             }

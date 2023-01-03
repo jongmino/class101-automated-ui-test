@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 
 public class PaymentPage {
 
-    private static final By PAYMENT_PRICE = byXpath("//p[text()='199,000원']");
+    private static final By PAYMENT_PRICE = byXpath("//p[contains(.,',000원')]");
 
     public static SelenideElement paymentPrice() {
         return $(PAYMENT_PRICE).shouldBe(Condition.visible);

@@ -11,8 +11,8 @@ import org.openqa.selenium.By;
 public class SettingPage {
 
     private static final By SETTING_SERVICE_REGION_BUTTON = withText("지역 설정");
-    private static final By SERVICE_REGION_US_BUTTON = byXpath("//p[contains(.,'United States / English')]");
-    private static final By SERVICE_REGION_JP_BUTTON = byXpath("//p[contains(.,'日本 / 日本語')]");
+    private static final By SERVICE_REGION_US_BUTTON = byXpath("//p[text()='United States / English']");
+    private static final By SERVICE_REGION_JP_BUTTON = byXpath("//p[text()='日本 / 日本語']");
 
     // 지역변경 버튼
     public static SelenideElement serviceRegionSettingButton() {

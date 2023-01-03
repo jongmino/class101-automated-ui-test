@@ -3,6 +3,7 @@ package net.class101.automateduitest.resources.testcases.classmate;
 import static org.junit.Assert.assertTrue;
 
 import com.codeborne.selenide.Condition;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.LecturePage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
@@ -18,20 +19,17 @@ public class ChangeVideoQuality implements TestCase {
 
     @Override
     public TestCase proceed() {
-        try {
+        LecturePage.Actions.openPage();
+        LecturePage.videoPlayer().hover();
+        LecturePage.settingButton().shouldBe(Condition.enabled).click();
+        LecturePage.videoQualitySettingButton().shouldBe(Condition.visible).shouldBe(Condition.enabled).click();
+        qualityOptionValue = LecturePage.firstUnCheckedRadioButton().find("input").getValue();
+        LecturePage.firstUnCheckedRadioButton().shouldBe(Condition.enabled).click();
+        Utils.sleep(1000);
+        LecturePage.videoPlayer().hover();
+        LecturePage.settingButton().shouldBe(Condition.enabled).click();
+        currentQualityValue = LecturePage.Actions.getVideoQualityValue();
 
-            LecturePage.Actions.openPage();
-            LecturePage.videoPlayer().hover();
-            LecturePage.settingButton().shouldBe(Condition.enabled).click();
-            LecturePage.videoQualitySettingButton().shouldBe(Condition.visible).shouldBe(Condition.enabled).click();
-            qualityOptionValue = LecturePage.firstUnCheckedRadioButton().find("input").getValue();
-            LecturePage.firstUnCheckedRadioButton().shouldBe(Condition.enabled).click();
-            Thread.sleep(1000);
-            LecturePage.settingButton().shouldBe(Condition.enabled).click();
-            currentQualityValue = LecturePage.Actions.getVideoQualityValue();
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
         return this;
     }
 
