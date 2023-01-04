@@ -1,6 +1,7 @@
 package net.class101.automateduitest.tests.creator;
 
 import com.codeborne.selenide.Configuration;
+import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.testcases.core.Logout;
@@ -20,7 +21,7 @@ public class ClassCommentTest {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.timeout = 40000;
+        Configuration.timeout = PropertyLoader.getProperties().timeout;
         CreatorHome.Actions.openPage();
         SF.get(LoginAsCreatorHasClass.class).proceed();
     }

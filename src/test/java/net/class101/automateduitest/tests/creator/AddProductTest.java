@@ -2,6 +2,7 @@ package net.class101.automateduitest.tests.creator;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
@@ -26,7 +27,7 @@ public class AddProductTest {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.timeout = 20000;
+        Configuration.timeout = PropertyLoader.getProperties().timeout;
         CreatorHome.Actions.openPage();
         SF.get(LoginAsCreatorNew.class).proceed();
     }

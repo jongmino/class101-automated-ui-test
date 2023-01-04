@@ -1,5 +1,7 @@
 package net.class101.automateduitest.tests.commerce;
 
+import com.codeborne.selenide.Configuration;
+import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.commerce.CheckCancelSubscription;
@@ -16,6 +18,7 @@ public class CancelSubscriptionTest {
 
     @BeforeAll
     static void beforeAll() {
+        Configuration.timeout = PropertyLoader.getProperties().timeout;
         Home.Actions.openPage();
         SF.get(LoginAsYearlySubscriber.class).proceed();
     }

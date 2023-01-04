@@ -3,10 +3,19 @@ package net.class101.automateduitest.resources.common;
 import java.util.Map;
 
 public class Properties {
+    public long timeout;
     public Map<String, Url> urls;
     public Map<String, Account> accounts;
 
     public Properties() {
+    }
+
+    public long getTimeout() {
+        return timeout;
+    }
+
+    public void setTimeout(long timeout) {
+        this.timeout = timeout;
     }
 
     public Map<String, Url> getUrls() {

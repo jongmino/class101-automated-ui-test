@@ -1,6 +1,7 @@
 package net.class101.automateduitest.tests.classmate;
 
 import com.codeborne.selenide.Configuration;
+import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.classmate.CheckLectureTabMenu;
@@ -17,7 +18,7 @@ public class LectureTabMenuTest {
 
     @BeforeAll
     void beforeAll() {
-        Configuration.timeout = 20000;
+        Configuration.timeout = PropertyLoader.getProperties().timeout;
         Home.Actions.openPage();
         SF.get(LoginAsSubscriber.class).proceed();
     }

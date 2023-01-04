@@ -16,7 +16,7 @@ public class VideoPlayerFunctionalityTest {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.timeout = 20000;
+        Configuration.timeout = PropertyLoader.getProperties().timeout;
         Home.Actions.openPage();
         SF.get(LoginAsSubscriber.class).proceed();
     }
