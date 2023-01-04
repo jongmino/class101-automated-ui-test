@@ -1,8 +1,7 @@
 package net.class101.automateduitest.tests.commerce;
 
-import com.codeborne.selenide.Configuration;
-import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.common.SF;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.commerce.CheckYearlySubscription;
 import net.class101.automateduitest.resources.testcases.core.LoginAsNonSubscriber;
@@ -18,7 +17,7 @@ public class SubscribePlusPlanTest {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.timeout = PropertyLoader.getProperties().timeout;
+        Utils.setTestConfig();
         Home.Actions.openPage();
         SF.get(LoginAsNonSubscriber.class).proceed();
     }

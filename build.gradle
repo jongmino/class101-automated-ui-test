@@ -41,7 +41,7 @@ dependencies {
 }
 
 test {
-    systemProperty("selenide.browser", System.getProperty("selenide.browser"))
+    systemProperty "test.browser", System.getProperty("test.browser")
     String includedTagsProperty = System.getProperty("includeTags")
     boolean includedTagsPropertySet = includedTagsProperty != null
     String excludedTagsProperty = System.getProperty("excludedTags")

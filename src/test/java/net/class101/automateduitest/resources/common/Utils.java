@@ -1,12 +1,18 @@
 package net.class101.automateduitest.resources.common;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import java.util.concurrent.Callable;
 import org.openqa.selenium.Keys;
 
 public class Utils {
-
+    public static void setTestConfig() {
+        String browser = System.getProperty("test.browser") == null? "chrome" : System.getProperty("test.browser");
+        System.out.println(browser);
+        Configuration.browser = PropertyLoader.getProperties().browser.replace("${sys:test.browser}", browser);
+        Configuration.timeout = PropertyLoader.getProperties().timeout;
+    }
     public static String getUrl() {
         return WebDriverRunner.url();
     }

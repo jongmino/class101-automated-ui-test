@@ -6,6 +6,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.common.SF;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.resources.pages.plus.Home;
@@ -96,7 +97,7 @@ public class TestAll {
     void beforeAll() {
         Configuration.browserSize = "1920x1080";
         //테스트 타임아웃 20초
-        Configuration.timeout = PropertyLoader.getProperties().timeout;
+        Utils.setTestConfig();
         //브라우저 창 위치 초기화
         Configuration.browserPosition = "0x0";
     }

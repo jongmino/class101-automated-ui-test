@@ -1,15 +1,12 @@
 package net.class101.automateduitest.tests.core;
 
-import com.codeborne.selenide.Configuration;
-import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.common.SF;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.core.LoginWithFacebook;
 import net.class101.automateduitest.resources.testcases.core.Logout;
-import org.junit.Ignore;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
@@ -19,7 +16,7 @@ public class FaceBookLoginTest {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.timeout = PropertyLoader.getProperties().timeout;
+        Utils.setTestConfig();
         Home.Actions.openPage();
     }
 

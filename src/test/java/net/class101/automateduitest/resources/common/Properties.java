@@ -4,8 +4,17 @@ import java.util.Map;
 
 public class Properties {
     public long timeout;
+    public String browser;
     public Map<String, Url> urls;
     public Map<String, Account> accounts;
+
+    public String getBrowser() {
+        return browser;
+    }
+
+    public void setBrowser(String browser) {
+        this.browser = browser;
+    }
 
     public Properties() {
     }

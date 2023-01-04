@@ -1,10 +1,8 @@
 package net.class101.automateduitest.tests.creator;
 
-import com.codeborne.selenide.Configuration;
-import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.common.SF;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
-import net.class101.automateduitest.resources.testcases.core.Logout;
 import net.class101.automateduitest.resources.testcases.creator.CheckCreatorGuideTab;
 import net.class101.automateduitest.resources.testcases.creator.LoginAsCreatorHasClass;
 import net.class101.automateduitest.resources.testcases.creator.LogoutCreatorCenter;
@@ -19,7 +17,7 @@ public class GuideCenterTest {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.timeout = PropertyLoader.getProperties().timeout;
+        Utils.setTestConfig();
         CreatorHome.Actions.openPage();
         SF.get(LoginAsCreatorHasClass.class).proceed();
     }

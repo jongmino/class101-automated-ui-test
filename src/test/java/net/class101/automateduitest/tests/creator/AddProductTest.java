@@ -1,12 +1,9 @@
 package net.class101.automateduitest.tests.creator;
 
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
-import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.common.SF;
+import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
-import net.class101.automateduitest.resources.testcases.core.Logout;
 import net.class101.automateduitest.resources.testcases.creator.CheckAddClass;
 import net.class101.automateduitest.resources.testcases.creator.CheckAddDigitalFile;
 import net.class101.automateduitest.resources.testcases.creator.CheckAddEBook;
@@ -27,7 +24,7 @@ public class AddProductTest {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.timeout = PropertyLoader.getProperties().timeout;
+        Utils.setTestConfig();
         CreatorHome.Actions.openPage();
         SF.get(LoginAsCreatorNew.class).proceed();
     }
