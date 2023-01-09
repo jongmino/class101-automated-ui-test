@@ -55,7 +55,7 @@ public class CreatorProductPage {
     public class Actions {
         public static void openPage() {
             final String STAGING_CREATOR_PRODUCT_PAGE =
-                PropertyLoader.getProperties().urls.get("creatorProduct").staging;
+                PropertyLoader.getProperties().urls.get("creatorProduct");
             open(STAGING_CREATOR_PRODUCT_PAGE);
         }
     }

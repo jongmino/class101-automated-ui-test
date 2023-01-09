@@ -72,7 +72,7 @@ public class MyPage {
 
     public class Actions {
         public static void openPage() {
-            final String plusMyPage = PropertyLoader.getProperties().urls.get("plusMyPage").staging;
+            final String plusMyPage = PropertyLoader.getProperties().urls.get("plusMyPage");
             open(plusMyPage);
         }
     }

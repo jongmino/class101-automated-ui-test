@@ -1,0 +1,46 @@
+timeout: 60000
+
+browser: ${sys:test.browser}
+
+urls:
+  plusHome: "https://web-preview-master.class101.net/ko"
+  plusSignUpPage: "https://web-preview-master.class101.net/ko/register"
+  plusMyPage: "https://web-preview-master.class101.net/ko/mypage"
+  creatorHome: "https://staging-creator.class101.net/"
+  creatorProduct: "https://staging-creator.class101.net/center/products"
+  lecturePage: "https://web-preview-master.class101.net/ko/classes/5f0a82797438143a52a1c86b/lectures/5f27a08ded2c180021dd1885"
+  kitLecturePage: "https://web-preview-master.class101.net/ko/products/5e4b42bb3887d3076ee5976b"
+  selectPlanPage: "https://web-preview-master.class101.net/ko/payment/select-subscription-product"
+  subscriptionPage: "https://web-preview-master.class101.net/ko/mypage/subscription"
+
+accounts:
+  plusNewUser:
+    id: "test_1@101.inc"
+    pw: "class101!"
+  plusNonSubscriber:
+    id: "referral_1@101.inc"
+    pw: "class101!"
+  plusSubscriber:
+    id: "sbtestc422@101.inc"
+    pw: "test001!"
+  plusYearlySubscriber:
+    id: "referral_10@101.inc"
+    pw: "class101!"
+  plusHasKit:
+    id: "dora.testc@gmail.com"
+    pw: "thwjd1205!"
+  plusNaver:
+    id: "candy6731"
+    pw: "class101!"
+  plusFacebook:
+    id: "class101_fb@101.inc"
+    pw: "Class101!"
+  creatorHasRevenue:
+    id: "revenue_referral_ko@101.inc"
+    pw: "revenue_referral_ko@101.inc"
+  creatorHasClass:
+    id: "sdtest1@101.inc"
+    pw: "class101!"
+  creatorNew:
+    id: "referral_2@101.inc"
+    pw: "class101!"

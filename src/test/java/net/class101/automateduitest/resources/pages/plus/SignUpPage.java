@@ -44,7 +44,7 @@ public class SignUpPage {
 
     public class Actions {
         public static void openPage() {
-            final String plusSignUpPage = PropertyLoader.getProperties().urls.get("plusSignUpPage").staging;
+            final String plusSignUpPage = PropertyLoader.getProperties().urls.get("plusSignUpPage");
             open(plusSignUpPage);
         }
     }

@@ -39,7 +39,7 @@ public class ProductDetailPage {
 
     public class Actions {
         public static void openKitPage() {
-            final String kitLecturePage = PropertyLoader.getProperties().urls.get("kitLecturePage").staging;
+            final String kitLecturePage = PropertyLoader.getProperties().urls.get("kitLecturePage");
             open(kitLecturePage);
         }
     }

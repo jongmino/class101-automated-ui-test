@@ -41,27 +41,7 @@ dependencies {
 }
 
 test {
-    systemProperty "test.browser", System.getProperty("test.browser")
-    String includedTagsProperty = System.getProperty("includeTags")
-    boolean includedTagsPropertySet = includedTagsProperty != null
-    String excludedTagsProperty = System.getProperty("excludedTags")
-    boolean excludedTagsPropertySet = excludedTagsProperty != null
-    if(includedTagsPropertySet && excludedTagsPropertySet) {
-        useJUnitPlatform{
-            includeTags includedTagsProperty
-            excludeTags excludedTagsProperty
-        }
-    } else if (includedTagsPropertySet && !excludedTagsPropertySet) {
-        useJUnitPlatform {
-            includeTags includedTagsProperty
-        }
-    } else if (!includedTagsPropertySet && excludedTagsPropertySet) {
-        useJUnitPlatform {
-            excludeTags excludedTagsProperty
-        }
-    } else {
-        useJUnitPlatform()
-    }
+    useJUnitPlatform()
 }
 allure {
     autoconfigure = true

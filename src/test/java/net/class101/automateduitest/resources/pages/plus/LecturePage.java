@@ -73,7 +73,7 @@ public class LecturePage {
         private static final By UNCHECKED_AUTO_PLAY_OPTION_TEXT = By.xpath("//div[label[input[@type='radio' and not(@checked)]]]//p");
 
         public static void openPage() {
-            final String LECTURE_PAGE_URL = PropertyLoader.getProperties().urls.get("lecturePage").staging;
+            final String LECTURE_PAGE_URL = PropertyLoader.getProperties().urls.get("lecturePage");
             open(LECTURE_PAGE_URL);
         }
 

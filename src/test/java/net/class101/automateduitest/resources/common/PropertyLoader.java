@@ -2,12 +2,13 @@ package net.class101.automateduitest.resources.common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-
 import java.io.File;
 
 public class PropertyLoader {
 
-    private static final String propertiesFilePath = "src/test/resources/properties.yaml";
+    private static final String PROPERTY_FILE_PATH = "src/test/resources/properties-%s.yaml";
+    private static final String DEFAULT_PROFILE = "staging";
+    private static final String ACTIVE_PROFILE_KEY = "activeProfile";
     private static Properties properties;
     private static ObjectMapper mapper;
 
@@ -26,9 +27,17 @@ public class PropertyLoader {
     }
 
     public static Properties getProperties() {
-        if (properties == null) {
-            properties = load(propertiesFilePath);
+        String profile = System.getProperty(ACTIVE_PROFILE_KEY);
+        System.out.println("ActiveProfile: " + profile);
+
+        if (profile == null) {
+            profile = DEFAULT_PROFILE;
         }
+        System.out.println("ActiveProfile: " + profile);
+        if (properties == null) {
+            properties = load(String.format(PROPERTY_FILE_PATH, profile));
+        }
+
         return properties;
     }
 }

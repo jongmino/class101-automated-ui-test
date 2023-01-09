@@ -95,7 +95,7 @@ public class Home {
         public static Boolean hasAdvertisement = null;
 
         public static void openPage() {
-            final String plusHome = PropertyLoader.getProperties().urls.get("plusHome").staging;
+            final String plusHome = PropertyLoader.getProperties().urls.get("plusHome");
             open(plusHome);
 
             if (hasAdvertisement == null) {

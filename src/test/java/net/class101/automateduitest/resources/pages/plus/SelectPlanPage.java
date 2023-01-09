@@ -30,7 +30,7 @@ public class SelectPlanPage {
 
     public class Actions {
         public static void openPage() {
-            final String selectPlanPage = PropertyLoader.getProperties().urls.get("selectPlanPage").staging;
+            final String selectPlanPage = PropertyLoader.getProperties().urls.get("selectPlanPage");
             open(selectPlanPage);
         }
     }

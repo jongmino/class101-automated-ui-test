@@ -5,7 +5,7 @@ import java.util.Map;
 public class Properties {
     public long timeout;
     public String browser;
-    public Map<String, Url> urls;
+    public Map<String, String> urls;
     public Map<String, Account> accounts;
 
     public String getBrowser() {
@@ -27,11 +27,11 @@ public class Properties {
         this.timeout = timeout;
     }
 
-    public Map<String, Url> getUrls() {
+    public Map<String, String> getUrls() {
         return urls;
     }
 
-    public void setUrls(Map<String, Url> value) {
+    public void setUrls(Map<String, String> value) {
         this.urls = value;
     }
 
@@ -62,31 +62,6 @@ public class Properties {
 
         public void setPw(String value) {
             this.pw = value;
-        }
-    }
-
-    public static class Url {
-
-        public String dev;
-        public String staging;
-
-        public Url() {
-        }
-
-        public String getDev() {
-            return dev;
-        }
-
-        public void setDev(String dev) {
-            this.dev = dev;
-        }
-
-        public String getStaging() {
-            return staging;
-        }
-
-        public void setStaging(String staging) {
-            this.staging = staging;
         }
     }
 }

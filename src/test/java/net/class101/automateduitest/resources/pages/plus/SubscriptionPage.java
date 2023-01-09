@@ -29,7 +29,7 @@ public class SubscriptionPage {
 
     public class Actions {
         public static void openPage() {
-            final String subscriptionPage = PropertyLoader.getProperties().urls.get("subscriptionPage").staging;
+            final String subscriptionPage = PropertyLoader.getProperties().urls.get("subscriptionPage");
             open(subscriptionPage);
         }
     }
