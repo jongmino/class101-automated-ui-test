@@ -4,10 +4,20 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 plugins {
     id 'java'
     id 'io.qameta.allure' version '2.9.3'
+    id 'com.google.cloud.tools.jib' version '3.3.1'
+}
+
+def getGitHash = { ->
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine "git", "rev-parse", "--short", "HEAD"
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
 }
 
 group 'net.class101'
-version '1.0-SNAPSHOT'
+version getGitHash()
 
 repositories {
     mavenCentral()
@@ -43,12 +53,30 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
 allure {
     autoconfigure = true
     version = "${allureVersion}"
 
     useJUnit5 {
         version = "${allureVersion}"
+    }
+}
+
+jib {
+    to {
+        image = '212011163676.dkr.ecr.ap-northeast-2.amazonaws.com/class101-ui-test'
+        project.afterEvaluate {
+            tags = [version]
+        }
+    }
+
+    container {
+        creationTime = 'USE_CURRENT_TIMESTAMP'
+        jvmFlags = [
+                '-javaagent:/agents/dd-java-agent.jar',
+                '-Ddd.trace.db.client.split-by-instance=TRUE'
+        ]
     }
 }
 
