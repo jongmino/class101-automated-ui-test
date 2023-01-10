@@ -27,12 +27,11 @@ public class PropertyLoader {
 
     public static Properties getProperties() {
         String profile = System.getenv("activeProfile");
-        System.out.println("ActiveProfile: " + profile);
 
         if (profile == null || profile.equals("")) {
             profile = DEFAULT_PROFILE;
         }
-        System.out.println("ActiveProfile: " + profile);
+        
         if (properties == null) {
             properties = load(String.format(PROPERTY_FILE_PATH, profile));
         }

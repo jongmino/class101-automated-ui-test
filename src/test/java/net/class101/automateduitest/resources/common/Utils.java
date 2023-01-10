@@ -8,7 +8,7 @@ import org.openqa.selenium.Keys;
 
 public class Utils {
     public static void setTestConfig() {
-        String browser = System.getenv("browser") == null? "chrome" : System.getenv("browser");
+        String browser = System.getenv("browser") == null ? "chrome" : System.getenv("browser");
         System.out.println(browser);
         Configuration.browser = browser;
         Configuration.timeout = PropertyLoader.getProperties().timeout;

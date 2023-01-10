@@ -13,6 +13,10 @@ if [ -z $platform ];
   then platform=" --tests *TestAll*"
 fi
 
+if [ -z $browser ];
+  then browser=chrome
+fi
+
 export browser=$browser;
 export activeProfile=$activeProfile;
 
