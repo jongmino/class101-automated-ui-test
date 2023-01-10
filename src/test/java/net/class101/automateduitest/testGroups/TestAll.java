@@ -95,11 +95,8 @@ public class TestAll {
 
     @BeforeAll
     void beforeAll() {
-        Configuration.browserSize = "1920x1080";
-        //테스트 타임아웃 20초
+        //test config
         Utils.setTestConfig();
-        //브라우저 창 위치 초기화
-        Configuration.browserPosition = "0x0";
     }
 
     @Nested

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+while getopts b:p:a: flag;
+do
+  case "${flag}" in
+    b) browser=${OPTARG};;
+    p) platform+=" --tests *${OPTARG}*";;
+    a) activeProfile=${OPTARG};;
+  esac
+done
+
+if [ -z $platform ];
+  then platform=" --tests *TestAll*"
+fi
+
+export browser=$browser;
+export activeProfile=$activeProfile;
+
+./gradlew clean test $platform

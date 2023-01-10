@@ -8,7 +8,6 @@ public class PropertyLoader {
 
     private static final String PROPERTY_FILE_PATH = "src/test/resources/properties-%s.yaml";
     private static final String DEFAULT_PROFILE = "staging";
-    private static final String ACTIVE_PROFILE_KEY = "activeProfile";
     private static Properties properties;
     private static ObjectMapper mapper;
 
@@ -27,10 +26,10 @@ public class PropertyLoader {
     }
 
     public static Properties getProperties() {
-        String profile = System.getProperty(ACTIVE_PROFILE_KEY);
+        String profile = System.getenv("activeProfile");
         System.out.println("ActiveProfile: " + profile);
 
-        if (profile == null) {
+        if (profile == null || profile.equals("")) {
             profile = DEFAULT_PROFILE;
         }
         System.out.println("ActiveProfile: " + profile);

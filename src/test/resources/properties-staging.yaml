@@ -1,7 +1,5 @@
 timeout: 60000
 
-browser: ${sys:test.browser}
-
 urls:
   plusHome: "https://staging.class101.net/ko"
   plusSignUpPage: "https://staging.class101.net/ko/register"
