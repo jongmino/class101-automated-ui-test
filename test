@@ -4,7 +4,20 @@ while getopts b:p:a: flag;
 do
   case "${flag}" in
     b) browser=${OPTARG};;
-    p) platform+=" --tests *${OPTARG}*";;
+    p)
+      case ${OPTARG} in
+        core)
+          fullPlatformName="CorePlatform";;
+        website)
+          fullPlatformName="WebsitePlatform";;
+        creator)
+          fullPlatformName="CreatorPlatform";;
+        classmate)
+          fullPlatformName="ClassmatePlatform";;
+        commerce)
+          fullPlatformName="CommercePlatform";;
+      esac
+      platform+=" --tests *$fullPlatformName*";;
     a) activeProfile=${OPTARG};;
   esac
 done
