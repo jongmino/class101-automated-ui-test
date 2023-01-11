@@ -7,7 +7,8 @@ urls:
   creatorHome: "https://creator-web-preview-master.class101.net/"
   creatorProduct: "https://creator-web-preview-master.class101.net/center/products"
   lecturePage: "https://web-preview-master.class101.net/ko/classes/5f0a82797438143a52a1c86b/lectures/5f27a08ded2c180021dd1885"
-  kitLecturePage: "https://web-preview-master.class101.net/ko/products/5e4b42bb3887d3076ee5976b"
+  productDetailPage: "https://staging.class101.net/ko/products/5f0a82797438143a52a1c86c"
+  kitPDP: "https://web-preview-master.class101.net/ko/products/5e4b42bb3887d3076ee5976b"
   selectPlanPage: "https://web-preview-master.class101.net/ko/payment/select-subscription-product"
   subscriptionPage: "https://web-preview-master.class101.net/ko/mypage/subscription"
 

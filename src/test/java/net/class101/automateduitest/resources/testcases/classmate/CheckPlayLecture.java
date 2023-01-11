@@ -19,7 +19,7 @@ public class CheckPlayLecture implements TestCase {
 
     @Override
     public TestCase proceed() {
-        ProductDetailPage.Actions.openKitPage();
+        ProductDetailPage.Actions.openPage();
         ProductDetailPage.playLectureButton().shouldNotBe(Condition.disabled).click();
         return this;
     }

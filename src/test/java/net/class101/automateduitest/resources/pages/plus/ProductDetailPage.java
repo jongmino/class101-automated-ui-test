@@ -38,9 +38,13 @@ public class ProductDetailPage {
     }
 
     public class Actions {
+        public static void openPage() {
+            final String productDetailPage = PropertyLoader.getProperties().urls.get("productDetailPage");
+            open(productDetailPage);
+        }
         public static void openKitPage() {
-            final String kitLecturePage = PropertyLoader.getProperties().urls.get("kitLecturePage");
-            open(kitLecturePage);
+            final String kitPDP = PropertyLoader.getProperties().urls.get("kitPDP");
+            open(kitPDP);
         }
     }
 }
