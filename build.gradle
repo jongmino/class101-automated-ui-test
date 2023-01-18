@@ -64,6 +64,10 @@ allure {
 }
 
 jib {
+    from {
+        image = 'openjdk:17'
+    }
+
     to {
         image = '212011163676.dkr.ecr.ap-northeast-2.amazonaws.com/class101-ui-test'
         project.afterEvaluate {

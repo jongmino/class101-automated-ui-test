@@ -22,7 +22,7 @@ do
   esac
 done
 
-if [ -z $platform ];
+if [[ -z $platform ]];
   then platform=" --tests *TestAll*"
 fi
 
