@@ -23,7 +23,7 @@ public class Home {
     private static final By FIRST_SAVE_BUTTON_ON_TRENDING_NOW = byXpath("(//section[contains(.,'실시간 인기 클래스')]//span[*[local-name()='svg']])[4]");
     private static final By SAVED_CLASSES_SECTION_TITLE = byXpath("//h4[contains(.,'찜한 클래스')]");
     private static final By RECOMMENDED_CLASS_SECTION = withText("추천 클래스");
-    private static final By RECOMMENDED_CATEGORY_SECTION = byXpath("//span[text()='관심 클래스를 발견하지 못하셨나요?']");
+    private static final By RECOMMENDED_CATEGORY_SECTION = byXpath("//*[text()='관심 클래스를 발견하지 못하셨나요?']");
     private static final By ENGLISH_CATEGORY_BUTTON = byXpath("//button[contains(.,'영어')]");
     private static final By FIRST_CURATION_ITEM = byXpath("//img[@alt='desktop-hero-banner']");
     private static final By MY_CLASS_SECTION = byXpath("//h4[contains(.,'내 클래스')]");

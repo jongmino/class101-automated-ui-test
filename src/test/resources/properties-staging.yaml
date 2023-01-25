@@ -4,6 +4,7 @@ urls:
   plusHome: "https://staging.class101.net/ko"
   plusSignUpPage: "https://staging.class101.net/ko/register"
   plusMyPage: "https://staging.class101.net/ko/mypage"
+  plusOrderPage: "https://staging.class101.net/ko/mypage/orders"
   creatorHome: "https://staging-creator.class101.net/"
   creatorProduct: "https://staging-creator.class101.net/center/products"
   lecturePage: "https://staging.class101.net/plus/ko/classes/5f0a82797438143a52a1c86b/lectures/5f27a08ded2c180021dd1885"

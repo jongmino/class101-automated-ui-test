@@ -11,9 +11,6 @@ public class Utils {
         String browser = System.getenv("browser") == null ? "chrome" : System.getenv("browser");
         System.out.println(browser);
         Configuration.browser = browser;
-        if(Configuration.browser == "chrome") {
-            Configuration.headless = true;
-        }
         Configuration.timeout = PropertyLoader.getProperties().timeout;
         Configuration.browserSize = "1920x1080";
         Configuration.browserPosition = "0x0";

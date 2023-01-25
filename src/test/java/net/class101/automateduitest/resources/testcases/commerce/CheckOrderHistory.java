@@ -17,7 +17,7 @@ public class CheckOrderHistory implements TestCase {
 
     @Override
     public TestCase proceed() {
-        MyPage.Actions.openPage();
+        OrderPage.Actions.openPage();
         return this;
     }
 

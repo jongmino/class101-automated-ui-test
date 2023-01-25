@@ -2,9 +2,11 @@ package net.class101.automateduitest.resources.pages.plus;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import net.class101.automateduitest.resources.common.PropertyLoader;
 import org.openqa.selenium.By;
 
 public class OrderPage {
@@ -28,5 +30,12 @@ public class OrderPage {
 
     public static SelenideElement refundableOrderDetailButton() {
         return $(REFUNDABLE_ORDER_DETAIL_BUTTON).shouldBe(Condition.visible);
+    }
+
+    public class Actions {
+        public static void openPage(){
+            final String plusOrderPage = PropertyLoader.getProperties().urls.get("plusOrderPage");
+            open(plusOrderPage);
+        }
     }
 }

@@ -38,7 +38,7 @@ public class CreatorNewClassPage {
     private static final By REQUEST_REVIEW_BUTTON = byXpath("//button[contains(@style,'rgb(255, 255, 255)')]//span[text()='검토 요청']");
     private static final By MODAL_REQUEST_REVIEW_BUTTON = byXpath("//div[@id='modalBottomSheet']//span[text()='검토 요청']");
     private static final By IN_REVIEW_STATUS = byXpath("//div[*[text()='상품 상태']]//p[text()='검토 중']");
-    private static final By IMG_UNDER_CLASS_INFO = byXpath("//div[div[span[text()='클래스 기본 정보']]]//form//img");
+    private static final By IMG_UNDER_CLASS_INFO = byXpath("//div[div[*[text()='클래스 기본 정보']]]//form//img");
 
     public static SelenideElement addClassTitle() {
         return $(ADD_CLASS_TITLE).shouldBe(Condition.visible);
