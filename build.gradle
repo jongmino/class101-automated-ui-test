@@ -7,17 +7,17 @@ plugins {
     id 'com.google.cloud.tools.jib' version '3.3.1'
 }
 
-//def getGitHash = { ->
-//    def stdout = new ByteArrayOutputStream()
-//    exec {
-//        commandLine "git", "rev-parse", "--short", "HEAD"
-//        standardOutput = stdout
-//    }
-//    return stdout.toString().trim()
-//}
+def getGitHash = { ->
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine "git", "rev-parse", "--short", "HEAD"
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
+}
 
 group 'net.class101'
-//version getGitHash()
+version getGitHash()
 
 repositories {
     mavenCentral()
