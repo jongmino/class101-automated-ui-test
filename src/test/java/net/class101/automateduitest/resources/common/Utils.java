@@ -5,12 +5,14 @@ import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import java.util.concurrent.Callable;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class Utils {
     public static void setTestConfig() {
         String browser = System.getenv("browser") == null ? "chrome" : System.getenv("browser");
         System.out.println(browser);
-        Configuration.browser = browser;
+        setBrowserOptions(browser);
         Configuration.timeout = PropertyLoader.getProperties().timeout;
         Configuration.browserSize = "1920x1080";
         Configuration.browserPosition = "0x0";
@@ -83,6 +85,22 @@ public class Utils {
             Thread.sleep(sleepAmount);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private static void setBrowserOptions(final String browser) {
+        Configuration.browser = browser;
+        switch(browser){
+            case "chrome":
+                ChromeOptions chromeOptions = new ChromeOptions().setHeadless(true).addArguments("--lang=ko_KR");
+                Configuration.browserCapabilities = chromeOptions;
+                break;
+            case "firefox":
+                FirefoxOptions firefoxOptions = new FirefoxOptions().setHeadless(true).addArguments("--lang=ko_KR");
+                Configuration.browserCapabilities = firefoxOptions;
+                break;
+            default:
+                break;
         }
     }
 }

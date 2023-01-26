@@ -2,9 +2,7 @@ package net.class101.automateduitest.testGroups;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
