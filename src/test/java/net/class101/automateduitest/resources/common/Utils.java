@@ -92,11 +92,13 @@ public class Utils {
         Configuration.browser = browser;
         switch(browser){
             case "chrome":
-                ChromeOptions chromeOptions = new ChromeOptions().setHeadless(true).addArguments("--lang=ko_KR");
+                ChromeOptions chromeOptions = new ChromeOptions().addArguments("--lang=ko_KR");
+//                chromeOptions.setHeadless(true);
                 Configuration.browserCapabilities = chromeOptions;
                 break;
             case "firefox":
-                FirefoxOptions firefoxOptions = new FirefoxOptions().setHeadless(true).addArguments("--lang=ko_KR");
+                FirefoxOptions firefoxOptions = new FirefoxOptions().addArguments("--lang=ko_KR");
+//                firefoxOptions.setHeadless(true);
                 Configuration.browserCapabilities = firefoxOptions;
                 break;
             default:

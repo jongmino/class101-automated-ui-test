@@ -1,6 +1,6 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.common.Utils;

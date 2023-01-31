@@ -7,7 +7,7 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorNewClas
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 크리에이터 센터에서 클래스 만들기 페이지로 정상 진입이 가능한지 테스트한다

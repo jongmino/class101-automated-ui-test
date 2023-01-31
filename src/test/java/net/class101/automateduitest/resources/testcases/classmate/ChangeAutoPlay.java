@@ -5,7 +5,7 @@ import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.LecturePage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 비디오 플레이어에서 자동 재생 옵션을 변경 할 수 있는지 테스트한다

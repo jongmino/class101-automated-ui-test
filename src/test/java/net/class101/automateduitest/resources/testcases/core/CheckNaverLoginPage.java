@@ -5,7 +5,7 @@ import net.class101.automateduitest.resources.pages.plus.NaverLoginPage;
 import net.class101.automateduitest.resources.pages.plus.SignUpPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 간편수단 회원가입 중 네이버로 시작하기 버튼을 클릭했을 때 정상적으로 네이버 로그인 페이지로 이동되는지 테스트한다

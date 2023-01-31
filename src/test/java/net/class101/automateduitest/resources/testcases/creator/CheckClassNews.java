@@ -5,7 +5,7 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNavigation;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 크리에이터 센터에서 클래스 소식 메뉴 클릭시 클래스 소식 페이지로 정상 진입 되는지 테스트한다

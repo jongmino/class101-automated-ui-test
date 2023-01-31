@@ -7,7 +7,7 @@ import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.pages.plus.ProductListPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 홈화면 가장 아래에 추천 카테고리 섹션이 정상 노출 되고, 카테고리 클릭 시 카테고리 페이지로 정상 이동되는지 테스트한다

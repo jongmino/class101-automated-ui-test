@@ -3,7 +3,7 @@ package net.class101.automateduitest.resources.testcases.classmate;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 마이페이지에서 1:1문의 메뉴를 클릭했을 때 채널톡 모달이 정상적으로 뜨는지 테스트한다

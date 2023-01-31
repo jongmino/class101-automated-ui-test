@@ -4,9 +4,9 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNav
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorNoticePage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 크리에이터 센터에서 '공지사항'메뉴 클릭 시 해당 페이지로 정상 이동되는지 테스트한다

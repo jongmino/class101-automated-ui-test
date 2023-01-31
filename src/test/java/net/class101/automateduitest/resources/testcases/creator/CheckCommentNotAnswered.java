@@ -6,7 +6,7 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNavigation;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 크리에이터 센터의 클래스 댓글 페이지에서 '답변 대기중' 탭을 클릭했을 때 '답변 대기중'인 댓글들이 정상적으로 노출되는지 테스트한다

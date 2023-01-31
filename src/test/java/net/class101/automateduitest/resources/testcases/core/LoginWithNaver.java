@@ -6,7 +6,7 @@ import net.class101.automateduitest.resources.pages.plus.LoginPage;
 import net.class101.automateduitest.resources.pages.plus.NaverLoginPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 네이버 유저로 로그인한다

@@ -3,7 +3,7 @@ package net.class101.automateduitest.resources.testcases.website;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 클래스를 수강한 이력이 있을 시 홈페이지에 '내 클래스' 섹션이 정상 노출 되는지 테스트한다

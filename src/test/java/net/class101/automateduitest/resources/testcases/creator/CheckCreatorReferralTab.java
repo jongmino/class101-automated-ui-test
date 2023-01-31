@@ -4,7 +4,7 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNav
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorReferralPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 크리에이터 센터에서 '클래스101+ 초대' 메뉴 클릭시 크리에이터 레퍼럴 페이지로 정상적으로 이동되는지 테스트한다

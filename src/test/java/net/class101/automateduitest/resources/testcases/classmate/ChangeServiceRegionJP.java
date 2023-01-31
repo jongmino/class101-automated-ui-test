@@ -1,7 +1,7 @@
 package net.class101.automateduitest.resources.testcases.classmate;
 
 import static net.class101.automateduitest.resources.common.Utils.urlContains;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.pages.plus.MyPage;

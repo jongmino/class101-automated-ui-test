@@ -6,7 +6,7 @@ import net.class101.automateduitest.resources.pages.plus.LoginPage;
 import net.class101.automateduitest.resources.pages.plus.SignUpPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 로그인 페이지에서 회원가입 버튼을 눌렀을 때 회원가입 페이지로 정상적으로 이동되는지 테스트한다

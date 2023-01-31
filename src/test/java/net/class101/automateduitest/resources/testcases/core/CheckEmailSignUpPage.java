@@ -4,7 +4,7 @@ import net.class101.automateduitest.resources.pages.plus.EmailSignUpPage;
 import net.class101.automateduitest.resources.pages.plus.SignUpPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 간편수단 회원가입 중 이메일 주소로 시작하기 버튼을 클릭했을 때 정상적으로 이메일 회원가입 페이지로 이동되는지 테스트한다

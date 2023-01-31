@@ -5,7 +5,7 @@ import net.class101.automateduitest.resources.pages.plus.SelectPlanPage;
 import net.class101.automateduitest.resources.pages.plus.SubscriptionPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 /**

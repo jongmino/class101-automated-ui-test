@@ -4,7 +4,7 @@ import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.pages.plus.ProductListPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 검색 창 클릭 시 검색 패널이 정상 노출이 되는지 확인하고, 검색어 입력시 알맞은 검색 결과가 나오는지 테스트한다

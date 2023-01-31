@@ -3,7 +3,7 @@ package net.class101.automateduitest.resources.testcases.website;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 로그인 유저의 홈화면에 취향 추천 클래스 섹션이 정상 노출 되는지 테스트한다

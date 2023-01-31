@@ -7,7 +7,7 @@ import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorNewClassPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 크리에이터 센터 '클래스 생성 페이지'에서 필수 항목 작성 후 '검토요청'버튼 클릭시 상태가 검토중으로 변경 되는지 테스트한다

@@ -5,7 +5,7 @@ import net.class101.automateduitest.resources.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.resources.pages.plus.SelectPlanPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: PDP에서 [클래스 101+시작하기] 버튼 클릭시 정기결제 구독 플랜 페이지로 정상 이동 되는지 테스트한다

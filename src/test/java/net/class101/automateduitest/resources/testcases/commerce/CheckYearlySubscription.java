@@ -5,7 +5,7 @@ import net.class101.automateduitest.resources.pages.plus.PaymentPage;
 import net.class101.automateduitest.resources.pages.plus.SelectPlanPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 연간 결제가 정상적으로 되는지 테스트한다

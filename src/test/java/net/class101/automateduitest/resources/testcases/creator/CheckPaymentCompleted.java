@@ -3,7 +3,7 @@ package net.class101.automateduitest.resources.testcases.creator;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorOrderAndShippingPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 크리에이터 센터 '주문 및 배송' 페이지에서 '결제완료'탭 클릭시 결제 완료 필드가 정상 노출되는지 테스트한다

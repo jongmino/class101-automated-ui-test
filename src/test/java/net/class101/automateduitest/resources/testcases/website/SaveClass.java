@@ -5,7 +5,7 @@ import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 찜하기가 없는 상태에서 찜하기를 눌렀을 시 '찜한 클래스' 섹션이 정상 노출 되는지 테스트한다

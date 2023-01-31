@@ -5,7 +5,7 @@ import net.class101.automateduitest.resources.pages.plus.OrderDetailPage;
 import net.class101.automateduitest.resources.pages.plus.OrderPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 주문 상세페이지의 필수 정보가 모두 표시 되는지 테스트한다

@@ -5,7 +5,7 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNav
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorStockPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 크리에이터 센터 '재고'메뉴 아래 '전체 재고'메뉴 클릭시 전체 재고 목록이 정상적으로 노출된다.

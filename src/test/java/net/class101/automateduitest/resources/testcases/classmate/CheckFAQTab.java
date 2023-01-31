@@ -5,7 +5,7 @@ import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 마이페이지에서 자주묻는질문 메뉴를 클릭했을 때 페이지가 정상적으로 이동되는지 테스트한다

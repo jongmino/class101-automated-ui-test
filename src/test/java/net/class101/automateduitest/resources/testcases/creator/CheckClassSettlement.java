@@ -4,7 +4,7 @@ import net.class101.automateduitest.resources.pages.creatorCenter.CreatorClassSe
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNavigation;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 크리에이터 센터에서 개별 클래스 정산 메뉴 클릭시 개별 클래스 정산 페이지로 정상 이동 되는지 테스트한다

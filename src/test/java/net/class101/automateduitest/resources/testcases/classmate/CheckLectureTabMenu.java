@@ -3,7 +3,7 @@ package net.class101.automateduitest.resources.testcases.classmate;
 import net.class101.automateduitest.resources.pages.plus.LecturePage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 수강환경 페이지에서 탭 메뉴들이 정상적으로 보이는지 테스트한다

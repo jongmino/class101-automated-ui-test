@@ -5,7 +5,7 @@ import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.ProductDetailPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @설명: 준비물 구매하기 버튼을 클릭했을 때 준비물 구매 페이지로 이동되는지 테스트한다
