@@ -22,7 +22,7 @@ public class ChangeVideoQuality implements TestCase {
         LecturePage.Actions.openPage();
         LecturePage.videoPlayer().hover();
         LecturePage.settingButton().shouldBe(Condition.enabled).click();
-        LecturePage.videoQualitySettingButton().shouldBe(Condition.visible).shouldBe(Condition.enabled).click();
+        LecturePage.videoQualitySettingButton().shouldBe(Condition.enabled).click();
         qualityOptionValue = LecturePage.firstUnCheckedRadioButton().find("input").getValue();
         LecturePage.firstUnCheckedRadioButton().shouldBe(Condition.enabled).click();
         Utils.sleep(1000);

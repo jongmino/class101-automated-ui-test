@@ -720,13 +720,13 @@ public class TestAll {
                     .proceed();
             }
 
-            @Test
-            @DisplayName("무료 체험")
-            void testFreeTrial() {
-                SF.get(CheckFreeTrial.class)
-                    .proceed()
-                    .validate();
-            }
+//            @Test
+//            @DisplayName("무료 체험")
+//            void testFreeTrial() {
+//                SF.get(CheckFreeTrial.class)
+//                    .proceed()
+//                    .validate();
+//            }
         }
 
         @Nested

@@ -1,6 +1,7 @@
 package net.class101.automateduitest.resources.common;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import java.util.concurrent.Callable;
@@ -16,6 +17,26 @@ public class Utils {
         Configuration.timeout = PropertyLoader.getProperties().timeout;
         Configuration.browserSize = "1920x1080";
         Configuration.browserPosition = "0x0";
+        Configuration.pageLoadTimeout = PropertyLoader.getProperties().timeout;
+        Configuration.pageLoadStrategy = "eager";
+    }
+
+    private static void setBrowserOptions(final String browser) {
+        Configuration.browser = browser;
+        switch(browser){
+            case "chrome":
+                ChromeOptions chromeOptions = new ChromeOptions().addArguments("--lang=ko_KR");
+//                chromeOptions.setHeadless(true);
+                Configuration.browserCapabilities = chromeOptions;
+                break;
+            case "firefox":
+                FirefoxOptions firefoxOptions = new FirefoxOptions().addArguments("--lang=ko_KR");
+//                firefoxOptions.setHeadless(true);
+                Configuration.browserCapabilities = firefoxOptions;
+                break;
+            default:
+                break;
+        }
     }
     public static String getUrl() {
         return WebDriverRunner.url();
@@ -85,24 +106,6 @@ public class Utils {
             Thread.sleep(sleepAmount);
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
-
-    private static void setBrowserOptions(final String browser) {
-        Configuration.browser = browser;
-        switch(browser){
-            case "chrome":
-                ChromeOptions chromeOptions = new ChromeOptions().addArguments("--lang=ko_KR");
-//                chromeOptions.setHeadless(true);
-                Configuration.browserCapabilities = chromeOptions;
-                break;
-            case "firefox":
-                FirefoxOptions firefoxOptions = new FirefoxOptions().addArguments("--lang=ko_KR");
-//                firefoxOptions.setHeadless(true);
-                Configuration.browserCapabilities = firefoxOptions;
-                break;
-            default:
-                break;
         }
     }
 }

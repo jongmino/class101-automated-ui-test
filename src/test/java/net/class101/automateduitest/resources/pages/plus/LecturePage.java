@@ -10,10 +10,10 @@ import net.class101.automateduitest.resources.common.PropertyLoader;
 import org.openqa.selenium.By;
 
 public class LecturePage {
-    private static final By VIDEO_PLAY_SPEED_BUTTON = byXpath("//div[div[contains(@class,'video')]]//div[div[div[p[text()='a']]]]/div[3]/div[1]");
-    private static final By VIDEO_SETTING_BUTTON = byXpath("//div[div[contains(@class,'video')]]//div[div[div[p[text()='a']]]]/div[3]/div[3]");
-    private static final By VIDEO_SETTING_QUALITY_BUTTON = byXpath("//div[div[p[text() = '화질']]]");
-    private static final By VIDEO_SETTING_AUTO_PLAY_BUTTON = byXpath("//div[div[p[text() = '자동 재생']]]");
+    private static final By VIDEO_PLAY_SPEED_BUTTON = byXpath("//div[div[contains(@class,'video')]]//div[div[div[p[text()='a']]]]/div[3]//button[1]");
+    private static final By VIDEO_SETTING_BUTTON = byXpath("//div[div[contains(@class,'video')]]//div[div[div[p[text()='a']]]]/div[3]/div[4]");
+    private static final By VIDEO_SETTING_QUALITY_BUTTON = byXpath("//button[contains(.,'화질')]");
+    private static final By VIDEO_SETTING_AUTO_PLAY_BUTTON = byXpath("//button[contains(.,'자동 재생')]");
     private static final By VIDEO_SETTING_FIRST_RADIO_OPTION_NOT_CHECKED = byXpath("//label[input[@type='radio' and not(@checked)]]");
     private static final By VIDEO_PLAYING = byXpath("//div[contains(@class,'playing')]");
     private static final By VIDEO_PLAYER = byXpath("//div[@aria-label='Video Player']");
@@ -68,8 +68,8 @@ public class LecturePage {
 
     public class Actions {
 
-        private static final By VIDEO_SETTING_QUALITY_CURRENT_VALUE = byXpath("//div[div[p[text() = '화질']]]//button//span[contains(.,'p')]");
-        private static final By VIDEO_SETTING_AUTO_PLAY_CURRENT_VALUE = byXpath("(//div[div[p[text() = '자동 재생']]]//button//span)[2]");
+        private static final By VIDEO_SETTING_QUALITY_CURRENT_VALUE = byXpath("//button[contains(.,'화질')]//span[contains(text(),'p')]");
+        private static final By VIDEO_SETTING_AUTO_PLAY_CURRENT_VALUE = byXpath("//button[contains(.,'자동 재생')]//span[contains(text(),'짐')]");
         private static final By UNCHECKED_AUTO_PLAY_OPTION_TEXT = By.xpath("//div[label[input[@type='radio' and not(@checked)]]]//p");
 
         public static void openPage() {
