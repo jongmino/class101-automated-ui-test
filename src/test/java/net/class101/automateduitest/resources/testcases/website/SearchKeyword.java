@@ -19,6 +19,7 @@ public class SearchKeyword implements TestCase {
 
     @Override
     public TestCase proceed() {
+        Home.Actions.openPage();
         //검색창 클릭
         Home.searchBar().click();
         //검색 패널 확인

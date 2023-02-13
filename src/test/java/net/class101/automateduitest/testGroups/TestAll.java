@@ -233,7 +233,7 @@ public class TestAll {
             @BeforeAll
             void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsNonSubscriber.class)
+                SF.get(LoginAsNewUser.class)
                     .proceed();
             }
 
@@ -248,44 +248,9 @@ public class TestAll {
             }
 
             @Test
-            @DisplayName("큐레이션 섹션 및 클래스 상세정보")
-            void testCurationSection() {
-                SF.get(CheckCurationSection.class)
-                    .proceed()
-                    .validate();
-            }
-
-            @Test
             @DisplayName("큐레이션 섹션 - 구독 플랜 선택")
             void testSubscriptionPlan() {
                 SF.get(CheckSubscriptionPlan.class)
-                    .proceed()
-                    .validate();
-            }
-
-            @Test
-            @DisplayName("검색 기능")
-            void testSearchBar() {
-                SF.get(SearchKeyword.class)
-                    .proceed()
-                    .validate();
-            }
-
-            @Test
-            @DisplayName("추천 카테고리 / 서브카테고리")
-            void testRecommendedCategory() {
-                SF.get(CheckRecommendedCategorySection.class)
-                    .proceed()
-                    .validate();
-                SF.get(CheckSubCategory.class)
-                    .proceed()
-                    .validate();
-            }
-
-            @Test
-            @DisplayName("추천 클래스")
-            void testRecommendedClass() {
-                SF.get(CheckRecommendedClassSection.class)
                     .proceed()
                     .validate();
             }
@@ -332,6 +297,42 @@ public class TestAll {
                     .proceed()
                     .validate();
             }
+
+            @Test
+            @DisplayName("검색 기능")
+            void testSearchBar() {
+                SF.get(SearchKeyword.class)
+                    .proceed()
+                    .validate();
+            }
+
+            @Test
+            @DisplayName("추천 카테고리 / 서브카테고리")
+            void testRecommendedCategory() {
+                SF.get(CheckRecommendedCategorySection.class)
+                    .proceed()
+                    .validate();
+                SF.get(CheckSubCategory.class)
+                    .proceed()
+                    .validate();
+            }
+
+            @Test
+            @DisplayName("추천 클래스")
+            void testRecommendedClass() {
+                SF.get(CheckRecommendedClassSection.class)
+                    .proceed()
+                    .validate();
+            }
+
+            @Test
+            @DisplayName("큐레이션 섹션 및 클래스 상세정보")
+            void testCurationSection() {
+                SF.get(CheckCurationSection.class)
+                    .proceed()
+                    .validate();
+            }
+
         }
     }
 
@@ -348,7 +349,7 @@ public class TestAll {
             @BeforeAll
             void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsNonSubscriber.class)
+                SF.get(LoginAsNewUser.class)
                     .proceed();
             }
 
@@ -363,28 +364,9 @@ public class TestAll {
             }
 
             @Test
-            @DisplayName("마이페이지 캐시탭 확인")
-            void testMyPageCashTab() {
-                SF.get(CheckCashTab.class)
-                    .proceed()
-                    .validate();
-            }
-
-            @Test
             @DisplayName("마이페이지 구독 탭 확인 - 미구독")
             void testMyPageSubscriptionStatus() {
                 SF.get(CheckSubscriptionStatusFalse.class)
-                    .proceed()
-                    .validate();
-            }
-
-            @Test
-            @DisplayName("마이페이지 서비스 리전 변경 기능 확인")
-            void testMyPageServiceRegion() {
-                SF.get(ChangeServiceRegionToEN.class)
-                    .proceed()
-                    .validate();
-                SF.get(ChangeServiceRegionJP.class)
                     .proceed()
                     .validate();
             }
@@ -421,7 +403,7 @@ public class TestAll {
             @BeforeAll
             void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsSubscriber.class)
+                SF.get(LoginAsYearlySubscriber.class)
                     .proceed();
             }
 
@@ -435,6 +417,24 @@ public class TestAll {
                 Home.Actions.openPage();
             }
 
+            @Test
+            @DisplayName("마이페이지 캐시탭 확인")
+            void testMyPageCashTab() {
+                SF.get(CheckCashTab.class)
+                    .proceed()
+                    .validate();
+            }
+
+            @Test
+            @DisplayName("마이페이지 서비스 리전 변경 기능 확인")
+            void testMyPageServiceRegion() {
+                SF.get(ChangeServiceRegionToEN.class)
+                    .proceed()
+                    .validate();
+                SF.get(ChangeServiceRegionJP.class)
+                    .proceed()
+                    .validate();
+            }
             @Test
             @DisplayName("마이페이지 구독 탭 확인 - 구독")
             void testMyPageSubscriptionStatus() {
@@ -708,18 +708,18 @@ public class TestAll {
     @TestInstance(Lifecycle.PER_CLASS)
     public class CommercePlatform {
 
-        @Nested
-        @DisplayName("신규 계정")
-        @TestInstance(Lifecycle.PER_CLASS)
-        public class NewUser {
-
-            @BeforeAll
-            void beforeAll() {
-                Home.Actions.openPage();
-                SF.get(LoginAsNewUser.class)
-                    .proceed();
-            }
-
+//        @Nested
+//        @DisplayName("신규 계정")
+//        @TestInstance(Lifecycle.PER_CLASS)
+//        public class NewUser {
+//
+//            @BeforeAll
+//            void beforeAll() {
+//                Home.Actions.openPage();
+//                SF.get(LoginAsNewUser.class)
+//                    .proceed();
+//            }
+//
 //            @Test
 //            @DisplayName("무료 체험")
 //            void testFreeTrial() {
@@ -727,7 +727,7 @@ public class TestAll {
 //                    .proceed()
 //                    .validate();
 //            }
-        }
+//        }
 
         @Nested
         @DisplayName("미구독 계정")
@@ -737,7 +737,7 @@ public class TestAll {
             @BeforeAll
             void beforeAll() {
                 Home.Actions.openPage();
-                SF.get(LoginAsNonSubscriber.class)
+                SF.get(LoginAsNewUser.class)
                     .proceed();
             }
 
@@ -782,13 +782,14 @@ public class TestAll {
                 Home.Actions.openPage();
             }
 
-            @Test
-            @DisplayName("준비물 구매")
-            void testBuyKit() {
-                SF.get(CheckKitPurchase.class)
-                    .proceed()
-                    .validate();
-            }
+//            TODO(Boulder): 준비물 구매가 있는 페이지 요청
+//            @Test
+//            @DisplayName("준비물 구매")
+//            void testBuyKit() {
+//                SF.get(CheckKitPurchase.class)
+//                    .proceed()
+//                    .validate();
+//            }
 
             @Test
             @DisplayName("구독 취소")

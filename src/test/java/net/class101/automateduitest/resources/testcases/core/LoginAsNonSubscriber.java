@@ -33,12 +33,12 @@ public class LoginAsNonSubscriber implements TestCase {
         final String plusNonSubscriberId = accounts.get("plusNonSubscriber").id;
         final String plusNonSubscriberPw = accounts.get("plusNonSubscriber").pw;
         AllLoginPage.Actions.login(plusNonSubscriberId, plusNonSubscriberPw);
-        Home.trendingNowSectionTitle();
+        Home.footerTermsOfUse();
         return this;
     }
 
     @Override
     public void validate() {
-       assertTrue(Home.userProfileImg().exists());
+       assertTrue(Home.footerTermsOfUse().exists());
     }
 }

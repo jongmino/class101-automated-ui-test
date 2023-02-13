@@ -27,7 +27,7 @@ public class LoginAsSubscriber implements TestCase {
         final String SUBSCRIBED_USER_ID = accounts.get("plusSubscriber").id;
         final String SUBSCRIBED_PASSWORD = accounts.get("plusSubscriber").pw;
         AllLoginPage.Actions.login(SUBSCRIBED_USER_ID, SUBSCRIBED_PASSWORD);
-        Home.trendingNowSectionTitle();
+        Home.footerTermsOfUse();
         return this;
     }
 

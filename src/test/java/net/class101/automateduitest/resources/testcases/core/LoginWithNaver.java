@@ -23,7 +23,7 @@ public class LoginWithNaver implements TestCase {
         LoginPage.allLoginButton().click();
         AllLoginPage.loginWithNaverButton().click();
         NaverLoginPage.Actions.defaultLogin();
-        Home.trendingNowSectionTitle();
+        Home.footerTermsOfUse();
         return this;
     }
 

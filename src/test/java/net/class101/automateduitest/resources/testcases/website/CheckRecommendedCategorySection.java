@@ -20,6 +20,7 @@ public class CheckRecommendedCategorySection implements TestCase {
 
     @Override
     public TestCase proceed() {
+        Home.Actions.openPage();
         //추천 카테고리 섹션 확인
         Home.recommendedCategorySectionTitle().scrollIntoView(true).shouldBe(Condition.visible);
         //영어 카테고리 클릭

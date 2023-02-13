@@ -21,6 +21,7 @@ public class SaveClass implements TestCase {
     @Override
     public TestCase proceed() {
         //실시간 인기 클래스 첫번째 아이템 찜하기
+        Home.Actions.openPage();
         Utils.sleep(2000);
         Home.trendingNowSectionTitle().scrollIntoView(true);
         Home.firstSaveButtonOnTrendingNow().shouldBe(Condition.enabled).click();

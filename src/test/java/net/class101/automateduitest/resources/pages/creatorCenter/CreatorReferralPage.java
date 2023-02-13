@@ -9,9 +9,9 @@ import org.openqa.selenium.By;
 
 public class CreatorReferralPage {
 
-    private static final By REFERRAL_LINK_COPY_BUTTON = byXpath("//button//span[text()='초대 페이지 링크 복사하기']");
+    private static final By CREATOR_REFERRAL_PAGE_TITLE = byXpath("//*[text()='다양한 채널에 클래스 알리기']");
 
-    public static SelenideElement referralLinkCopyButton() {
-        return $(REFERRAL_LINK_COPY_BUTTON).shouldBe(Condition.visible);
+    public static SelenideElement creatorReferralPageTitle() {
+        return $(CREATOR_REFERRAL_PAGE_TITLE).shouldBe(Condition.visible);
     }
 }

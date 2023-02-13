@@ -23,6 +23,6 @@ public class CheckCreatorReferralTab implements TestCase {
 
     @Override
     public void validate() {
-        assertTrue(CreatorReferralPage.referralLinkCopyButton().exists());
+        assertTrue(CreatorReferralPage.creatorReferralPageTitle().exists());
     }
 }

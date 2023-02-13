@@ -29,7 +29,7 @@ public class LoginAsUserHasKit implements TestCase {
         final String KIT_USER_ID = accounts.get("plusHasKit").id;
         final String KIT_PASSWORD = accounts.get("plusHasKit").pw;
         AllLoginPage.Actions.login(KIT_USER_ID, KIT_PASSWORD);
-        Home.trendingNowSectionTitle();
+        Home.footerTermsOfUse();
         return this;
     }
 

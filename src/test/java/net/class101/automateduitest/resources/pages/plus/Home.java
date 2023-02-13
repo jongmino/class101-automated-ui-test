@@ -17,7 +17,7 @@ import org.openqa.selenium.By;
 public class Home {
 
     private static final By USER_NAVIGATION_PROFILE_IMG = byXpath("(//img[@alt='profile'])[3]");
-    private static final By USER_NAVIGATION_LOGIN_BUTTON = byXpath("(//p[text()='로그인'])[3]");
+    private static final By USER_NAVIGATION_LOGIN_BUTTON = byXpath("(//p[text()='로그인'])[2]");
     private static final By TRENDING_CLASS_SECTION = withText("실시간 인기 클래스");
     private static final By FIRST_SAVE_BUTTON_ON_TRENDING_NOW = byXpath("(//section[contains(.,'실시간 인기 클래스')]//span[*[local-name()='svg']])[4]");
     private static final By SAVED_CLASSES_SECTION_TITLE = byXpath("//h2[contains(.,'찜한 클래스')]");
@@ -30,6 +30,7 @@ public class Home {
     private static final By SEARCH_PANEL_TITLE = withText("지금 인기있는");
     private static final By SEARCH_BAR_INPUT_AFTER_CLICK = byTagName("input");
     private static final By CLOSE_MESSAGE_BUTTON = byXpath("//span[text()='더 이상 보지 않기']");
+    private static final By FOOTER_TERMS_OF_USE = byXpath("(//span[text()='이용약관'])[2]");
 
     public static SelenideElement loginButton() {
         return $(USER_NAVIGATION_LOGIN_BUTTON).shouldBe(Condition.visible);
@@ -90,6 +91,9 @@ public class Home {
         return $$(SAVED_CLASSES_SECTION_TITLE);
     }
 
+    public static SelenideElement footerTermsOfUse() {
+        return $(FOOTER_TERMS_OF_USE).shouldBe(Condition.visible);
+    }
     public class Actions {
         public static Boolean hasAdvertisement = null;
 
