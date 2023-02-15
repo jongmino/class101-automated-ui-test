@@ -12,14 +12,15 @@ urls:
   kitPDP: "https://staging.class101.net/ko/products/5ffab8e80a3770000d4784c6"
   selectPlanPage: "https://staging.class101.net/ko/payment/select-subscription-product"
   subscriptionPage: "https://staging.class101.net/ko/mypage/subscription"
+  adminClasses: "https://staging-admin.class101.net/admin/klasses"
 
 accounts:
   plusNewUser:
     id: "test_1@101.inc"
     pw: "class101!"
   plusNonSubscriber:
-    id: "referral_3@101.inc"
-    pw: "class101!"
+    id: "sbtest2@101.inc"
+    pw: "Class101!"
   plusSubscriber:
     id: "sbtestc422@101.inc"
     pw: "test001!"
@@ -44,3 +45,12 @@ accounts:
   creatorNew:
     id: "referral_3@101.inc"
     pw: "class101!"
+  commonUser:
+    id: "sbtest3@101.inc"
+    pw: "Class101!"
+  creatorUser:
+    id: "sbtest6@101.inc"
+    pw: "Class101!"
+  creatorAdminUser:
+    id: "sbtest4@101.inc"
+    pw: "Class101!"

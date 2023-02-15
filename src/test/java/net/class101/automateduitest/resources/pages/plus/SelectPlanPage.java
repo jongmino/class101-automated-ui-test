@@ -15,6 +15,7 @@ public class SelectPlanPage {
     private static final By SUBSCRIPTION_PLAN_TITLE = withText("연간 구독");
     private static final By NEXT_BUTTON = byXpath("//button[contains(.,'다음')]");
     private static final By SPAN_CONTAINS_FREE_TRIAL = byXpath("//span[contains(.,'무료 체험')]");
+    private static final By PAYMENT_MONTH = byXpath("//span[text()='월간 구독']");
 
     public static SelenideElement subscribePlanTitle() {
         return $(SUBSCRIPTION_PLAN_TITLE).shouldBe(Condition.visible);
@@ -26,6 +27,10 @@ public class SelectPlanPage {
 
     public static SelenideElement spanContainsFreeTrial() {
         return $(SPAN_CONTAINS_FREE_TRIAL).shouldBe(Condition.visible);
+    }
+
+    public static SelenideElement paymentMonth() {
+        return $(PAYMENT_MONTH).shouldBe(Condition.visible);
     }
 
     public class Actions {

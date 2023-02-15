@@ -27,7 +27,9 @@ public class CreatorLoginPage {
         public static void login(final String email, final String password) {
             CreatorLoginPage.emailInputElement().sendKeys(email);
             CreatorLoginPage.passwordInputElement().sendKeys(password);
-            CreatorLoginPage.loginButtonElement().click();
+            //CreatorLoginPage.loginButtonElement().click();
+            CreatorLoginPage.loginButtonElement().shouldBe(Condition.visible).click();
+            }
         }
     }
-}
+

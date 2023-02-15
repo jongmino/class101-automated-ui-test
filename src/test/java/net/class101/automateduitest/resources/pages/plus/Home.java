@@ -31,6 +31,7 @@ public class Home {
     private static final By SEARCH_BAR_INPUT_AFTER_CLICK = byTagName("input");
     private static final By CLOSE_MESSAGE_BUTTON = byXpath("//span[text()='더 이상 보지 않기']");
     private static final By FOOTER_TERMS_OF_USE = byXpath("(//span[text()='이용약관'])[2]");
+    private static final By HOME_SUBSCRIPTION_BUTTON = byXpath("//span[text()='지금 혜택 받기']");
 
     public static SelenideElement loginButton() {
         return $(USER_NAVIGATION_LOGIN_BUTTON).shouldBe(Condition.visible);
@@ -94,6 +95,11 @@ public class Home {
     public static SelenideElement footerTermsOfUse() {
         return $(FOOTER_TERMS_OF_USE).shouldBe(Condition.visible);
     }
+
+    public static SelenideElement homeSubscriptionButton() {
+        return $(HOME_SUBSCRIPTION_BUTTON).shouldBe(Condition.visible);
+    }
+
     public class Actions {
         public static Boolean hasAdvertisement = null;
 

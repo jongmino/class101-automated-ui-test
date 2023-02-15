@@ -28,4 +28,26 @@ public class CreatorHome {
             open(CREATOR_CENTER_URL);
         }
     }
+
+    public class ProductList {
+        public static void openPage() {
+            final String CREATOR_CENTER_PRODUCT_URL = PropertyLoader.getProperties().urls.get("creatorProduct");
+            open(CREATOR_CENTER_PRODUCT_URL);
+        }
+    }
+
+    public class DirectUrl {
+        public static void openPage() {
+            final String CREATOR_CENTER_PRODUCT_DIRECT_URL = CreatorNewClassPage.getCurrentUrl();
+            open(CREATOR_CENTER_PRODUCT_DIRECT_URL);
+        }
+    }
+
+    public class AdminClassesUrl {
+        public static void openPage() {
+            final String CREATOR_CENTER_ADMIN_CLASSES_URL = PropertyLoader.getProperties().urls.get("adminClasses");
+            open(CREATOR_CENTER_ADMIN_CLASSES_URL);
+        }
+    }
+
 }

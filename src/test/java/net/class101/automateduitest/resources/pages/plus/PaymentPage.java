@@ -11,6 +11,12 @@ public class PaymentPage {
 
     private static final By PAYMENT_PRICE = byXpath("//p[contains(.,',000원')]");
 
+    private static final By SUBSRIPTION_START = byXpath("//span[text()='구독 시작하기']");
+
+    public static SelenideElement subscriptionStart(){
+        return $(SUBSRIPTION_START).shouldBe(Condition.visible);
+    }
+
     public static SelenideElement paymentPrice() {
         return $(PAYMENT_PRICE).shouldBe(Condition.visible);
     }
