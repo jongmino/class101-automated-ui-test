@@ -16,8 +16,8 @@ import org.openqa.selenium.By;
 
 public class Home {
 
-    private static final By USER_NAVIGATION_PROFILE_IMG = byXpath("(//img[@alt='profile'])[3]");
-    private static final By USER_NAVIGATION_LOGIN_BUTTON = byXpath("(//p[text()='로그인'])[2]");
+    private static final By USER_NAVIGATION_PROFILE_IMG = byXpath("(//img[@alt='profile'])[last()]");
+    private static final By USER_NAVIGATION_LOGIN_BUTTON = byXpath("(//p[text()='로그인'])[last()]");
     private static final By TRENDING_CLASS_SECTION = withText("실시간 인기 클래스");
     private static final By FIRST_SAVE_BUTTON_ON_TRENDING_NOW = byXpath("(//section[contains(.,'실시간 인기 클래스')]//span[*[local-name()='svg']])[4]");
     private static final By SAVED_CLASSES_SECTION_TITLE = byXpath("//h2[contains(.,'찜한 클래스')]");
