@@ -13,58 +13,6 @@ import java.util.Random;
 import java.util.UUID;
 
 public class CreatorNewClassPage {
-
-    private static String RecentRandomName = "getRecentRandomName";
-    public static String setRandomName() {
-        RecentRandomName = UUID.randomUUID().toString().replace("-", "").substring(0, 20);
-        return RecentRandomName;
-    }
-    public static String getRecentRandomName() {
-        return RecentRandomName;
-    }
-
-
-    private static String CurrentUrl = "getCurrentUrl";
-    public static String setCurrentUrl() {
-        CurrentUrl = classProductUrl().getAttribute("href").toString().replaceFirst("center/products","creator/projects").replace("preview", "edit");
-        return CurrentUrl;
-    }
-    public static String getCurrentUrl() {
-        return CurrentUrl;
-    }
-
-
-    private static String RecentClassTitleName = "getRecentClassTitleName";
-    public static String setClassTitleName() {
-        RecentClassTitleName = UUID.randomUUID().toString().replace("-", "").substring(0, 20);
-        return RecentClassTitleName;
-    }
-    public static String getRecentClassTitleName() {
-        return RecentClassTitleName;
-    }
-
-
-
-    public static final String[] TEST_FIRST_CATEGORY = { "크리에이티브", "수익 창출", "직무", "외국어", "키즈", "준비물 · 키트" };
-    public static String setTestFirstCategory() {
-        Random random = new Random();
-        int randomNum = random.nextInt(5);
-        return TEST_FIRST_CATEGORY[randomNum];
-    }
-
-    public static String getTestFirstCategory() {
-        return TEST_FIRST_CATEGORY[0];
-    }
-
-    private static String RecentLoadCategory = "getRecentLoadCategory";
-    public static String setRecentLoadCategory() {
-        RecentLoadCategory = setTestFirstCategory();
-        return RecentLoadCategory;
-    }
-    public static String getRecentLoadCategory() {
-        return RecentLoadCategory;
-    }
-
     private static final By ADD_CLASS_TITLE = byXpath("//*[text()='정규 클래스']");
     private static final By COVER_IMAGE_SECTION = byXpath("//p[text()='커버 이미지']");
     private static final By COVER_IMAGE_INPUT = byXpath("//input[@type='file' and contains(@name,'coverImage')]");
@@ -93,9 +41,6 @@ public class CreatorNewClassPage {
     private static final By MODAL_REQUEST_REVIEW_BUTTON = byXpath("//div[@id='modalBottomSheet']//span[text()='검토 요청']");
     private static final By IN_REVIEW_STATUS = byXpath("//div[*[text()='상품 상태']]//p[text()='검토 중']");
     private static final By IMG_UNDER_CLASS_INFO = byXpath("//div[div[*[text()='클래스 기본 정보']]]//form//img");
-
-    //dean
-
     private static final By CLASS_TITLE_SERACH_INPUT = byXpath("//input[@placeholder='상품명 검색']");
     private static final By CLASS_TITLE_SERACH_MATCHED = byXpath("//*[@id=\"__next\"]/main/div/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div/div/div[2]/div/div/div[2]/div/div/div[3]/div/p");
     private static final By CLASS_SEEMORE_BUTTON = byXpath("//*[@id=\"__next\"]/main/div/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div/div/div[2]/div/div/div[2]/div/div[1]/div[9]/div/div/button[2]");
@@ -270,9 +215,6 @@ public class CreatorNewClassPage {
         return $(ADMIN_CLASSES_EDIT_POPUP_LAUNCH_BUTTON).shouldBe(Condition.visible);
     }
 
-    //dean
-
-
     public static SelenideElement addClassTitle() {
         return $(ADD_CLASS_TITLE).shouldBe(Condition.visible);
     }
@@ -404,4 +346,59 @@ public class CreatorNewClassPage {
     public static ElementsCollection allCreatorDescriptionSaveButtons() {
         return $$(CREATOR_DESCRIPTION_SAVE_BUTTON);
     }
+
+    public class Action {
+        private static String RecentRandomName = "getRecentRandomName";
+        public static String setRandomName() {
+            RecentRandomName = UUID.randomUUID().toString().replace("-", "").substring(0, 20);
+            return RecentRandomName;
+        }
+        public static String getRecentRandomName() {
+            return RecentRandomName;
+        }
+
+
+        private static String CurrentUrl = "getCurrentUrl";
+        public static String setCurrentUrl() {
+            CurrentUrl = classProductUrl().getAttribute("href").toString().replaceFirst("center/products","creator/projects").replace("preview", "edit");
+            return CurrentUrl;
+        }
+        public static String getCurrentUrl() {
+            return CurrentUrl;
+        }
+
+
+        private static String RecentClassTitleName = "getRecentClassTitleName";
+        public static String setClassTitleName() {
+            RecentClassTitleName = UUID.randomUUID().toString().replace("-", "").substring(0, 20);
+            return RecentClassTitleName;
+        }
+        public static String getRecentClassTitleName() {
+            return RecentClassTitleName;
+        }
+
+
+
+        public static final String[] TEST_FIRST_CATEGORY = { "크리에이티브", "수익 창출", "직무", "외국어", "키즈", "준비물 · 키트" };
+        public static String setTestFirstCategory() {
+            Random random = new Random();
+            int randomNum = random.nextInt(5);
+            return TEST_FIRST_CATEGORY[randomNum];
+        }
+
+        public static String getTestFirstCategory() {
+            return TEST_FIRST_CATEGORY[0];
+        }
+
+        private static String RecentLoadCategory = "getRecentLoadCategory";
+        public static String setRecentLoadCategory() {
+            RecentLoadCategory = setTestFirstCategory();
+            return RecentLoadCategory;
+        }
+        public static String getRecentLoadCategory() {
+            return RecentLoadCategory;
+        }
+    }
+
+
 }

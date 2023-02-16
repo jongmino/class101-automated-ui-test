@@ -2,6 +2,7 @@ package net.class101.automateduitest.resources.testcases.core;
 
 import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.common.Utils;
+import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -20,19 +21,15 @@ public class MypageProfileImgChange implements TestCase {
 
     @Override
     public TestCase proceed() {
-        MyPage.myPageCenterProfileImg().click();
-        //Mypage에 이미지 4개를 선언해두고 램덤으로 가져오게 함.
-        MyPage.myPageCenterProfileImgInput().uploadFile(new File(MyPage.setTestImages()));
-        Utils.sleep(3000);
+        Home.userProfileImg().click();
+        MyPage.myPageCenterProfileImgInput().uploadFile(new File(MyPage.Actions.setTestImages()));
         // if문을 통해 변경된 이미지가 이전 이미지와 같으면 이미지를 다시 랜덤으로 가져와 업로드.
         {
-            if (MyPage.setRecentLoadImage().equals(MyPage.getTestImages())){
-                MyPage.myPageCenterProfileImgInput().uploadFile(new File(MyPage.setTestImages()));
+            if (MyPage.Actions.setRecentLoadImage().equals(MyPage.Actions.getTestImages())){
+                MyPage.myPageCenterProfileImgInput().uploadFile(new File(MyPage.Actions.setTestImages()));
             }
         }
-        Utils.sleep(3000);
         MyPage.myPageInfoSave().shouldBe(Condition.enabled).click();
-        Utils.sleep(3000);
         return this;
 
     }
@@ -40,7 +37,7 @@ public class MypageProfileImgChange implements TestCase {
     @Override
     public void validate() {
         // 이전에 등록된 이미지와 최근에 변경한 이미지가 다르면 이미지가 변경되었다는걸 확인.
-        assertNotSame(MyPage.getRecentLoadImage(), MyPage.setTestImages());
+        assertNotSame(MyPage.Actions.getRecentLoadImage(), MyPage.Actions.setTestImages());
 
     }
 

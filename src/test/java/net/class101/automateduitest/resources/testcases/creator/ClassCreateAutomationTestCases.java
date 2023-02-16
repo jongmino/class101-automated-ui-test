@@ -3,18 +3,15 @@ package net.class101.automateduitest.resources.testcases.creator;
 import com.codeborne.selenide.*;
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.common.Utils;
-import net.class101.automateduitest.resources.pages.creatorCenter.CreatorAddProductPage;
-import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
-import net.class101.automateduitest.resources.pages.creatorCenter.CreatorNewClassPage;
-import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
+import net.class101.automateduitest.resources.pages.creatorCenter.*;
 import net.class101.automateduitest.resources.pages.plus.MyPage;
+import net.class101.automateduitest.resources.pages.admin.adminClasses;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 import java.io.File;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
@@ -33,14 +30,14 @@ public class ClassCreateAutomationTestCases implements TestCase {
             //클래스 생성 후 상세 페이지 진입
             CreatorProductPage.createProductButton().shouldNotBe(Condition.disabled).click();
             CreatorAddProductPage.createClassButton().click();
-            CreatorNewClassPage.setCurrentUrl(); // 현재 URL을 저장한다
+            CreatorNewClassPage.Action.setCurrentUrl(); // 현재 URL을 저장한다
 
             //기본정보 탭 > 커버 이미지 추가
             CreatorNewClassPage.coverImageSection().click();
-            CreatorNewClassPage.coverImageInput().uploadFile(new File(MyPage.setTestImages()));
+            CreatorNewClassPage.coverImageInput().uploadFile(new File(MyPage.Actions.setTestImages()));
             {
-                if (MyPage.setRecentLoadImage().equals(MyPage.getTestImages())) {
-                    CreatorNewClassPage.coverImageInput().uploadFile(new File(MyPage.setTestImages()));
+                if (MyPage.Actions.setRecentLoadImage().equals(MyPage.Actions.getTestImages())) {
+                    CreatorNewClassPage.coverImageInput().uploadFile(new File(MyPage.Actions.setTestImages()));
                 }
             }
             CreatorNewClassPage.allImageUnderClassInfo().shouldBe(CollectionCondition.size(2)); // wait for file uploaded
@@ -50,7 +47,7 @@ public class ClassCreateAutomationTestCases implements TestCase {
 
             //기본정보 탭 > 클래스 제목 추가
             CreatorNewClassPage.classTitleSection().click();
-            CreatorNewClassPage.classTitleInput().sendKeys(CreatorNewClassPage.setClassTitleName());
+            CreatorNewClassPage.classTitleInput().sendKeys(CreatorNewClassPage.Action.setClassTitleName());
             Utils.sleep(1000);
             CreatorNewClassPage.classTitleSaveButton().shouldBe(Condition.enabled).click();
             CreatorNewClassPage.allClassTitleSaveButton().shouldBe(CollectionCondition.size(0)); // 클래스 제목이 완전히 submit 될 때까지 기다린다
@@ -58,10 +55,10 @@ public class ClassCreateAutomationTestCases implements TestCase {
             //기본정보 탭 > 카테고리 추가 (첫 번째 카테고리만 랜덤으로 선택하게 만들었고 나머지는 1번째 카테고리를 선택하게 만들었다 //나중에 이후 카테고리도 랜덤으로 선택하게 만들어야 함)
             CreatorNewClassPage.classTitleSection().scrollIntoView(true);
             CreatorNewClassPage.categorySection().click();
-            CreatorNewClassPage.firstCategorySelector().selectOption(CreatorNewClassPage.setTestFirstCategory());
+            CreatorNewClassPage.firstCategorySelector().selectOption(CreatorNewClassPage.Action.setTestFirstCategory());
             {
-                if (CreatorNewClassPage.setRecentLoadCategory().equals(CreatorNewClassPage.getTestFirstCategory())) {
-                    CreatorNewClassPage.firstCategorySelector().selectOption(CreatorNewClassPage.setTestFirstCategory());
+                if (CreatorNewClassPage.Action.setRecentLoadCategory().equals(CreatorNewClassPage.Action.getTestFirstCategory())) {
+                    CreatorNewClassPage.firstCategorySelector().selectOption(CreatorNewClassPage.Action.setTestFirstCategory());
                 }
             }
             Utils.sleep(1000);
@@ -75,14 +72,14 @@ public class ClassCreateAutomationTestCases implements TestCase {
 
             //기본정보 탭 > 클래스 소개 추가
             CreatorNewClassPage.classDescriptionSection().click();
-            CreatorNewClassPage.classDescriptionInput().sendKeys(CreatorNewClassPage.setRandomName());
+            CreatorNewClassPage.classDescriptionInput().sendKeys(CreatorNewClassPage.Action.setRandomName());
             CreatorNewClassPage.classDescriptionSaveButton().click();
             CreatorNewClassPage.allClassDescriptionSaveButtons()
                     .shouldBe(CollectionCondition.size(0)); // wait for submit class description
 
             //기본정보 탭 > 크리에이터 소개 추가
             CreatorNewClassPage.creatorDescriptionSection().click();
-            CreatorNewClassPage.creatorDescriptionInput().sendKeys(CreatorNewClassPage.setRandomName());
+            CreatorNewClassPage.creatorDescriptionInput().sendKeys(CreatorNewClassPage.Action.setRandomName());
             CreatorNewClassPage.creatorDescriptionSaveButton().click();
             CreatorNewClassPage.allCreatorDescriptionSaveButtons()
                     .shouldBe(CollectionCondition.size(0)); // wait for submit creator description
@@ -95,8 +92,8 @@ public class ClassCreateAutomationTestCases implements TestCase {
             //클래스 및 키트 탭 > 이런 걸 배울 거에요 추가
             CreatorNewClassPage.whatToLearnSection().click();
             CreatorNewClassPage.addSkillButton().click();
-            CreatorNewClassPage.addSkillTitleInput().sendKeys(CreatorNewClassPage.setRandomName());
-            CreatorNewClassPage.addSkillDescriptionInput().sendKeys(CreatorNewClassPage.setRandomName());
+            CreatorNewClassPage.addSkillTitleInput().sendKeys(CreatorNewClassPage.Action.setRandomName());
+            CreatorNewClassPage.addSkillDescriptionInput().sendKeys(CreatorNewClassPage.Action.setRandomName());
             CreatorNewClassPage.addSkillSaveButton().click();
 
             //검토 요청
@@ -105,12 +102,12 @@ public class ClassCreateAutomationTestCases implements TestCase {
             CreatorNewClassPage.modalRequestReviewButton().shouldBe(Condition.enabled).click();
 
             //클래스 리스트로 돌아가기
-            CreatorHome.ProductList.openPage();
+            CreatorProductPage.Actions.openPage();
 
 
             //크리레이팅 서비스 플랜 설정
-            CreatorNewClassPage.classTitleSearchInput().sendKeys(CreatorNewClassPage.getRecentClassTitleName());
-            CreatorNewClassPage.getRecentClassTitleName().equals(CreatorNewClassPage.classTitleSearchMatched().getText());
+            CreatorNewClassPage.classTitleSearchInput().sendKeys(CreatorNewClassPage.Action.getRecentClassTitleName());
+            CreatorNewClassPage.Action.getRecentClassTitleName().equals(CreatorNewClassPage.classTitleSearchMatched().getText());
             CreatorNewClassPage.classSeemoreButton().click();
             CreatorNewClassPage.creatingServicePlan().click();
             Utils.sleep(1000);
@@ -122,14 +119,13 @@ public class ClassCreateAutomationTestCases implements TestCase {
             CreatorNewClassPage.creatingServicePlan().click();
             CreatorNewClassPage.creatingServicePlanInput().getValue().equals("62a9a4cb0cfbc976a5fc6212");
 
-
-            //----------------
+            // 어드민 페이지로 전환
 
             SF.get(LogoutCreatorCenter.class).proceed();
-            CreatorHome.ProductList.openPage();
+            CreatorProductPage.Actions.openPage();
             SF.get(LoginAsAdminUser.class).proceed().validate(); //로그아웃 한 후에 간헐적으로 페이지 로딩을 못함.
             Utils.sleep(3000);
-            CreatorHome.DirectUrl.openPage();
+            CreatorClassNewsPage.DirectUrl.openPage();
 
             //영상 언어
             CreatorNewClassPage.adminVideoLanguageKR().click();
@@ -163,31 +159,23 @@ public class ClassCreateAutomationTestCases implements TestCase {
             CreatorNewClassPage.adminWorkspacePackageEditTitle().click(); // 패키지 수정 탭 클릭
             CreatorNewClassPage.adminWorkspacePackageAddButton().click(); // 패키지 추가 버튼 클릭
             CreatorNewClassPage.adminWorkspacePackageNameInput().clear(); // 패키지명 clear
-            CreatorNewClassPage.adminWorkspacePackageNameInput().sendKeys(CreatorNewClassPage.setRandomName()); // 패키지명 입력
+            CreatorNewClassPage.adminWorkspacePackageNameInput().sendKeys(CreatorNewClassPage.Action.setRandomName()); // 패키지명 입력
             CreatorNewClassPage.adminWorkspacePackageSaveButton().click(); // 패키지 수정 탭 저장
             CreatorNewClassPage.adminWorkspace().click(); // 관리자용 작업실 오픈
             CreatorNewClassPage.adminWorkspaceTitle().scrollIntoView(true);
             CreatorNewClassPage.adminWorkspacePackageEditTitle().click(); // 패키지 수정 탭 클릭
-            CreatorNewClassPage.adminWorkspacePackageDefaultInput().selectOption(CreatorNewClassPage.getRecentRandomName());
+            CreatorNewClassPage.adminWorkspacePackageDefaultInput().selectOption(CreatorNewClassPage.Action.getRecentRandomName());
             CreatorNewClassPage.adminWorkspacePackageSaveButton().click(); // 패키지 수정 탭 저장
 
             //어드민 페이지
-            CreatorHome.AdminClassesUrl.openPage(); // 어드민 > 클래스 목록으로 진입
+            adminClasses.AdminClassesUrl.openPage(); // 어드민 > 클래스 목록으로 진입
             SF.get(LoginAsAdminUser.class).proceed().validate(); // 어드민 로그인
             CreatorNewClassPage.adminClassesTitle().click(); // 제목 필터 클릭
-            CreatorNewClassPage.adminClassesTitleInput().sendKeys(CreatorNewClassPage.getRecentClassTitleName()); // 클래스 제목 입력
+            CreatorNewClassPage.adminClassesTitleInput().sendKeys(CreatorNewClassPage.Action.getRecentClassTitleName()); // 클래스 제목 입력
             CreatorNewClassPage.adminClassesTitleAddFilter().click(); // 필터 추카 버튼 클릭
             CreatorNewClassPage.adminClassesEditButton().click(); // 클래스 수정 버튼 클릭
             CreatorNewClassPage.adminClassesEditLaunchButton().click(); // 클래스 런칭 버튼 클릭
             CreatorNewClassPage.adminClassesEeitPopupLaunchButton().click(); // 클래스 런칭 팝업 내 런칭 버튼 클릭
-
-
-            //동기화 문제로 생성한 클래스가 바로 검색되지 않는 경우가 있어서 주석 처리.
-//        Home.Actions.openPage(); // 구독 홈으로 이동
-//        Home.searchBar().click(); //검색창 클릭
-//        Home.searchPanelTitle(); //검색 패널 확인
-//        Home.searchBarInput().sendKeys(CreatorNewClassPage.getRecentClassTitleName()); //검색 키워드 입력
-//        Home.searchBarInput().pressEnter(); //검색
 
             return this;
 
@@ -199,7 +187,5 @@ public class ClassCreateAutomationTestCases implements TestCase {
         assertTrue(Utils.urlContains("edit"));
         getWebDriver().close();
 
-//        CreatorNewClassPage.creatingServicePlan().click();
-//        CreatorNewClassPage.creatingServicePlanInput().getValue().equals("62a9a4cb0cfbc976a5fc6212");
     }
 }

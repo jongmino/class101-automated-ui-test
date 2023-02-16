@@ -17,13 +17,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  *  2) 비 구독 계정으로 로그인하여 구독 배너를 통해 결제 플랜으로 진입하여 월 구독 결제를 시도한다.
  */
 
-public class CheckMonthSubsription implements TestCase {
+public class CheckMonthSubscription implements TestCase {
 
     @Override
     public TestCase proceed() {
-        Home.homeSubscriptionButton().shouldBe(Condition.visible).click();
-        SelectPlanPage.paymentMonth().shouldBe(Condition.visible).click();
-        $(SelectPlanPage.nextButton().scrollIntoView("{behavior: \"instant\", block: \"center\", inline: \"center\"}"));
+        Home.homeSubscriptionButton().click();
+        SelectPlanPage.paymentMonth().click();
+        SelectPlanPage.nextButton().scrollIntoView("{behavior: \"instant\", block: \"center\", inline: \"center\"}");
         SelectPlanPage.nextButton().shouldBe(Condition.visible).click();
         return this;
     }

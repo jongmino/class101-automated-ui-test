@@ -2,7 +2,6 @@ package net.class101.automateduitest.tests.core;
 
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.common.Utils;
-import net.class101.automateduitest.resources.pages.plus.Home;
 import net.class101.automateduitest.resources.testcases.core.LoginAsCommon;
 import net.class101.automateduitest.resources.testcases.core.Logout;
 import net.class101.automateduitest.resources.testcases.core.MypageNicknameChange;
@@ -12,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class NicknameChange {
+public class NicknameChangeTest {
 
     @BeforeAll
     static void beforeAll() {
@@ -26,8 +25,7 @@ public class NicknameChange {
     }
 
     @Test
-    void testDeanRandomNickname() {
+    void testRandomNickname() {
         SF.get(MypageNicknameChange.class).proceed().validate();
-        Utils.sleep(2000);
     }
 }

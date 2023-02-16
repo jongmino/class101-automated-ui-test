@@ -20,16 +20,15 @@ public class MypageNicknameChange implements TestCase {
         Home.userProfileImg().click();
         MyPage.myPageProfileButton().click();
         MyPage.myPageNicknameInput().clear();
-        MyPage.myPageNicknameInput().sendKeys(MyPage.setNickname());
+        MyPage.myPageNicknameInput().sendKeys(MyPage.Actions.setNickname());
         MyPage.myPageInfoSave().click();
-        Utils.sleep(3000);
         return this;
 
     }
 
     @Override
     public void validate() {
-        assertEquals(MyPage.myPageLeftNickname().text(), MyPage.getRecentLoadNickname());
+        assertEquals(MyPage.myPageLeftNickname().text(), MyPage.Actions.getRecentLoadNickname());
     }
 
 }
