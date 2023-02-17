@@ -10,7 +10,7 @@ import java.util.UUID;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
-public class MyPageEditProfile {
+public class MyPageEditProfilePage {
 
     private static final By MY_PAGE_PROFILE_BUTTON = byXpath("(//img[@alt='profile-picture'])[1]");
     private static final By MY_PAGE_NICKNAME_INPUT = byXpath("//input[@name='nickName']");

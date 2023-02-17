@@ -1,8 +1,7 @@
 package net.class101.automateduitest.resources.pages.creatorCenter;
 
 import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
@@ -397,6 +396,13 @@ public class CreatorNewClassPage {
         }
         public static String getRecentLoadCategory() {
             return RecentLoadCategory;
+        }
+    }
+
+    public class DirectUrl {
+        public static void openPage() {
+            final String CREATOR_CENTER_PRODUCT_DIRECT_URL = CreatorNewClassPage.Action.getCurrentUrl();
+            open(CREATOR_CENTER_PRODUCT_DIRECT_URL);
         }
     }
 

@@ -1,9 +1,7 @@
 package net.class101.automateduitest.resources.testcases.core;
 
-import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.plus.Home;
-import net.class101.automateduitest.resources.pages.plus.MyPage;
-import net.class101.automateduitest.resources.pages.plus.MyPageEditProfile;
+import net.class101.automateduitest.resources.pages.plus.MyPageEditProfilePage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -19,17 +17,17 @@ public class MypageNicknameChange implements TestCase {
     @Override
     public TestCase proceed() {
         Home.userProfileImg().click();
-        MyPageEditProfile.myPageProfileButton().click();
-        MyPageEditProfile.myPageNicknameInput().clear();
-        MyPageEditProfile.myPageNicknameInput().sendKeys(MyPageEditProfile.Actions.setNickname());
-        MyPageEditProfile.myPageInfoSave().click();
+        MyPageEditProfilePage.myPageProfileButton().click();
+        MyPageEditProfilePage.myPageNicknameInput().clear();
+        MyPageEditProfilePage.myPageNicknameInput().sendKeys(MyPageEditProfilePage.Actions.setNickname());
+        MyPageEditProfilePage.myPageInfoSave().click();
         return this;
 
     }
 
     @Override
     public void validate() {
-        assertEquals(MyPageEditProfile.myPageLeftNickname().text(), MyPageEditProfile.Actions.getRecentLoadNickname());
+        assertEquals(MyPageEditProfilePage.myPageLeftNickname().text(), MyPageEditProfilePage.Actions.getRecentLoadNickname());
     }
 
 }

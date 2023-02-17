@@ -4,7 +4,7 @@ import net.class101.automateduitest.resources.common.PropertyLoader;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class adminClasses {
+public class adminClassesPage {
 
     public class AdminClassesUrl {
         public static void openPage() {

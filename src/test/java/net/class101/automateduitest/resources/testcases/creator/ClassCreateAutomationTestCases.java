@@ -4,8 +4,8 @@ import com.codeborne.selenide.*;
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.*;
-import net.class101.automateduitest.resources.pages.plus.MyPage;
-import net.class101.automateduitest.resources.pages.admin.adminClasses;
+import net.class101.automateduitest.resources.pages.admin.adminClassesPage;
+import net.class101.automateduitest.resources.pages.plus.MyPageEditProfilePage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 import java.io.File;
@@ -34,10 +34,10 @@ public class ClassCreateAutomationTestCases implements TestCase {
 
             //기본정보 탭 > 커버 이미지 추가
             CreatorNewClassPage.coverImageSection().click();
-            CreatorNewClassPage.coverImageInput().uploadFile(new File(MyPage.Actions.setTestImages()));
+            CreatorNewClassPage.coverImageInput().uploadFile(new File(MyPageEditProfilePage.Actions.setTestImages()));
             {
-                if (MyPage.Actions.setRecentLoadImage().equals(MyPage.Actions.getTestImages())) {
-                    CreatorNewClassPage.coverImageInput().uploadFile(new File(MyPage.Actions.setTestImages()));
+                if (MyPageEditProfilePage.Actions.setRecentLoadImage().equals(MyPageEditProfilePage.Actions.getTestImages())) {
+                    CreatorNewClassPage.coverImageInput().uploadFile(new File(MyPageEditProfilePage.Actions.setTestImages()));
                 }
             }
             CreatorNewClassPage.allImageUnderClassInfo().shouldBe(CollectionCondition.size(2)); // wait for file uploaded
@@ -125,7 +125,7 @@ public class ClassCreateAutomationTestCases implements TestCase {
             CreatorProductPage.Actions.openPage();
             SF.get(LoginAsAdminUser.class).proceed().validate(); //로그아웃 한 후에 간헐적으로 페이지 로딩을 못함.
             Utils.sleep(3000);
-            CreatorClassNewsPage.DirectUrl.openPage();
+            CreatorNewClassPage.DirectUrl.openPage();
 
             //영상 언어
             CreatorNewClassPage.adminVideoLanguageKR().click();
@@ -168,7 +168,7 @@ public class ClassCreateAutomationTestCases implements TestCase {
             CreatorNewClassPage.adminWorkspacePackageSaveButton().click(); // 패키지 수정 탭 저장
 
             //어드민 페이지
-            adminClasses.AdminClassesUrl.openPage(); // 어드민 > 클래스 목록으로 진입
+            adminClassesPage.AdminClassesUrl.openPage(); // 어드민 > 클래스 목록으로 진입
             SF.get(LoginAsAdminUser.class).proceed().validate(); // 어드민 로그인
             CreatorNewClassPage.adminClassesTitle().click(); // 제목 필터 클릭
             CreatorNewClassPage.adminClassesTitleInput().sendKeys(CreatorNewClassPage.Action.getRecentClassTitleName()); // 클래스 제목 입력

@@ -27,11 +27,4 @@ public class CreatorClassNewsPage {
         return $(CREATE_NOTICE_BUTTON).shouldBe(Condition.visible);
     }
 
-    public class DirectUrl {
-        public static void openPage() {
-            final String CREATOR_CENTER_PRODUCT_DIRECT_URL = CreatorNewClassPage.getCurrentUrl();
-            open(CREATOR_CENTER_PRODUCT_DIRECT_URL);
-        }
-    }
-
 }
