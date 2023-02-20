@@ -43,7 +43,7 @@ public class ClassCreateAutomationTestCases implements TestCase {
                 }
             }
             CreatorNewClassPage.allImageUnderClassInfo().shouldBe(CollectionCondition.size(2)); // wait for file uploaded
-            Utils.sleep(2000);
+            Utils.sleep(1000);
             CreatorNewClassPage.coverImageSaveButton().shouldBe(Condition.enabled).click();
             CreatorNewClassPage.allCoverImageSaveButton().shouldBe(CollectionCondition.size(0)); // 커버 이미지가 완전히 submit 될 때까지 기다린다
 
@@ -63,11 +63,8 @@ public class ClassCreateAutomationTestCases implements TestCase {
                     CreatorNewClassPage.firstCategorySelector().selectOption(CreatorNewClassPage.Actions.setTestFirstCategory());
                 }
             }
-            Utils.sleep(1000);
             CreatorNewClassPage.secondCategorySelector().selectOption(1);
-            Utils.sleep(1000);
             CreatorNewClassPage.thirdCategorySelector().selectOption(1);
-            Utils.sleep(1000);
             CreatorNewClassPage.categorySaveButton().click();
             CreatorNewClassPage.allCategorySaveButton()
                     .shouldBe(CollectionCondition.size(0)); // wait for submit category
@@ -85,7 +82,6 @@ public class ClassCreateAutomationTestCases implements TestCase {
             CreatorNewClassPage.creatorDescriptionSaveButton().click();
             CreatorNewClassPage.allCreatorDescriptionSaveButtons()
                     .shouldBe(CollectionCondition.size(0)); // wait for submit creator description
-            Utils.sleep(2000);
 
             //클래스 및 키트 탭 이동
             CreatorNewClassPage.addClassTitle().scrollIntoView(true);
@@ -99,7 +95,6 @@ public class ClassCreateAutomationTestCases implements TestCase {
             CreatorNewClassPage.addSkillSaveButton().click();
 
             //검토 요청
-            Utils.sleep(3000);
             CreatorNewClassPage.requestReviewButton().shouldBe(Condition.enabled).click();
             CreatorNewClassPage.modalRequestReviewButton().shouldBe(Condition.enabled).click();
 
@@ -112,10 +107,8 @@ public class ClassCreateAutomationTestCases implements TestCase {
             CreatorNewClassPage.Actions.getRecentClassTitleName().equals(CreatorNewClassPage.classTitleSearchMatched().getText());
             CreatorNewClassPage.classSeemoreButton().click();
             CreatorNewClassPage.creatingServicePlan().click();
-            Utils.sleep(1000);
             CreatorNewClassPage.creatingServicePlanInput().click();
             CreatorNewClassPage.creatingServicePlanBasic().click();
-            Utils.sleep(3000);
             CreatorNewClassPage.creatingServicePlanSaveButton().click();
 
             CreatorNewClassPage.creatingServicePlan().click();
@@ -125,8 +118,7 @@ public class ClassCreateAutomationTestCases implements TestCase {
 
             SF.get(LogoutCreatorCenter.class).proceed();
             CreatorProductPage.Actions.openPage();
-            SF.get(LoginAsAdminUserInAdmin.class).proceed().validate(); //로그아웃 한 후에 간헐적으로 페이지 로딩을 못함.
-            Utils.sleep(3000);
+            SF.get(LoginAsAdminUserInCreator.class).proceed().validate(); //로그아웃 한 후에 간헐적으로 페이지 로딩을 못함.
             CreatorNewClassPage.Actions.openDirectUrl();
 
             //영상 언어
@@ -157,7 +149,6 @@ public class ClassCreateAutomationTestCases implements TestCase {
             getWebDriver().switchTo().alert().accept(); // 얼리버드 쿠폰? 확인 팝업
             CreatorNewClassPage.adminWorkspace().click(); // 관리자용 작업실 오픈
             CreatorNewClassPage.adminWorkspaceTitle().scrollIntoView(true);
-            Utils.sleep(1000);
             CreatorNewClassPage.adminWorkspacePackageEditTitle().click(); // 패키지 수정 탭 클릭
             CreatorNewClassPage.adminWorkspacePackageAddButton().click(); // 패키지 추가 버튼 클릭
             CreatorNewClassPage.adminWorkspacePackageNameInput().clear(); // 패키지명 clear

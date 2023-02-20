@@ -5,6 +5,7 @@ import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLoginPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
 
 import java.util.Map;
 
@@ -25,12 +26,11 @@ public class LoginAsAdminUserInAdmin implements TestCase {
         final String email = accounts.get("creatorAdminUser").id;
         final String password = accounts.get("creatorAdminUser").pw;
         CreatorLoginPage.Actions.login(email, password);
-        //CreatorProductPage.creatorCenterLogo();
         return this;
     }
 
     @Override
     public void validate() {
-        assertTrue(Utils.urlContains("products"));
+        assertTrue(Utils.urlContains("klasses"));
     }
 }
