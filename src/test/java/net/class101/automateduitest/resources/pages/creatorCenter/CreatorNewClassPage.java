@@ -346,7 +346,7 @@ public class CreatorNewClassPage {
         return $$(CREATOR_DESCRIPTION_SAVE_BUTTON);
     }
 
-    public class Action {
+    public class Actions {
         private static String RecentRandomName = "getRecentRandomName";
         public static String setRandomName() {
             RecentRandomName = UUID.randomUUID().toString().replace("-", "").substring(0, 20);
@@ -378,7 +378,7 @@ public class CreatorNewClassPage {
 
 
 
-        public static final String[] TEST_FIRST_CATEGORY = { "크리에이티브", "수익 창출", "직무", "외국어", "키즈", "준비물 · 키트" };
+        private static final String[] TEST_FIRST_CATEGORY = { "크리에이티브", "수익 창출", "직무", "외국어", "키즈", "준비물 · 키트" };
         public static String setTestFirstCategory() {
             Random random = new Random();
             int randomNum = random.nextInt(5);
@@ -399,9 +399,9 @@ public class CreatorNewClassPage {
         }
     }
 
-    public class DirectUrl {
+    public class openDirectUrl {
         public static void openPage() {
-            final String CREATOR_CENTER_PRODUCT_DIRECT_URL = CreatorNewClassPage.Action.getCurrentUrl();
+            final String CREATOR_CENTER_PRODUCT_DIRECT_URL = CreatorNewClassPage.Actions.getCurrentUrl();
             open(CREATOR_CENTER_PRODUCT_DIRECT_URL);
         }
     }

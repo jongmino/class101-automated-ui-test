@@ -9,6 +9,8 @@ import net.class101.automateduitest.resources.testcases.creator.LoginAsCreatorUs
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+
 @TestInstance(Lifecycle.PER_CLASS)
 public class ClassCreateAutomationTests {
 
@@ -20,6 +22,7 @@ public class ClassCreateAutomationTests {
             SF.get(LoginAsCreatorUser.class).proceed();
             SF.get(ClassCreateAutomationTestCases.class).proceed().validate();
             System.out.println("testAddClassCreate: " + i);
+            getWebDriver().close();
         }
     }
 }

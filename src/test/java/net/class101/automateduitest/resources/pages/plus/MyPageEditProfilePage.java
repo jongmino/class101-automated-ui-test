@@ -41,7 +41,7 @@ public class MyPageEditProfilePage {
         }
 
         // 프로필 이미지 변경
-        public static final String[] TEST_IMAGE = { "src/test/images/1.jpeg", "src/test/images/2.jpeg", "src/test/images/3.jpeg", "src/test/images/4.jpeg" };
+        private static final String[] TEST_IMAGE = { "src/test/images/1.jpeg", "src/test/images/2.jpeg", "src/test/images/3.jpeg", "src/test/images/4.jpeg" };
         public static String setTestImages() {
             Random random = new Random();
             int randomNum = random.nextInt(3);
@@ -52,7 +52,7 @@ public class MyPageEditProfilePage {
             return TEST_IMAGE[0];
         }
 
-        public static String RecentLoadImage = "getRecentLoadImage";
+        private static String RecentLoadImage = "getRecentLoadImage";
         public static String setRecentLoadImage() {
             RecentLoadImage = setTestImages();
             return RecentLoadImage;

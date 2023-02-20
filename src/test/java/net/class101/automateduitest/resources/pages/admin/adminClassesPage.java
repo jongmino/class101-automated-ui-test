@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class adminClassesPage {
 
-    public class AdminClassesUrl {
+    public class Actions {
         public static void openPage() {
             final String CREATOR_CENTER_ADMIN_CLASSES_URL = PropertyLoader.getProperties().urls.get("adminClasses");
             open(CREATOR_CENTER_ADMIN_CLASSES_URL);
