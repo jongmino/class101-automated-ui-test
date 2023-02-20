@@ -7,7 +7,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-
+import static com.codeborne.selenide.Selenide.open;
 import java.util.Random;
 import java.util.UUID;
 
@@ -74,7 +74,6 @@ public class CreatorNewClassPage {
     private static final By ADMIN_CLASSES_EDIT_BUTTON = byXpath("//*[@id=\"__next\"]/div[2]/div/main/div/div/div[5]/div/div[1]/div[1]/div/div[2]/div/div/div[1]/div/div[5]/div/button");
     private static final By ADMIN_CLASSES_EDIT_LAUNCH_BUTTON = byXpath("//button[contains(@style,'rgb(255, 255, 255)')]//span[text()='런칭하기']");
     private static final By ADMIN_CLASSES_EDIT_POPUP_LAUNCH_BUTTON = byXpath("//*[@id=\"modalBottomSheet\"]/div/div/div[2]/div/div[6]/button[2]");
-
 
 
     public static SelenideElement classProductUrl() {
@@ -348,37 +347,43 @@ public class CreatorNewClassPage {
 
     public class Actions {
         private static String RecentRandomName = "getRecentRandomName";
+
         public static String setRandomName() {
             RecentRandomName = UUID.randomUUID().toString().replace("-", "").substring(0, 20);
             return RecentRandomName;
         }
+
         public static String getRecentRandomName() {
             return RecentRandomName;
         }
 
 
         private static String CurrentUrl = "getCurrentUrl";
+
         public static String setCurrentUrl() {
-            CurrentUrl = classProductUrl().getAttribute("href").toString().replaceFirst("center/products","creator/projects").replace("preview", "edit");
+            CurrentUrl = classProductUrl().getAttribute("href").toString().replaceFirst("center/products", "creator/projects").replace("preview", "edit");
             return CurrentUrl;
         }
+
         public static String getCurrentUrl() {
             return CurrentUrl;
         }
 
 
         private static String RecentClassTitleName = "getRecentClassTitleName";
+
         public static String setClassTitleName() {
             RecentClassTitleName = UUID.randomUUID().toString().replace("-", "").substring(0, 20);
             return RecentClassTitleName;
         }
+
         public static String getRecentClassTitleName() {
             return RecentClassTitleName;
         }
 
 
+        private static final String[] TEST_FIRST_CATEGORY = {"크리에이티브", "수익 창출", "직무", "외국어", "키즈", "준비물 · 키트"};
 
-        private static final String[] TEST_FIRST_CATEGORY = { "크리에이티브", "수익 창출", "직무", "외국어", "키즈", "준비물 · 키트" };
         public static String setTestFirstCategory() {
             Random random = new Random();
             int randomNum = random.nextInt(5);
@@ -390,21 +395,21 @@ public class CreatorNewClassPage {
         }
 
         private static String RecentLoadCategory = "getRecentLoadCategory";
+
         public static String setRecentLoadCategory() {
             RecentLoadCategory = setTestFirstCategory();
             return RecentLoadCategory;
         }
+
         public static String getRecentLoadCategory() {
             return RecentLoadCategory;
         }
-    }
 
-    public class openDirectUrl {
-        public static void openPage() {
+        public static void openDirectUrl() {
             final String CREATOR_CENTER_PRODUCT_DIRECT_URL = CreatorNewClassPage.Actions.getCurrentUrl();
             open(CREATOR_CENTER_PRODUCT_DIRECT_URL);
         }
     }
-
-
 }
+
+
