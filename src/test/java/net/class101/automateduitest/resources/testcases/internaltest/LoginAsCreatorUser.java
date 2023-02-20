@@ -1,4 +1,4 @@
-package net.class101.automateduitest.resources.testcases.creator;
+package net.class101.automateduitest.resources.testcases.internaltest;
 
 import net.class101.automateduitest.resources.common.Properties;
 import net.class101.automateduitest.resources.common.PropertyLoader;

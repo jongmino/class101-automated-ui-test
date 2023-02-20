@@ -1,11 +1,9 @@
-package net.class101.automateduitest.resources.testcases.creator;
+package net.class101.automateduitest.resources.testcases.internaltest;
 
 import net.class101.automateduitest.resources.common.Properties;
 import net.class101.automateduitest.resources.common.PropertyLoader;
 import net.class101.automateduitest.resources.common.Utils;
-import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLoginPage;
-import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 import java.util.Map;
@@ -19,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  *  1) 어드민 권한이 있는 계정으로 로그인한다.
  */
 
-public class LoginAsAdminUser implements TestCase {
+public class LoginAsAdminUserInCreator implements TestCase {
 
     @Override
     public TestCase proceed() {
@@ -33,6 +31,6 @@ public class LoginAsAdminUser implements TestCase {
 
     @Override
     public void validate() {
-        assertTrue(Utils.urlContains("products"));
+        assertTrue(Utils.urlContains("klasses"));
     }
 }

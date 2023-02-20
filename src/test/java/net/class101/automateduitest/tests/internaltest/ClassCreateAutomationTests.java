@@ -1,10 +1,10 @@
-package net.class101.automateduitest.tests.creator;
+package net.class101.automateduitest.tests.internaltest;
 
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
-import net.class101.automateduitest.resources.testcases.creator.ClassCreateAutomationTestCases;
-import net.class101.automateduitest.resources.testcases.creator.LoginAsCreatorUser;
+import net.class101.automateduitest.resources.testcases.internaltest.ClassCreateAutomationTestCases;
+import net.class101.automateduitest.resources.testcases.internaltest.LoginAsCreatorUser;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.TestInstance.Lifecycle;

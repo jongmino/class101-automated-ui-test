@@ -1,4 +1,4 @@
-package net.class101.automateduitest.resources.testcases.creator;
+package net.class101.automateduitest.resources.testcases.internaltest;
 
 import com.codeborne.selenide.*;
 import net.class101.automateduitest.resources.common.SF;
@@ -8,6 +8,7 @@ import net.class101.automateduitest.resources.pages.creatorCenter.*;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorNewClassPage;
 import net.class101.automateduitest.resources.pages.plus.MyPageEditProfilePage;
 import net.class101.automateduitest.resources.testcases.TestCase;
+import net.class101.automateduitest.resources.testcases.creator.LogoutCreatorCenter;
 
 import java.io.File;
 
@@ -124,7 +125,7 @@ public class ClassCreateAutomationTestCases implements TestCase {
 
             SF.get(LogoutCreatorCenter.class).proceed();
             CreatorProductPage.Actions.openPage();
-            SF.get(LoginAsAdminUser.class).proceed().validate(); //로그아웃 한 후에 간헐적으로 페이지 로딩을 못함.
+            SF.get(LoginAsAdminUserInAdmin.class).proceed().validate(); //로그아웃 한 후에 간헐적으로 페이지 로딩을 못함.
             Utils.sleep(3000);
             CreatorNewClassPage.Actions.openDirectUrl();
 
@@ -170,7 +171,7 @@ public class ClassCreateAutomationTestCases implements TestCase {
 
             //어드민 페이지
             AdminClassesPage.Actions.openPage(); // 어드민 > 클래스 목록으로 진입
-            SF.get(LoginAsAdminUser.class).proceed().validate(); // 어드민 로그인
+            SF.get(LoginAsAdminUserInAdmin.class).proceed().validate(); // 어드민 로그인
             CreatorNewClassPage.adminClassesTitle().click(); // 제목 필터 클릭
             CreatorNewClassPage.adminClassesTitleInput().sendKeys(CreatorNewClassPage.Actions.getRecentClassTitleName()); // 클래스 제목 입력
             CreatorNewClassPage.adminClassesTitleAddFilter().click(); // 필터 추카 버튼 클릭
