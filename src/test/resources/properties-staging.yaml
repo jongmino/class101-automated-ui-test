@@ -9,7 +9,7 @@ urls:
   creatorProduct: "https://staging-creator.class101.net/center/products"
   lecturePage: "https://staging.class101.net/ko/classes/5c6f91d274eabcfdafa1e5ff/lectures/5c6f91eb74eabcfdafa23add"
   productDetailPage: "https://staging.class101.net/ko/products/5c5d780674eabcfdafd38eed"
-  kitPDP: "https://staging.class101.net/ko/products/5ffab8e80a3770000d4784c6"
+  kitPDP: "https://staging.class101.net/ko/products/60402e7653e12d000e28588e"
   selectPlanPage: "https://staging.class101.net/ko/payment/select-subscription-product"
   subscriptionPage: "https://staging.class101.net/ko/mypage/subscription"
   adminClasses: "https://staging-admin.class101.net/admin/klasses"
