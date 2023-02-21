@@ -13,6 +13,7 @@ urls:
   selectPlanPage: "https://staging.class101.net/ko/payment/select-subscription-product"
   subscriptionPage: "https://staging.class101.net/ko/mypage/subscription"
   adminClasses: "https://staging-admin.class101.net/admin/klasses"
+  noKitPage : "https://staging.class101.net/ko/products/5ebe4cd83aad3b762dced3fd"
 
 accounts:
   plusNewUser:
