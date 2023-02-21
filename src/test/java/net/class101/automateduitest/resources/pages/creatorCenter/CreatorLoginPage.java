@@ -28,6 +28,7 @@ public class CreatorLoginPage {
             CreatorLoginPage.emailInputElement().sendKeys(email);
             CreatorLoginPage.passwordInputElement().sendKeys(password);
             CreatorLoginPage.loginButtonElement().click();
+            }
         }
     }
-}
+

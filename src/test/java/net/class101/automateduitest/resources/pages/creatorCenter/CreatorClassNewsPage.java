@@ -2,6 +2,7 @@ package net.class101.automateduitest.resources.pages.creatorCenter;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -25,4 +26,5 @@ public class CreatorClassNewsPage {
     public static SelenideElement createNoticeButton() {
         return $(CREATE_NOTICE_BUTTON).shouldBe(Condition.visible);
     }
+
 }

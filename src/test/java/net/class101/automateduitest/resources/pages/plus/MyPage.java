@@ -3,8 +3,7 @@ package net.class101.automateduitest.resources.pages.plus;
 import static com.codeborne.selenide.Selectors.byClassName;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -12,7 +11,6 @@ import net.class101.automateduitest.resources.common.PropertyLoader;
 import org.openqa.selenium.By;
 
 public class MyPage {
-
     private static final By MY_PAGE_LOGOUT_BUTTON = withText("로그아웃");
     private static final By MY_PAGE_CASH_TAB = byXpath("//a[contains(@href,'cash')]");
     private static final By MY_PAGE_SUBSCRIPTION_STATUS_NON = byXpath("//a[contains(@href,'subscription') and contains(.,'구독하기')]");
@@ -24,6 +22,7 @@ public class MyPage {
     private static final By MY_PAGE_ENQUIRY_TAB = byXpath("//button[contains(.,'1:1 문의')]");
     private static final By MY_PAGE_SETTING_TAB = byXpath("//a[contains(@href,'setting')]");
     private static final By CHANNEL_TALK_MODAL = byClassName("ch-desk-messenger");
+
 
     public static SelenideElement logoutButton() {
         return $(MY_PAGE_LOGOUT_BUTTON).shouldBe(Condition.visible);
