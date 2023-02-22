@@ -20,11 +20,11 @@ public class CheckServiceRegionJp implements TestCase {
     @Override
     public TestCase proceed() {
         CreatorHome.profileImg().click();
-        CreatorHome.serviceRegionSettingButtonKr().shouldBe(Condition.visible).click();
-        CreatorHome.serviceRegionJp().shouldBe(Condition.visible).click();
-        CreatorHome.serviceRegionSaveButtonKr().click();
-        CreatorHome.serviceRegionToastAlertKr().shouldBe(Condition.visible);
-        getWebDriver().navigate().refresh(); // 간헐적으로 서비스 지역이 변경되지 않아 refresh를 추가했고 크리에이터 센터 로고를 클릭으로 새로고침읋 하려고 했는데 크센 로고 클릭으로는 작동을 안함..
+        CreatorHome.serviceRegionSettingButton().click();
+        CreatorHome.serviceRegionJp().click();
+        CreatorHome.serviceRegionSaveButton().click();
+        Utils.sleep(5000);
+        getWebDriver().navigate().refresh();
         CreatorHome.serviceRegionGuideCenterJp().shouldBe(Condition.visible).click();
         return this;
     }

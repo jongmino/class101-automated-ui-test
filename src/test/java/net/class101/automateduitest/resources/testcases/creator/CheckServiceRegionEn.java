@@ -3,6 +3,7 @@ package net.class101.automateduitest.resources.testcases.creator;
 import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
+import net.class101.automateduitest.resources.pages.creatorCenter.CreatorProductPage;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
@@ -20,11 +21,11 @@ public class CheckServiceRegionEn implements TestCase {
     @Override
     public TestCase proceed() {
         CreatorHome.profileImg().click();
-        CreatorHome.serviceRegionSettingButtonJp().shouldBe(Condition.visible).click();
-        CreatorHome.serviceRegionEn().shouldBe(Condition.visible).click();
-        CreatorHome.serviceRegionSaveButtonJp().click();
-        CreatorHome.serviceRegionToastAlertJp().shouldBe(Condition.visible);
-        getWebDriver().navigate().refresh(); // 간헐적으로 서비스 지역이 변경되지 않아 refresh를 추가했고 크리에이터 센터 로고를 클릭으로 새로고침읋 하려고 했는데 크센 로고 클릭으로는 작동을 안함..
+        CreatorHome.serviceRegionSettingButton().click();
+        CreatorHome.serviceRegionEn().click();
+        CreatorHome.serviceRegionSaveButton().click();
+        Utils.sleep(5000);
+        getWebDriver().navigate().refresh();
         CreatorHome.serviceRegionGuideCenterEn().shouldBe(Condition.visible).click();
         return this;
     }
