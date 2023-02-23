@@ -15,7 +15,6 @@ public class NoBuyKitButtonTest {
     static void beforeAll() {
         Utils.setTestConfig();
         SF.get(LoginAsNonSubscriber.class).proceed();
-        Utils.sleep(2000);
     }
 
     @AfterAll
