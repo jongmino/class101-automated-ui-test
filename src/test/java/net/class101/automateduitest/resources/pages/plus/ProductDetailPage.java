@@ -33,8 +33,7 @@ public class ProductDetailPage {
         return $(CREATOR_INTRODUCTION_TAB).shouldBe(Condition.visible);
     }
 
-    public static SelenideElement buyKitButton() {return $(BUY_KIT_BUTTON).shouldBe(Condition.visible);}
-    public static boolean hasKitButton() {return $(BUY_KIT_BUTTON).exists();}
+    public static SelenideElement buyKitButton() {return $(BUY_KIT_BUTTON);}
 
     public class Actions {
         public static void openPage() {
@@ -47,7 +46,7 @@ public class ProductDetailPage {
             open(kitPDP);
         }
 
-        public static void noKitClassPage() {
+        public static void openNoKitPage() {
             final String noKitPage = PropertyLoader.getProperties().urls.get("noKitPage");
             open(noKitPage);
         }

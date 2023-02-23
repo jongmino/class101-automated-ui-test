@@ -17,13 +17,13 @@ public class CheckNoBuyKitButton implements TestCase {
 
     @Override
     public TestCase proceed() {
-        ProductDetailPage.Actions.noKitClassPage();
+        ProductDetailPage.Actions.openNoKitPage();
 
         return this;
     }
 
     @Override
     public void validate() {
-        assertTrue(!ProductDetailPage.hasKitButton());
+        assertTrue(!ProductDetailPage.buyKitButton().exists());
     }
 }

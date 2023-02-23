@@ -4,7 +4,6 @@ import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.testcases.commerce.CheckNoBuyKitButton;
 import net.class101.automateduitest.resources.testcases.core.LoginAsNonSubscriber;
-import net.class101.automateduitest.resources.testcases.core.LoginAsSubscriber;
 import net.class101.automateduitest.resources.testcases.core.Logout;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
