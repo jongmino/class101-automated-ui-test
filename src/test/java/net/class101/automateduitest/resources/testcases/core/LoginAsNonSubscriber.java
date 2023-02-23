@@ -24,9 +24,7 @@ public class LoginAsNonSubscriber implements TestCase {
     @Override
     public TestCase proceed() {
         Home.Actions.openPage();
-        //유저 네비게이션 우상단 로그인 버튼 클릭
         Home.loginButton().click();
-        //다른 방법으로 로그인 버튼 클릭
         LoginPage.allLoginButton().click();
 
         final Map<String, Properties.Account> accounts = PropertyLoader.getProperties().accounts;

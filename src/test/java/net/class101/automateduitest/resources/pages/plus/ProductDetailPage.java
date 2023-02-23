@@ -33,18 +33,22 @@ public class ProductDetailPage {
         return $(CREATOR_INTRODUCTION_TAB).shouldBe(Condition.visible);
     }
 
-    public static SelenideElement buyKitButton() {
-        return $(BUY_KIT_BUTTON).shouldBe(Condition.visible);
-    }
+    public static SelenideElement buyKitButton() {return $(BUY_KIT_BUTTON);}
 
     public class Actions {
         public static void openPage() {
             final String productDetailPage = PropertyLoader.getProperties().urls.get("productDetailPage");
             open(productDetailPage);
         }
+
         public static void openKitPage() {
             final String kitPDP = PropertyLoader.getProperties().urls.get("kitPDP");
             open(kitPDP);
+        }
+
+        public static void openNoKitPage() {
+            final String noKitPage = PropertyLoader.getProperties().urls.get("noKitPage");
+            open(noKitPage);
         }
     }
 }
