@@ -3,7 +3,10 @@ package net.class101.automateduitest.resources.testcases.creator;
 import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
+import net.class101.automateduitest.resources.pages.creatorCenter.CreatorLeftNavigation;
 import net.class101.automateduitest.resources.testcases.TestCase;
+
+import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -23,9 +26,8 @@ public class CheckServiceRegionJp implements TestCase {
         CreatorHome.serviceRegionSettingButton().click();
         CreatorHome.serviceRegionJp().click();
         CreatorHome.serviceRegionSaveButton().click();
-        Utils.sleep(5000);
         getWebDriver().navigate().refresh();
-        CreatorHome.serviceRegionGuideCenterJp().shouldBe(Condition.visible).click();
+        CreatorLeftNavigation.creatorGuideTabJp().shouldBe(Condition.visible).click();
         return this;
     }
 

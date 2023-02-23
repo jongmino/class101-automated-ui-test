@@ -19,14 +19,10 @@ public class CreatorHome {
     private static final By SERVICE_REGION_EN = byXpath("(//div[@class='css-t34sz'])[2]");
     private static final By SERVICE_REGION_KR = byXpath("(//div[@class='css-t34sz'])[1]");
     private static final By SERVICE_REGION_SAVE_BUTTON = byXpath("//div[@class='css-1uo2vg6']//button[@class='css-sf0tcz']");
-    private static final By SERVICE_REGION_GUIDE_CENTER_JP = byXpath("//span[text()='クリエイターガイドセンター']");
-    private static final By SERVICE_REGION_GUIDE_CENTER_EN = byXpath("//span[text()='FAQ']");
-    private static final By SERVICE_REGION_GUIDE_CENTER_KR = byXpath("//span[text()='크리에이터 가이드 센터']");
 
     public static SelenideElement profileImg() {
         return $(NAVIGATION_PROFILE_IMG).shouldBe(Condition.visible);
     }
-
     public static SelenideElement logoutButton() {
         return $(LOGOUT_BUTTON).shouldBe(Condition.visible);
     }
@@ -42,18 +38,8 @@ public class CreatorHome {
     public static SelenideElement serviceRegionKr() {
         return $(SERVICE_REGION_KR).shouldBe(Condition.visible);
     }
-
-    public static SelenideElement serviceRegionGuideCenterJp() {
-        return $(SERVICE_REGION_GUIDE_CENTER_JP).shouldBe(Condition.visible);
-    }
     public static SelenideElement serviceRegionSaveButton() {
         return $(SERVICE_REGION_SAVE_BUTTON).shouldBe(Condition.visible);
-    }
-    public static SelenideElement serviceRegionGuideCenterEn() {
-        return $(SERVICE_REGION_GUIDE_CENTER_EN).shouldBe(Condition.visible);
-    }
-    public static SelenideElement serviceRegionGuideCenterKr() {
-        return $(SERVICE_REGION_GUIDE_CENTER_KR).shouldBe(Condition.visible);
     }
 
 

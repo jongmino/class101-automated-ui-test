@@ -25,6 +25,8 @@ public class CreatorLeftNavigation {
     private static final By KIT_SETTLEMENT_TAB = byXpath("//span[text()='키트 정산']");
     private static final By KIT_SETTLEMENT_SUB_TAB = byXpath("//div[text()='[Created by] 샌디테스트1']");
     private static final By CREATOR_GUIDE_TAB = byXpath("//span[text()='크리에이터 가이드 센터']");
+    private static final By CREATOR_GUIDE_TAB_JP = byXpath("//span[text()='クリエイターガイドセンター']");
+    private static final By CREATOR_GUIDE_TAB_EN = byXpath("//span[text()='FAQ']");
 
     public static SelenideElement classTab() {
         return $(CLASS_TAB).shouldBe(Condition.visible);
@@ -88,5 +90,12 @@ public class CreatorLeftNavigation {
 
     public static SelenideElement noticeTab() {
         return $(NOTICE_TAB).shouldBe(Condition.visible);
+    }
+
+    public static SelenideElement creatorGuideTabJp() {
+        return $(CREATOR_GUIDE_TAB_JP).shouldBe(Condition.visible);
+    }
+    public static SelenideElement creatorGuideTabEn() {
+        return $(CREATOR_GUIDE_TAB_EN).shouldBe(Condition.visible);
     }
 }
