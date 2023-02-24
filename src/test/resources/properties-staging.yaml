@@ -14,7 +14,7 @@ urls:
   subscriptionPage: "https://staging.class101.net/ko/mypage/subscription"
   adminClasses: "https://staging-admin.class101.net/admin/klasses"
   noKitPage : "https://staging.class101.net/ko/products/5ebe4cd83aad3b762dced3fd"
-
+  soldOutKitPage : "https://staging.class101.net/ko/products/62d0f107fcd2bc000fe2211b"
 accounts:
   plusNewUser:
     id: "test_1@101.inc"

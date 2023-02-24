@@ -50,5 +50,9 @@ public class ProductDetailPage {
             final String noKitPage = PropertyLoader.getProperties().urls.get("noKitPage");
             open(noKitPage);
         }
+        public static void openSoldOutClassPage() {
+            final String soldOutKitPage = PropertyLoader.getProperties().urls.get("soldOutKitPage");
+            open(soldOutKitPage);
+        }
     }
 }
