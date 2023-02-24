@@ -12,5 +12,5 @@ public class KitBuyPage {
     private static final By SOLD_OUT_BUTTON = byXpath("//span[text()='품절']");
 
 
-    public static SelenideElement soldOutButton() { return $(SOLD_OUT_BUTTON).shouldBe(Condition.visible); }
+    public static SelenideElement openSoldOutClassPage() { return $(SOLD_OUT_BUTTON).shouldBe(Condition.visible); }
 }

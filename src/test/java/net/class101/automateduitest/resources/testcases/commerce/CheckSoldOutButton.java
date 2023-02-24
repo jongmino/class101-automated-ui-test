@@ -20,7 +20,7 @@ public class CheckSoldOutButton implements TestCase {
 
     @Override
     public void validate() {
-        assertTrue(KitBuyPage.soldOutButton().exists());
+        assertTrue(KitBuyPage.openSoldOutClassPage().exists());
         Selenide.closeWindow();
         Selenide.switchTo().window(0);
     }

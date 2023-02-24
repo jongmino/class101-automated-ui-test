@@ -32,7 +32,7 @@ public class SoldOutButtonTest {
     }
 
     @Test
-    void KitSoldOutButtonTest() {
+    void testKitSoldOutButton() {
         SF.get(CheckSoldOutButton.class).proceed().validate();
     }
 
