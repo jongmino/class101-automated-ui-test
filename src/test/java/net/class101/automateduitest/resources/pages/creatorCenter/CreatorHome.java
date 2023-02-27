@@ -14,11 +14,15 @@ public class CreatorHome {
 
     private static final String NAVIGATION_PROFILE_IMG = "img[alt='profile']";
     private static final By LOGOUT_BUTTON = byXpath("//p[text()='로그아웃']");
-    private static final By SERVICE_REGION_SETTING_BUTTON = byXpath("(//div[@id='popover']//div[@class='css-zsoya5'])[2]");
-    private static final By SERVICE_REGION_JP = byXpath("(//div[@class='css-t34sz'])[3]");
-    private static final By SERVICE_REGION_EN = byXpath("(//div[@class='css-t34sz'])[2]");
-    private static final By SERVICE_REGION_KR = byXpath("(//div[@class='css-t34sz'])[1]");
-    private static final By SERVICE_REGION_SAVE_BUTTON = byXpath("//div[@class='css-1uo2vg6']//button[@class='css-sf0tcz']");
+    private static final By SERVICE_REGION_SETTING_BUTTON_JP = byXpath("//p[text()='地域設定']");
+    private static final By SERVICE_REGION_SETTING_BUTTON_EN = byXpath("//p[text()='Region Settings']");
+    private static final By SERVICE_REGION_SETTING_BUTTON_KR = byXpath("//p[text()='지역 설정']");
+    private static final By SERVICE_REGION_JP = byXpath("(//div[@id='modalBottomSheet']//picture)[3]");
+    private static final By SERVICE_REGION_EN = byXpath("(//div[@id='modalBottomSheet']//picture)[2]");
+    private static final By SERVICE_REGION_KR = byXpath("(//div[@id='modalBottomSheet']//picture)[1]");
+    private static final By SERVICE_REGION_SAVE_BUTTON_JP = byXpath("//span[text()='適用']");
+    private static final By SERVICE_REGION_SAVE_BUTTON_EN = byXpath("//span[text()='Apply']");
+    private static final By SERVICE_REGION_SAVE_BUTTON_KR = byXpath("//span[text()='적용']");
 
     public static SelenideElement profileImg() {
         return $(NAVIGATION_PROFILE_IMG).shouldBe(Condition.visible);
@@ -26,8 +30,14 @@ public class CreatorHome {
     public static SelenideElement logoutButton() {
         return $(LOGOUT_BUTTON).shouldBe(Condition.visible);
     }
-    public static SelenideElement serviceRegionSettingButton() {
-        return $(SERVICE_REGION_SETTING_BUTTON).shouldBe(Condition.visible);
+    public static SelenideElement serviceRegionSettingButtonJp() {
+        return $(SERVICE_REGION_SETTING_BUTTON_JP).shouldBe(Condition.visible);
+    }
+    public static SelenideElement serviceRegionSettingButtonEn() {
+        return $(SERVICE_REGION_SETTING_BUTTON_EN).shouldBe(Condition.visible);
+    }
+    public static SelenideElement serviceRegionSettingButtonKr() {
+        return $(SERVICE_REGION_SETTING_BUTTON_KR).shouldBe(Condition.visible);
     }
     public static SelenideElement serviceRegionJp() {
         return $(SERVICE_REGION_JP).shouldBe(Condition.visible);
@@ -38,8 +48,14 @@ public class CreatorHome {
     public static SelenideElement serviceRegionKr() {
         return $(SERVICE_REGION_KR).shouldBe(Condition.visible);
     }
-    public static SelenideElement serviceRegionSaveButton() {
-        return $(SERVICE_REGION_SAVE_BUTTON).shouldBe(Condition.visible);
+    public static SelenideElement serviceRegionSaveButtonJp() {
+        return $(SERVICE_REGION_SAVE_BUTTON_JP).shouldBe(Condition.visible);
+    }
+    public static SelenideElement serviceRegionSaveButtonEn() {
+        return $(SERVICE_REGION_SAVE_BUTTON_EN).shouldBe(Condition.visible);
+    }
+    public static SelenideElement serviceRegionSaveButtonKr() {
+        return $(SERVICE_REGION_SAVE_BUTTON_KR).shouldBe(Condition.visible);
     }
 
 

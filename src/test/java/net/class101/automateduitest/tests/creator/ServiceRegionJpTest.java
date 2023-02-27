@@ -1,12 +1,12 @@
 package net.class101.automateduitest.tests.creator;
 
+import com.codeborne.selenide.Selenide;
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.testcases.creator.*;
 import org.junit.jupiter.api.*;
 
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -22,8 +22,8 @@ public class ServiceRegionJpTest {
     @AfterEach // 서비스 지역을 KR로 변경하는 케이스 추가
     void afterEach() {
         CreatorHome.Actions.openPage();
-        SF.get(CheckServiceRegionKr.class).proceed();
-        getWebDriver().navigate().refresh();
+        SF.get(CheckServiceRegionJpInKr.class).proceed();
+        Selenide.refresh();
     }
 
     @AfterAll

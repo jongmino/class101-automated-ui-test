@@ -1,6 +1,5 @@
 package net.class101.automateduitest.tests.creator;
 
-import com.codeborne.selenide.Condition;
 import net.class101.automateduitest.resources.common.SF;
 import net.class101.automateduitest.resources.common.Utils;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
@@ -43,6 +42,6 @@ public class ServiceRegionTest {
     @Test
     @Order(3)
     void testServiceRegionKr() {
-        SF.get(CheckServiceRegionKr.class).proceed().validate();
+        SF.get(CheckServiceRegionEnInKr.class).proceed().validate();
     }
 }
