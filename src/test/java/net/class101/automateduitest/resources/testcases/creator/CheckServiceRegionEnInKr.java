@@ -1,5 +1,6 @@
 package net.class101.automateduitest.resources.testcases.creator;
 
+import com.codeborne.selenide.Selenide;
 import net.class101.automateduitest.resources.pages.creatorCenter.CreatorHome;
 import net.class101.automateduitest.resources.testcases.TestCase;
 
@@ -21,7 +22,7 @@ public class CheckServiceRegionEnInKr implements TestCase {
         CreatorHome.serviceRegionSettingButton().click();
         CreatorHome.serviceRegionKr().click();
         CreatorHome.serviceRegionSaveButton().click();
-        getWebDriver().navigate().refresh();
+        Selenide.refresh();
         return this;
     }
 
