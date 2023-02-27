@@ -28,7 +28,7 @@ public class ServiceRegionJpTest {
 
     @AfterAll
     static void afterAll() {
-        SF.get(LogoutCreatorCenter.class).proceed();
+        SF.get(LogoutCreatorCenterGlobal.class).proceed();
     }
 
     @Test

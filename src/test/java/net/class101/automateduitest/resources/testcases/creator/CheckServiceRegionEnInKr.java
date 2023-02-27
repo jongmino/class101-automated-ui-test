@@ -18,9 +18,9 @@ public class CheckServiceRegionEnInKr implements TestCase {
     @Override
     public TestCase proceed() {
         CreatorHome.profileImg().click();
-        CreatorHome.serviceRegionSettingButtonEn().click();
+        CreatorHome.serviceRegionSettingButton().click();
         CreatorHome.serviceRegionKr().click();
-        CreatorHome.serviceRegionSaveButtonEn().click();
+        CreatorHome.serviceRegionSaveButton().click();
         getWebDriver().navigate().refresh();
         return this;
     }

@@ -20,9 +20,9 @@ public class CheckServiceRegionJp implements TestCase {
     @Override
     public TestCase proceed() {
         CreatorHome.profileImg().click();
-        CreatorHome.serviceRegionSettingButtonKr().click();
+        CreatorHome.serviceRegionSettingButton().click();
         CreatorHome.serviceRegionJp().click();
-        CreatorHome.serviceRegionSaveButtonKr().click();
+        CreatorHome.serviceRegionSaveButton().click();
         Selenide.refresh();
         CreatorLeftNavigation.creatorGuideTabJp().shouldBe(Condition.visible).click();
         return this;
